@@ -1,0 +1,43 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: .5px solid rgba(204, 204, 204, .5);
+}
+
+.menu {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+  position: relative;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu:last-child::after {
+  content: "10";
+  color: #ffffff;
+  font-size: .7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 18px;
+  height: 18px;
+  background: #7D3F92;
+  position: absolute;
+  right: -9px;
+  bottom: 0px;
+  border-radius: 50%;
+}
+
+
