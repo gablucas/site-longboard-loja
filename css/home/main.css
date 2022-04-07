@@ -1,0 +1,59 @@
+.main-bg {
+  background: var(--cor-d1);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  padding-top: 60px;
+
+  position: relative;
+}
+
+.main-novidade {
+  position: absolute;
+
+  top: 60px;
+  left: 40px;
+}
+
+.main-novidade p {
+  margin-top: 8px;
+}
+
+.main-novidade a {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--cor-d5);
+}
+
+.main-novidade a::after {
+  content: "";
+  width: 70px;
+  height: 2px;
+  background: var(--cor-d5);
+  display: block;
+  
+  position: relative;
+  top: -2px;
+}
+
+.main-titulo h1 {
+  margin-top: 60px;
+  max-width: 18ch;
+}
+
+.main-titulo p {
+  margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  .main-imagem::before {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+
+
