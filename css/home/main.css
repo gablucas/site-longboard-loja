@@ -32,6 +32,10 @@
   color: var(--cor-d5);
 }
 
+.main-novidade a:hover {
+  color: var(--cor-d4);
+}
+
 .main-novidade a::after {
   content: "";
   width: 70px;
@@ -41,6 +45,10 @@
   
   position: relative;
   top: -2px;
+}
+
+.main-novidade a:hover::after {
+  background: var(--cor-d4);
 }
 
 .main-titulo h1 {

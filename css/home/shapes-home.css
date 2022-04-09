@@ -1,0 +1,85 @@
+.shapes-home {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 60px;
+}
+
+.shapes-home h2 {
+  text-align: center;
+}
+
+.shapes-modalidade {
+  margin-top: 40px;
+  
+  border: 1px solid var(--cor-8);
+  border-radius: 50px;
+  justify-self: center;
+}
+
+.shapes-modalidade label {
+  font: inherit;
+  text-transform: inherit;
+  color: inherit;
+
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+
+  cursor: pointer;
+}
+
+.shapes-modalidade label:hover {
+  color: var(--cor-6);
+}
+
+.shapes-modalidade input:checked + label {
+  color: var(--cor-0);
+  background: var(--cor-d7);
+}
+
+.shapes-produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-top: 60px;
+}
+
+.shapes-produtos li {
+  display: none;
+
+  padding: 20px;
+}
+
+.shapes-produtos li.ativo {
+  display: initial;
+}
+
+.shapes-produtos a {
+  display: block;
+
+  padding: 20px;
+  border: 1px solid var(--cor-3);
+  border-radius: 7px;
+
+  position: relative;
+}
+
+/* Efeito de clareamento quando mouse passa por cima */
+.shapes-produtos a::before {
+  content: "";
+  background: var(--cor-0);
+  opacity: 0;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: .3s;
+}
+
+.shapes-produtos a:hover::before {
+  opacity: .2;
+}
+
+

@@ -1,5 +1,6 @@
 body {
   font-family: "Roboto";
+  height: 2000px;
 }
 
 body, h1, h2, h3, ul, p {
@@ -7,7 +8,7 @@ body, h1, h2, h3, ul, p {
   padding: 0px;
 }
 
-ul {
+ul, li {
   list-style: none;
 }
 
@@ -20,4 +21,17 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+/* label {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  background: none;
+} */
+
+input {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
 }
