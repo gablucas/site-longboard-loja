@@ -20,7 +20,6 @@ function selecionarShapes(event) {
   }
 }
 
-//Adiciona um evento de clique a todos os inputs (Modalidades)
 function cliqueModalidade(elemento) {
   elemento.addEventListener('click', selecionarShapes)
 }

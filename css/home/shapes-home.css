@@ -1,7 +1,7 @@
 .shapes-home {
   display: grid;
   grid-template-columns: 1fr;
-  padding-top: 60px;
+  margin-top: 60px;
 }
 
 .shapes-home h2 {
@@ -80,6 +80,68 @@
 
 .shapes-produtos a:hover::before {
   opacity: .2;
+}
+
+@media (max-width: 1024px) {
+  .shapes-modalidade label {
+    padding: 10px;
+  }
+
+  .shapes-produtos {
+    margin-top: 40px;
+  }
+
+  .shapes-produtos li {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shapes-home {
+    margin-top: 40px;
+  }
+
+  .shapes-modalidade {
+    border: none;
+    border-radius: none;
+
+    margin-top: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .shapes-modalidade label {
+    border: 1px solid var(--cor-8);
+  }
+
+  .shapes-produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 425px) {
+  .shapes-home {
+    margin-top: 30px;
+  }
+
+  .shapes-modalidade label {
+    flex: 1;
+    text-align: center;
+  }
+
+  .shapes-produtos {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  .shapes-produtos {
+    margin-top: 20px;
+  }
 }
 
 

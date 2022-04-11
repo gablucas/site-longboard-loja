@@ -61,9 +61,17 @@
     font-size: 2rem;
   }
 
+  .font-1-s {
+    font-size: 1.1rem;
+  }
+
   .font-2-xl {
     font-size: 1.40rem;
     max-width: 38ch;
+  }
+
+  .font-2-s-b-u {
+    font-size: 1rem;
   }
 
   .font-2-s {
@@ -94,6 +102,14 @@
 
   .font-1-xxl {
     font-size: 2rem;
+  }
+
+  .font-1-s {
+    font-size: 1rem;
+  }
+
+  .font-2-s-b-u {
+    font-size: .9rem;
   }
 }
 
