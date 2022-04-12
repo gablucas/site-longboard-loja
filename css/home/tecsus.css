@@ -1,0 +1,71 @@
+.tecsus-bg {
+  background: var(--cor-12);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.tecsus p {
+  padding-top: 12px;
+}
+
+.tecnologia {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+
+  padding-top: 40px;
+}
+
+.tecnologia-vantagens {
+  height: 460px;
+  display: grid;
+  align-content: space-between;
+
+  padding-left: 40px;
+}
+
+.sustentabilidade {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  margin-top: 80px;
+}
+
+.sustentabilidade-vantagens {
+  height: 460px;
+  display: grid;
+  align-content: space-between;
+
+  padding-right: 40px;
+}
+
+.tecnologia-vantagens li,
+.sustentabilidade-vantagens li{
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.tecnologia-vantagens h3,
+.sustentabilidade-vantagens h3 {
+  padding-left: 12px;
+}
+
+.tecnologia-vantagens p,
+.tecnologia-vantagens a,
+.sustentabilidade-vantagens p {
+  grid-column: 1/-1;
+}
+
+.tecnologia-vantagens a {
+  padding-top: 12px;
+  color: var(--cor-d4);
+}
+
+.tecnologia-vantagens a::after {
+  content: "";
+  width: 204px;
+  height: 2px;
+  background: var(--cor-d4);
+  display: block;
+}
+
+
+

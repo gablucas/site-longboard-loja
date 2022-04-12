@@ -1,7 +1,8 @@
 .shapes-home {
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .shapes-home h2 {
@@ -41,7 +42,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  margin-top: 60px;
+  padding-top: 60px;
 }
 
 .shapes-produtos li {
@@ -88,7 +89,7 @@
   }
 
   .shapes-produtos {
-    margin-top: 40px;
+    padding-top: 40px;
   }
 
   .shapes-produtos li {
@@ -98,7 +99,8 @@
 
 @media (max-width: 768px) {
   .shapes-home {
-    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .shapes-modalidade {
@@ -124,7 +126,8 @@
 
 @media (max-width: 425px) {
   .shapes-home {
-    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .shapes-modalidade label {
@@ -134,13 +137,13 @@
 
   .shapes-produtos {
     grid-template-columns: 1fr;
-    margin-top: 30px;
+    padding-top: 30px;
   }
 }
 
 @media (max-width: 375px) {
   .shapes-produtos {
-    margin-top: 20px;
+    padding-top: 20px;
   }
 }
 

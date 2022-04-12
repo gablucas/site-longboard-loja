@@ -27,7 +27,6 @@ function cliqueModalidade(elemento) {
 modalidades.forEach(cliqueModalidade);
 
 // Deixar um input inicial selecionado
-
 const inputSelecionado =  document.querySelector('.shapes-modalidade input[id=dancingfreestyle]')
 
 inputSelecionado.checked = true;
