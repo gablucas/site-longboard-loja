@@ -4,7 +4,7 @@
   padding-bottom: 60px;
 }
 
-.tecsus p {
+.tecsus > p {
   padding-top: 12px;
 }
 
@@ -26,6 +26,7 @@
 .sustentabilidade {
   display: grid;
   grid-template-columns: 7fr 5fr;
+
   margin-top: 80px;
 }
 
@@ -37,6 +38,13 @@
   padding-right: 40px;
 }
 
+.tecnologia-imagem img,
+.sustentabilidade-imagem img {
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
 .tecnologia-vantagens li,
 .sustentabilidade-vantagens li{
   display: grid;
@@ -45,27 +53,111 @@
 
 .tecnologia-vantagens h3,
 .sustentabilidade-vantagens h3 {
+  display: flex;
+  align-items: center;
   padding-left: 12px;
 }
 
 .tecnologia-vantagens p,
-.tecnologia-vantagens a,
 .sustentabilidade-vantagens p {
   grid-column: 1/-1;
+  padding-top: 12px;
 }
 
 .tecnologia-vantagens a {
-  padding-top: 12px;
-  color: var(--cor-d4);
+  padding-left: 8px;
 }
 
-.tecnologia-vantagens a::after {
-  content: "";
-  width: 204px;
-  height: 2px;
-  background: var(--cor-d4);
-  display: block;
+@media (max-width: 768px) {
+  .tecsus-bg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .sustentabilidade {
+    margin-top: 60px;
+  }
+
+  .tecnologia-vantagens,
+  .sustentabilidade-vantagens {
+    height: 380px;
+  }
+
+  .tecnologia-vantagens {
+    padding-left: 20px;
+  }
+
+  .sustentabilidade-vantagens {
+    padding-right: 20px;
+  }
+
+  .tecnologia-vantagens h3,
+  .sustentabilidade-vantagens h3 {
+    padding-left: 8px;
+  }
+
+  .tecnologia-vantagens p,
+  .sustentabilidade-vantagens p {
+    padding-top: 12px;
+  }
+
+  .tecnologia-imagem img,
+  .sustentabilidade-imagem img {
+    height: 380px;
+  }
 }
+
+@media (max-width: 425px) {
+  .tecsus-bg {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .tecnologia,
+  .sustentabilidade {
+    grid-template-columns: 1fr;
+  }
+
+  .sustentabilidade {
+    margin-top: 40px;
+  }
+
+  .tecnologia-vantagens,
+  .sustentabilidade-vantagens {
+    height: auto;
+    padding: 20px 0px 0px 0px;
+  }
+
+  .tecnologia-vantagens li + li,
+  .sustentabilidade-vantagens li + li {
+    padding-top: 20px;
+  }
+
+  .sustentabilidade-imagem {
+    grid-row: 1;
+  }
+
+  .tecnologia-imagem img,
+  .sustentabilidade-imagem img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 375px) {
+  .tecnologia-imagem img,
+  .sustentabilidade-imagem img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 320px) {
+  .tecnologia-imagem img,
+  .sustentabilidade-imagem img {
+    height: 200px;
+  }
+}
+
+
 
 
 
