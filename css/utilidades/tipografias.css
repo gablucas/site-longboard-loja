@@ -110,6 +110,14 @@
   }
 }
 
+@media (max-width: 425px) {
+
+  .produtos-lista .font-1-xxl {
+    font-size: 1.8rem;
+  }
+}
+
+
 @media (max-width: 375px) {
 
   .font-1-xxl {
@@ -129,6 +137,10 @@
 
   .font-1-xxl {
     font-size: 1.75rem;
+  }
+
+  .produtos-lista .font-1-xxl {
+    font-size: 1.4rem;
   }
 
   .font-1-l {

@@ -118,6 +118,10 @@
     grid-template-columns: 1fr;
   }
 
+  .tecnologia {
+    padding-top: 30px;
+  }
+
   .sustentabilidade {
     margin-top: 40px;
   }

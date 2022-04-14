@@ -76,6 +76,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  
   transition: .3s;
 }
 
@@ -137,7 +138,7 @@
 
   .shapes-produtos {
     grid-template-columns: 1fr;
-    padding-top: 30px;
+    padding-top: 20px;
   }
 }
 
