@@ -1,0 +1,45 @@
+.footer-bg {
+  background: var(--cor-12);
+}
+
+.footer {
+  padding-top: 60px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-dados p {
+  padding-top: 12px;
+  max-width: 30ch;
+}
+
+.footer-informacoes,
+.footer-menu {
+  justify-self: center;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 12px;
+  padding-top: 24px;
+
+  grid-column: 1/-1;
+}
+
+.footer li:first-child {
+  padding-top: 12px;
+}
+
+.footer li + li {
+  padding-top: 8px;
+}
+
+.footer nav a:hover {
+  color: var(--cor-3);
+}
+
+.footer-copyright {
+  padding-top: 60px;
+  padding-bottom: 20px;
+}

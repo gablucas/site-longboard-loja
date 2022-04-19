@@ -1,5 +1,6 @@
 @import './css/global/global.css';
 @import './css/global/header.css';
+@import './css/global/footer.css';
 
 /* Utilidades */
 @import './css/utilidades/componentes.css';
