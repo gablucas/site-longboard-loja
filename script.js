@@ -3,17 +3,17 @@
 const modalidades = document.querySelectorAll('.home-shapes-modalidades input')
 const shapes = document.querySelectorAll('.home-produtos-shapes li');
 
+
 function selecionarShapes(event) {
   const modalidadeSelecionada = event.currentTarget;
   const modalidadeId = modalidadeSelecionada.getAttribute('id');
 
-  // Remove os itens da lista
   for(let index = 0; index < shapes.length; index++){
-    shapes[index].classList.remove('ativo')
-  }
+    
+    // Remove os shapes da seleção anterior
+    shapes[index].classList.remove('ativo');
 
-  // Adiciona os itens a lista
-  for(let index = 0; index < shapes.length; index++){
+    // Adiciona os shapes de acordo com a modalidade selecionada
     if(shapes[index].classList.contains(modalidadeId)) {
       shapes[index].classList.add('ativo')
     }
@@ -27,6 +27,6 @@ function cliqueModalidade(elemento) {
 modalidades.forEach(cliqueModalidade);
 
 // Deixar um input inicial selecionado
-const inputSelecionado =  document.querySelector('.home-shapes-modalidade input[id=dancingfreestyle]')
+const inputSelecionado =  document.querySelector('.home-shapes-modalidades input[id=dancingfreestyle]')
 
 inputSelecionado.checked = true;
