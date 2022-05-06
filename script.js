@@ -1,7 +1,7 @@
 
 // Exibir os shapes na home de acordo com a modalidade selecionada
-const modalidades = document.querySelectorAll('.shapes-modalidade input')
-const shapes = document.querySelectorAll('.shapes-produtos li');
+const modalidades = document.querySelectorAll('.home-shapes-modalidades input')
+const shapes = document.querySelectorAll('.home-produtos-shapes li');
 
 function selecionarShapes(event) {
   const modalidadeSelecionada = event.currentTarget;
@@ -27,6 +27,6 @@ function cliqueModalidade(elemento) {
 modalidades.forEach(cliqueModalidade);
 
 // Deixar um input inicial selecionado
-const inputSelecionado =  document.querySelector('.shapes-modalidade input[id=dancingfreestyle]')
+const inputSelecionado =  document.querySelector('.home-shapes-modalidade input[id=dancingfreestyle]')
 
 inputSelecionado.checked = true;

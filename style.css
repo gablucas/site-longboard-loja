@@ -1,6 +1,7 @@
 @import './css/global/global.css';
 @import './css/global/header.css';
 @import './css/global/footer.css';
+@import './css/global/banner.css';
 
 /* Utilidades */
 @import './css/utilidades/componentes.css';
@@ -9,6 +10,9 @@
 
 /* Home */
 @import './css/home/main.css';
-@import './css/home/shapes-home.css';
+@import './css/home/home-shapes.css';
 @import './css/home/tecsus.css';
 @import './css/home/produtos.css';
+
+/* Produtos - Shapes */
+@import './css/home/produtos-shapes.css';

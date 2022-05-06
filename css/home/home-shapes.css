@@ -1,15 +1,15 @@
-.shapes-home {
+.home-shapes {
   display: grid;
   grid-template-columns: 1fr;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.shapes-home h2 {
+.home-shapes h2 {
   text-align: center;
 }
 
-.shapes-modalidade {
+.home-shapes-modalidades {
   margin-top: 40px;
   
   border: 1px solid var(--cor-8);
@@ -17,7 +17,7 @@
   justify-self: center;
 }
 
-.shapes-modalidade label {
+.home-shapes-modalidades label {
   font: inherit;
   text-transform: inherit;
   color: inherit;
@@ -29,33 +29,33 @@
   cursor: pointer;
 }
 
-.shapes-modalidade label:hover {
+.home-shapes-modalidades label:hover {
   color: var(--cor-6);
 }
 
-.shapes-modalidade input:checked + label {
+.home-shapes-modalidades input:checked + label {
   color: var(--cor-0);
   background: var(--cor-d7);
 }
 
-.shapes-produtos {
+.home-produtos-shapes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
   padding-top: 60px;
 }
 
-.shapes-produtos li {
+.home-produtos-shapes li {
   display: none;
 
   padding: 20px;
 }
 
-.shapes-produtos li.ativo {
+.home-produtos-shapes li.ativo {
   display: initial;
 }
 
-.shapes-produtos a {
+.home-produtos-shapes a {
   display: block;
 
   padding: 20px;
@@ -66,7 +66,7 @@
 }
 
 /* Efeito de clareamento quando mouse passa por cima */
-.shapes-produtos a::before {
+.home-produtos-shapes a::before {
   content: "";
   background: var(--cor-0);
   opacity: 0;
@@ -80,31 +80,31 @@
   transition: .3s;
 }
 
-.shapes-produtos a:hover::before {
+.home-produtos-shapes a:hover::before {
   opacity: .2;
 }
 
 @media (max-width: 1024px) {
-  .shapes-modalidade label {
+  .home-shapes-modalidades label {
     padding: 10px;
   }
 
-  .shapes-produtos {
+  .home-produtos-shapes {
     padding-top: 40px;
   }
 
-  .shapes-produtos li {
+  .home-produtos-shapes li {
     padding: 10px;
   }
 }
 
 @media (max-width: 768px) {
-  .shapes-home {
+  .home-shapes {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 
-  .shapes-modalidade {
+  .home-shapes-modalidades {
     border: none;
     border-radius: none;
 
@@ -116,34 +116,34 @@
     gap: 10px;
   }
 
-  .shapes-modalidade label {
+  .home-shapes-modalidades label {
     border: 1px solid var(--cor-8);
   }
 
-  .shapes-produtos {
+  .home-produtos-shapes {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 425px) {
-  .shapes-home {
+  .home-shapes {
     padding-top: 30px;
     padding-bottom: 30px;
   }
 
-  .shapes-modalidade label {
+  .home-shapes-modalidades label {
     flex: 1;
     text-align: center;
   }
 
-  .shapes-produtos {
+  .home-produtos-shapes {
     grid-template-columns: 1fr;
     padding-top: 20px;
   }
 }
 
 @media (max-width: 375px) {
-  .shapes-produtos {
+  .home-produtos-shapes {
     padding-top: 20px;
   }
 }
