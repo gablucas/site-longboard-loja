@@ -12,7 +12,7 @@
 @import './css/home/main.css';
 @import './css/home/home-shapes.css';
 @import './css/home/tecsus.css';
-@import './css/home/produtos.css';
+@import './css/home/opcoes.css';
 
 /* Produtos - Shapes */
-@import './css/home/produtos-shapes.css';
+@import './css/produtos/produtos-shapes.css';

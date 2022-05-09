@@ -1,6 +1,5 @@
 body {
   font-family: "Roboto";
-  height: 4000px;
 }
 
 body, h1, h2, h3, ul, p {
@@ -34,4 +33,9 @@ input {
   position: absolute;
   pointer-events: none;
   opacity: 0;
+}
+
+button {
+  background: none;
+  border: none;
 }

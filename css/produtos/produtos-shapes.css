@@ -1,0 +1,92 @@
+.shapes-banner {
+  background: #FFA200;
+
+  position: relative;
+}
+
+.shapes-banner h1 {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shapes-banner img {
+  margin: 0 auto;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+  padding: 60px 0px;
+}
+
+.produtos-filtro {
+  width: 260px;
+}
+
+.produtos-filtro .filtro + .filtro {
+  margin-top: 40px;
+}
+
+.filtro {
+  display: flex;
+  flex-direction: column;
+}
+
+.filtro h3 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.filtro button {
+  flex: 1;
+  font: inherit;
+  padding: 4px 20px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.filtro button + button {
+  margin-top: 8px;
+}
+
+.produtos-shapes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.produtos-shapes a {
+  display: block;
+  border: 1px solid var(--cor-3);
+  border-radius: 7px;
+
+  position: relative;
+  
+}
+
+.produtos-shapes a::before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--cor-0);
+  transition: .3s;
+}
+
+.produtos-shapes a:hover::before {
+  opacity: .2;
+}
+
+.produtos-shapes h3 {
+  padding-left: 14px;
+  padding-bottom: 14px;
+}
+
