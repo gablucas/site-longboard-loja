@@ -9,9 +9,10 @@ function executarFiltro(event) {
   // Pintar o botão quando clicado
   for (let i = 0; i < botaoFiltro.length; i++) {
 
+    botaoFiltro[i].classList.remove('selecionado')
+
     if(botaoFiltro[i] === elemento) {
-      botaoFiltro[i].style.color = "#FFFFFF";
-      botaoFiltro[i].style.background = "#7D3F92";
+      botaoFiltro[i].classList.add('selecionado');
     }
   }
 

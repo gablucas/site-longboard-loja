@@ -61,6 +61,11 @@
   border: 1px solid var(--cor-d5);
 }
 
+.filtro-botoes button.selecionado {
+  color: var(--cor-0);
+  background: var(--cor-d5);
+}
+
 .produtos-shapes {
   display: grid;
   grid-template-columns: repeat(3, 260px);
