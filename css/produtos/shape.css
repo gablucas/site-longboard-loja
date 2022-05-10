@@ -1,0 +1,119 @@
+.shape {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  gap: 40px;
+}
+
+/* Faz com que as imagens menores fiquem... menores */
+.shape-imagem {
+  display: grid;
+  grid-template-rows: 1fr 125px; 
+  gap: 20px;
+}
+
+/* Faz com que o container das imagens menores tenha um scroll */
+.shape-imagem div {
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  padding-bottom: 10px;
+}
+
+.shape-imagem img {
+  border: 1px solid var(--cor-3);
+  border-radius: 7px;
+}
+
+.shape-sobre p {
+  margin-top: 8px;
+}
+
+.shape-dados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+  padding: 20px;
+  gap: 40px;
+  background: var(--cor-2);
+  border-radius: 7px;
+}
+
+.shape-dados ul {
+  margin-top: 8px;
+}
+
+.shape-dados li + li {
+  margin-top: 12px;
+}
+
+.shape-informacoes li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shape-longometro li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.shape-longometro div {
+  display: flex;
+  gap: 12px;
+}
+
+.shape-longometro div span {
+  width: 25px;
+  height: 15px;
+  border: 1px solid var(--cor-10);
+  border-radius: 5px;
+}
+
+.shape-longometro div.nota1 span:first-child {
+  background-color: var(--cor-10);
+}
+
+.shape-longometro div.nota2 span:nth-child(-n + 2) {
+  background-color: var(--cor-10);
+}
+
+.shape-longometro div.nota3 span:nth-child(-n + 3) {
+  background-color: var(--cor-10);
+}
+
+.shape-longometro div.nota4 span:nth-child(-n + 4) {
+  background-color: var(--cor-10);
+}
+
+.shape-longometro div.nota5 span:nth-child(-n + 5) {
+  background-color: var(--cor-10);
+}
+
+.shape-compra input {
+  position: initial;
+  pointer-events: initial;
+  text-align: center;
+  opacity: 1;
+
+  width: 60px;
+  height: 40px;
+  border: 1px solid #000000;
+  border-radius: 7px;
+}
+
+.shape-compra {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  place-items: end;
+  gap: 40px;
+}
+
+.shape-compra button {
+  font: inherit;
+  padding: 12px 12px;
+  border-radius: 7px;
+  background:linear-gradient(#B667CB,
+  #7D3F92);
+}

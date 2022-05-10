@@ -2,7 +2,7 @@ body {
   font-family: "Roboto";
 }
 
-body, h1, h2, h3, ul, p {
+body, h1, h2, h3, ul, span, p {
   margin: 0px;
   padding: 0px;
 }
