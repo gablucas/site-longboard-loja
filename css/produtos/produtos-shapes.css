@@ -20,7 +20,8 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 40px;
-  padding: 60px 0px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .produtos-filtro {
@@ -44,9 +45,15 @@
 .filtro button {
   flex: 1;
   font: inherit;
-  padding: 4px 20px;
+  padding: 6px 20px;
+  cursor: pointer;
   border: 1px solid #000000;
   border-radius: 5px;
+}
+
+.filtro button:hover {
+  color: var(--cor-d5);
+  border: 1px solid var(--cor-d5);
 }
 
 .filtro button + button {
@@ -55,8 +62,12 @@
 
 .produtos-shapes {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 260px);
   gap: 40px;
+}
+
+.produtos-shapes li {
+  display: none;
 }
 
 .produtos-shapes a {
@@ -65,7 +76,6 @@
   border-radius: 7px;
 
   position: relative;
-  
 }
 
 .produtos-shapes a::before {
@@ -92,5 +102,9 @@
 
 .produtos-shapes img {
   margin: 0 auto;
+}
+
+.produtos-shapes li.ativo {
+  display: initial;
 }
 

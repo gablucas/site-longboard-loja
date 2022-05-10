@@ -30,3 +30,4 @@ modalidades.forEach(cliqueModalidade);
 const inputSelecionado =  document.querySelector('.home-shapes-modalidades input[id=dancingfreestyle]')
 
 inputSelecionado.checked = true;
+
