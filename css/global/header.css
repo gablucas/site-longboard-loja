@@ -67,4 +67,12 @@ header {
   padding: 8px 0px;
 }
 
+.menu-secundario a:hover {
+  color: var(--cor-d5);
+}
+
+.menu-secundario a.ativo {
+  color: var(--cor-d5);
+}
+
 
