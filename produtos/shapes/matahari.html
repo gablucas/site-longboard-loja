@@ -16,7 +16,7 @@
 
   <!-- Seção 1: Header -->
   <header class="container">
-    <a href="../"><img src="../../img/ohaipreto.svg" alt="Logo OHAI Boards"></a>
+    <a href="../../"><img src="../../img/ohaipreto.svg" alt="Logo OHAI Boards"></a>
 
     <nav aria-label="Primario">
       <ul class="menu font-2-s-m cor-10">
@@ -125,8 +125,10 @@
       </div>
 
       <div class="shape-compra">
-        <input class="font-2-s-m" type="number" name="quantidade" id="quantidade">
-        <button class="font-2-xs-m-u cor-0">adicionar ao carrinho</button>
+        <form action="../../carrinho.html">
+          <input class="font-2-s-m" type="number" name="quantidade" id="quantidade" placeholder="0">
+          <button class="font-2-xs-m-u cor-0">adicionar ao carrinho</button>
+        </form>
       </div>
     </div>
   </main>
@@ -174,10 +176,8 @@
 
       <p class="footer-copyright font-2-s cor-4">Todos os direitos reservados. 2022</p>
     </div>
-
-    
   </footer>
 
-
+  <script src="../../js/produto.js"></script>
 </body>
 </html>

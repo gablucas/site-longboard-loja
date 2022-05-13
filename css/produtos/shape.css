@@ -90,27 +90,26 @@
   background-color: var(--cor-10);
 }
 
+.shape-compra form {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+}
+
 .shape-compra input {
   position: initial;
   pointer-events: initial;
-  text-align: center;
   opacity: 1;
 
-  width: 60px;
-  height: 40px;
+  text-align: center;
+  width: 40px;
   border: 1px solid #000000;
   border-radius: 7px;
 }
 
-.shape-compra {
-  padding-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  place-items: end;
-  gap: 40px;
-}
-
 .shape-compra button {
+  cursor: pointer;
   font: inherit;
   padding: 12px 12px;
   border-radius: 7px;
