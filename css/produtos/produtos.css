@@ -1,10 +1,12 @@
-.shapes-banner {
+#shapes-produtos .banner {
   background: #FFA200;
+}
 
+.banner {
   position: relative;
 }
 
-.shapes-banner h1 {
+.banner h1 {
   position: absolute;
 
   top: 50%;
@@ -12,7 +14,7 @@
   transform: translate(-50%, -50%);
 }
 
-.shapes-banner img {
+.banner img {
   margin: 0 auto;
 }
 
@@ -67,17 +69,17 @@
   background: var(--cor-d5);
 }
 
-.produtos-shapes {
+.produtos {
   display: grid;
   grid-template-columns: repeat(3, 260px);
   gap: 40px;
 }
 
-.produtos-shapes li {
+.produtos li {
   display: none;
 }
 
-.produtos-shapes a {
+.produtos a {
   display: block;
   border: 1px solid var(--cor-3);
   border-radius: 7px;
@@ -85,7 +87,7 @@
   position: relative;
 }
 
-.produtos-shapes a::before {
+.produtos a::before {
   content: "";
   position: absolute;
   opacity: 0;
@@ -98,20 +100,20 @@
   transition: .3s;
 }
 
-.produtos-shapes a:hover::before {
+.produtos a:hover::before {
   opacity: .2;
 }
 
-.produtos-shapes h3 {
+.produtos h3 {
   padding-left: 14px;
   padding-bottom: 14px;
 }
 
-.produtos-shapes img {
+.produtos img {
   margin: 0 auto;
 }
 
-.produtos-shapes li.ativo {
+.produtos li.ativo {
   display: initial;
 }
 

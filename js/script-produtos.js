@@ -14,7 +14,7 @@ menuSecundario.forEach(ativarMenuSecundario)
 
 // Filtrar os shapes pela modalidade
 botaoFiltro = document.querySelectorAll('.produtos-filtro .filtro button')
-shapes = document.querySelectorAll('.produtos-shapes li')
+shapes = document.querySelectorAll('.produtos li')
 
 function executarFiltro(event) {
   elemento = event.currentTarget; // Armazena o elemento clicado na variavel
