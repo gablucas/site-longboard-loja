@@ -56,6 +56,15 @@
   text-transform: uppercase;
 }
 
+.font-2-xxs-u {
+  font: 400 .875rem/1.2 'Roboto';
+  text-transform: uppercase;
+}
+
+.font-2-xxs {
+  font: 400 .875rem/1.2 'Roboto';
+}
+
 @media (max-width: 1024px) {
 
   .font-1-xxl {

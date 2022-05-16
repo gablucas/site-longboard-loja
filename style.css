@@ -17,3 +17,6 @@
 /* Produtos */
 @import './css/produtos/produtos.css';
 @import './css/produtos/shape.css';
+
+/* Carrinho */
+@import './css/carrinho/carrinho.css';
