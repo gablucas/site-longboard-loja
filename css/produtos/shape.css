@@ -26,6 +26,11 @@
   border-radius: 7px;
 }
 
+.shape-imagem div img {
+  position: relative;
+  cursor: pointer;
+}
+
 .shape-sobre p {
   margin-top: 8px;
 }

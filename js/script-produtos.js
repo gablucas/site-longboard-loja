@@ -34,7 +34,6 @@ function executarFiltro(event) {
 
   // Mostrar os shapes do filtro selecionado
   for (let i = 0; i < shapes.length ; i++) {
-    shapes[i].classList.add('ativo');
 
     // Se o botão for desselecionado, mostra todos os shapes
     if(elemento.classList.contains('selecionado') === false) {
