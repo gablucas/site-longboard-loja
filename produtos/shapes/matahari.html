@@ -48,7 +48,7 @@
     <div class="shape-sobre">
       
       <div class="shape-introducao">
-        <h1 class="font-1-xl">Matahari</h1>
+        <h1 class="font-1-xl">Matahari <span class="font-1-m-u cor-d5">R$ 700,00</span></h1>
         <span class="font-2-s-b-u cor-5">OHAI BOARDS</span>
         <p class="font-2-xs">Contemple o que há de mais moderno para modalidade de Dancing e Freestyle, Matahari é o shape que busca trazer o melhor desempenho para ambas modalidades, ou seja, você tem uma ótima agilidade para executar as manobras de freestyle enquanto tempo um ótimo espaço para pratica do dancing.</p>
       </div>
@@ -126,6 +126,13 @@
 
       <div class="shape-compra">
         <form action="../../carrinho.html">
+
+          <datalist id="flex">
+            <option value="Flex 1">
+            <option value="Flex 2">
+          </datalist>
+
+          <input list="flex" class="quantidade font-2-s-m" name="flex" placeholder="flex">
           <input class="font-2-s-m" type="number" name="quantidade" id="quantidade" placeholder="1">
           <button class="font-2-xs-m-u cor-0">adicionar ao carrinho</button>
         </form>
@@ -178,6 +185,6 @@
     </div>
   </footer>
 
-  <script src="../../js/produto.js"></script>
+  <script src="../../js/script-produto.js"></script>
 </body>
 </html>

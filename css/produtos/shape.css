@@ -31,7 +31,13 @@
   cursor: pointer;
 }
 
-.shape-sobre p {
+.shape-introducao h1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shape-introducao p {
   margin-top: 8px;
 }
 
@@ -100,6 +106,10 @@
   display: flex;
   gap: 20px;
   justify-content: start;
+}
+
+.shape-compra input.quantidade {
+  width: 100px;
 }
 
 .shape-compra input {
