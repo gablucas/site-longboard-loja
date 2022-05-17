@@ -29,7 +29,7 @@ img {
   background: none;
 } */
 
-input {
+input[type=radio] {
   position: absolute;
   pointer-events: none;
   opacity: 0;
