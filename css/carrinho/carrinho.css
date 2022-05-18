@@ -74,7 +74,6 @@
 }
 
 /* ENTREGA */
-
 .carrinho-endereco {
   display: flex;
   flex-direction: column;
@@ -104,12 +103,14 @@
   margin-bottom: 4px;
 }
 
+/* Adicionada estilo quando o endereço é selecionado */
 .carrinho-endereco-item.selecionado {
   background: var(--cor-d1);
 }
 
 .carrinho-endereco-item.selecionado::before {
-  box-shadow: inset 0 0 0 2px var(--cor-d1), inset 0 0 0 13px var(--cor-10);
+  box-shadow: inset 0 0 0 2px var(--cor-d1), 
+              inset 0 0 0 9px var(--cor-10);
 }
 
 .carrinho-endereco button {
@@ -131,29 +132,39 @@
   background: var(--cor-d5);
 }
 
-.carrinho-frete h2 {
+.carrinho-frete {
   margin-top: 10px;
-  margin-bottom: 8px;
+}
+
+.carrinho-frete h2 {
+  margin-bottom: 10px;
 }
 
 .carrinho-frete label {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
 }
 
-.carrinho-frete label ~ label {
-  margin-top: 4px;
+.carrinho-frete label::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid var(--cor-12);
+}
+
+/* Adicionad estilo quando o frete é selecionado */
+.carrinho-frete input:checked + label::before {
+  box-shadow: inset 0 0 0 2px var(--cor-0), 
+              inset 0 0 0 7px var(--cor-10);
 }
 
 /* PAGAMENTO */
 .carrinho-pagamento-itens {
   display: none;
   grid-template-columns: repeat(3, 1fr);
-}
-
-.carrinho-pagamento h2,
-.carrinho-pagamento button {
-  grid-column: 1 / -1;
 }
 
 .carrinho-pagamento label {

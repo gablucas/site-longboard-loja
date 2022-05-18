@@ -103,16 +103,17 @@
                 </div>
                 
                 <button class="font-2-xs">Cadastrar novo endereço</button>
+                <span class="error"></span>
               </div>
             
             <!-- Frete -->
               <div class="carrinho-frete">
                 <h2 class="font-2-s-b-u">Frete</h2>
                 <input type="radio" name="entrega" value="normal">
-                <label for="normal" class="font-2-xs-m-u cor-10">Normal <span>R$ 15,00</span></label>
+                <label class="carrinho-frete-item" for="normal" class="font-2-xs-m-u cor-10">Normal <span>R$ 15,00</span></label>
 
                 <input type="radio" name="entrega" value="expresso">
-                <label for="expresso" class="font-2-xs-m-u cor-10">Expresso <span>R$ 30,00</span></label>
+                <label class="carrinho-frete-item" for="expresso" class="font-2-xs-m-u cor-10">Expresso <span>R$ 30,00</span></label>
               </div>
 
               <button class="botao-carrinho font-2-xs-m-u cor-0" onclick="ativaPagamento()">Concluido</button>
