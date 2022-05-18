@@ -22,3 +22,13 @@ function cliqueInput(item) {
 }
 
 endereco.forEach(cliqueInput)
+
+// Ativar pagamento
+function ativaPagamento() {
+  carrinhoEndereco = document.querySelector('.carrinho-entrega > div')
+  carrinhoEndereco.classList.remove('ativo')
+  console.log(carrinhoEndereco)
+
+  carrinhoPagamento = document.querySelector('.carrinho-pagamento > div')
+  carrinhoPagamento.classList.add('ativo')
+}

@@ -66,68 +66,73 @@
         </div>
 
         <!-- Container do resumo, endereço e pagamento -->
-        <div class="carrinho-final">
+        <div class="carrinho-infos">
 
           <!-- Resumo da compra -->
           <div class="carrinho-resumo">
             <h2 class="font-2-s-b-u">Resumo da compra</h2>
-            <span class="font-2-s cor-10">Subtotal <span>R$ 700,00</span></span>
-            <span class="font-2-s cor-10">Frete <span>R$ 30,00</span></span>
-            <span class="font-2-s-b-u cor-10">Total <span>R$ 730,00</span></span>
+
+            <div class="carrinho-resumo-valores">
+              <span class="font-2-s cor-10">Subtotal <span>R$ 700,00</span></span>
+              <span class="font-2-s cor-10">Frete <span>R$ 30,00</span></span>
+              <span class="font-2-s-b-u cor-10">Total <span>R$ 730,00</span></span>
+            </div>
           </div>
 
           <!-- Endereço -->
           <div class="carrinho-entrega">
+            <h2 class="font-2-s-b-u">Endereço</h2>
 
-            <div class="carrinho-endereco">
-              <h2 class="font-2-s-b-u">Endereço</h2>
-            
-              <div class="carrinho-endereco-item font-2-xxs cor-12">
-                    <input type="radio" name="endereco" value="casa">
-                    <label for="casa" class="font-2-xs-m-u cor-10">Casa</label>
+            <div class="carrinho-entrega-itens ativo">
+
+              <div class="carrinho-endereco">
+                <div class="carrinho-endereco-item font-2-xxs cor-12">
+                      <input type="radio" name="endereco" value="casa">
+                      <label for="casa" class="font-2-xs-m-u cor-10">Casa</label>
+                      <span>Rua Trajeto do Front End, 01</span>
+                      <span>Frontlandia - Codar - CSS</span>
+                      <span>Edificio Array, Sala 96</span>
+                </div>
+
+                <div class="carrinho-endereco-item font-2-xxs cor-12">
+                    <input type="radio" name="endereco" value="trabalho">
+                    <label for="trabalho" class="font-2-xs-m-u cor-11">Trabalho</label>
                     <span>Rua Trajeto do Front End, 01</span>
                     <span>Frontlandia - Codar - CSS</span>
                     <span>Edificio Array, Sala 96</span>
+                </div>
+                
+                <button class="font-2-xs">Cadastrar novo endereço</button>
               </div>
-
-              <div class="carrinho-endereco-item font-2-xxs cor-12">
-                  <input type="radio" name="endereco" value="trabalho">
-                  <label for="trabalho" class="font-2-xs-m-u cor-11">Trabalho</label>
-                  <span>Rua Trajeto do Front End, 01</span>
-                  <span>Frontlandia - Codar - CSS</span>
-                  <span>Edificio Array, Sala 96</span>
-              </div>
-
-              <button class="font-2-xs">Cadastrar novo endereço</button>
-            </div>
-
+            
             <!-- Frete -->
-            <div class="carrinho-frete">
-              <h2 class="font-2-s-b-u">Frete</h2>
-              <input type="radio" name="entrega" value="normal">
-              <label for="normal" class="font-2-xs-m-u cor-10">Normal <span>R$ 15,00</span></label>
+              <div class="carrinho-frete">
+                <h2 class="font-2-s-b-u">Frete</h2>
+                <input type="radio" name="entrega" value="normal">
+                <label for="normal" class="font-2-xs-m-u cor-10">Normal <span>R$ 15,00</span></label>
 
-              <input type="radio" name="entrega" value="expresso">
-              <label for="expresso" class="font-2-xs-m-u cor-10">Expresso <span>R$ 30,00</span></label>
+                <input type="radio" name="entrega" value="expresso">
+                <label for="expresso" class="font-2-xs-m-u cor-10">Expresso <span>R$ 30,00</span></label>
+              </div>
+
+              <button class="botao-carrinho font-2-xs-m-u cor-0" onclick="ativaPagamento()">Concluido</button>
             </div>
-
-            <button class="botao-carrinho font-2-xs-m-u cor-0">Concluido</button>
           </div>
           
           <!-- Pagamento -->
           <div class="carrinho-pagamento">
             <h2 class="font-2-s-b-u">Pagamento</h2>
 
-            <input type="radio" name="pagamento" value="boleto" id="boleto">
-            <label for="boleto">Boleto</label>
-
-            <input type="radio" name="pagamento" value="pix" id="pix">
-            <label for="pix">Pix</label>
-
-            <input type="radio" name="pagamento" value="cartao" id="cartao">
-            <label for="cartao">Cartão</label>
-            
-            <button class="botao-carrinho font-2-xs-m-u cor-0">Finalizar compra</button>
+            <div class="carrinho-pagamento-itens">
+              <input type="radio" name="pagamento" value="boleto" id="boleto">
+              <label for="boleto">Boleto</label>
+              <input type="radio" name="pagamento" value="pix" id="pix">
+              <label for="pix">Pix</label>
+              <input type="radio" name="pagamento" value="cartao" id="cartao">
+              <label for="cartao">Cartão</label>
+              
+              <button class="botao-carrinho font-2-xs-m-u cor-0">Finalizar compra</button>
+            </div>
           </div>
         </div>
   </div>

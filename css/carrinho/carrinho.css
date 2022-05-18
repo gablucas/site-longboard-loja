@@ -40,7 +40,7 @@
   text-align: center;
 }
 
-.carrinho-final {
+.carrinho-infos {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -55,30 +55,25 @@
   background: var(--cor-0);
 }
 
-.carrinho-resumo h2,
-.carrinho-pagamento h2 {
-  margin-bottom: 20px;
-}
-
 /* RESUMO */
 .carrinho-resumo {
   height: 130px;
 }
 
-.carrinho-resumo > span {
+.carrinho-resumo-valores {
+  margin-top: 20px;
+}
+
+.carrinho-resumo-valores > span {
   display: flex;
   justify-content: space-between;
 }
 
-.carrinho-resumo > span:last-child {
+.carrinho-resumo-valores > span:last-child {
   margin-top: 20px;
 }
 
 /* ENTREGA */
-.carrinho-entrega {
-  display: grid;
-  gap: 10px;
-}
 
 .carrinho-endereco {
   display: flex;
@@ -130,6 +125,7 @@
 .botao-carrinho {
   cursor: pointer;
   padding: 8px;
+  margin-top: 12px;
   border: 1px solid var(--cor-12);
   border-radius: 7px;
   background: var(--cor-d5);
@@ -150,8 +146,8 @@
 }
 
 /* PAGAMENTO */
-.carrinho-pagamento {
-  display: grid;
+.carrinho-pagamento-itens {
+  display: none;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -174,6 +170,25 @@
   color: var(--cor-0);
   background: var(--cor-d4);
 }
+
+/* ATIVADOR */
+.carrinho-entrega-itens.ativo {
+  margin-top: 12px;
+  display: grid;
+}
+
+.carrinho-entrega-itens{
+  display: none;
+}
+
+.carrinho-pagamento-itens.ativo {
+  margin-top: 12px;
+  display: grid;
+}
+
+
+
+
 
 
 
