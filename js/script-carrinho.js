@@ -10,11 +10,13 @@ function adicionarChecked(event) {
     if(enderecoSelecionado.contains(enderecoInput[i])) {
       enderecoInput[i].checked = true;
       enderecoSelecionado.classList.add('selecionado');
-
+      
     } else {
-      endereco[i].classList.remove('selecionado')
+      endereco[i].classList.remove('selecionado');
     }
+    
   }
+  
 }
 
 function cliqueEndereco(item) {
@@ -47,22 +49,39 @@ freteLabel.forEach(cliqueFrete)
 function ativaPagamento() {
   error = document.querySelector('.error')
 
-  // Verificar se há um endereço e frete selecionado
+  // Verificar se há um endereço selecionado
   for(i = 0; i < endereco.length; i++) {
 
     // Se sim, finaliza a aba de endereço e abre a de pagamento
-    if(enderecoInput[i].checked && freteInput[i].checked) {
-      carrinhoEndereco = document.querySelector('.carrinho-entrega > div');
-      carrinhoEndereco.classList.remove('ativo');
-    
-      carrinhoPagamento = document.querySelector('.carrinho-pagamento > div');
-      carrinhoPagamento.classList.add('ativo');
+    if(enderecoInput[i].checked) {
 
-    // Se não, exibe uma mensagem de erro
+      // Verifica se há algum frete selecionado
+      for(i2 = 0; i2 < freteInput.length; i2++) {
+        
+        if(freteInput[i2].checked) {
+          carrinhoEndereco = document.querySelector('.carrinho-entrega > div');
+          carrinhoEndereco.classList.remove('ativo');
+        
+          carrinhoPagamento = document.querySelector('.carrinho-pagamento > div');
+          carrinhoPagamento.classList.add('ativo');
+          console.log(carrinhoPagamento)
+        
+        // Se não, exibe uma mensagem de erro
+        } else {
+          error.textContent = "Por favor, selecione um Frete";
+          error.style.color = "red";
+          error.style.textAlign = "center";
+          break;
+        }
+      }
+      // Para o loop no primeiro 'enderecoInput' que esteja 'checked'. (Senão, se houver um input selecionado e este não é o ultimo, o loop passara nesse input e exibira a mensagem de erro 'Por favor, selecione um Endereço)
+      break;
+
     } else {
-      error.textContent = "Por favor, selecione um endereço";
+      error.textContent = "Por favor, selecione um Endereço";
       error.style.color = "red";
       error.style.textAlign = "center";
+      break;
     }
   }
 }
