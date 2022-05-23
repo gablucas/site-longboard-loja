@@ -64,14 +64,13 @@ function ativaPagamento() {
         
           carrinhoPagamento = document.querySelector('.carrinho-pagamento > div');
           carrinhoPagamento.classList.add('ativo');
-          console.log(carrinhoPagamento)
         
         // Se não, exibe uma mensagem de erro
         } else {
           error.textContent = "Por favor, selecione um Frete";
           error.style.color = "red";
           error.style.textAlign = "center";
-          break;
+          
         }
       }
       // Para o loop no primeiro 'enderecoInput' que esteja 'checked'. (Senão, se houver um input selecionado e este não é o ultimo, o loop passara nesse input e exibira a mensagem de erro 'Por favor, selecione um Endereço)
@@ -81,7 +80,6 @@ function ativaPagamento() {
       error.textContent = "Por favor, selecione um Endereço";
       error.style.color = "red";
       error.style.textAlign = "center";
-      break;
     }
   }
 }
