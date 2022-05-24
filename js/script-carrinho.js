@@ -33,8 +33,11 @@ function selecionarFrete(event) {
   freteSelecionado = event.currentTarget;
 
   for(i = 0; i < freteLabel.length; i++) {
+    freteLabel[i].classList.replace('font-2-xs-m','font-2-xs')
+
     if(freteSelecionado === (freteLabel[i])) {
       freteInput[i].checked = true;
+      freteLabel[i].classList.replace('font-2-xs','font-2-xs-m',)
     }
   }
 }
@@ -46,9 +49,16 @@ function cliqueFrete(item) {
 freteLabel.forEach(cliqueFrete)
 
 // Ativar pagamento
-function ativaPagamento() {
-  error = document.querySelector('.error')
+carrinhoEndereco = document.querySelector('.carrinho-entrega > div');
+carrinhoPagamento = document.querySelector('.carrinho-pagamento > div');
 
+error = document.querySelector('.error')
+error.style.color = "red";
+error.style.textAlign = "center";
+
+
+function ativaPagamento() {
+  
   // Verificar se há um endereço selecionado
   for(i = 0; i < endereco.length; i++) {
 
@@ -59,17 +69,14 @@ function ativaPagamento() {
       for(i2 = 0; i2 < freteInput.length; i2++) {
         
         if(freteInput[i2].checked) {
-          carrinhoEndereco = document.querySelector('.carrinho-entrega > div');
           carrinhoEndereco.classList.remove('ativo');
-        
-          carrinhoPagamento = document.querySelector('.carrinho-pagamento > div');
           carrinhoPagamento.classList.add('ativo');
-        
+          editarEndereco.classList.add('ativo');
+
         // Se não, exibe uma mensagem de erro
         } else {
           error.textContent = "Por favor, selecione um Frete";
-          error.style.color = "red";
-          error.style.textAlign = "center";
+
           
         }
       }
@@ -83,3 +90,12 @@ function ativaPagamento() {
     }
   }
 }
+
+// Editar endereço
+const editarEndereco = document.querySelector('.carrinho-entrega .editar-dados')
+
+editarDados = editarEndereco.addEventListener('click', function() {
+  error.textContent = "";
+  editarEndereco.classList.remove('ativo');
+  carrinhoEndereco.classList.toggle('ativo');
+})
