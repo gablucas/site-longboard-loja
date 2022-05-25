@@ -1,4 +1,3 @@
-
 // Exibir os shapes na home de acordo com a modalidade selecionada
 const modalidades = document.querySelectorAll('.home-shapes-modalidades input')
 const shapes = document.querySelectorAll('.home-produtos-shapes li');

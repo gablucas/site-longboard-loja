@@ -112,15 +112,17 @@
   width: 100px;
 }
 
-.shape-compra input {
-  position: initial;
-  pointer-events: initial;
-  opacity: 1;
 
+.shape-compra select,
+.shape-compra input {
   text-align: center;
   width: 40px;
   border: 1px solid #000000;
   border-radius: 7px;
+}
+
+.shape-compra select {
+  width: 100px;
 }
 
 .shape-compra button {

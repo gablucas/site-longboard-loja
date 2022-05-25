@@ -127,15 +127,16 @@
       <div class="shape-compra">
         <form action="../../carrinho.html">
 
-          <datalist id="flex">
-            <option value="Flex 1">
-            <option value="Flex 2">
-          </datalist>
+          <select class="font-2-s" name="flex" id="">
+            <option value="">Tipo flex</option>
+            <option value="flex1">Flex 1</option>
+            <option value="flex2">Flex 2</option>
+          </select>
 
-          <input list="flex" class="quantidade font-2-s-m" name="flex" placeholder="flex">
-          <input class="font-2-s-m" type="number" name="quantidade" id="quantidade" placeholder="1">
-          <button class="font-2-xs-m-u cor-0">adicionar ao carrinho</button>
+          <input class="font-2-s" type="number" name="quantidade" value="1" id="quantidade" placeholder="1">
+          <button type="submit" class="font-2-xs-m-u cor-0">adicionar ao carrinho</button>
         </form>
+        <span class="error"></span>
       </div>
     </div>
   </main>

@@ -53,7 +53,6 @@ carrinhoEndereco = document.querySelector('.carrinho-entrega > div');
 carrinhoPagamento = document.querySelector('.carrinho-pagamento > div');
 
 error = document.querySelector('.error')
-error.style.color = "red";
 error.style.textAlign = "center";
 
 
@@ -85,8 +84,6 @@ function ativaPagamento() {
 
     } else {
       error.textContent = "Por favor, selecione um Endereço";
-      error.style.color = "red";
-      error.style.textAlign = "center";
     }
   }
 }
