@@ -6,17 +6,15 @@ function trocaImagem(evento) {
   imagemClicada = evento.currentTarget;                     // Pega o elemento clicado
   srcImagemClicada = imagemClicada.getAttribute('src')      // Pega o src do elemento clicado
   srcImagemPrincipal = imagemPrincipal.getAttribute('src')  // Pega o src do elemento principal
-  trocarImagem = srcImagemPrincipal;                        // Armazena o src do elemento principal para trocar depois
-
 
   // Faz a troca das imagens
   imagemPrincipal.setAttribute('src', srcImagemClicada);
-  imagemClicada.setAttribute('src', trocarImagem);
+  imagemClicada.setAttribute('src', srcImagemPrincipal);
 }
 
-function cliqueImagem (itensImagens) {
-  itensImagens.addEventListener('click', trocaImagem);
-}
+imagens.forEach((imagens) =>{
+  imagens.addEventListener('click', trocaImagem);
+})
 
 // Validar o formulario para o carrinho
 formProduto = document.querySelector(".shape-compra form");
