@@ -9,7 +9,7 @@
     left: 0px;
     padding: 10px 15px;
     font-weight: 400;
-    border: 2px solid var(--cor-10);
+    border: 2px solid var(--cor-8);
     border-radius: 0px 0px 5px 5px;
     background: var(--cor-d1);
     z-index: 10;
@@ -26,14 +26,14 @@
 
 .menu-dropdown li:hover {
     cursor: pointer;
-    color: var(--cor-d4);
+    color: var(--cor-8);
 }
 
 
 [data-dropdown]:hover .menu-dropdown,
 [data-dropdown].active .menu-dropdown {
     display: block;
-    animation: dropdown .4s forwards;
+    animation: dropdown .3s forwards;
 }
 
 @keyframes dropdown {

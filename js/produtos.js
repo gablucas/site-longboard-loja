@@ -13,12 +13,16 @@ function ativarMenuSecundario(link) {
 menuSecundario.forEach(ativarMenuSecundario)
 
 
-/** FILTRAR OS SHAPES PELA MODALIDADE */
-
+/** FILTRAR OS PRODUTOS POR SUAS CARACTERISTICAS */
 const botoes = document.querySelectorAll('.filtro button');
 const produtos = document.querySelectorAll('.produtos li');
 
+
 /** Nova Forma */
+botoes.forEach((botao) => {
+  botao.addEventListener('click', filtroProdutos)
+})
+
 function filtroProdutos(event) {
   const botaoSelecionado = event.currentTarget;
   const botaoID = botaoSelecionado.getAttribute('id');
@@ -38,24 +42,18 @@ function filtroProdutos(event) {
 
     if(produto.classList.contains(botaoID)) {
       produto.classList.add('ativo');
-      console.log('oi')
       
     } else if(!botaoSelecionado.classList.contains('selecionado')) {
       produto.classList.add('ativo');
-      console.log('oi2')
 
     } else {
       produto.classList.remove('ativo');
-      console.log('oi3')
-
     }
     
   })
 }
 
-botoes.forEach((botao) => {
-  botao.addEventListener('click', filtroProdutos)
-})
+
 
 
 

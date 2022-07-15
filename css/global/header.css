@@ -25,6 +25,10 @@ header {
   padding-bottom: 10px;
 }
 
+.menu a:hover {
+  color: var(--cor-8);
+}
+
 .menu:last-child::after {
   content: "10";
   color: #ffffff;
