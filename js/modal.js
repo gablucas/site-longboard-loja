@@ -4,22 +4,19 @@ const modalContainer = document.querySelector('[data-modal="container"]');
 
 
 modal.addEventListener('click', ativarModal);
-
 function ativarModal(e) {
   e.preventDefault();
   modalContainer.classList.add('ativo');
-
-  modalContainer.addEventListener('click', clickOutside)
 }
 
+modalContainer.addEventListener('click', clickOutside)
 function clickOutside(e) {
-  if(e.target === modalContainer) {
+  if(e.target === this) {
     desativarModal();
   }
 }
 
 modalFechar.addEventListener('click', desativarModal)
-
 function desativarModal() {
   modalContainer.classList.remove('ativo')
 }
