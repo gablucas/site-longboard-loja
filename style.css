@@ -3,6 +3,7 @@
 @import './css/global/footer.css';
 @import './css/global/banner.css';
 @import './css/global/dropdown.css';
+@import './css/global/modal.css';
 
 /* Utilidades */
 @import './css/utilidades/componentes.css';
