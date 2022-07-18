@@ -8,7 +8,6 @@ dropdown.forEach((menu) => {
 })
 
 function handleClick(e) {
-    e.preventDefault();
     this.classList.add('active');
     outsideClick(this, ()=> {
         this.classList.remove('active')
