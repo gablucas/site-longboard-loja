@@ -25,7 +25,7 @@ const productError = document.querySelector('[data-error="product"]')
 
 formProduto.addEventListener('submit', (e) => {
 
-  if(listaFlex.selectedIndex === 0) {
+  if(!listaFlex.selectedIndex) {
     e.preventDefault();
     productError.textContent = "Selecione um flex de shape";
 
@@ -36,5 +36,9 @@ formProduto.addEventListener('submit', (e) => {
   } else if(quantidadeProduto.value >= 10) {
     e.preventDefault();
     productError.textContent = "Selecione no máximo 4 produtos";
+  } else {
+    
   }
 })
+
+// Adicionar produto ao carrinho

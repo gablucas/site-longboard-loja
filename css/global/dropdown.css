@@ -11,7 +11,7 @@
     font-weight: 400;
     border: 2px solid var(--cor-8);
     border-radius: 0px 0px 5px 5px;
-    background: var(--cor-d1);
+    background: var(--cor-0);
     z-index: 10;
 }
 
@@ -39,11 +39,11 @@
 @keyframes dropdown {
     from {
         opacity: 0;
-        transform: translate3d(0, 20px, 0);
+        /* transform: translate3d(0, 20px, 0); */
     }
 
     to {
         opacity: 1;
-        transform: translate3d(0, 0, 0);
+        /* transform: translate3d(0, 0, 0); */
     }
 }

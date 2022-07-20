@@ -32,7 +32,6 @@ submitLogin.addEventListener('submit', loginValidate)
 function loginValidate(e) {
   loginError.innerHTML = "";
 
-  console.log(usuario)
   if(!usuario.value) {
     e.preventDefault();
     loginError.innerHTML = "Por favor digite um email valido"

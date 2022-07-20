@@ -1,2 +1,2 @@
-const account = [];
-const password = [];
+const account = ['gabriel'];
+const password = ['123'];

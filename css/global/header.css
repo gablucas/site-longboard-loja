@@ -30,7 +30,7 @@ header {
 }
 
 .menu:last-child::after {
-  content: "10";
+  content: "0";
   color: #ffffff;
   font-size: .7rem;
 
