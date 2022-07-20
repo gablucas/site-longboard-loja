@@ -20,21 +20,21 @@ imagens.forEach((imagens) =>{
 formProduto = document.querySelector(".shape-compra form");
 quantidadeProduto = document.querySelector('.shape-compra form input');
 listaFlex = document.querySelector('.shape-compra form select')
-error = document.querySelector('.error')
+const productError = document.querySelector('[data-error="product"]')
 
 
 formProduto.addEventListener('submit', (e) => {
 
   if(listaFlex.selectedIndex === 0) {
     e.preventDefault();
-    error.textContent = "Selecione um flex de shape";
+    productError.textContent = "Selecione um flex de shape";
 
   } else if(quantidadeProduto.value <= 0) {
     e.preventDefault();
-    error.textContent = "Selecione no mínimo 1 produto";
+    productError.textContent = "Selecione no mínimo 1 produto";
 
   } else if(quantidadeProduto.value >= 10) {
     e.preventDefault();
-    error.textContent = "Selecione no máximo 4 produtos";
+    productError.textContent = "Selecione no máximo 4 produtos";
   }
 })

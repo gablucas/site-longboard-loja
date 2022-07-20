@@ -52,8 +52,8 @@ freteLabel.forEach(cliqueFrete)
 carrinhoEndereco = document.querySelector('.carrinho-entrega > div');
 carrinhoPagamento = document.querySelector('.carrinho-pagamento > div');
 
-error = document.querySelector('.error')
-error.style.textAlign = "center";
+const cartError = document.querySelector('[data-error="cart"]')
+cartError.style.textAlign = "center";
 
 
 function ativaPagamento() {
@@ -74,7 +74,7 @@ function ativaPagamento() {
 
         // Se não, exibe uma mensagem de erro
         } else {
-          error.textContent = "Por favor, selecione um Frete";
+          cartError.textContent = "Por favor, selecione um Frete";
 
           
         }
@@ -83,7 +83,7 @@ function ativaPagamento() {
       break;
 
     } else {
-      error.textContent = "Por favor, selecione um Endereço";
+      cartError.textContent = "Por favor, selecione um Endereço";
     }
   }
 }

@@ -18,10 +18,11 @@
 
 .modal {
   width: 400px;
-  height: 340px;
+  height: 360px;
   padding: 20px;
   box-sizing: border-box;
   border: 6px solid var(--cor-d5);
+  border-radius: 5px;
   box-shadow: 0 0 0 10px #FFFFFF;
   background: #FFFFFF;
 
@@ -74,15 +75,19 @@
   border-radius: 50%;
 }
 
-.modal button.registro {
-  background:linear-gradient(#B667CB, #7D3F92);
-}
-
 .modal a {
   display: block;
   margin-top: 12px;
+  cursor: pointer;
 }
 
-.modal a:hover {
+.modal a.registro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:linear-gradient(#B667CB, #7D3F92);
+}
+
+.modal .lost-account:hover {
   color: var(--cor-d5);
 }
