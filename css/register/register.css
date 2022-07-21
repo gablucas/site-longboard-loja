@@ -1,0 +1,70 @@
+.progress-bar {
+  width: 0vw;
+  height: 6px;
+  background: var(--cor-d5);
+}
+
+.register-step {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.register-account {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.register-account label,
+.register-account button {
+  display: block;
+}
+
+.register-account button {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background:linear-gradient(#B667CB, #7D3F92);
+}
+
+.register-account label {
+  margin-top: 12px;
+}
+
+.register-account input {
+  margin-top: 4px;
+}
+
+.register-account input {
+  width: 260px;
+  padding: 6px;
+  border: 1px solid var(--cor-6);
+  border-radius: 5px;
+}
+
+.register-form {
+  display: flex;
+  justify-content: center;
+}
+
+[data-submit="register-step1"] {
+  display: none;
+}
+
+[data-submit="register-step1"].active {
+  display: flex;
+}
+
+[data-submit="register-step2"] {
+  display: none;
+}
+
+[data-submit="register-step2"].active {
+  display: flex;
+}
+
+
+
+

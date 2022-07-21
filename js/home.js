@@ -45,8 +45,7 @@ modalidades.forEach((modalidade) => {
 /** INICIAR COM UM INPUT SELECIONADO */
 
 // FORMA NOVA
-const inputSelecionado =  document.querySelector('.home-shapes-modalidades input[id=dancingfreestyleHome]').checked = true;
-
+  const inputSelecionado =  document.querySelector('.home-shapes-modalidades input[id=dancingfreestyleHome]').checked = true;
 // FORMA ANTIGA
 // const inputSelecionado =  document.querySelector('.home-shapes-modalidades input[id=dancingfreestyle]');
 

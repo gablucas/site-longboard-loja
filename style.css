@@ -16,6 +16,10 @@
 @import './css/home/tecsus.css';
 @import './css/home/opcoes.css';
 
+/* Register */
+@import './css/register/register.css';
+
+
 /* Produtos */
 @import './css/produtos/produtos.css';
 @import './css/produtos/shape.css';

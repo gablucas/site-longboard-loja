@@ -39,225 +39,59 @@
   </header>
 
   <!-- Seção 2: Main -->
-  <main class="main-bg">
+  <main class="register-account container">
+    <div class="progress-bar part3"></div>
+    <h1 class="font-1-xl">Crie sua conta</h1>
+    <span class="register-step font-2-xs-m-u cor-11">Etapa <span data-register="step">1</span> de 3</span>
 
-    <div class="main container">
+    <!-- Primeira etapa do registro -->
+    <div data-submit="register-step1" class="register-form font-2-s-m cor-11 active">
+      <form action="">
 
-      <div class="main-novidade">
-        <h3 class="font-1-l cor-d5">Matahari</h3>
-        <p class="font-2-s cor-d7">Novo shape projetado para <br> Dancing e Freestyle</p>
-        <a class="font-2-s" href="./produtos/shapes/matahari.html">Ver mais ></a>
-      </div>
+        <!-- Email -->
+        <label for="">Email</label>
+        <input data-register="email" class="font-2-xs" type="text">
+        <span data-error="register-email" class="error"></span>
 
-      <div class="main-imagem">
-        <img src="img/home/imagem-home.png" width="453" height="451" alt="Novidade shape matahari">
-      </div>
+        <!-- Senha -->
+        <label for="">Senha</label>
+        <input data-register="password" class="font-2-xs" type="password" name="" id="">
+        <span data-error="register-password" class="error"></span>
 
-      <div class="main-titulo">
-        <h1 class="font-1-xxl cor-d7">Shapes feitos com tecnologia avançada e design moderno</h1>
-        <p class="font-2-xl cor-d7">Shapes de alta qualidade feito para os amantes do longboard, reme com o que há de melhor.</p>
-      </div>
+        <!-- Confirmar senha -->
+        <label for="">Confirmar senha</label>
+        <input data-register="confirm-password" class="font-2-xs" type="password" name="" id="confirm-password">
+        <span data-error="confirm-password" class="error"></span>
 
+        <button data-register="button-step1" type="button" class="font-2-s-m cor-0">Continuar</button>
+      </form>
     </div>
 
+        <!-- Segunda etapa do registro -->
+        <div data-submit="register-step2" class="register-form font-2-s-m cor-11">
+          <form action="">
+    
+            <!-- Nome -->
+            <label for="">Nome</label>
+            <input data-register="nome" class="font-2-xs" type="text">
+            <span data-error="register-nome" class="error"></span>
+    
+            <!-- Sobrenome -->
+            <label for="">Sobrenome</label>
+            <input data-register="sobrenome" class="font-2-xs" type="text" name="" id="">
+            <span data-error="register-sobrenome" class="error"></span>
+    
+            <!-- CPF -->
+            <label for="">CPF</label>
+            <input data-register="register-cpf" class="font-2-xs" type="password" name="" id="">
+            <span data-error="register-cpf" class="error"></span>
+    
+            <button data-register="button-step2" type="button" class="font-2-s-m cor-0">Continuar</button>
+          </form>
+        </div>
   </main>
 
-  <!-- Seção 3: Shapes -->
-  <article class="home-shapes container">
-    
-    <h2 class="font-1-xxl cor-d7">Conheça nossos shapes</h2>
-
-    <div class="home-shapes-modalidades font-2-s-b-u cor-10">
-
-      <input type="radio" name="modalidade" id="dancingfreestyleHome">
-      <label for="dancingfreestyleHome">Dancing/Freestyle</label>
-
-      <input type="radio" name="modalidade" id="carvingpumpingHome">
-      <label for="carvingpumpingHome">Carving/Pumping</label>
-
-      <input type="radio" name="modalidade" id="freeridedownhillHome">
-      <label for="freeridedownhillHome">Freeride/Downhill</label>
-
-      <input type="radio" name="modalidade" id="minicruiserHome">
-      <label for="minicruiserHome">Mini/Cruiser</label>
-
-      <input type="radio" name="modalidade" id="surfskateHome">
-      <label for="surfskateHome">Surfskate</label>
-
-      <input type="radio" name="modalidade" id="distanceHome">
-      <label for="distanceHome">Distance</label>
-    </div>
-
-    <div>
-      <ul class="home-produtos-shapes">
-
-        <li class="dancingfreestyleHome font-1-s cor-10 ativo"><a href="./produtos/shapes/matahari.html"><img src="img/produtos/shapes/matahari/matahari_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Matahari</h3></a>
-        </li>
-
-        <li class="dancingfreestyleHome ativo"><a href="./"><img src="img/produtos/shapes/bhangrav2/bhangrav2_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Bhangra V2</h3></a>
-        </li>
-
-        <li class="dancingfreestyleHome ativo"><a href="./"><img src="img/produtos/shapes/tarab/tarab-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Tarab</h3></a>
-        </li>
-
-        <li class="dancingfreestyleHome carvingpumpingHome ativo"><a href="./"><img src="img/produtos/shapes/tan-tien/tantien-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Tan Tien</h3></a>
-        </li>
-
-        <li class="dancingfreestyleHome carvingpumpingHome ativo"><a href="./"><img src="img/produtos/shapes/dervish-sama/dervishsama-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Dervish Sama</h3></a>
-        </li>
-
-        <li class="carvingpumpingHome"><a href="./"><img src="img/produtos/shapes/icarus/icarus-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Icarus</h3></a>
-        </li>
-
-        <li class="carvingpumpingHome"><a href="./"><img src="img/produtos/shapes/fattail/fattail-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Fattail</h3></a>
-        </li>
-
-        <li class="carvingpumpingHome"><a href="./"><img src="img/produtos/shapes/vanguard/vanguard-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Vanguard</h3></a>
-        </li>
-
-        <li class="freeridedownhillHome distanceHome"><a href="./"><img src="img/produtos/shapes/trip/trip-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Trip</h3></a>
-        </li>
-
-        <li class="freeridedownhillHome"><a href="./"><img src="img/produtos/shapes/basalt-tesseract/basalt-tesseract-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Basalt Tesseract</h3></a>
-        </li>
-
-        <li class="freeridedownhillHome"><a href="./"><img src="img/produtos/shapes/cantellated-tesseract/cantellated-tesseract-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Cantellated Tesseract</h3></a>
-        </li>
-
-        <li class="freeridedownhillHome"><a href="./"><img src="img/produtos/shapes/truncated-tesseract/truncated-tesseract-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Truncated Tesseract</h3></a>
-        </li>
-
-        <li class="minicruiserHome"><a href="./"><img src="img/produtos/shapes/omakase/omakase-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Omakase</h3></a>
-        </li>
-
-        <li class="minicruiserHome"><a href="./"><img src="img/produtos/shapes/coyote/coyote-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Coyote</h3></a>
-        </li>
-
-        <li class="minicruiserHome"><a href="./"><img src="img/produtos/shapes/poke/poke-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Poke</h3></a>
-        </li>
-
-        <li class="surfskateHome"><a href="./"><img src="img/produtos/shapes/bolsa/bolsa-1_1024px.jpg" alt="" width="360" height="360"><h3 class="font-1-s cor-10">Bolsa</h3></a>
-        </li>
-
-      </ul>
-    </div>
-
-  </article>
-
-  <!-- Seção 4: Tecnologia e Sustentabilidade -->
-  <article class="tecsus-bg">
-    <div class="tecsus container">
-      <h2 class="font-1-xxl cor-0">Tecnologia e Sustentabilidade</h2>
-      <p class="font-2-s cor-4">Nossos shapes são detalhadamente projetados e fabricados com equipamentos de última geração, visando tambem, em todo o processo, reduzir drasticamente a poluição e o desmatamento</p>
-
-      <div class="tecnologia">
-        <div class="tecnologia-imagem">
-          <img src="img/fotos/imgtecnologia.jpg" alt="" width="460" height="460">
-        </div>
-
-        <div>
-          <ul class="tecnologia-vantagens">
-            <li><img src="img/icones/icondurabilidade.svg" alt="">
-            <h3 class="font-2-l-m cor-0">Alta durabilidade</h3>
-            <p class="font-2-xs cor-5">Composto por bamboo e fibra de vidro, esses materiais passam por processos físicos e químicos que garantem ao shape uma alta resistencia a impactos</p>
-            </li>
-
-            <li><img src="img/icones/iconleveza.svg " alt="">
-              <h3 class="font-2-l-m cor-0">Leveza</h3>
-              <p class="font-2-xs cor-5">Unindo tecnologia e conhecimento, permitiu-nos projetar shapes extremamente leves sem abrir mão da durabilidade.</p>
-            </li>
-
-            <li><img src="img/icones/icondesign.svg" alt="">
-              <h3 class="font-2-l-m cor-0">Design</h3>
-              <p class="font-2-xs cor-5">Desde o recorte do shape até o seu design gráfico, provem de uma equipe especializada que transformam nosso produto em uma obra de arte</p>
-            </li>
-
-            <li><img src="img/icones/iconflexibilidade.svg" alt="">
-              <h3 class="font-2-l-m cor-0">Flexibilidade</h3>
-              <p class="font-2-xs cor-5">Cada shape foi projetado com variações de flexibilidade, atendendo a todos os gostos.<a class="font-2-xs cor-d4" href="./">Veja mais sobre ></a></p>
-              
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="sustentabilidade">
-            
-        <div>
-          <ul class="sustentabilidade-vantagens">
-            <li>
-              <img src="img/icones/iconbamboo.svg" alt="">
-              <h3 class="font-2-l-m cor-0">Bamboo é a solução</h3>
-              <p class="font-2-xs cor-5">O bamboo é o material principal que compõe nossos shapes, além de suas propriedades incríveis que nos permite criar shapes resistentes e leves, são uma opção eco-friendly, devido ao seu rapido crescimento e forma de cultivo que trazem impactos quase nulos ao meio-ambiente.</p>
-            </li>
-
-            <li>
-              <img src="img/icones/iconproducaolimpa.svg" alt="">
-                <h3 class="font-2-l-m cor-0">Produção limpa</h3>
-                <p class="font-2-xs cor-5">Após anos de estudos, foi possível chegar a um método de produção que visa utilizar de forma inteligente os recursos que são usados na produção do shape, sendo assim, evitando desperdicios.</p>
-            </li>
-
-            <li>
-              <img src="img/icones/iconbamboo.svg" alt="">
-              <h3 class="font-2-l-m cor-0">Recursos verdes</h3>
-              <p class="font-2-xs cor-5">Contamos com sistemas de captação de água da chuva e de energia solar que nos auxilia na produção dos shapes, diminuindo assim, o gasto por meios menos ecólogicos que por consequencia, salva nossa bela natureza.</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="sustentabilidade-imagem">
-          <img src="img/fotos/imgsustentabilidade.jpg" alt="" width="460" height="460">
-        </div>
-      </div>
-    </div>
-  </article>
-
-  <!-- Seção 5: Outros produtos -->
-  <article class="opcoes container">
-
-    <h1 class="font-1-xxl">Outros produtos</h1>
-
-    <ul class="opcoes-lista">
-    
-      <li>
-        <a href="./">
-          <h3 class="font-1-xxl cor-0">Trucks</h3>
-          <img src="img/home/opcoes/produtos_trucks.jpg" width="360" height="260" alt="">
-        </a>
-      </li>
-
-      <li>
-        <a href="./">
-          <h3 class="font-1-xxl cor-0">Rodas</h3>
-          <img src="img/home/opcoes/produtos_rodas.jpg" width="360" height="260" alt="">
-        </a>
-      </li>
-      
-      <li>
-        <a href="./produtos/shapes/produtos-shapes.html">
-          <h3 class="font-1-xxl cor-0">Shapes</h3>
-          <img src="img/home/opcoes/produtos_shapes.jpg" width="360" height="560" alt="">
-        </a>
-      </li>
-
-      <li>
-        <a href="./">
-          <h3 class="font-1-xxl cor-0">Acessórios</h3>
-          <img src="img/home/opcoes/produtos_acessorios.jpg" width="360" height="260" alt="">
-        </a>
-      </li>
-
-      <li>
-        <a href="./">
-          <h3 class="font-1-xxl cor-0">Rolamentos</h3>
-          <img src="img/home/opcoes/produtos_rolamentos.jpg" width="360" height="260" alt="">
-        </a>
-      </li>
-
-    </ul>
-  </article>
-
-  <!-- Seção 6: Footer -->
+  <!-- Seção 3: Footer -->
   <footer class="footer-bg">
     <div class="footer container">
 
@@ -307,20 +141,23 @@
     <div class="modal">
       <span class="font-1-s cor-10">Olá visitante, seja bem vindo!</span>
       <button data-modal="fechar" class="fechar font-2-m cor-0">X</button>
-      <form class="font-2-s" action="">
+
+      <form class="font-2-s" action="" data-submit="login">
         <label for="usuario">Email</label>
         <input class="font-2-s" type="text" name="usuario" id="usuario">
         <label for="password">Senha</label>
         <input type="password" name="password" id="password">
-        <button class="font-2-s-m cor-10" type="submit">ENTRAR</button>
-        <button class="registro font-2-s-m cor-0">INSCREVA-SE</button>
+        <button type="submit" data-button="login" class="font-2-s-m cor-10">ENTRAR</button>
+        <a class="registro font-2-s-m cor-0" href="register.html">INSCREVA-SE</a>
       </form>
-      <span data-error="account-login" class="error"></span>
-      <a class="cor-d7" href="">Esqueceu sua senha?</a>
+      
+      <span data-error="login" class="error"></span>
+      <a class="lost-account font-2-xs cor-d7" href="">Esqueceu sua senha?</a>
     </div>
   </section>
 
-  <script src="js/home.js"></script>
+  <script src="js/register.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/users.js"></script>
 </body>
 </html>

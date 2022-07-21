@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 @media (max-width: 768px) {
