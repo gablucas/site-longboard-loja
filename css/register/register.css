@@ -34,11 +34,8 @@
 }
 
 .register-account input {
-  margin-top: 4px;
-}
-
-.register-account input {
   width: 260px;
+  margin-top: 4px;
   padding: 6px;
   border: 1px solid var(--cor-6);
   border-radius: 5px;
@@ -48,6 +45,49 @@
   display: flex;
   justify-content: center;
 }
+
+.register-form-address {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.register-cep input {
+  width: 80px;
+}
+
+.register-rua {
+  display: grid;
+  grid-template-columns:auto auto;
+  gap: 10px;
+}
+
+.register-rua div:last-child input{
+  width: 60px;
+  text-align: center;
+}
+
+.register-cidade {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+}
+
+.register-complemento input {
+  width: 340px;
+}
+
+
+.register-cidade div:first-child input,
+.register-cidade div:nth-child(2) input {
+  width: 122px;
+}
+
+.register-cidade div:last-child input {
+  width: 40px;
+}
+
+
 
 [data-submit="register-step1"] {
   display: none;
@@ -62,6 +102,14 @@
 }
 
 [data-submit="register-step2"].active {
+  display: flex;
+}
+
+[data-submit="register-step3"] {
+  display: none;
+}
+
+[data-submit="register-step3"].active {
   display: flex;
 }
 
