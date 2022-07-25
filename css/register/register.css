@@ -39,6 +39,7 @@
   padding: 6px;
   border: 1px solid var(--cor-6);
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .register-form {
@@ -53,16 +54,16 @@
 }
 
 .register-cep input {
-  width: 80px;
+  width: 100px;
 }
 
 .register-rua {
   display: grid;
   grid-template-columns:auto auto;
-  gap: 10px;
+  column-gap: 20px;
 }
 
-.register-rua div:last-child input{
+.register-rua div:nth-child(2) input{
   width: 60px;
   text-align: center;
 }
@@ -70,21 +71,27 @@
 .register-cidade {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: 10px;
+  column-gap: 20px;
 }
 
 .register-complemento input {
   width: 340px;
 }
 
-
 .register-cidade div:first-child input,
 .register-cidade div:nth-child(2) input {
-  width: 122px;
+  width: 120px;
 }
 
-.register-cidade div:last-child input {
-  width: 40px;
+.register-cidade div:nth-child(3) input {
+  width: 60px;
+  text-align: center;
+}
+
+.register-sucessfull {
+  display: grid;
+  justify-content: center;
+  gap: 4px;
 }
 
 
@@ -111,6 +118,14 @@
 
 [data-submit="register-step3"].active {
   display: flex;
+}
+
+[data-submit="register-sucessfull"] {
+  display: none;
+}
+
+[data-submit="register-sucessfull"].active {
+  display: grid;
 }
 
 

@@ -16,7 +16,7 @@
 
   <!-- Seção 1: Header -->
   <header class="container">
-    <img src="img/ohaipreto.svg" alt="Logo OHAI Boards">
+    <a href="index.html"><img src="img/ohaipreto.svg" alt="Logo OHAI Boards"></a>
 
     <nav aria-label="Primario">
       <ul class="menu font-2-s-m cor-10">
@@ -42,7 +42,7 @@
   <main class="register-account container">
     <div class="progress-bar part3"></div>
     <h1 class="font-1-xl">Crie sua conta</h1>
-    <span class="register-step font-2-xs-m-u cor-11">Etapa <span data-register="step">1</span> de 3</span>
+    <span class="register-step font-2-xs-m-u cor-11" data-register="step">Etapa 1 de 3</span>
 
     <!-- Primeira etapa do registro -->
     <div data-submit="register-step1" class="register-form font-2-s-m cor-11 active">
@@ -55,7 +55,7 @@
 
         <!-- Senha -->
         <label for="">Senha</label>
-        <input data-register="password" class="font-2-xs" type="password" name="" id="">
+        <input data-register="password" class="font-2-xs" type="password" name="">
         <span data-error="register-password" class="error"></span>
 
         <!-- Confirmar senha -->
@@ -78,49 +78,54 @@
 
         <!-- Sobrenome -->
         <label for="">Sobrenome</label>
-        <input data-register="lastname" class="font-2-xs" type="text" name="" id="">
+        <input data-register="lastname" class="font-2-xs" type="text" name="">
         <span data-error="register-lastname" class="error"></span>
+
+        <!-- Nascimento -->
+        <label for="">Nascimento</label>
+        <input data-register="nascimento" class="font-2-xs" type="number" name="">
+        <span data-error="register-nascimento" class="error"></span>
 
         <!-- CPF -->
         <label for="">CPF</label>
-        <input data-register="cpf" class="font-2-xs" type="number" name="" id="">
+        <input data-register="cpf" class="font-2-xs" type="number" name="">
         <span data-error="register-cpf" class="error"></span>
 
         <button data-register="button-step2" type="button" class="font-2-s-m cor-0">Continuar</button>
       </form>
     </div>
 
-    <!-- Terceira etapa do registro -->
+    <!-- Terceira etapa do registro -->git
     <div data-submit="register-step3" class="register-form font-2-s-m cor-11">
       <form action="">
 
         <!-- CEP -->
         <div class="register-cep">
           <label for="">CEP</label>
-          <input data-register="cep" class="font-2-xs" type="text">
-          <span data-error="register-cep" class="error"></span>
+          <input data-register="cep" class="font-2-xs" type="number">
         </div>
+        <span data-error="register-cep" class="error"></span>
 
         <!-- Rua e Numero -->
         <div class="register-rua">
-
           <div>
             <label for="">Rua</label>
-            <input data-register="rua" class="font-2-xs" type="text" name="" id="">
-            <span data-error="register-rua" class="error"></span>
+            <input data-register="rua" class="font-2-xs" type="text" name="">
           </div>
 
           <div>
             <label for="">Nº</label>
-            <input data-register="numero" class="font-2-xs" type="number" name="" id="">
-            <span data-error="register-numero" class="error"></span>
+            <input data-register="numero" class="font-2-xs" type="number" name="">
           </div>
+
+        <span data-error="register-rua" class="error"></span>
         </div>
+
 
         <!-- Complemento -->
         <div class="register-complemento">
           <label for="">Complemento</label>
-          <input data-register="complemento" class="font-2-xs" type="text" name="" id="">
+          <input data-register="complemento" class="font-2-xs" type="text" name="">
           <span data-error="register-complemento" class="error"></span>
         </div>
 
@@ -128,25 +133,27 @@
         <div class="register-cidade">
           <div>
             <label for="">Cidade</label>
-            <input data-register="cidade" class="font-2-xs" type="text" name="" id="">
-            <span data-error="register-cidade" class="error"></span>
+            <input data-register="cidade" class="font-2-xs" type="text" name="">
           </div>
       
           <div>
             <label for="">Bairro</label>
-            <input data-register="bairro" class="font-2-xs" type="text" name="" id="">
-            <span data-error="register-bairro" class="error"></span>
+            <input data-register="bairro" class="font-2-xs" type="text" name="">
           </div>
 
           <div>
             <label for="">Estado</label>
-            <input data-register="estado" class="font-2-xs" type="text" name="" id="">
-            <span data-error="register-estado" class="error"></span>
+            <input data-register="estado" class="font-2-xs" type="text" name="">
           </div>
+          <span data-error="register-cidade" class="error"></span>
         </div>
 
-        <button data-register="button-step3" type="button" class="font-2-s-m cor-0">Continuar</button>
+        <button data-register="button-step3" type="button" class="font-2-s-m cor-0">Finalizar cadastro</button>
       </form>
+    </div>
+
+    <!-- Registro com sucesso -->
+    <div data-submit="register-sucessfull" class="register-sucessfull">
     </div>
   </main>
 

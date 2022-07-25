@@ -38,6 +38,12 @@ function loginValidate(e) {
   } else if(!password.value) {
     e.preventDefault();
     loginError.innerHTML = "Por favor, digite sua senha"
+  } else if(!account.some(acc => acc.email === usuario.value)) {
+    e.preventDefault();
+    loginError.innerHTML = "Usuario não existe";
+  } else if(!account.some(acc => acc.password === password.value)) {
+    e.preventDefault();
+    loginError.innerHTML = "Senha não confere";
   }
 }
 
