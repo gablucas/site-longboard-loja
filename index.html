@@ -31,7 +31,7 @@
         </ul>
         </li>
 
-        <li data-modal><a href="./"><img src="img/icones/iconusuario.svg" alt=""> Entrar</a></li>
+        <li data-modal><a href="./"><img src="img/icones/iconusuario.svg" alt=""><span data-user>Entrar</span></a></li>
 
         <li><a href="./"><img src="img/icones/iconsacola.svg" alt="Sacola"></a></li>
       </ul>
@@ -234,7 +234,7 @@
       </li>
       
       <li>
-        <a href="./produtos/shapes/produtos-shapes.html">
+        <a href="produtos/produtos-shapes.html">
           <h3 class="font-1-xxl cor-0">Shapes</h3>
           <img src="img/home/opcoes/produtos_shapes.jpg" width="360" height="560" alt="">
         </a>
@@ -308,12 +308,12 @@
       <span class="font-1-s cor-10">Olá visitante, seja bem vindo!</span>
       <button data-modal="fechar" class="fechar font-2-m cor-0">X</button>
 
-      <form class="font-2-s" action="" data-submit="login">
+      <form class="font-2-s" data-submit="login">
         <label for="usuario">Email</label>
         <input class="font-2-s" type="text" name="usuario" id="usuario">
         <label for="password">Senha</label>
         <input type="password" name="password" id="password">
-        <button type="submit" data-button="login" class="font-2-s-m cor-10">ENTRAR</button>
+        <button type="button" data-button="login" class="font-2-s-m cor-10">ENTRAR</button>
         <a class="registro font-2-s-m cor-0" href="register.html">INSCREVA-SE</a>
       </form>
       
@@ -324,5 +324,6 @@
 
   <script src="js/home.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/users.js"></script>
 </body>
 </html>
