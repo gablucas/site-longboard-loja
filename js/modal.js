@@ -27,7 +27,7 @@ const loginBtn = document.querySelector('[data-button="login"]');
 const submitLogin = document.querySelector('[data-submit="login"]')
 const loginError = document.querySelector('[data-error="login"]')
 
-submitLogin.addEventListener('click', loginValidate)
+loginBtn.addEventListener('click', loginValidate)
 
 function loginValidate(e) {
   loginError.innerHTML = "";
