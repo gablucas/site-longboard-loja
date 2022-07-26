@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Ohai Boards</title>
+</head>
+
+<body id="contato">
+
+  <!-- Seção 1: Header -->
+  <header class="container">
+    <img src="img/ohaipreto.svg" alt="Logo OHAI Boards">
+
+    <nav aria-label="Primario">
+      <ul class="menu font-2-s-m cor-10">
+
+        <li data-dropdown><a href="produtos/produtos.html">Produtos <img src="img/icones/iconexibicao.svg" alt=""></a>
+        <ul class="menu-dropdown" >
+          <li><a href="produtos/produtos-shapes.html">Shapes</a></li>
+          <li><a href="produtos/produtos-trucks.html">Trucks</a></li>
+          <li><a href="produtos/produtos-rodas.html">Rodas</a></li>
+          <li><a href="produtos/produtos-rolamentos.html">Rolamentos</a></li>
+          <li><a href="produtos/produtos-acessorios.html">Acessórios</a></li>
+        </ul>
+        </li>
+
+        <li data-modal><a href="./"><img src="img/icones/iconusuario.svg" alt=""><span data-user>Entrar</span></a></li>
+
+        <li><a href="./carrinho.html"><img src="img/icones/iconsacola.svg" alt="Sacola"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção 2: Carrinho -->
+    <main class="contato container">
+      <h1 class="font-1-xxl cor-d7">Contato</h1>
+
+      <div>
+        <ul class="contato-lista font-2-s">
+          <li><a href="tel:554733333333">(47)3333-3333</a></li>
+          <li><a href="tel:47999999999">(47) 99999-9999</a></li>
+          <li><a href="mailto:contato@ohaiboards.com.br">contato@ohaiboards.com.br</a></li>
+          <li><a href="https://goo.gl/maps/vfbNj11K3wgjABuB6">Rua No Comply, 180 - Centro,<br>
+            Blumenau, Santa Catarina - <br>
+            89360-180</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28459.04811347161!2d-49.077790401172386!3d-26.923133022475188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1658862967154!5m2!1spt-BR!2sbr" width="700" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="contato-shape">
+        <img src="img/contato/shape-contato.png" alt="">
+      </div>
+     
+  </main>
+
+  <!-- Seção 6: Footer -->
+  <footer class="footer-bg">
+    <div class="footer container">
+
+      <div class="footer-dados">
+        <a href="./"><img src="img/ohaibranco.svg" alt=""></a>
+        <p class="cor-4">"Não apenas fabricamos shapes, fabricamos felicidade"</p>
+
+        <div class="footer-redes">
+          <a href="./"><img src="img/icones/iconyoutube.svg" alt=""></a>
+          <a href="./"><img src="img/icones/iconfacebook.svg" alt=""></a>
+          <a href="./"><img src="img/icones/iconinstagram.svg" alt=""></a>
+          <a href="./"><img src="img/icones/icontwitter.svg" alt=""></a>
+        </div>
+      </div>
+
+      <div class="footer-informacoes">
+        <h3 class="font-1-m-u cor-0">Informações</h3>
+        <nav>
+          <ul class="font-2-s cor-4">
+              <li><a href="./">Contato</a></li>
+              <li><a href="./">Troca e devolução</a></li>
+              <li><a href="./">Política de privacidade</a></li>
+              <li><a href="./">Termos e condições</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-menu">
+        <h3 class="font-1-m-u cor-0">Menu</h3>
+        <nav>
+          <ul class="font-2-s cor-4">
+              <li><a href="./">Sobre nós</a></li>
+              <li><a href="./">Tutoriais</a></li>
+              <li><a href="./produtos/produtos.html">Produtos</a></li>
+              <li><a href="./">Blog</a></li>
+              <li><a href="./">Minha conta</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="footer-copyright font-2-s cor-4">Todos os direitos reservados. 2022</p>
+    </div>
+  </footer>
+
+  <script src="js/dropdown.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/users.js"></script>
+</body>
+</html>

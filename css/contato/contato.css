@@ -1,0 +1,27 @@
+.contato {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px 40px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  position: relative;
+}
+
+#contato h1 {
+  grid-column: 1/-1;;
+}
+
+.contato-lista li + li {
+  padding-top: 8px;
+}
+
+.contato-lista li:hover {
+  color: var(--cor-8);
+}
+
+.contato-shape {
+  position: absolute;
+  bottom: 0px;
+  right: 100px;
+}
