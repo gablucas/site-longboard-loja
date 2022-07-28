@@ -29,7 +29,11 @@ header {
   color: var(--cor-8);
 }
 
-.menu:last-child::after {
+.img-carrinho {
+  position: relative;
+}
+
+.img-carrinho::after {
   content: "0";
   color: #ffffff;
   font-size: .7rem;
@@ -42,16 +46,53 @@ header {
   height: 18px;
   background: #7D3F92;
   position: absolute;
-  right: -9px;
+  left: 16px;
   bottom: 10px;
   border-radius: 50%;
 }
 
+[data-menu="button"] {
+  display: none;
+}
+
+[data-menu="list"] {
+  display: none;
+}
+
 @media (max-width: 425px) {
 
-  .menu {
-    display: none;
+  [data-menu="button"] {
+    display: initial;
   }
+
+  .mobile-button {
+    padding: 8px;
+    background: var(--cor-d5);
+  }
+
+  .menu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    align-items: start;
+    flex-direction: column;
+    gap: 0px;
+    z-index: 2;
+  }
+
+  [data-menu="list"].active {
+    display: flex;
+  }
+
+  .mobile-list {
+    background: var(--cor-0);
+  }
+
+  .mobile-list li {
+    width: 100%;
+  }
+
 }
 
 /* Menu secundario */
@@ -78,5 +119,6 @@ header {
 .menu-secundario a.ativo {
   color: var(--cor-d5);
 }
+
 
 

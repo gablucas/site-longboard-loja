@@ -19,10 +19,12 @@
     <img src="img/ohaipreto.svg" alt="Logo OHAI Boards">
 
     <nav aria-label="Primario">
-      <ul class="menu font-2-s-m cor-10">
+      <button data-menu="button" class="mobile-button font-2-s-m cor-0" aria-controls="dropdown-menu">Menu</button>
+      <ul data-menu="list" class="menu mobile-list font-2-s-m cor-10">
 
         <li data-dropdown><a href="produtos/produtos.html">Produtos <img src="img/icones/iconexibicao.svg" alt=""></a>
-        <ul class="menu-dropdown" >
+          
+        <ul class="menu-dropdown">
           <li><a href="produtos/produtos-shapes.html">Shapes</a></li>
           <li><a href="produtos/produtos-trucks.html">Trucks</a></li>
           <li><a href="produtos/produtos-rodas.html">Rodas</a></li>
@@ -33,7 +35,7 @@
 
         <li data-modal><a href="./"><img src="img/icones/iconusuario.svg" alt=""><span data-user>Entrar</span></a></li>
 
-        <li><a href="./carrinho.html"><img src="img/icones/iconsacola.svg" alt="Sacola"></a></li>
+        <li><a class="img-carrinho" href="./carrinho.html"><img src="img/icones/iconsacola.svg" alt="Sacola"></a></li>
       </ul>
     </nav>
   </header>
@@ -325,5 +327,6 @@
   <script src="js/home.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/users.js"></script>
+  <script src="js/menu-mobile.js"></script>
 </body>
 </html>

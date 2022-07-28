@@ -47,3 +47,14 @@
         /* transform: translate3d(0, 0, 0); */
     }
 }
+
+@media (max-width: 425px) {
+
+    .menu-dropdown {
+      position: static;
+      background: var(--cor-d1);
+      /* width: 100%; */
+      border-radius: 0px;
+      border: none;
+    }
+  }
