@@ -55,14 +55,16 @@ header {
   display: none;
 }
 
-[data-menu="list"] {
-  display: none;
-}
+
 
 @media (max-width: 425px) {
 
   [data-menu="button"] {
     display: initial;
+  }
+
+  [data-menu="list"] {
+    display: none;
   }
 
   .mobile-button {
