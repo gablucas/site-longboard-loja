@@ -45,59 +45,60 @@
     <span class="register-step font-2-xs-m-u cor-11" data-register="step">Etapa 1 de 3</span>
 
     <!-- Primeira etapa do registro -->
-    <div data-submit="register-step1" class="register-form font-2-s-m cor-11 active">
-      <form action="">
+    <div data-register="step1" class="register-form font-2-s-m cor-11 active">
+      <form>
 
         <!-- Email -->
-        <label for="">Email</label>
-        <input data-register="email" class="font-2-xs" type="text">
-        <span data-error="register-email" class="error"></span>
+        <label for="email">Email</label>
+        <input class="font-2-xs form-error" type="text" name="email">
+        <span class="error"></span>
 
         <!-- Senha -->
         <label for="">Senha</label>
-        <input data-register="password" class="font-2-xs" type="password" name="">
-        <span data-error="register-password" class="error"></span>
+        <input class="font-2-xs" type="password" name="senha">
+        <span class="error"></span>
 
         <!-- Confirmar senha -->
         <label for="">Confirmar senha</label>
-        <input data-register="confirm-password" class="font-2-xs" type="password" name="" id="confirm-password">
-        <span data-error="confirm-password" class="error"></span>
+        <input class="font-2-xs" type="password" name="confirmar-senha">
+        <span class="error"></span>
 
-        <button data-register="button-step1" type="button" class="font-2-s-m cor-0">Continuar</button>
+
       </form>
+      <button data-register="button" type="button" class="font-2-s-m cor-0">Continuar</button>
     </div>
 
     <!-- Segunda etapa do registro -->
-    <div data-submit="register-step2" class="register-form font-2-s-m cor-11">
-      <form action="">
+    <div data-register="step2" class="register-form font-2-s-m cor-11">
+      <form>
 
         <!-- Nome -->
         <label for="">Nome</label>
         <input data-register="name" class="font-2-xs" type="text">
-        <span data-error="register-name" class="error"></span>
-
+        <span class="error"></span>
+        
         <!-- Sobrenome -->
         <label for="">Sobrenome</label>
         <input data-register="lastname" class="font-2-xs" type="text" name="">
-        <span data-error="register-lastname" class="error"></span>
+        <span class="error"></span>
 
         <!-- Nascimento -->
         <label for="">Nascimento</label>
         <input data-register="nascimento" class="font-2-xs" type="number" name="">
-        <span data-error="register-nascimento" class="error"></span>
-
+        <span class="error"></span>
+        
         <!-- CPF -->
         <label for="">CPF</label>
         <input data-register="cpf" class="font-2-xs" type="number" name="">
-        <span data-error="register-cpf" class="error"></span>
-
-        <button data-register="button-step2" type="button" class="font-2-s-m cor-0">Continuar</button>
+        <span class="error"></span>
+        
+        <button data-register="button" type="button" class="font-2-s-m cor-0">Continuar</button>
       </form>
     </div>
 
-    <!-- Terceira etapa do registro -->git
-    <div data-submit="register-step3" class="register-form font-2-s-m cor-11">
-      <form action="">
+    <!-- Terceira etapa do registro -->
+    <div data-register="step3" class="register-form font-2-s-m cor-11">
+      <form>
 
         <!-- CEP -->
         <div class="register-cep">
@@ -148,12 +149,12 @@
           <span data-error="register-cidade" class="error"></span>
         </div>
 
-        <button data-register="button-step3" type="button" class="font-2-s-m cor-0">Finalizar cadastro</button>
+        <button data-register="button" type="button" class="font-2-s-m cor-0">Finalizar cadastro</button>
       </form>
     </div>
 
     <!-- Registro com sucesso -->
-    <div data-submit="register-sucessfull" class="register-sucessfull">
+    <div data-register="sucessfull" class="register-sucessfull">
     </div>
   </main>
 
@@ -223,7 +224,5 @@
   </section>
 
   <script src="js/register.js"></script>
-  <script src="js/modal.js"></script>
-  <script src="js/users.js"></script>
 </body>
 </html>

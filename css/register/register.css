@@ -21,7 +21,6 @@
 }
 
 .register-account button {
-  width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 20px;
@@ -96,38 +95,36 @@
 
 
 
-[data-submit="register-step1"] {
+[data-register="step1"] {
   display: none;
 }
 
-[data-submit="register-step1"].active {
-  display: flex;
-}
-
-[data-submit="register-step2"] {
-  display: none;
-}
-
-[data-submit="register-step2"].active {
-  display: flex;
-}
-
-[data-submit="register-step3"] {
-  display: none;
-}
-
-[data-submit="register-step3"].active {
-  display: flex;
-}
-
-[data-submit="register-sucessfull"] {
-  display: none;
-}
-
-[data-submit="register-sucessfull"].active {
+[data-register="step1"].active {
   display: grid;
 }
 
+[data-register="step2"] {
+  display: none;
+}
 
+[data-register="step2"].active {
+  display: flex;
+}
+
+[data-register="step3"] {
+  display: none;
+}
+
+[data-register="step3"].active {
+  display: flex;
+}
+
+[data-register="sucessfull"] {
+  display: none;
+}
+
+[data-register="sucessfull"].active {
+  display: grid;
+}
 
 
