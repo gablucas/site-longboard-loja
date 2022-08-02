@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <title>Ohai Boards</title>
+  <title>Local</title>
 </head>
 
 <body id="home">
@@ -42,10 +42,10 @@
   <main class="register-account container">
     <div class="progress-bar part3"></div>
     <h1 class="font-1-xl">Crie sua conta</h1>
-    <span class="register-step font-2-xs-m-u cor-11" data-register="step">Etapa 1 de 3</span>
+    <span class="register-step font-2-xs-m-u cor-11" data-register="count-step">Etapa 1 de 3</span>
 
     <!-- Primeira etapa do registro -->
-    <div data-register="step1" class="register-form font-2-s-m cor-11 active">
+    <div data-register="step1" class="register-form font-2-s-m cor-11">
       <form>
 
         <!-- Email -->
@@ -69,31 +69,30 @@
     </div>
 
     <!-- Segunda etapa do registro -->
-    <div data-register="step2" class="register-form font-2-s-m cor-11">
+    <div data-register="step2" class="register-form font-2-s-m cor-11 active">
       <form>
-
         <!-- Nome -->
         <label for="">Nome</label>
-        <input data-register="name" class="font-2-xs" type="text">
+        <input class="font-2-xs" type="text" name="nome">
         <span class="error"></span>
         
         <!-- Sobrenome -->
         <label for="">Sobrenome</label>
-        <input data-register="lastname" class="font-2-xs" type="text" name="">
+        <input class="font-2-xs" type="text" name="sobrenome">
         <span class="error"></span>
 
         <!-- Nascimento -->
         <label for="">Nascimento</label>
-        <input data-register="nascimento" class="font-2-xs" type="number" name="">
+        <input class="font-2-xs" type="date" name="nascimento">
         <span class="error"></span>
         
         <!-- CPF -->
         <label for="">CPF</label>
-        <input data-register="cpf" class="font-2-xs" type="number" name="">
+        <input class="font-2-xs" type="text" name="cpf" maxlength="11" placeholder="000.000.000-00">
         <span class="error"></span>
         
-        <button data-register="button" type="button" class="font-2-s-m cor-0">Continuar</button>
       </form>
+      <button data-register="button" type="button" class="font-2-s-m cor-0">Continuar</button>
     </div>
 
     <!-- Terceira etapa do registro -->
@@ -223,6 +222,6 @@
     </div>
   </section>
 
-  <script src="js/register.js"></script>
+  <script type="module" src="js/register.js"></script>
 </body>
 </html>

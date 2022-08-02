@@ -42,7 +42,6 @@
 }
 
 .register-form {
-  display: flex;
   justify-content: center;
 }
 
@@ -108,7 +107,7 @@
 }
 
 [data-register="step2"].active {
-  display: flex;
+  display: grid;
 }
 
 [data-register="step3"] {
@@ -116,7 +115,7 @@
 }
 
 [data-register="step3"].active {
-  display: flex;
+  display: grid;
 }
 
 [data-register="sucessfull"] {
