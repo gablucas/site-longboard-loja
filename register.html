@@ -45,9 +45,8 @@
     <span class="register-step font-2-xs-m-u cor-11" data-register="count-step">Etapa 1 de 3</span>
 
     <!-- Primeira etapa do registro -->
-    <div data-register="step1" class="register-form font-2-s-m cor-11">
-      <form>
-
+    <div data-register="step1" class="container-form font-2-s-m cor-11 active">
+      <form data-form="register">
         <!-- Email -->
         <label for="email">Email</label>
         <input class="font-2-xs form-error" type="text" name="email">
@@ -63,14 +62,13 @@
         <input class="font-2-xs" type="password" name="confirmar-senha">
         <span class="error"></span>
 
-
       </form>
       <button data-register="button" type="button" class="font-2-s-m cor-0">Continuar</button>
     </div>
 
     <!-- Segunda etapa do registro -->
-    <div data-register="step2" class="register-form font-2-s-m cor-11 active">
-      <form>
+    <div data-register="step2" class="container-form font-2-s-m cor-11">
+      <form data-form="register">
         <!-- Nome -->
         <label for="">Nome</label>
         <input class="font-2-xs" type="text" name="nome">
@@ -96,64 +94,66 @@
     </div>
 
     <!-- Terceira etapa do registro -->
-    <div data-register="step3" class="register-form font-2-s-m cor-11">
-      <form>
+    <div data-register="step3" class="container-form font-2-s-m cor-11">
+      <form data-form="register">
 
         <!-- CEP -->
         <div class="register-cep">
           <label for="">CEP</label>
-          <input data-register="cep" class="font-2-xs" type="number">
+          <input data-register="cep" class="font-2-xs" type="number" name="cep">
+          <span class="error"></span>
         </div>
-        <span data-error="register-cep" class="error"></span>
-
+        
         <!-- Rua e Numero -->
         <div class="register-rua">
           <div>
             <label for="">Rua</label>
-            <input data-register="rua" class="font-2-xs" type="text" name="">
+            <input data-register="rua" class="font-2-xs" type="text" name="rua">
+            <span class="error"></span>
           </div>
 
           <div>
             <label for="">Nº</label>
-            <input data-register="numero" class="font-2-xs" type="number" name="">
+            <input data-register="numero" class="font-2-xs" type="number" name="numero">
+            <span class="error"></span>
           </div>
-
-        <span data-error="register-rua" class="error"></span>
         </div>
-
 
         <!-- Complemento -->
         <div class="register-complemento">
           <label for="">Complemento</label>
-          <input data-register="complemento" class="font-2-xs" type="text" name="">
-          <span data-error="register-complemento" class="error"></span>
+          <input data-register="complemento" class="font-2-xs" type="text" name="complemento">
         </div>
-
+        
         <!-- Cidade, Bairro e Estado -->
         <div class="register-cidade">
           <div>
             <label for="">Cidade</label>
-            <input data-register="cidade" class="font-2-xs" type="text" name="">
+            <input data-register="cidade" class="font-2-xs" type="text" name="cidade">
+            <span class="error"></span>
           </div>
       
           <div>
             <label for="">Bairro</label>
-            <input data-register="bairro" class="font-2-xs" type="text" name="">
+            <input data-register="bairro" class="font-2-xs" type="text" name="bairro">
+            <span class="error"></span>
           </div>
 
           <div>
             <label for="">Estado</label>
-            <input data-register="estado" class="font-2-xs" type="text" name="">
+            <input data-register="estado" class="font-2-xs" type="text" name="estado">
+            <span class="error"></span>
           </div>
-          <span data-error="register-cidade" class="error"></span>
         </div>
-
-        <button data-register="button" type="button" class="font-2-s-m cor-0">Finalizar cadastro</button>
       </form>
+
+      <button data-register="button" type="button" class="font-2-s-m cor-0">Finalizar cadastro</button>
     </div>
 
     <!-- Registro com sucesso -->
     <div data-register="sucessfull" class="register-sucessfull">
+      <h1>Cadastro efetuado com sucesso</h1>
+      <p>Seus dados</p>
     </div>
   </main>
 

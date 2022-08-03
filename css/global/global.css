@@ -52,7 +52,12 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+input  {
+
+}
+
 .error {
+  top: 10px;
   display: block;
   font: 400 .875rem/1.2 'Roboto';
   margin-top: 4px;
