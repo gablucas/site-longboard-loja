@@ -38,16 +38,25 @@ export default function formstep3(forms, btn, descriptionError) {
     }
   }
 
+    // Validar CEP
+    input.cep.addEventListener("keydown", validateCEP)
+    function validateCEP(e) {
+      const cep = e.target.value;
+      if(e.key !== "Backspace"){
+        if(cep.length >= 8) {
+          e.preventDefault()
+        }
+      }
+    }
+
     // Buscar dados de endereço
-    input.cep.addEventListener('change', validateChange) 
-    function validateChange(inp) {
-      fetch(`https://viacep.com.br/ws/${inp.target.value}/json`)
-      .then(r => r.json())
-      .then(endereco => {
-        input.rua.value = endereco.logradouro;
-        input.cidade.value = endereco.localidade;
-        input.bairro.value = endereco.bairro;
-        input.estado.value = endereco.uf;
-      })
+    input.cep.addEventListener('change', buscarEndereco) 
+    async function buscarEndereco(inp) {
+      const requisitarEndereco = fetch(`https://viacep.com.br/ws/${inp.target.value}/json`);
+      const endereco = await (await requisitarEndereco).json()
+      input.rua.value = endereco.logradouro;
+      input.cidade.value = endereco.localidade;
+      input.bairro.value = endereco.bairro;
+      input.estado.value = endereco.uf;
     }
 }

@@ -3,7 +3,7 @@ export default function formstep1(form, btn, descriptionError) {
   const input = form[0].elements
 
   btn[0].addEventListener('click', validateClick)
-  function validateClick() {
+  function validateClick(e) {
     let error = false;
 
     // Campos vazios

@@ -28,9 +28,10 @@ export default function formstep2(form, btn, descriptionError) {
     }
   }
 
+  // Validar CPF
   input.cpf.addEventListener('keydown', validateCPF);
   function validateCPF(e) {
-    let cpf = e.target.value
+    const cpf = e.target.value
     const numeros = ["0","1","2","3","4","5","6","7","8","9"];
 
     if(e.key !== "Backspace") {
