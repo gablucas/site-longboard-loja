@@ -16,14 +16,33 @@ export default function formstep2(form, btn, descriptionError) {
     })
     
     // CPF Incompleto
-    if(input.cpf.value.length < 11 && input.cpf.value) {
+    if(input.cpf.value.length < 14 && input.cpf.value) {
       descriptionError(input.cpf, "CPF Incompleto")
+      error = true;
     }
 
     // Ir para o proximo formulario
     if(!error) {
       form[1].parentElement.classList.remove("active");
       form[2].parentElement.classList.add("active");
+    }
+  }
+
+  input.cpf.addEventListener('keydown', validateCPF);
+  function validateCPF(e) {
+    let cpf = e.target.value
+    const numeros = ["0","1","2","3","4","5","6","7","8","9"];
+
+    if(e.key !== "Backspace") {
+      if(cpf.length === 3 || cpf.length === 7) {
+        e.target.value = cpf.concat(".")
+      }else if(cpf.length === 11) {
+        e.target.value = cpf.concat("-")
+      }
+      
+      if(!numeros.some((numero => e.key === numero))) {
+        e.preventDefault();
+      }
     }
   }
 }

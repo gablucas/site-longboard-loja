@@ -1,8 +1,7 @@
-import {account, createAccount} from "../users.js";
+import {account} from "../users.js";
 
-
-export default function formstep3(form, btn, descriptionError) {
-  const input = form[2].elements
+export default function formstep3(forms, btn, descriptionError) {
+  const input = forms[2].elements
   const registerSucessfull = document.querySelector("[data-register='sucessfull']");
 
   btn[2].addEventListener('click', validateClick)
@@ -21,11 +20,20 @@ export default function formstep3(form, btn, descriptionError) {
     })
 
     if(!error) {
-      form[2].parentElement.classList.remove("active");
+      forms[2].parentElement.classList.remove("active");
       registerSucessfull.classList.add("active");
       
       // Cadastrar o usuario
-      createAccount(input.cep.value)
+      const user = {};
+      forms.forEach((form) => {
+        Array.from(form).forEach((input) => {
+          if(input.name === "confirmar-senha") {
+          } else {
+            user[input.name] = input.value;
+          }
+        })
+      })
+      account.push(user)
       console.log(account)
     }
   }

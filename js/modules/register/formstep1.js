@@ -1,4 +1,5 @@
 export default function formstep1(form, btn, descriptionError) {
+
   const input = form[0].elements
 
   btn[0].addEventListener('click', validateClick)
@@ -15,14 +16,24 @@ export default function formstep1(form, btn, descriptionError) {
       }
     })
 
+    // Email correto
+    const verificaEmail = input.email.value.toLowerCase();
+    if(!verificaEmail.includes("@") && input.email.value) {
+      descriptionError(input.email, 'Está faltando o "@" no email')
+      error = true;
+    } else if(!verificaEmail.includes(".") && input.email.value) {
+      descriptionError(input.email, 'Está faltando o "." no email')
+      error = true;
+    }
+
     // Senhas iguais
-    if(input.senha.value !== input["confirmar-senha"].value && !!input.senha.value && !!input["confirmar-senha"].value) {
+    if(input.senha.value !== input["confirmar-senha"].value && input.senha.value && input["confirmar-senha"].value) {
       descriptionError(input["confirmar-senha"], "As senhas não conferem");
       error = true;
     }
     
     // Senha fraca
-    if(input.senha.value.length <= 5 && !!input.senha.value) {
+    if(input.senha.value.length <= 5 && input.senha.value) {
       descriptionError(input.senha, "A senha é muito fraca");
       error = true;
     }
