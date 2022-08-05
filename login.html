@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Login</title>
+</head>
+
+<body id="contato">
+
+  <!-- Seção 1: Header -->
+  <header class="container">
+    <img src="img/ohaipreto.svg" alt="Logo OHAI Boards">
+
+    <nav aria-label="Primario">
+      <ul class="menu font-2-s-m cor-10">
+
+        <li data-dropdown><a href="produtos/produtos.html">Produtos <img src="img/icones/iconexibicao.svg" alt=""></a>
+        <ul class="menu-dropdown" >
+          <li><a href="produtos/produtos-shapes.html">Shapes</a></li>
+          <li><a href="produtos/produtos-trucks.html">Trucks</a></li>
+          <li><a href="produtos/produtos-rodas.html">Rodas</a></li>
+          <li><a href="produtos/produtos-rolamentos.html">Rolamentos</a></li>
+          <li><a href="produtos/produtos-acessorios.html">Acessórios</a></li>
+        </ul>
+        </li>
+
+        <li data-modal><a href="./"><img src="img/icones/iconusuario.svg" alt=""><span data-user>Entrar</span></a></li>
+
+        <li><a href="./carrinho.html"><img src="img/icones/iconsacola.svg" alt="Sacola"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção 2: Carrinho -->
+    <main class="login container">
+    <h1 class="cor-d7">Acesse sua conta<span class="cor-d4">.</span></h1>
+          <form data-login="form" class="font-2-s" data-submit="login">
+
+            <label for="email">Email</label>
+            <input class="font-2-s" type="text" name="email" id="email">
+            <span class="error"></span>
+
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password">
+            <span class="error"></span>
+          </form>
+
+          <div class="btns-container font-2-s-m">
+            <button data-login="button" type="button" data-button="login" class="btn-login font-2-s-m cor-d5">ENTRAR</button>
+            <a class="btn-registro  cor-0" href="register.html">INSCREVA-SE</a>
+          </div>
+          <span data-error="login" class="error"></span>
+          <a class="lost-account font-2-xs cor-d7" href="">Esqueceu sua senha?</a>
+  </main>
+
+  <!-- Seção 6: Footer -->
+  <footer class="footer-bg">
+    <div class="footer container">
+
+      <div class="footer-dados">
+        <a href="./"><img src="img/ohaibranco.svg" alt=""></a>
+        <p class="cor-4">"Não apenas fabricamos shapes, fabricamos felicidade"</p>
+
+        <div class="footer-redes">
+          <a href="./"><img src="img/icones/iconyoutube.svg" alt=""></a>
+          <a href="./"><img src="img/icones/iconfacebook.svg" alt=""></a>
+          <a href="./"><img src="img/icones/iconinstagram.svg" alt=""></a>
+          <a href="./"><img src="img/icones/icontwitter.svg" alt=""></a>
+        </div>
+      </div>
+
+      <div class="footer-informacoes">
+        <h3 class="font-1-m-u cor-0">Informações</h3>
+        <nav>
+          <ul class="font-2-s cor-4">
+              <li><a href="./">Contato</a></li>
+              <li><a href="./">Troca e devolução</a></li>
+              <li><a href="./">Política de privacidade</a></li>
+              <li><a href="./">Termos e condições</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-menu">
+        <h3 class="font-1-m-u cor-0">Menu</h3>
+        <nav>
+          <ul class="font-2-s cor-4">
+              <li><a href="./">Sobre nós</a></li>
+              <li><a href="./">Tutoriais</a></li>
+              <li><a href="./produtos/produtos.html">Produtos</a></li>
+              <li><a href="./">Blog</a></li>
+              <li><a href="./">Minha conta</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="footer-copyright font-2-s cor-4">Todos os direitos reservados. 2022</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>

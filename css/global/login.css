@@ -1,0 +1,57 @@
+.login {
+  display: grid;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.login form {
+  display: grid;
+}
+
+.login input {
+  height: 40px;
+}
+
+.login label {
+  margin-top: 12px;
+}
+
+.login .btns-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn-login,
+.btn-registro {
+  padding: 10px 15px;
+}
+
+.btn-login {
+  border: 1px solid var(--cor-d5);
+}
+
+.btn-login:hover {
+  color: var(--cor-d7);
+  border-color: var(--cor-d7);
+  cursor: pointer;
+}
+
+.btn-registro {
+  background: var(--cor-d5);
+}
+
+.btn-registro:hover {
+  background-color: var(--cor-d4);
+}
+
+.lost-account {
+  margin-top: 8px;
+}
+
+.lost-account:hover {
+  color: var(--cor-d5);
+}
+

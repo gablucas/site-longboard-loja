@@ -47,13 +47,35 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+input {
+  border: 1px solid var(--cor-6);
+  margin-top: 4px;
+  padding: 6px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
 }
 
-input  {
+input:focus {
+  outline: none;
+  border: 1px solid var(--cor-d5);
+  box-shadow: 0 0 0 2px var(--cor-d4);
+  animation: inputFocus .2s forwards;
+}
 
+@keyframes inputFocus {
+  from {
+  box-shadow: 0 0 0 0px var(--cor-d4);
+  }
+
+  to {
+  box-shadow: 0 0 0 2px var(--cor-d4);
+
+  }
 }
 
 .error {

@@ -1,6 +1,7 @@
+import errorDescription from "../errorDescription.js";
 import {account} from "../users.js";
 
-export default function formstep3(forms, btn, descriptionError) {
+export default function validateRegister3(forms, btn) {
   const input = forms[2].elements
   const registerSucessfull = document.querySelector("[data-register='sucessfull']");
 
@@ -8,14 +9,14 @@ export default function formstep3(forms, btn, descriptionError) {
   function validateClick() {
     let error = false;
 
-    // Campos vazios
+    // Campos vazios - Criar um modulo com esse código
     Array.from(input).forEach((inp) => {
       if(inp.name === "complemento") {
       } else if(!inp.value) {
-        descriptionError(inp, "Campo vazio")
+        errorDescription(inp, "Campo vazio")
         error = true;
       } else {
-        descriptionError(inp, "");
+        errorDescription(inp, "");
       }
     })
 

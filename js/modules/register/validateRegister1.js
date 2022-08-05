@@ -1,4 +1,6 @@
-export default function formstep1(form, btn, descriptionError) {
+import errorDescription from "../errorDescription.js";
+
+export default function validateRegister1(form, btn) {
 
   const input = form[0].elements
 
@@ -6,35 +8,35 @@ export default function formstep1(form, btn, descriptionError) {
   function validateClick(e) {
     let error = false;
 
-    // Campos vazios
+    // Campos vazios - Criar um modulo com esse código
     Array.from(input).forEach((inp) => {
       if(!inp.value) {
-        descriptionError(inp, "Campo vazio")
+        errorDescription(inp, "Campo vazio")
         error = true;
       } else {
-        descriptionError(inp, "")
+        errorDescription(inp, "")
       }
     })
 
     // Email correto
     const verificaEmail = input.email.value.toLowerCase();
     if(!verificaEmail.includes("@") && input.email.value) {
-      descriptionError(input.email, 'Está faltando o "@" no email')
+      errorDescription(input.email, 'Está faltando o "@" no email')
       error = true;
     } else if(!verificaEmail.includes(".") && input.email.value) {
-      descriptionError(input.email, 'Está faltando o "." no email')
+      errorDescription(input.email, 'Está faltando o "." no email')
       error = true;
     }
 
     // Senhas iguais
     if(input.senha.value !== input["confirmar-senha"].value && input.senha.value && input["confirmar-senha"].value) {
-      descriptionError(input["confirmar-senha"], "As senhas não conferem");
+      errorDescription(input["confirmar-senha"], "As senhas não conferem");
       error = true;
     }
     
     // Senha fraca
     if(input.senha.value.length <= 5 && input.senha.value) {
-      descriptionError(input.senha, "A senha é muito fraca");
+      errorDescription(input.senha, "A senha é muito fraca");
       error = true;
     }
 

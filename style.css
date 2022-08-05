@@ -3,7 +3,7 @@
 @import './css/global/footer.css';
 @import './css/global/banner.css';
 @import './css/global/dropdown.css';
-@import './css/global/modal.css';
+@import './css/global/login.css';
 
 /* Utilidades */
 @import './css/utilidades/componentes.css';
@@ -18,7 +18,6 @@
 
 /* Register */
 @import './css/register/register.css';
-
 
 /* Produtos */
 @import './css/produtos/produtos.css';

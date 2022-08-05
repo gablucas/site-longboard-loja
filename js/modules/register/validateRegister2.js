@@ -1,23 +1,25 @@
-export default function formstep2(form, btn, descriptionError) {
+import errorDescription from "../errorDescription.js";
+
+export default function validateRegister2(form, btn) {
   const input = form[1].elements
 
   btn[1].addEventListener('click', validateClick)
   function validateClick() {
     let error = false;
 
-    // Campos vazios
+    // Campos vazios - Criar um modulo com esse código
     Array.from(input).forEach((inp) => {
       if(!inp.value) {
-        descriptionError(inp, "Campo vazio")
+        errorDescription(inp, "Campo vazio")
         error = true;
       } else {
-        descriptionError(inp, "")
+        errorDescription(inp, "")
       }
     })
     
     // CPF Incompleto
     if(input.cpf.value.length < 14 && input.cpf.value) {
-      descriptionError(input.cpf, "CPF Incompleto")
+      errorDescription(input.cpf, "CPF Incompleto")
       error = true;
     }
 
