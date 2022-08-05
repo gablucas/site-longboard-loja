@@ -17,7 +17,7 @@
   justify-self: center;
 }
 
-.home-shapes-modalidades label {
+.home-shapes-modalidades button {
   font: inherit;
   text-transform: inherit;
   color: inherit;
@@ -29,11 +29,11 @@
   cursor: pointer;
 }
 
-.home-shapes-modalidades label:hover {
+.home-shapes-modalidades button:hover {
   color: var(--cor-6);
 }
 
-.home-shapes-modalidades input:checked + label {
+.home-shapes-modalidades button.active {
   color: var(--cor-0);
   background: var(--cor-d7);
 }
@@ -51,7 +51,7 @@
   padding: 20px;
 }
 
-.home-produtos-shapes li.ativo {
+.home-produtos-shapes li.active {
   display: initial;
 }
 
