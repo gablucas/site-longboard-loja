@@ -1,7 +1,6 @@
 import errorDescription from "./modules/errorDescription.js";
 import { account } from "./modules/users.js";
 
-
 const loginForm = document.querySelector("[data-login='form']").elements;
 const loginButton = document.querySelector("[data-login='button']");
 
