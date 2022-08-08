@@ -1,10 +1,10 @@
-.progress-bar {
+.step-progress {
   width: 0vw;
   height: 6px;
   background: var(--cor-d5);
 }
 
-.progress-bar.step1 {
+.step-progress.step1 {
   animation: step1 .3s forwards;
 }
 
@@ -18,7 +18,7 @@
   }
 }
 
-.progress-bar.step2 {
+.step-progress.step2 {
   animation: step2 .3s forwards;
 }
 
@@ -32,7 +32,7 @@
   }
 }
 
-.progress-bar.step3 {
+.step-progress.step3 {
   animation: step3 .3s forwards;
 }
 

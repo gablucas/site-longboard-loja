@@ -12,6 +12,7 @@ export default function registerUser(forms) {
   })
   account.push(user)
   console.log(account)
+  localStorage.teste = JSON.stringify(account[1])
 }
 
 

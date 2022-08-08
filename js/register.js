@@ -19,10 +19,11 @@ import buscarEndereco from "./modules/register/buscarEndereco.js";
 
 
 // Formulario
-const registerForm = document.querySelectorAll('[data-form="register"]')
+const registerForm = document.querySelectorAll('[data-form="register"]');
 const registerButton = document.querySelectorAll("[data-register='button']");
 const registerSucessfull = document.querySelector("[data-register='sucessfull']");
-const teste = document.querySelector(".progress-bar");
+const stepProgress = document.querySelector('[data-register="step-progress"]');
+const stepCount = document.querySelector('[data-register="step-count"]');
 
 // VALIDANDO OS FORMULARIOS
 
@@ -33,7 +34,8 @@ function validarFormulario1() {
 
   // Validação
   if(!validateEmail(form) && !validatePassword(form) && !campoVazio(form)) {
-    teste.classList.add('step1')
+    stepProgress.classList.add('step1')
+    stepCount.innerText = 2;
     registerForm[0].parentElement.classList.remove("active");
     registerForm[1].parentElement.classList.add("active");
   }
@@ -47,7 +49,8 @@ function validarFormulario2() {
   
   // Validação
   if(!validateCPF(form) && !campoVazio(form)) {
-    teste.classList.replace('step1', 'step2')
+    stepProgress.classList.replace('step1', 'step2')
+    stepCount.innerText = 3;
     registerForm[1].parentElement.classList.remove("active");
     registerForm[2].parentElement.classList.add("active");
   }
@@ -64,7 +67,7 @@ const form = registerForm[2];
   
   // Validação
   if(!campoVazio(form)) {
-    teste.classList.replace('step2', 'step3')
+    stepProgress.classList.replace('step2', 'step3')
     form.parentElement.classList.remove("active");
     registerSucessfull.classList.add("active");
     registerUser(registerForm)
