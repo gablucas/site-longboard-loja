@@ -22,6 +22,7 @@ import buscarEndereco from "./modules/register/buscarEndereco.js";
 const registerForm = document.querySelectorAll('[data-form="register"]')
 const registerButton = document.querySelectorAll("[data-register='button']");
 const registerSucessfull = document.querySelector("[data-register='sucessfull']");
+const teste = document.querySelector(".progress-bar");
 
 // VALIDANDO OS FORMULARIOS
 
@@ -32,6 +33,7 @@ function validarFormulario1() {
 
   // Validação
   if(!validateEmail(form) && !validatePassword(form) && !campoVazio(form)) {
+    teste.classList.add('step1')
     registerForm[0].parentElement.classList.remove("active");
     registerForm[1].parentElement.classList.add("active");
   }
@@ -45,9 +47,9 @@ function validarFormulario2() {
   
   // Validação
   if(!validateCPF(form) && !campoVazio(form)) {
-    form.parentElement.classList.remove("active");
-    registerSucessfull.classList.add("active");
-    registerUser(registerForm);
+    teste.classList.replace('step1', 'step2')
+    registerForm[1].parentElement.classList.remove("active");
+    registerForm[2].parentElement.classList.add("active");
   }
 }
 
@@ -62,6 +64,7 @@ const form = registerForm[2];
   
   // Validação
   if(!campoVazio(form)) {
+    teste.classList.replace('step2', 'step3')
     form.parentElement.classList.remove("active");
     registerSucessfull.classList.add("active");
     registerUser(registerForm)

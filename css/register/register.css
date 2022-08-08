@@ -4,6 +4,49 @@
   background: var(--cor-d5);
 }
 
+.progress-bar.step1 {
+  animation: step1 .3s forwards;
+}
+
+@keyframes step1 {
+  from {
+    width: 0vw;
+  }
+
+  to {
+    width: 33vw;
+  }
+}
+
+.progress-bar.step2 {
+  animation: step2 .3s forwards;
+}
+
+@keyframes step2 {
+  from {
+    width: 33vw;
+  }
+
+  to {
+    width: 66vw;
+  }
+}
+
+.progress-bar.step3 {
+  animation: step3 .3s forwards;
+}
+
+@keyframes step3 {
+  from {
+    width: 66vw;
+  }
+
+  to {
+    width: 100vw;
+  }
+}
+
+
 .register-step {
   display: block;
   text-align: center;
