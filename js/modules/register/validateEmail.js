@@ -5,13 +5,17 @@ export default function validateEmail(input) {
   
   const email = input.email.value.toLowerCase();
 
-  if(!email.includes("@") && !!email) {
-    errorDescription(input.email, 'Está faltando o "@" no email')
-    error = true;
-  } else if(!email.includes(".") && input.email.value) {
-    errorDescription(input.email, 'Está faltando o "." no email')
-    error = true;
+  if(!!email) {
+    if(!email.includes("@")) {
+      errorDescription(input.email, 'Está faltando o "@" no email')
+      error = true;
+    }else if(!email.includes(".com")) {
+      errorDescription(input.email, 'Está faltando o ".com" no email')
+      error = true;
+    }else if(email.includes("@.")) {
+      errorDescription(input.email, "Email inválido")
+      error = true;
+    }
   }
-
   return error;
 }

@@ -5,7 +5,7 @@ import campoVazio from "./modules/register/campoVazio.js"
 // Modulos para o primeiro formulario
 import validateEmail from "./modules/register/validateEmail.js";
 import validatePassword from "./modules/register/validatePassword.js";
-
+import strengthPassword from "./modules/register/strengthPassword.js";
 
 // Modulos para o segundo formulario
 import formatCPF from "./modules/register/formatCPF.js";
@@ -40,6 +40,9 @@ function validarFormulario1() {
     registerForm[1].parentElement.classList.add("active");
   }
 }
+
+// Funções segundo formulario
+strengthPassword(registerForm[0]);
 
 
 // Segundo formulario

@@ -46,6 +46,15 @@
   }
 }
 
+.password-strength{
+  display: inline-block;
+  position: relative;
+  bottom: 2px;
+  width: 0%;
+  height: 4px;;
+  background: var(--cor-d5);
+}
+
 
 .register-step {
   display: block;
