@@ -1,4 +1,4 @@
-import {account} from "../users.js";
+import account from "../users.js";
 
 export default function registerUser(forms) {
   const user = {endereco: {}};
@@ -17,5 +17,3 @@ export default function registerUser(forms) {
   localStorage[account[account.length - 1].cpf] = JSON.stringify(account[account.length - 1])
 }
 
-
-  

@@ -128,10 +128,12 @@
 .register-sucessfull {
   display: grid;
   justify-content: center;
-  gap: 4px;
+  gap: 12px;
 }
 
-
+.user-data li + li {
+  margin-top: 6px;
+}
 
 [data-register="step1"] {
   display: none;

@@ -16,6 +16,7 @@ import validateCPF from "./modules/register/validateCPF.js";
 import formatCEP from "./modules/register/formatCEP.js";
 import registerUser from "./modules/register/registerUser.js";
 import buscarEndereco from "./modules/register/buscarEndereco.js";
+import showDataUser from "./modules/register/showDataUser.js";
 
 
 // Formulario
@@ -71,9 +72,11 @@ const form = registerForm[2];
   // Validação
   if(!campoVazio(form)) {
     stepProgress.classList.replace('step2', 'step3')
+    stepCount.parentElement.innerHTML = "";
     form.parentElement.classList.remove("active");
     registerSucessfull.classList.add("active");
     registerUser(registerForm)
+    showDataUser();
   }
 }
 

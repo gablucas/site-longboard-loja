@@ -1,5 +1,5 @@
-const account = [{email: "gab",password: "gab",}];
-export {account}
+const account = [];
+export default account;
 
 
 
