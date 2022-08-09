@@ -1,4 +1,4 @@
-import errorDescription from "../errorDescription.js";
+import errorDescription from "./errorDescription.js";
 
 export default function verificaVazio(input) {
 let error = false;

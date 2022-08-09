@@ -1,5 +1,5 @@
 // Modulos para todos formularios
-import campoVazio from "./modules/register/campoVazio.js"
+import campoVazio from "./modules/global/campoVazio.js"
 
 
 // Modulos para o primeiro formulario

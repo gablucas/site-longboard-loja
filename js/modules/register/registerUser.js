@@ -1,4 +1,4 @@
-import account from "../users.js";
+import account from "../global/users.js";
 
 export default function registerUser(forms) {
   const user = {endereco: {}};
@@ -14,6 +14,6 @@ export default function registerUser(forms) {
   })
   account.push(user)
   console.log(account)
-  localStorage[account[account.length - 1].cpf] = JSON.stringify(account[account.length - 1])
+  localStorage[account[account.length - 1].email] = JSON.stringify(account[account.length - 1])
 }
 

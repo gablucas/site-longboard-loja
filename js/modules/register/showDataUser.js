@@ -1,4 +1,4 @@
-import account from "../users.js";
+import account from "../global/users.js";
 
 export default function showDataUser() {
   const element = document.querySelector('[data-register="user-data"]');

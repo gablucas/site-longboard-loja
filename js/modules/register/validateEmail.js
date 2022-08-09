@@ -1,4 +1,4 @@
-import errorDescription from "../errorDescription.js";
+import errorDescription from "../global/errorDescription.js";
 
 export default function validateEmail(input) {
   let error = false;
