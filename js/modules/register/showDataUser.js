@@ -1,9 +1,5 @@
-import account from "../global/users.js";
-
-export default function showDataUser() {
+export default function showDataform(user) {
   const element = document.querySelector('[data-register="user-data"]');
-  const user = account[0];
-  console.log(user)
 
   element.innerHTML = ` <li><span class="font-2-s-m">Nome:</span> ${user.nome}</li>
                         <li><span class="font-2-s-m">Sobrenome:</span> ${user.sobrenome}</li>

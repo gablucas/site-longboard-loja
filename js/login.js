@@ -1,6 +1,7 @@
-import storageUsers from "./modules/login/storageUsers.js";
+import { storageUsers } from "./modules/global/users.js";
 import validateLogin from "./modules/login/validateLogin.js";
 import campoVazio from "./modules/global/campoVazio.js"
+import changeDataUser from "./modules/global/changeDataUser.js";
 
 const loginForm = document.querySelector("[data-login='form']")
 const loginButton = document.querySelector("[data-login='button']");
@@ -11,9 +12,10 @@ storageUsers();
 loginButton.addEventListener('click', login)
 function login() {
 
-  // Campos vazios
-  campoVazio(loginForm)
+  if(!validateLogin(loginForm) && !campoVazio(loginForm)) {
+    // window.location.href = "index.html";
 
-  // Validar email e senha
-  validateLogin(loginForm)
+    // Encontra o usuario e adiciona o valor de "on" para propriedade "logged"
+    changeDataUser(loginForm.email.value, "logged", "on");
+  }
 }

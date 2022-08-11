@@ -1,6 +1,9 @@
+// Carregar usuarios ja cadastrados para validar
+import storageUsers from "./modules/global/storageUsers.js";
+storageUsers();
+
 // Modulos para todos formularios
 import campoVazio from "./modules/global/campoVazio.js"
-
 
 // Modulos para o primeiro formulario
 import validateEmail from "./modules/register/validateEmail.js";
@@ -76,7 +79,6 @@ const form = registerForm[2];
     form.parentElement.classList.remove("active");
     registerSucessfull.classList.add("active");
     registerUser(registerForm)
-    showDataUser();
   }
 }
 

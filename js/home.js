@@ -1,4 +1,4 @@
-import initDropDown from "./modules/dropdown.js";
+import initDropDown from "./modules/global/dropdown.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initHomeFilter from "./modules/home-filter.js";
 

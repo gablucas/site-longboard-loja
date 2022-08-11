@@ -1,7 +1,7 @@
-import account from "../global/users.js";
+import showDataUser from "./showDataUser.js";
 
 export default function registerUser(forms) {
-  const user = {endereco: {}};
+  const user = {endereco: {}, logged: "off"};
   forms.forEach((form) => {
     Array.from(form).forEach((input) => {
       if(input.name === "confirmar-senha") {
@@ -12,8 +12,8 @@ export default function registerUser(forms) {
       }
     })
   })
-  account.push(user)
-  console.log(account)
-  localStorage[account[account.length - 1].email] = JSON.stringify(account[account.length - 1])
+
+  showDataUser(user)
+  localStorage[user.email] = JSON.stringify(user)
 }
 

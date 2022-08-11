@@ -1,3 +1,4 @@
+import account from "../global/users.js";
 import errorDescription from "../global/errorDescription.js";
 
 export default function validateEmail(input) {
@@ -14,6 +15,9 @@ export default function validateEmail(input) {
       error = true;
     }else if(email.includes("@.")) {
       errorDescription(input.email, "Email inválido")
+      error = true;
+    }else if(account.some(user => user.email === email)){
+      errorDescription(input.email, "Email já registrado")
       error = true;
     }
   }
