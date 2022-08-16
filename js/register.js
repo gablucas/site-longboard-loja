@@ -1,7 +1,3 @@
-// Carregar usuarios ja cadastrados para validar
-import storageUsers from "./modules/global/storageUsers.js";
-storageUsers();
-
 // Modulos para todos formularios
 import campoVazio from "./modules/global/campoVazio.js"
 
@@ -19,7 +15,6 @@ import validateCPF from "./modules/register/validateCPF.js";
 import formatCEP from "./modules/register/formatCEP.js";
 import registerUser from "./modules/register/registerUser.js";
 import buscarEndereco from "./modules/register/buscarEndereco.js";
-import showDataUser from "./modules/register/showDataUser.js";
 
 
 // Formulario
@@ -65,7 +60,6 @@ function validarFormulario2() {
 
 // Funções segundo formulario
 formatCPF(registerForm[1]);
-
 
 // Terceiro formulario
 registerButton[2].addEventListener('click', validarFormulario3)

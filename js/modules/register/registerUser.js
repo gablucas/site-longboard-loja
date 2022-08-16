@@ -1,7 +1,7 @@
 import showDataUser from "./showDataUser.js";
 
 export default function registerUser(forms) {
-  const user = {endereco: {}, logged: "off"};
+  const user = {endereco: {}};
   forms.forEach((form) => {
     Array.from(form).forEach((input) => {
       if(input.name === "confirmar-senha") {
