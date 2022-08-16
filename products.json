@@ -1,0 +1,52 @@
+[
+  {
+  "id":"ldf01",
+  "type":"shape",
+  "name":"Matahari",
+  "brand":"OHAI",
+  "price":"700",
+  "dimensions": {
+    "length":"113",
+    "width":"23,2",
+    "profile":"rocker"
+  },
+
+  "longometer": {
+    "stability": "4",
+    "agility": "2",
+    "mobility": "2",
+    "carving": "3",
+    "cruise": "3",
+    "pumping": "3"
+  },
+
+  "flex":["flex 1", "flex 2"],
+
+  "description":"Contemple o que há de mais moderno para modalidade de Dancing e Freestyle, Matahari é o shape que busca trazer o melhor desempenho para ambas modalidades, ou seja, você tem uma ótima agilidade para executar as manobras de freestyle enquanto tempo um ótimo espaço para pratica do dancing"
+},
+
+{
+  "id":"ldf02",
+  "type":"shape",
+  "name":"Tarab",
+  "brand":"OHAI"
+},
+{
+  "id":"ldf03",
+  "type":"shape",
+  "name":"Bhangra V2",
+  "brand":"OHAI"
+},
+{
+  "id":"ldf04",
+  "type":"shape",
+  "name":"Tan Tien",
+  "brand":"OHAI"
+},
+{
+  "id":"ldf05",
+  "type":"shape",
+  "name":"Dervish Sama",
+  "brand":"OHAI"
+}
+]
