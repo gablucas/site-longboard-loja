@@ -5,6 +5,7 @@
       "id":"ldf01",
       "name":"Matahari",
       "modality":"dancingfreestyle",
+      "mount":"topmount",
       "brand":"OHAI",
       "price":"700",
       "dimensions": {
@@ -41,6 +42,7 @@
       "id":"ldf02",
       "name":"Bhangra V2",
       "modality":"dancingfreestyle",
+      "mount":"topmount",
       "brand":"OHAI",
       "price":"730",
       "dimensions": {
@@ -76,6 +78,7 @@
       "id":"ldf03",
       "name":"Tarab",
       "modality":"dancingfreestyle",
+      "mount":"topmount",
       "brand":"OHAI",
       "price":"750",
       "dimensions": {
@@ -108,6 +111,7 @@
       "id":"ldf04",
       "name":"Tan Tien",
       "modality":"dancingfreestyle carvingpumping",
+      "mount":"dropthrough",
       "brand":"OHAI",
       "price":"600",
       "dimensions": {
@@ -140,6 +144,7 @@
       "id":"ldf05",
       "name":"Dervish Sama",
       "modality":"dancingfreestyle carvingpumping",
+      "mount":"dropthrough",
       "brand":"OHAI",
       "price":"600",
       "dimensions": {
@@ -172,6 +177,7 @@
       "id":"ldf06",
       "name":"Icarus",
       "modality":"carvingpumping",
+      "mount":"dropthrough",
       "brand":"OHAI",
       "price":"575",
       "dimensions": {
@@ -206,6 +212,7 @@
       "id":"ldf07",
       "name":"Fattail",
       "modality":"carvingpumping",
+      "mount":"topmount",
       "brand":"OHAI",
       "price":"575",
       "dimensions": {
@@ -240,6 +247,7 @@
       "id":"ldf08",
       "name":"Vanguard",
       "modality":"carvingpumping",
+      "mount":"topmount",
       "brand":"OHAI",
       "price":"575",
       "dimensions": {
@@ -274,6 +282,7 @@
       "id":"ldf09",
       "name":"Trip",
       "modality":"freeridedownhill distance",
+      "mount":"doubledrop",
       "brand":"OHAI",
       "price":"620",
       "dimensions": {
@@ -313,6 +322,7 @@
       "id":"ldf10",
       "name":"Basalt Tesseract",
       "modality":"freeridedownhill",
+      "mount":"topmount",
       "brand":"OHAI",
       "price":"980",
       "dimensions": {
@@ -345,6 +355,7 @@
       "id":"ldf11",
       "name":"Cantellated Tesseract",
       "modality":"freeridedownhill",
+      "mount":"topmount",
       "brand":"OHAI",
       "price":"980",
       "dimensions": {
@@ -377,6 +388,7 @@
       "id":"ldf12",
       "name":"Truncated Tesseract",
       "modality":"freeridedownhill",
+      "mount":"topmount",
       "brand":"OHAI",
       "price":"980",
       "dimensions": {
@@ -410,6 +422,7 @@
       "id":"ldf13",
       "name":"Omakase",
       "modality":"minicruiser",
+      "mount":"topmount",
       "brand":"OHAI",
       "price":"870",
       "dimensions": {
@@ -447,6 +460,7 @@
       "id":"ldf14",
       "name":"Coyote",
       "modality":"minicruiser",
+      "mount":"topmount",
       "brand":"OHAI",
       "price":"700",
       "dimensions": {
@@ -480,6 +494,7 @@
       "id":"ldf15",
       "name":"Poke",
       "modality":"minicruiser",
+      "mount":"topmount",
       "brand":"OHAI",
       "price":"650",
       "dimensions": {
@@ -515,6 +530,7 @@
       "id":"ldf16",
       "name":"Bolsa",
       "modality":"surfskate",
+      "mount":"topmount",
       "brand":"OHAI",
       "price":"650",
       "dimensions": {

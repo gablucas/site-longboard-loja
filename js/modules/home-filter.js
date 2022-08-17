@@ -2,7 +2,6 @@ export default function initHomeFilter() {
 
 /** EXIBIR OS SHAPES NA HOME DE ACORDO COM A MODALIDADE SELECIONADA */
 const modalidades = document.querySelectorAll('.home-shapes-modalidades button')
-const shapes = document.querySelectorAll('.home-produtos-shapes li');
 
 
 modalidades.forEach((modalidade) => {
@@ -10,7 +9,7 @@ modalidades.forEach((modalidade) => {
 })
 
 function selecionarShapes(e) {
-
+  const shapes = document.querySelectorAll('.home-produtos-shapes li');
   const modalidadeID = e.currentTarget.getAttribute('id');
   
   modalidades.forEach((btn) => {
