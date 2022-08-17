@@ -1,12 +1,16 @@
 import initDropDown from "./modules/global/dropdown.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initHomeFilter from "./modules/home-filter.js";
-import loggedUser from "./modules/global/loggedUser.js"
+import loggedUser from "./modules/global/loggedUser.js";
+import showProducts from "./modules/home/showProducts.js";
 
 initDropDown();
 initMenuMobile();
-initHomeFilter();
 loggedUser();
+showProducts();
+initHomeFilter();
+
+
 
 fetch('products.json')
 .then(response => response.json())

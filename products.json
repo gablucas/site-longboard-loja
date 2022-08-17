@@ -1,52 +1,549 @@
-[
-  {
-  "id":"ldf01",
-  "type":"shape",
-  "name":"Matahari",
-  "brand":"OHAI",
-  "price":"700",
-  "dimensions": {
-    "length":"113",
-    "width":"23,2",
-    "profile":"rocker"
-  },
-
-  "longometer": {
-    "stability": "4",
-    "agility": "2",
-    "mobility": "2",
-    "carving": "3",
-    "cruise": "3",
-    "pumping": "3"
-  },
-
-  "flex":["flex 1", "flex 2"],
-
-  "description":"Contemple o que há de mais moderno para modalidade de Dancing e Freestyle, Matahari é o shape que busca trazer o melhor desempenho para ambas modalidades, ou seja, você tem uma ótima agilidade para executar as manobras de freestyle enquanto tempo um ótimo espaço para pratica do dancing"
-},
-
 {
-  "id":"ldf02",
-  "type":"shape",
-  "name":"Tarab",
-  "brand":"OHAI"
-},
-{
-  "id":"ldf03",
-  "type":"shape",
-  "name":"Bhangra V2",
-  "brand":"OHAI"
-},
-{
-  "id":"ldf04",
-  "type":"shape",
-  "name":"Tan Tien",
-  "brand":"OHAI"
-},
-{
-  "id":"ldf05",
-  "type":"shape",
-  "name":"Dervish Sama",
-  "brand":"OHAI"
+  "shapes" : [
+
+    {
+      "id":"ldf01",
+      "name":"Matahari",
+      "modality":"dancingfreestyle",
+      "brand":"OHAI",
+      "price":"700",
+      "dimensions": {
+        "length":"113",
+        "width":"23,2",
+        "weight":"2,1",
+        "profile":"rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1", "flex 2"],
+    
+      "images": [
+        "img/produtos/shapes/matahari/matahari_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari2_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari3_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari4_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari5_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari6_1024px.jpg"
+      ],
+    
+      "description":"Contemple o que há de mais moderno para modalidade de Dancing e Freestyle, Matahari é o shape que busca trazer o melhor desempenho para ambas modalidades, ou seja, você tem uma ótima agilidade para executar as manobras de freestyle enquanto tempo um ótimo espaço para pratica do dancing"
+    },
+
+    {
+      "id":"ldf02",
+      "name":"Bhangra V2",
+      "modality":"dancingfreestyle",
+      "brand":"OHAI",
+      "price":"730",
+      "dimensions": {
+        "length":"123",
+        "width":"24",
+        "weight":"2,3 - 2,5",
+        "profile":"rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1", "flex 2"],
+    
+      "images": [
+        "img/produtos/shapes/bhangrav2/bhangrav2_1024px.jpg",
+        "img/produtos/shapes/bhangrav2/bhangrav2-2_1024px.jpg",
+        "img/produtos/shapes/bhangrav2/bhangrav2-3_1024px.jpg",
+        "img/produtos/shapes/bhangrav2/bhangrav2-4_1024px.jpg",
+        "img/produtos/shapes/bhangrav2/bhangrav2-5_1024px.jpg"
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf03",
+      "name":"Tarab",
+      "modality":"dancingfreestyle",
+      "brand":"OHAI",
+      "price":"750",
+      "dimensions": {
+        "length":"119",
+        "width":"24,1",
+        "weigth":"2.3",
+        "profile":"rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1", "flex 2"],
+    
+      "images": [
+        "img/produtos/shapes/tarab/tarab1_1024px.jpg",
+        "img/produtos/shapes/tarab/tarab2_1024px.jpg"
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf04",
+      "name":"Tan Tien",
+      "modality":"dancingfreestyle carvingpumping",
+      "brand":"OHAI",
+      "price":"600",
+      "dimensions": {
+        "length":"99",
+        "width":"22,3",
+        "weigth":"1,4 - 1,6",
+        "profile":"camber"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1", "flex 2"],
+    
+      "images": [
+        "img/produtos/shapes/tantien/tantien1_1024px.jpg",
+        "img/produtos/shapes/tantien/tantien2_1024px.jpg"
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf05",
+      "name":"Dervish Sama",
+      "modality":"dancingfreestyle carvingpumping",
+      "brand":"OHAI",
+      "price":"600",
+      "dimensions": {
+        "length":"109",
+        "width":"22,9",
+        "weigth":"1,4 - 1,6",
+        "profile":"camber"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1", "flex 2"],
+    
+      "images": [
+        "img/produtos/shapes/dervishsama/dervishsama1_1024px.jpg",
+        "img/produtos/shapes/dervishsama/dervishsama2_1024px.jpg"
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf06",
+      "name":"Icarus",
+      "modality":"carvingpumping",
+      "brand":"OHAI",
+      "price":"575",
+      "dimensions": {
+        "length":"97,5",
+        "width":"22",
+        "weigth":"1,3",
+        "profile":"camber"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1", "flex 2"],
+    
+      "images": [
+        "img/produtos/shapes/icarus/icarus1_1024px.jpg",
+        "img/produtos/shapes/icarus/icarus2_1024px.jpg",
+        "img/produtos/shapes/icarus/icarus3_1024px.jpg",
+        "img/produtos/shapes/icarus/icarus4_1024px.jpg"
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf07",
+      "name":"Fattail",
+      "modality":"carvingpumping",
+      "brand":"OHAI",
+      "price":"575",
+      "dimensions": {
+        "length":"96,5",
+        "width":"22",
+        "weigth":"1,4",
+        "profile":"camber"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1", "flex 2"],
+    
+      "images": [
+        "img/produtos/shapes/fattail/fattail1_1024px.jpg",
+        "img/produtos/shapes/fattail/fattail2_1024px.jpg",
+        "img/produtos/shapes/fattail/fattail3_1024px.jpg",
+        "img/produtos/shapes/fattail/fattail4_1024px.jpg"
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf08",
+      "name":"Vanguard",
+      "modality":"carvingpumping",
+      "brand":"OHAI",
+      "price":"575",
+      "dimensions": {
+        "length":"107 - 98",
+        "width":"21,5",
+        "weigth":"1,2 - 1,7",
+        "profile":"camber"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1", "flex 2", "flex 3", "flex 4"],
+    
+      "images": [
+        "img/produtos/shapes/vanguard/vanguard1_1024px.jpg",
+        "img/produtos/shapes/vanguard/vanguard2_1024px.jpg",
+        "img/produtos/shapes/vanguard/vanguard3_1024px.jpg",
+        "img/produtos/shapes/vanguard/vanguard4_1024px.jpg"
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf09",
+      "name":"Trip",
+      "modality":"freeridedownhill distance",
+      "brand":"OHAI",
+      "price":"620",
+      "dimensions": {
+        "length":"84,5",
+        "width":"22,9",
+        "weigth":"1,6",
+        "profile":"Rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1"],
+    
+      "images": [
+        "img/produtos/shapes/trip/trip1_1024px.jpg",
+        "img/produtos/shapes/trip/trip2_1024px.jpg",
+        "img/produtos/shapes/trip/trip3_1024px.jpg",
+        "img/produtos/shapes/trip/trip4_1024px.jpg",
+        "img/produtos/shapes/trip/trip5_1024px.jpg",
+        "img/produtos/shapes/trip/trip6_1024px.jpg",
+        "img/produtos/shapes/trip/trip7_1024px.jpg",
+        "img/produtos/shapes/trip/trip8_1024px.jpg",
+        "img/produtos/shapes/trip/trip9_1024px.jpg"
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf10",
+      "name":"Basalt Tesseract",
+      "modality":"freeridedownhill",
+      "brand":"OHAI",
+      "price":"980",
+      "dimensions": {
+        "length":"99",
+        "width":"24",
+        "weigth":"2,0",
+        "profile":"Rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1"],
+    
+      "images": [
+        "img/produtos/shapes/basalttesseract/basalttesseract1_1024px.jpg",
+        "img/produtos/shapes/basalttesseract/basalttesseract2_1024px.jpg"
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf11",
+      "name":"Cantellated Tesseract",
+      "modality":"freeridedownhill",
+      "brand":"OHAI",
+      "price":"980",
+      "dimensions": {
+        "length":"91",
+        "width":"24",
+        "weigth":"2,0",
+        "profile":"Rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1"],
+    
+      "images": [
+        "img/produtos/shapes/cantellatedtesseract/cantellatedtesseract1_1024px.jpg",
+        "img/produtos/shapes/cantellatedtesseract/cantellatedtesseract2_1024px.jpg"
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf12",
+      "name":"Truncated Tesseract",
+      "modality":"freeridedownhill",
+      "brand":"OHAI",
+      "price":"980",
+      "dimensions": {
+        "length":"84",
+        "width":"24",
+        "weigth":"2,0",
+        "profile":"Rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1"],
+    
+      "images": [
+        "img/produtos/shapes/truncatedtesseract/truncatedtesseract1_1024px.jpg",
+        "img/produtos/shapes/truncatedtesseract/truncatedtesseract2_1024px.jpg",
+        "img/produtos/shapes/truncatedtesseract/truncatedtesseract3_1024px.jpg"
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf13",
+      "name":"Omakase",
+      "modality":"minicruiser",
+      "brand":"OHAI",
+      "price":"870",
+      "dimensions": {
+        "length":"85,1",
+        "width":"25,4",
+        "weigth":"1,8",
+        "profile":"Rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1"],
+    
+      "images": [
+        "img/produtos/shapes/omakase/omakase1_1024px.jpg",
+        "img/produtos/shapes/omakase/omakase2_1024px.jpg",
+        "img/produtos/shapes/omakase/omakase3_1024px.jpg",
+        "img/produtos/shapes/omakase/omakase4_1024px.jpg",
+        "img/produtos/shapes/omakase/omakase5_1024px.jpg",
+        "img/produtos/shapes/omakase/omakase6_1024px.jpg"
+        
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf14",
+      "name":"Coyote",
+      "modality":"minicruiser",
+      "brand":"OHAI",
+      "price":"700",
+      "dimensions": {
+        "length":"78,1",
+        "width":"21,3",
+        "weigth":"1,3",
+        "profile":"Rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1"],
+    
+      "images": [
+        "img/produtos/shapes/coyote/coyote1_1024px.jpg",
+        "img/produtos/shapes/coyote/coyote2_1024px.jpg"
+        
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf15",
+      "name":"Poke",
+      "modality":"minicruiser",
+      "brand":"OHAI",
+      "price":"650",
+      "dimensions": {
+        "length":"86",
+        "width":"23,18",
+        "weigth":"1,3",
+        "profile":"Rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1"],
+    
+      "images": [
+        "img/produtos/shapes/poke/poke1_1024px.jpg",
+        "img/produtos/shapes/poke/poke2_1024px.jpg",
+        "img/produtos/shapes/poke/poke3_1024px.jpg",
+        "img/produtos/shapes/poke/poke4_1024px.jpg",
+        "img/produtos/shapes/poke/poke5_1024px.jpg"
+      ],
+    
+      "description":""
+    },
+
+    {
+      "id":"ldf16",
+      "name":"Bolsa",
+      "modality":"surfskate",
+      "brand":"OHAI",
+      "price":"650",
+      "dimensions": {
+        "length":"78,75",
+        "width":"24",
+        "weigth":"1,32",
+        "profile":"Rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["flex 1"],
+    
+      "images": [
+        "img/produtos/shapes/bolsa/bolsa1_1024px.jpg",
+        "img/produtos/shapes/bolsa/bolsa2_1024px.jpg",
+        "img/produtos/shapes/bolsa/bolsa3_1024px.jpg",
+        "img/produtos/shapes/bolsa/bolsa4_1024px.jpg",
+        "img/produtos/shapes/bolsa/bolsa5_1024px.jpg"
+      ],
+    
+      "description":""
+    }
+  ]
 }
-]

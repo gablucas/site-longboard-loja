@@ -63,11 +63,11 @@ header {
   display: none;
 }
 
-[data-menu="login"].active {
+[data-menu="login-active"] {
   display: initial;
 }
 
-[data-menu="user"].active {
+[data-menu="user-active"] {
   display: initial;
 }
 
