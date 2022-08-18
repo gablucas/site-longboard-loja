@@ -1,16 +1,7 @@
-import showProducts from "./modules/global/showProducts.js";
-import ativarMenuSecundario from "./modules/produtos/menuSecundario.js";
-showProducts();
-ativarMenuSecundario();
-
-
-
-
-
-/** FILTRAR OS PRODUTOS POR SUAS CARACTERISTICAS */
 const botoes = document.querySelectorAll('.filtro button');
 
-/** Nova Forma */
+export default function filterProducts() {
+/** FILTRAR OS PRODUTOS POR SUAS CARACTERISTICAS */
 botoes.forEach((botao) => {
   botao.addEventListener('click', filtroProdutos)
 })
@@ -44,4 +35,5 @@ function filtroProdutos(event) {
     }
     
   })
+}
 }

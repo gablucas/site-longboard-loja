@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 
-.shape-introducao h1 {
+.shape-introducao div {
   display: flex;
   align-items: center;
   justify-content: space-between;

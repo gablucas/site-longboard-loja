@@ -50,19 +50,19 @@
     <div class="shape-sobre">
       
       <div class="shape-introducao">
-        <h1 class="font-1-xl">Matahari <span class="font-1-m-u cor-d5">R$ 700,00</span></h1>
-        <span class="font-2-s-b-u cor-5">OHAI BOARDS</span>
-        <p class="font-2-xs">Contemple o que há de mais moderno para modalidade de Dancing e Freestyle, Matahari é o shape que busca trazer o melhor desempenho para ambas modalidades, ou seja, você tem uma ótima agilidade para executar as manobras de freestyle enquanto tempo um ótimo espaço para pratica do dancing.</p>
+        <div><h1 data-product="name" class="font-1-xl">Matahari</h1><span data-product="price" class="font-1-m-u cor-d5">R$ 700,00</span></div>
+        <span data-product="brand" class="font-2-s-b-u cor-5">OHAI BOARDS</span>
+        <p data-product="description" class="font-2-xs">Contemple o que há de mais moderno para modalidade de Dancing e Freestyle, Matahari é o shape que busca trazer o melhor desempenho para ambas modalidades, ou seja, você tem uma ótima agilidade para executar as manobras de freestyle enquanto tempo um ótimo espaço para pratica do dancing.</p>
       </div>
 
       <div class="shape-dados">
         <div class="shape-informacoes">
           <h2 class="font-2-s-m cor-11">Informações do produto</h2>
           <ul class="font-2-xs cor-10">
-            <li>Comprimento <span>44,5" / 113 cm</span></li>
-            <li>Largura <span>9,25" / 23,2 cm</span></li>
-            <li>Perfil <span>Rigido</span></li>
-            <li>Peso <span>2,1kg</span></li>
+            <li>Comprimento <span data-product="length">44,5" / 113 cm</span></li>
+            <li>Largura <span data-product="width">9,25" / 23,2 cm</span></li>
+            <li>Perfil <span data-product="profile">Rigido</span></li>
+            <li>Peso <span data-product="weight">2,1kg</span></li>
           </ul>
         </div>
   
@@ -70,7 +70,7 @@
           <h2 class="font-2-s-m cor-11">Long-o-metro</h2>
           <ul class="font-2-xs cor-10">
             <li>Estabilidade
-              <div class="nota4">
+              <div data-product="stability" class="nota4">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -78,7 +78,7 @@
                 <span></span>
               </div></li>
 
-            <li>Agilidade
+            <li data-product="agility">Agilidade
               <div class="nota2">
                 <span></span>
                 <span></span>
@@ -87,7 +87,7 @@
                 <span></span>
               </div></li>
 
-            <li>Mobilidade
+            <li data-product="mobility">Mobilidade
               <div class="nota2">
                 <span></span>
                 <span></span>
@@ -96,7 +96,7 @@
                 <span></span>
               </div></li>
 
-            <li>Carving
+            <li data-product="carving">Carving
               <div class="nota3">
                 <span></span>
                 <span></span>
@@ -105,7 +105,7 @@
                 <span></span>
               </div></li>
 
-            <li>Cruise
+            <li data-product="cruise">Cruise
               <div class="nota3">
                 <span></span>
                 <span></span>
@@ -114,7 +114,7 @@
                 <span></span>
               </div></li>
 
-            <li>Pumping
+            <li data-product="pumping">Pumping
               <div class="nota3">
                 <span></span>
                 <span></span>
@@ -129,7 +129,7 @@
       <div class="shape-compra">
         <form action="../../carrinho.html">
 
-          <select class="font-2-s" name="flex" id="">
+          <select data-product="flex" class="font-2-s" name="flex" id="">
             <option value="">Tipo flex</option>
             <option value="flex1">Flex 1</option>
             <option value="flex2">Flex 2</option>
@@ -188,6 +188,6 @@
     </div>
   </footer>
 
-  <script src="../../js/script-produto.js"></script>
+  <script type="module" src="../js/product.js"></script>
 </body>
 </html>
