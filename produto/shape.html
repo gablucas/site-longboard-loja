@@ -36,33 +36,28 @@
   <main class="shape container">
 
     <div class="shape-imagem">
-      <img src="../../img/produtos/shapes/matahari/matahari_1024px.jpg" alt="">
+      <img data-product="main-image" src="" alt="">
 
-    <div>
-      <img src="../../img/produtos/shapes/matahari/matahari2_1024px.jpg" alt="">
-      <img src="../../img/produtos/shapes/matahari/matahari3_1024px.jpg" alt="">
-      <img src="../../img/produtos/shapes/matahari/matahari4_1024px.jpg" alt="">
-      <img src="../../img/produtos/shapes/matahari/matahari5_1024px.jpg" alt="">
-      <img src="../../img/produtos/shapes/matahari/matahari6_1024px.jpg" alt="">
+    <div data-product="images">
     </div>
     </div>
 
     <div class="shape-sobre">
       
       <div class="shape-introducao">
-        <div><h1 data-product="name" class="font-1-xl">Matahari</h1><span data-product="price" class="font-1-m-u cor-d5">R$ 700,00</span></div>
-        <span data-product="brand" class="font-2-s-b-u cor-5">OHAI BOARDS</span>
-        <p data-product="description" class="font-2-xs">Contemple o que há de mais moderno para modalidade de Dancing e Freestyle, Matahari é o shape que busca trazer o melhor desempenho para ambas modalidades, ou seja, você tem uma ótima agilidade para executar as manobras de freestyle enquanto tempo um ótimo espaço para pratica do dancing.</p>
+        <div><h1 data-product="name" class="font-1-xl"></h1><span data-product="price" class="font-1-m-u cor-d5"></span></div>
+        <span data-product="brand" class="font-2-s-b-u cor-5"></span>
+        <p data-product="description" class="font-2-xs"></p>
       </div>
 
       <div class="shape-dados">
         <div class="shape-informacoes">
           <h2 class="font-2-s-m cor-11">Informações do produto</h2>
           <ul class="font-2-xs cor-10">
-            <li>Comprimento <span data-product="length">44,5" / 113 cm</span></li>
-            <li>Largura <span data-product="width">9,25" / 23,2 cm</span></li>
-            <li>Perfil <span data-product="profile">Rigido</span></li>
-            <li>Peso <span data-product="weight">2,1kg</span></li>
+            <li>Comprimento <span data-product="dimensions-length"></span></li>
+            <li>Largura <span data-product="dimensions-width"></span></li>
+            <li>Perfil <span data-product="dimensions-profile"></span></li>
+            <li>Peso <span data-product="dimensions-weight"></span></li>
           </ul>
         </div>
   
@@ -70,7 +65,7 @@
           <h2 class="font-2-s-m cor-11">Long-o-metro</h2>
           <ul class="font-2-xs cor-10">
             <li>Estabilidade
-              <div data-product="stability" class="nota4">
+              <div data-product="longometer-stability" class="">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -78,8 +73,8 @@
                 <span></span>
               </div></li>
 
-            <li data-product="agility">Agilidade
-              <div class="nota2">
+            <li>Agilidade
+              <div data-product="longometer-agility" class="">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -87,8 +82,8 @@
                 <span></span>
               </div></li>
 
-            <li data-product="mobility">Mobilidade
-              <div class="nota2">
+            <li>Mobilidade
+              <div data-product="longometer-mobility" class="">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -96,8 +91,8 @@
                 <span></span>
               </div></li>
 
-            <li data-product="carving">Carving
-              <div class="nota3">
+            <li>Carving
+              <div data-product="longometer-carving" class="">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -105,8 +100,8 @@
                 <span></span>
               </div></li>
 
-            <li data-product="cruise">Cruise
-              <div class="nota3">
+            <li>Cruise
+              <div data-product="longometer-cruise" class="">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -114,8 +109,8 @@
                 <span></span>
               </div></li>
 
-            <li data-product="pumping">Pumping
-              <div class="nota3">
+            <li>Pumping
+              <div data-product="longometer-pumping" class="">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -130,9 +125,6 @@
         <form action="../../carrinho.html">
 
           <select data-product="flex" class="font-2-s" name="flex" id="">
-            <option value="">Tipo flex</option>
-            <option value="flex1">Flex 1</option>
-            <option value="flex2">Flex 2</option>
           </select>
 
           <input class="font-2-s" type="number" name="quantidade" value="1" id="quantidade" placeholder="1">
@@ -148,7 +140,7 @@
     <div class="footer container">
 
       <div class="footer-dados">
-        <a href="./"><img src="../../img/ohaibranco.svg" alt=""></a>
+        <a href="./"><img data-product="image"  src="../../img/ohaibranco.svg" alt=""></a>
         <p class="cor-4">"Não apenas fabricamos shapes, fabricamos felicidade"</p>
 
         <div class="footer-redes">
