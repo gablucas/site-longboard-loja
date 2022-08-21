@@ -5,5 +5,6 @@ export default function initMenuMobile() {
   menuMobile.addEventListener('touchstart', openMenuMobile);
   function openMenuMobile() {
     listMobile.classList.add('active');
+
   }
 }

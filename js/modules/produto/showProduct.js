@@ -5,7 +5,7 @@ export default async function showProduct() {
   const typeProduct = parametros.get('type');
   const idProduct = parametros.get('id');
   
-  const promise = await fetch('../../../products.json')
+  const promise = await fetch('https://gablucas.github.io/site-longboard-loja/products.json')
   const productsJson = await promise.json();
   const product = productsJson[typeProduct].find(product => product.id === idProduct);
 
