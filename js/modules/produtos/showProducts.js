@@ -2,11 +2,10 @@ const list = document.querySelector('[data-products]')
 const productType = list.getAttribute('data-products');
 
 export default async function showProducts() {
-  const promise = fetch('../../../products.json');
+  const promise = fetch('https://gablucas.github.io/site-longboard-loja/products.json');
   const productsJson = await (await promise).json();
   const products = productsJson[productType];
 
-  
   products.forEach((product) => {
     
     // Mostra os shapes da aba home
