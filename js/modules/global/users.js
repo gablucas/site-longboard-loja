@@ -1,5 +1,3 @@
-import loggedUser from "./loggedUser.js";
-
 const account = [];
 
 export default account;

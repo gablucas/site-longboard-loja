@@ -13,7 +13,7 @@ export default function registerUser(forms) {
     })
   })
 
-  showDataUser(user)
   localStorage[user.email] = JSON.stringify(user)
+  showDataUser(user)
 }
 

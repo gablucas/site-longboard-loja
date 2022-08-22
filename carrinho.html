@@ -16,7 +16,7 @@
 
   <!-- Seção 1: Header -->
   <header class="container">
-    <img src="img/ohaipreto.svg" alt="Logo OHAI Boards">
+    <a href="./index.html"><img src="img/ohaipreto.svg" alt="Logo OHAI Boards"></a>
 
     <nav aria-label="Primario">
       <ul class="menu font-2-s-m cor-10">
@@ -47,32 +47,8 @@
         <h1 class="font-1-m-u cor-d7">Seu Carrinho</h1>
 
         <!-- Container dos produtos -->
-        <div class="carrinho-produtos">
+        <div data-cart="products" class="carrinho-produtos">
 
-          <!-- Produto no carrinho -->
-          <div class="carrinho-item">
-            <div class="carrinho-item-imagem">
-              <img src="img/produtos/shapes/matahari/matahari_1024px.jpg" alt="" width="143" height="143">
-            </div>
-
-            <!-- Dados do produto -->
-            <div class="carrinho-item-dados">
-              <p>Produto</p>
-              <span class="font-2-xs-m-u cor-11">Shape Matahari</span>
-              <span class="font-2-xxs-u cor-6">Ohai</span>
-              <span class="font-2-xs">Dancing & Freestyle</span>
-              <span class="font-2-xs">Flex 1</span>
-            </div>
-            <div class="carrinho-item-quantidade">
-              <p>Quantidade</p>
-              <span class="font-2-xs">1</span>
-            </div>
-            <div class="carrinho-item-preco">
-              <p>Preço</p>
-              <span class="font-2-s-m cor-11">R$ 700,00</span>
-              <span class="font-2-xxs cor-6">Un x R$ 700,00</span>
-            </div>
-          </div>
         </div>
 
         <!-- Container do resumo, endereço e pagamento -->
@@ -194,6 +170,6 @@
     </div>
   </footer>
 
-  <script type="module" src="js/carrinho.js"></script>
+  <script type="module" src="js/cart.js"></script>
 </body>
 </html>

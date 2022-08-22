@@ -33,7 +33,7 @@
   </header>
 
   <!-- Seçãp 2: Main -->
-  <main class="shape container">
+  <main data-product="id" class="shape container">
 
     <div class="shape-imagem">
       <img data-product="main-image" src="" alt="">
@@ -122,13 +122,13 @@
       </div>
 
       <div class="shape-compra">
-        <form action="../../carrinho.html">
+        <form data-cart="formtoCart">
 
           <select data-product="flex" class="font-2-s" name="flex" id="">
           </select>
 
           <input class="font-2-s" type="number" name="quantidade" value="1" id="quantidade" placeholder="1">
-          <button type="submit" class="font-2-xs-m-u cor-0">adicionar ao carrinho</button>
+          <button type="button" data-cart="addtoCart" class="font-2-xs-m-u cor-0">adicionar ao carrinho</button>
         </form>
         <span data-error="product" class="error font-2-xs"></span>
       </div>
