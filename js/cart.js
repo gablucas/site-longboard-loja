@@ -3,7 +3,7 @@ import activeAddress from "./modules/cart/activeAddress.js";;
 import activeShipping from "./modules/cart/activeShipping.js";
 import activePayment from "./modules/cart/activePayment.js";
 import editAddress from "./modules/cart/editAddress.js";
-import purchaseSummary from "./modules/cart/purchseSummary.js";
+import purchaseSummary from "./modules/cart/purchaseSummary.js";
 
 showCartItens();
 activeAddress();

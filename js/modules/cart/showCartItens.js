@@ -1,5 +1,3 @@
-import purchaseSummary from "./purchseSummary.js";
-
 const cart = document.querySelector('[data-cart="products"]');
 
 export default async function showCartItens() {
@@ -10,7 +8,6 @@ export default async function showCartItens() {
 
   cartProducts.forEach((product) => {
     const getProduct = productsJson[product.type].find((getItem) => getItem.id === product.id);
-    purchaseSummary(product.quantity)
 
     cart.innerHTML +=
      `<!-- Produto no carrinho -->
