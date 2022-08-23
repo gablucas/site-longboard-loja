@@ -23,6 +23,15 @@
   gap: 20px;
   border: 1px solid var(--cor-3);
   background: var(--cor-0);
+
+  position: relative;
+}
+
+.remove-item {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  cursor: pointer;
 }
 
 .carrinho-item p {

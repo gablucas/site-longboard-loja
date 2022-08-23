@@ -1,3 +1,5 @@
+import removeItem from "./removeItem.js";
+
 const cart = document.querySelector('[data-cart="products"]');
 
 export default async function showCartItens() {
@@ -12,6 +14,7 @@ export default async function showCartItens() {
     cart.innerHTML +=
      `<!-- Produto no carrinho -->
      <div class="carrinho-item">
+        <span data-cart="remove-item" class="remove-item cor-8">x</span>
        <div class="carrinho-item-imagem">
          <img src="${getProduct.images[0]}" alt="" width="143" height="143">
        </div>
@@ -36,4 +39,6 @@ export default async function showCartItens() {
      </div>
    </div>`
   })
+
+  removeItem();
 }
