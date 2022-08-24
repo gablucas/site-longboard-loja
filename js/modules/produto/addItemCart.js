@@ -1,12 +1,16 @@
+import showQuantityItensCart from "../global/showQuantityItensCart.js";
+
 const formtoCart = document.querySelector('[data-cart="formtoCart"]').elements;
-const addtoCart = document.querySelector('[data-cart="buy"]');
+const buyItem = document.querySelector('[data-cart="buy"]');
+const addCart = document.querySelector('[data-cart="addCart"]');
 let cartArray = [];
 
 export default function addItemCart() {
+  [buyItem, addCart].forEach((btn) => {
+    btn.addEventListener('click', saveItem)
+  })
 
-  addtoCart.addEventListener('click', saveItem)
-
-  function saveItem() {
+  function saveItem({currentTarget}) {
     const dataProduct = document.querySelector('[data-product="id"]').getAttribute('id').split('-');
 
     if(localStorage.cart) {
@@ -17,6 +21,16 @@ export default function addItemCart() {
     cartArray.push(product)
     localStorage.cart = JSON.stringify(cartArray);
 
-    window.location.href = "../carrinho.html";
+    // Se o cliente clicar no botao de comprar
+    // O codigo abaixo direciona para a pagina do carrinho
+    if(currentTarget.getAttribute("data-cart") === "buy") {
+      window.location.href = "../carrinho.html";
+    }
+
+    // Se o cliente clicar no botao de adicionar ao carrinho
+    // O codigo abaixo atualiza o valor do inficador de itens do carrinho
+    if(currentTarget.getAttribute("data-cart") === "addCart") {
+      showQuantityItensCart();
+    } 
   }
 }

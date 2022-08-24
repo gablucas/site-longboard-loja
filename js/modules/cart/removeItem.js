@@ -1,5 +1,7 @@
 import cartStorage from "./cartStorage.js";
 import purchaseSummary from "./purchaseSummary.js";
+import showQuantityItensCart from "../global/showQuantityItensCart.js";
+
 
 export default function removeItem() {
   const btnRemoveItem = document.querySelectorAll('[data-cart="remove-item"]');
@@ -8,7 +10,6 @@ export default function removeItem() {
     btn.addEventListener('click', removeItemCart)
   })
 
-  
   function removeItemCart({currentTarget}) {
     const itens = document.querySelectorAll('[data-cart="remove-item"]');
     const index = Array.from(itens).findIndex(item => item === currentTarget);
@@ -20,5 +21,6 @@ export default function removeItem() {
 
     currentTarget.parentElement.remove();
     purchaseSummary();
+    showQuantityItensCart();
   }
 }
