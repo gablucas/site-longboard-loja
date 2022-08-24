@@ -1,3 +1,6 @@
+import showQuantityItensCart from "./modules/global/showQuantityItensCart.js"
+showQuantityItensCart();
+
 // Modulos para todos formularios
 import campoVazio from "./modules/global/campoVazio.js"
 

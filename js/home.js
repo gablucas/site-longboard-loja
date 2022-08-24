@@ -4,6 +4,7 @@ import initHomeFilter from "./modules/home-filter.js";
 import loggedUser from "./modules/global/loggedUser.js";
 import exitAccount from "./modules/global/exitAccount.js";
 import showProducts from "./modules/produtos/showProducts.js";
+import showQuantityItensCart from "./modules/global/showQuantityItensCart.js"
 
 initDropDown();
 initMenuMobile();
@@ -11,5 +12,6 @@ loggedUser();
 showProducts();
 initHomeFilter();
 exitAccount();
+showQuantityItensCart();
 
 

@@ -1,3 +1,6 @@
+import showQuantityItensCart from "./modules/global/showQuantityItensCart.js"
+showQuantityItensCart();
+
 // Trocar imagens com clique
 imagens = document.querySelectorAll('.shape-imagem div img');
 imagemPrincipal = document.querySelector('.shape-imagem img')

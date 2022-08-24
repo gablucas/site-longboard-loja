@@ -1,5 +1,5 @@
 const formtoCart = document.querySelector('[data-cart="formtoCart"]').elements;
-const addtoCart = document.querySelector('[data-cart="addtoCart"]');
+const addtoCart = document.querySelector('[data-cart="buy"]');
 let cartArray = [];
 
 export default function addItemCart() {

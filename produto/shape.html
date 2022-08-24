@@ -27,7 +27,8 @@
 
         <li data-menu="user"><a href="../../account.html"></a></li>
 
-        <li><a href="./"><img src="../../img/icones/iconsacola.svg" alt="Sacola"></a></li>
+        <li><a class="img-carrinho" href="./carrinho.html"><img src="../img/icones/iconsacola.svg" alt="Sacola"><span data-cart="quantity" class="cart-quantity">1</span></a></li>
+      </ul>
       </ul>
     </nav>
   </header>
@@ -128,7 +129,8 @@
           </select>
 
           <input class="font-2-s" type="number" name="quantidade" value="1" id="quantidade" placeholder="1">
-          <button type="button" data-cart="addtoCart" class="font-2-xs-m-u cor-0">adicionar ao carrinho</button>
+          <button type="button" data-cart="buy" class="font-2-xs-m-u cor-0">Comprar</button>
+          <button type="button" data-cart="addCart" class="font-2-xs-m-u cor-0">Adicionar no carrinho</button>
         </form>
         <span data-error="product" class="error font-2-xs"></span>
       </div>
