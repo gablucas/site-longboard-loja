@@ -23,7 +23,7 @@
 
         <li><a href="./">Longboard <img src="../img/icones/iconexibicao.svg" alt=""></a></li>
 
-        <li data-menu="login-active"><a href="login.html"><img src="../img/icones/iconusuario.svg" alt="">Entrar</a></li>
+        <li data-menu="login-active"><a href="../login.html"><img src="../img/icones/iconusuario.svg" alt="">Entrar</a></li>
 
         <li data-dropdown data-menu="user"><a href=""></a>
           <ul class="menu-dropdown">
@@ -34,7 +34,7 @@
           </ul>
         </li>
 
-        <li><a class="img-carrinho" href="../carrinho.html"><img src="../img/icones/iconsacola.svg" alt="Sacola"><span data-cart="quantity" class="cart-quantity">1</span></a></li>
+        <li><a class="img-carrinho" href="../carrinho.html"><img src="../img/icones/iconsacola.svg" alt="Sacola"><span data-cart="quantity" class="cart-quantity">0</span></a></li>
       </ul>
       </ul>
     </nav>
@@ -53,7 +53,7 @@
     <div class="shape-sobre">
       
       <div class="shape-introducao">
-        <div><h1 data-product="name" class="font-1-xl"></h1><span data-product="price" class="font-1-m-u cor-d5"></span></div>
+        <div><h1 data-product="name" class="font-1-xl"></h1><span class="font-1-m-u cor-d5">R$ <span data-product="price">0</span>,00</span></div>
         <span data-product="brand" class="font-2-s-b-u cor-5"></span>
         <p data-product="description" class="font-2-xs"></p>
       </div>
@@ -130,16 +130,17 @@
       </div>
 
       <div class="shape-compra">
-        <form data-cart="formtoCart">
-
-          <select data-product="flex" class="font-2-s" name="flex" id="">
+        <form data-cart="form">
+          <select data-product="flex" class="font-2-s" name="flex">
           </select>
+          <input class="font-2-s" type="number" name="quantity" value="1" placeholder="1">
+          <span class="error"></span>
+        </form>
 
-          <input class="font-2-s" type="number" name="quantidade" value="1" id="quantidade" placeholder="1">
+        <div>
           <button type="button" data-cart="buy" class="font-2-xs-m-u cor-0">Comprar</button>
           <button type="button" data-cart="addCart" class="font-2-xs-m-u cor-0">Adicionar no carrinho</button>
-        </form>
-        <span data-error="product" class="error font-2-xs"></span>
+        </div>
       </div>
     </div>
   </main>

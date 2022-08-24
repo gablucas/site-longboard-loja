@@ -1,3 +1,5 @@
+import switchImage from "./switchImage.js";
+
 const dataProduct = document.querySelectorAll('[data-product]');
 const parametros = new URLSearchParams(location.search);
 const typeProduct = parametros.get('type');
@@ -13,7 +15,7 @@ export default async function showProduct() {
     const attribute = element.getAttribute('data-product');
     const propertyName = attribute.split("-")[1];
 
-    if(attribute.includes('id')) {
+    if(attribute === "id") {
       element.setAttribute('id', `${typeProduct}-${idProduct}`)
 
     }else if(attribute.includes("dimensions")) {
@@ -39,4 +41,6 @@ export default async function showProduct() {
       element.innerText = product[attribute];
     }
   })
+
+  switchImage();
 }

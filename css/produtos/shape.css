@@ -101,22 +101,31 @@
   background-color: var(--cor-10);
 }
 
+.shape-compra {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-top: 12px;
+}
+
 .shape-compra form {
-  margin-top: 20px;
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
   justify-content: start;
+  align-items: center;
+  gap: 12px;
+  height: 40px;
 }
 
-.shape-compra input.quantidade {
-  width: 100px;
+.shape-compra div {
+  justify-self: end;
 }
-
 
 .shape-compra select,
 .shape-compra input {
   text-align: center;
   width: 40px;
+  height: 40px;
   border: 1px solid #000000;
   border-radius: 7px;
 }
@@ -128,7 +137,8 @@
 .shape-compra button {
   cursor: pointer;
   font: inherit;
-  padding: 12px 12px;
+
+  padding: 10px;
   border-radius: 7px;
   background:linear-gradient(#B667CB,
   #7D3F92);
