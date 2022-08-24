@@ -140,6 +140,9 @@
 
   padding: 10px;
   border-radius: 7px;
-  background:linear-gradient(#B667CB,
-  #7D3F92);
+  background:linear-gradient(var(--cor-d4),var(--cor-d5));
+}
+
+.shape-compra button:hover {
+  background:linear-gradient(var(--cor-d5), var(--cor-d6));
 }
