@@ -28,7 +28,7 @@ export default async function showProduct() {
       })
 
       const mainImage = document.querySelector('[data-product="main-image"]');
-      mainImage.setAttribute('src', `../../${product.images[0]}`);
+      mainImage.setAttribute('src', `../${product.images[0]}`);
 
     }else if(attribute.includes("flex")){
       product.flex.forEach((flex) => {
