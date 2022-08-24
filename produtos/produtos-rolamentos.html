@@ -31,11 +31,18 @@
           </ul>
         </li>
 
-        <li data-menu="login" class="active"><a href="login.html"><img src="../img/icones/iconusuario.svg" alt="">Entrar</a></li>
+        <li data-menu="login-active"><a href="../login.html"><img src="../img/icones/iconusuario.svg" alt="">Entrar</a></li>
 
-        <li data-menu="user"><a href="../account.html"></a></li>
+        <li data-dropdown data-menu="user"><a href=""></a>
+          <ul class="menu-dropdown">
+            <li>Minha conta</li>
+            <li>Meus pedidos</li>
+            <li>Favoritos</li>
+            <li data-menu="exit">Sair</li>
+          </ul>
+        </li>
 
-        <li><a href="./"><img src="../../img/icones/iconsacola.svg" alt="Sacola"></a></li>
+        <li><a class="img-carrinho" href="../carrinho.html"><img src="../img/icones/iconsacola.svg" alt="Sacola"><span data-cart="quantity" class="cart-quantity">1</span></a></li>
       </ul>
     </nav>
   </header>
@@ -98,7 +105,7 @@
       </div>
 
       <div>
-        <ul data-products="rolamentos" class="produtos">
+        <ul data-products="bearings" class="produtos">
         </ul>
       </div>
     </div>

@@ -560,5 +560,161 @@
     
       "description":""
     }
+  ],
+
+  "trucks": [
+    {
+      "id":"ldf01",
+      "name":"Matahari",
+      "modality":"dancingfreestyle",
+      "mount":"topmount",
+      "brand":"OHAI",
+      "price":"700",
+      "dimensions": {
+        "length":"113",
+        "width":"23,2",
+        "weight":"2,1",
+        "profile":"rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["Flex 1", "Flex 2"],
+    
+      "images": [
+        "img/produtos/shapes/matahari/matahari_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari2_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari3_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari4_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari5_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari6_1024px.jpg"
+      ],
+    
+      "description":"Contemple o que há de mais moderno para modalidade de Dancing e Freestyle, Matahari é o shape que busca trazer o melhor desempenho para ambas modalidades, ou seja, você tem uma ótima agilidade para executar as manobras de freestyle enquanto tempo um ótimo espaço para pratica do dancing"
+    }
+  ],
+
+  "wheels": [
+    {
+      "id":"ldf01",
+      "name":"Matahari",
+      "modality":"dancingfreestyle",
+      "mount":"topmount",
+      "brand":"OHAI",
+      "price":"700",
+      "dimensions": {
+        "length":"113",
+        "width":"23,2",
+        "weight":"2,1",
+        "profile":"rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["Flex 1", "Flex 2"],
+    
+      "images": [
+        "img/produtos/shapes/matahari/matahari_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari2_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari3_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari4_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari5_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari6_1024px.jpg"
+      ],
+    
+      "description":"Contemple o que há de mais moderno para modalidade de Dancing e Freestyle, Matahari é o shape que busca trazer o melhor desempenho para ambas modalidades, ou seja, você tem uma ótima agilidade para executar as manobras de freestyle enquanto tempo um ótimo espaço para pratica do dancing"
+    }
+  ],
+
+  "bearings": [
+    {
+      "id":"ldf01",
+      "name":"Matahari",
+      "modality":"dancingfreestyle",
+      "mount":"topmount",
+      "brand":"OHAI",
+      "price":"700",
+      "dimensions": {
+        "length":"113",
+        "width":"23,2",
+        "weight":"2,1",
+        "profile":"rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["Flex 1", "Flex 2"],
+    
+      "images": [
+        "img/produtos/shapes/matahari/matahari_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari2_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari3_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari4_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari5_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari6_1024px.jpg"
+      ],
+    
+      "description":"Contemple o que há de mais moderno para modalidade de Dancing e Freestyle, Matahari é o shape que busca trazer o melhor desempenho para ambas modalidades, ou seja, você tem uma ótima agilidade para executar as manobras de freestyle enquanto tempo um ótimo espaço para pratica do dancing"
+    }
+  ],
+
+  "acessories": [
+    {
+      "id":"ldf01",
+      "name":"Matahari",
+      "modality":"dancingfreestyle",
+      "mount":"topmount",
+      "brand":"OHAI",
+      "price":"700",
+      "dimensions": {
+        "length":"113",
+        "width":"23,2",
+        "weight":"2,1",
+        "profile":"rocker"
+      },
+    
+      "longometer": {
+        "stability": "4",
+        "agility": "2",
+        "mobility": "2",
+        "carving": "3",
+        "cruise": "3",
+        "pumping": "3"
+      },
+    
+      "flex":["Flex 1", "Flex 2"],
+    
+      "images": [
+        "img/produtos/shapes/matahari/matahari_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari2_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari3_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari4_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari5_1024px.jpg",
+        "img/produtos/shapes/matahari/matahari6_1024px.jpg"
+      ],
+    
+      "description":"Contemple o que há de mais moderno para modalidade de Dancing e Freestyle, Matahari é o shape que busca trazer o melhor desempenho para ambas modalidades, ou seja, você tem uma ótima agilidade para executar as manobras de freestyle enquanto tempo um ótimo espaço para pratica do dancing"
+    }
   ]
 }

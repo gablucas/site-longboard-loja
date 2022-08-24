@@ -1,5 +1,6 @@
 const list = document.querySelector('[data-products]')
 const productType = list.getAttribute('data-products');
+console.log(productType)
 
 export default async function showProducts() {
   const promise = fetch('https://gablucas.github.io/site-longboard-loja/products.json');
