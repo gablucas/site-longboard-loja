@@ -1,4 +1,4 @@
-export default function initHomeFilter() {
+export default function homeFilter() {
 
 /** EXIBIR OS SHAPES NA HOME DE ACORDO COM A MODALIDADE SELECIONADA */
 const modalidades = document.querySelectorAll('.home-shapes-modalidades button')

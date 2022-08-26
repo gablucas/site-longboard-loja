@@ -1,0 +1,40 @@
+.account-bg {
+  background-color: var(--cor-2);
+}
+
+.account {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  gap: 20px;
+}
+
+.account-options,
+.account-info {
+  background-color: var(--cor-0);
+}
+
+.account-options h1 {
+  padding: 20px 0px 20px 20px;
+}
+
+.account-options li {
+  cursor: pointer;
+  padding: 14px 0px 14px 20px;
+  border-top: .5px solid var(--cor-6);
+}
+
+.account-options li:hover {
+  color: var(--cor-d5);
+  background-color: var(--cor-d2);
+}
+
+.account-options li.active {
+  color: var(--cor-0);
+  background-color: var(--cor-d5);
+}
+
+.account-info {
+  padding-top: 40px;
+}

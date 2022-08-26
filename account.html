@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Ohai Boards</title>
+</head>
+
+<body id="account">
+
+  <!-- Seção 1: Header -->
+  <header class="container">
+    <a href="./index.html"><img src="./img/ohaipreto.svg" alt="Logo OHAI Boards"></a>
+
+    <nav aria-label="Primario">
+      <ul class="menu font-2-s-m cor-10">
+
+        <li data-dropdown><a href="produtos/produtos.html">Produtos <img src="./img/icones/iconexibicao.svg" alt=""></a>
+
+        <ul class="menu-dropdown" >
+          <li><a href="produtos/produtos-shapes.html">Shapes</a></li>
+          <li><a href="produtos/produtos-trucks.html">Trucks</a></li>
+          <li><a href="produtos/produtos-rodas.html">Rodas</a></li>
+          <li><a href="produtos/produtos-rolamentos.html">Rolamentos</a></li>
+          <li><a href="produtos/produtos-acessorios.html">Acessórios</a></li>
+        </ul>
+        </li>
+
+        <li data-menu="login-active"><a href="login.html"><img src="../img/icones/iconusuario.svg" alt="">Entrar</a></li>
+
+        <li data-dropdown data-menu="user"><a href=""></a>
+          <ul class="menu-dropdown">
+            <li>Minha conta</li>
+            <li>Meus pedidos</li>
+            <li>Favoritos</li>
+            <li data-menu="exit">Sair</li>
+          </ul>
+        </li>
+
+        <li><a class="img-carrinho" href="./carrinho.html"><img src="../img/icones/iconsacola.svg" alt="Sacola"><span data-cart="quantity" class="cart-quantity">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção 2: Sua conta -->
+  <main class="account-bg">
+    <div class=" account container">
+      
+      <!-- Campo das opções -->
+      <div class="account-options">
+        <h1 class="font-1-xl cor-d7">Sua conta</h1>
+        <ul data-account="options" class="font-2-s-b-u">
+          <li>Minhas informações</li>
+          <li>Meus pedidos</li>
+          <li>Meus endereços</li>
+          <li>Dados de pagamento</li>
+          <li>Favoritos</li>
+          <li>Sair</li>
+        </ul>
+      </div>
+
+      <!-- Dados das opções -->
+      <div class="account-info">
+        <h2>Minhas informações</h2>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+        
+    </div>
+  </main>
+
+
+
+  <!-- Seção 6: Footer -->
+  <footer class="footer-bg">
+    <div class="footer container">
+
+      <div class="footer-dados">
+        <a href="./"><img src="img/ohaibranco.svg" alt=""></a>
+        <p class="cor-4">"Não apenas fabricamos shapes, fabricamos felicidade"</p>
+
+        <div class="footer-redes">
+          <a href="./"><img src="img/icones/iconyoutube.svg" alt=""></a>
+          <a href="./"><img src="img/icones/iconfacebook.svg" alt=""></a>
+          <a href="./"><img src="img/icones/iconinstagram.svg" alt=""></a>
+          <a href="./"><img src="img/icones/icontwitter.svg" alt=""></a>
+        </div>
+      </div>
+
+      <div class="footer-informacoes">
+        <h3 class="font-1-m-u cor-0">Informações</h3>
+        <nav>
+          <ul class="font-2-s cor-4">
+              <li><a href="./">Contato</a></li>
+              <li><a href="./">Troca e devolução</a></li>
+              <li><a href="./">Política de privacidade</a></li>
+              <li><a href="./">Termos e condições</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-menu">
+        <h3 class="font-1-m-u cor-0">Menu</h3>
+        <nav>
+          <ul class="font-2-s cor-4">
+              <li><a href="./">Sobre nós</a></li>
+              <li><a href="./">Tutoriais</a></li>
+              <li><a href="./produtos/produtos.html">Produtos</a></li>
+              <li><a href="./">Blog</a></li>
+              <li><a href="./">Minha conta</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="footer-copyright font-2-s cor-4">Todos os direitos reservados. 2022</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/account.js"></script>
+
+</body>
+</html>
