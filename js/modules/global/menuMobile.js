@@ -1,4 +1,4 @@
-export default function initMenuMobile() {
+export default function menuMobile() {
   const menuMobile = document.querySelector('[data-menu="button"]');
   const listMobile = document.querySelector('[data-menu="list"]');
   
