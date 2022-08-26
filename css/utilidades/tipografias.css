@@ -1,5 +1,4 @@
 /* Tipografias */
-/*  */
 
 .font-1-xxl {
   font: 700 3.25rem/1.1 'Ubuntu';
@@ -55,6 +54,11 @@
   font: 500 1rem/1.3 'Roboto';
 }
 
+.font-2-xs-u {
+  font: 400 1rem/1.3 'Roboto';
+  text-transform: uppercase;
+}
+
 .font-2-xs-m-u {
   font: 500 1rem/1.3 'Roboto';
   text-transform: uppercase;
@@ -67,6 +71,16 @@
 
 .font-2-xxs {
   font: 400 .875rem/1.2 'Roboto';
+}
+
+.font-2-xxxs-u {
+  font: 400 .625rem/1.2 'Roboto';
+  text-transform: uppercase;
+}
+
+.font-2-xxxs-b-u {
+  font: 600 .75rem/1.2 'Roboto';
+  text-transform: uppercase;
 }
 
 @media (max-width: 1024px) {
