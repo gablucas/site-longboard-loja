@@ -1,11 +1,12 @@
-// Editar endereço
-const editarEndereco = document.querySelector('.carrinho-entrega .editar-dados')
+import { cartShipping } from "./activePayment.js";
+const editShippingButton = document.querySelector('[data-cart="edit-shipping"]');
 
-export default function editAddress() {
+export default function editShipping() {
 
-  editarEndereco.addEventListener('click', reativarEndereco)
+  editShippingButton.addEventListener('click', reativarEndereco)
+
   function reativarEndereco() {
-    editarEndereco.classList.remove('ativo');
-    carrinhoEndereco.classList.add('ativo');
+    cartShipping.classList.add('ativo');
+    editShippingButton.classList.remove('ativo');
   }
 }

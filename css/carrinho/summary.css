@@ -1,0 +1,16 @@
+.cart-summary {
+  height: 130px;
+}
+
+.cart-summary-values {
+  margin-top: 20px;
+}
+
+.cart-summary-values > span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-summary-values > span:last-child {
+  margin-top: 20px;
+}

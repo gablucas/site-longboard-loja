@@ -22,7 +22,9 @@ export default function addItemCart() {
       }
       
       const product = {type: dataProduct[0], id: dataProduct[1], flex: form.flex.value, quantity: form.quantity.value};
+
       cartArray.push(product)
+      
       localStorage.cart = JSON.stringify(cartArray);
   
       // Se o cliente clicar no botao de comprar

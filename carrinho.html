@@ -47,24 +47,23 @@
   </header>
 
   <!-- Seção 2: Carrinho -->
-    <main class="carrinho-bg">
+    <main class="cart-bg">
       
-      <div class="carrinho container">
+      <div class="cart container">
         <h1 class="font-1-m-u cor-d7">Seu Carrinho</h1>
 
         <!-- Container dos produtos -->
-        <div data-cart="products" class="carrinho-produtos">
-
+        <div data-cart="products">
         </div>
 
         <!-- Container do resumo, endereço e pagamento -->
-        <div class="carrinho-infos">
+        <div class="cart-info">
 
           <!-- Resumo da compra -->
-          <div class="carrinho-resumo">
+          <div class="cart-summary">
             <h2 class="font-2-s-b-u">Resumo da compra</h2>
 
-            <div class="carrinho-resumo-valores">
+            <div class="cart-summary-values">
               <span class="font-2-s cor-10">Subtotal <span data-cart="subtotal">R$ 0,00</span></span>
               <span class="font-2-s cor-10">Frete <span data-cart="shipping">R$ 30,00</span></span>
               <span class="font-2-s-b-u cor-10">Total <span data-cart="total">R$ 0,00</span></span>
@@ -72,13 +71,14 @@
           </div>
 
           <!-- Endereço -->
-          <div class="carrinho-entrega">
-            <h2 class="font-2-s-b-u">Endereço <span class="editar-dados font-2-xxs">editar</span></h2>
+          <div class="cart-shipping">
+            <h2 class="font-2-s-b-u">Endereço <span data-cart="edit-shipping" class="cart-edit-shipping font-2-xxs">editar</span></h2>
 
-            <div class="carrinho-entrega-itens ativo">
+            <div data-cart="shipping-container" class="cart-shipping-container ativo">
 
-              <div class="carrinho-endereco">
-                <div class="carrinho-endereco-item font-2-xxs cor-12">
+              <div data-cart="adresses" class="cart-adress-container">
+
+                <div data-cart="adress-item" class="cart-adress-item font-2-xxs cor-12">
                       <input type="radio" name="endereco" value="casa">
                       <label for="casa" class="font-2-xs-m-u cor-10">Casa</label>
                       <span>Rua Trajeto do Front End, 01</span>
@@ -86,7 +86,7 @@
                       <span>Edificio Array, Sala 96</span>
                 </div>
 
-                <div class="carrinho-endereco-item font-2-xxs cor-12">
+                <div data-cart="adress-item" class="cart-adress-item font-2-xxs cor-12">
                     <input type="radio" name="endereco" value="trabalho">
                     <label for="trabalho" class="font-2-xs-m-u cor-11">Trabalho</label>
                     <span>Rua Trajeto do Front End, 01</span>
@@ -98,37 +98,39 @@
               </div>
             
             <!-- Frete -->
-              <div class="carrinho-frete">
+              <div data-cart="shippings" class="cart-shipping-rates">
                 <h2 class="font-2-s-b-u">Frete</h2>
                 <input type="radio" name="entrega" value="normal">
-                <label class="carrinho-frete-item font-2-xs cor-10" for="normal">Normal <span>R$ 15,00</span></label>
+                <label class="font-2-xs cor-10" for="normal">Normal <span>R$ 15,00</span></label>
 
                 <input type="radio" name="entrega" value="expresso">
-                <label class="carrinho-frete-item font-2-xs cor-10" for="expresso">Expresso <span>R$ 30,00</span></label>
+                <label class="font-2-xs cor-10" for="expresso">Expresso <span>R$ 30,00</span></label>
               </div>
               
-              <span data-error="cart" class="error font-2-xs"></span>
-              <button data-button="endereco" class="botao-carrinho font-2-xs-m-u cor-0">Concluido</button>
+              <span data-cart="error" class="error"></span>
+              <button data-cart="button" class="cart-button font-2-xs-m-u cor-0">Concluido</button>
             </div>
           </div>
           
           <!-- Pagamento -->
-          <div class="carrinho-pagamento">
+          <div class="cart-payment">
             <h2 class="font-2-s-b-u">Pagamento</h2>
 
-            <div class="carrinho-pagamento-itens">
-              <input type="radio" name="pagamento" value="boleto" id="boleto">
-              <label for="boleto">Boleto</label>
-              <input type="radio" name="pagamento" value="pix" id="pix">
-              <label for="pix">Pix</label>
-              <input type="radio" name="pagamento" value="cartao" id="cartao">
-              <label for="cartao">Cartão</label>
-              
-              <button class="botao-carrinho font-2-xs-m-u cor-0">Finalizar compra</button>
+            <duv data-cart="payment-container" class="cart-payment-container">
+              <div data-cart="payments" class="cart-payment-options">
+                <input type="radio" name="pagamento" value="boleto" id="boleto">
+                <label for="boleto">Boleto</label>
+                <input type="radio" name="pagamento" value="pix" id="pix">
+                <label for="pix">Pix</label>
+                <input type="radio" name="pagamento" value="cartao" id="cartao">
+                <label for="cartao">Cartão</label>
+              </div>
+              <span data-cart="error" class="error"></span>
+              <button data-cart="button" class="botao-carrinho font-2-xs-m-u cor-0">Finalizar compra</button>
             </div>
           </div>
         </div>
-  </div>
+    </div>
   </main>
 
   <!-- Seção 6: Footer -->

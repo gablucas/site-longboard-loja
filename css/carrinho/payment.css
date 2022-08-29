@@ -1,0 +1,31 @@
+/* PAGAMENTO */
+
+.cart-payment-container {
+  margin-top: 12px;
+}
+
+.cart-payment label {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid var(--cor-8);
+}
+
+.cart-payment-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.cart-payment input:checked + label {
+  color: var(--cor-0);
+  background: var(--cor-d4);
+}
+
+/* ATIVADOR */
+[data-cart="payment-container"] {
+  display: none;
+}
+
+[data-cart="payment-container"].ativo {
+  display: grid;
+}

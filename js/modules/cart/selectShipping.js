@@ -1,13 +1,11 @@
 // Ativar o frete selecionado
-const freteLabel = document.querySelectorAll('.carrinho-frete label')
-const freteInput = document.querySelectorAll('.carrinho-frete input')
+const freteLabel = document.querySelectorAll('.cart-shipping-rates label')
 
-export default function activeShipping() {
+export default function selectShipping() {
 
   freteLabel.forEach((item) => {
   item.addEventListener('click', selecionarFrete)
 })
-
 
 function selecionarFrete(event) {
 

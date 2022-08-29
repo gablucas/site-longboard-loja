@@ -13,25 +13,25 @@ export default async function showCartItens() {
 
     cart.innerHTML +=
      `<!-- Produto no carrinho -->
-     <div class="carrinho-item">
-        <span data-cart="remove-item" class="remove-item cor-8">x</span>
-       <div class="carrinho-item-imagem">
+     <div class="cart-product">
+        <span data-cart="remove-item" class="cart-remove-item cor-8">x</span>
+       <div>
          <img src="${getProduct.images[0]}" alt="" width="143" height="143">
        </div>
 
        <!-- Dados do produto -->
-       <div class="carrinho-item-dados">
+       <div>
          <p>Produto</p>
          <span class="font-2-xs-m-u cor-11">Shape ${getProduct.name}</span>
          <span class="font-2-xxs-u cor-6">${getProduct.brand}</span>
          <span class="font-2-xs">Dancing & Freestyle</span>
          <span class="font-2-xs">${product.flex}</span>
        </div>
-       <div class="carrinho-item-quantidade">
+       <div class="cart-product-quantity">
          <p>Quantidade</p>
          <span class="font-2-xs">${product.quantity}</span>
        </div>
-       <div class="carrinho-item-preco">
+       <div class="cart-product-price">
          <p>Preço</p>
          <span class="font-2-s-m cor-11">R$ ${getProduct.price * product.quantity},00</span>
          <span class="font-2-xxs cor-6">Un x R$ ${getProduct.price},00</span>

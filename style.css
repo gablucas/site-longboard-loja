@@ -25,9 +25,14 @@
 
 /* Carrinho */
 @import './css/carrinho/carrinho.css';
+@import './css/carrinho/product.css';
+@import './css/carrinho/summary.css';
+@import './css/carrinho/shipping.css';
+@import './css/carrinho/payment.css';
 
 /* Contato */
 @import './css/contato/contato.css';
 
 /* Account */
 @import './css/account/account.css';
+@import './css/account/myinformations.css';

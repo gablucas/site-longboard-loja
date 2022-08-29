@@ -1,0 +1,70 @@
+.account-info {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  padding: 40px 20px 20px 20px;
+  gap: 20px;
+}
+
+.account-info h2 {
+  grid-column: 1/-1;
+}
+
+.account-info .mini-container {
+  border: 1px solid var(--cor-12);
+
+  position: relative;
+}
+
+.account-info h3 {
+  position: absolute;
+  padding-left: 4px;
+  padding-right: 4px;
+  top: -9px;
+  left: 8px;
+  background: var(--cor-0);
+}
+
+.account-edit {
+  position: absolute;
+  padding-left: 4px;
+  padding-right: 4px;
+  bottom: -7px;
+  right: 20px;
+  cursor: pointer;
+  color: var(--cor-d6);
+  background: var(--cor-0);
+}
+
+.account-edit:hover {
+  color: var(--cor-d4);
+}
+
+.account-info ul {
+  padding: 20px;
+}
+
+.account-info li + li {
+  padding-top: 6px;
+}
+
+.account-info button {
+  width: 100%;
+  padding: 9px 0px 9px 0px;
+  margin-top: 10px;
+}
+
+.account-info button:hover {
+  cursor: pointer;
+  background-color: var(--cor-d2);
+}
+
+.last-order img {
+  padding-top: 5px;
+  margin: 0 auto;
+}
+
+.last-order ul {
+  padding-top: 5px;
+}
