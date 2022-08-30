@@ -34,5 +34,5 @@
 @import './css/contato/contato.css';
 
 /* Account */
-@import './css/account/account.css';
-@import './css/account/myinformations.css';
+@import './css/myaccount/account.css';
+@import './css/myaccount/myinformations.css';

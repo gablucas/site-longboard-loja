@@ -1,4 +1,3 @@
-
 export const accounts = {
 
   getUsers() {
@@ -13,7 +12,7 @@ export const accounts = {
 
   loggedUser() {
     if(localStorage.loggedUser) {
-      return getStorageAccounts().find(user => user.email === localStorage.loggedUser);
+      return this.getUsers().find(user => user.email === localStorage.loggedUser);
     }
   }
 }

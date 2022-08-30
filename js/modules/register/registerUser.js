@@ -10,7 +10,7 @@ export default function registerUser(forms) {
       if(input.name === "confirmar-senha") {
 
       }else if(input.name.includes('endereco')) {
-        user.endereco[input.name] = input.value;
+        user.endereco[input.name.replace(/\w+_(\w+)/, "$1")] = input.value;
       }else{
         user[input.name] = input.value;
       }
