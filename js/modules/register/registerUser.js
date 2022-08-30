@@ -1,4 +1,4 @@
-import { getStorageAccounts } from "../global/accounts.js";
+import { accounts } from "../global/accounts.js";
 import showDataUser from "./showDataUser.js";
 
 export default function registerUser(forms) {
@@ -20,7 +20,7 @@ export default function registerUser(forms) {
   // Adiciona o objeto criado no array de contas
   // e depois os insere no localStorage
   if(localStorage.accounts) {
-    getStorageAccounts((accounts) => {
+    accounts.setUsers((accounts) => {
       accounts.push(user)
       localStorage.accounts = JSON.stringify(accounts);
     })

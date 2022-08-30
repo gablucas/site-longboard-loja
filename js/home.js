@@ -14,4 +14,3 @@ showProducts();
 homeFilter();
 showQuantityItensCart();
 
-
