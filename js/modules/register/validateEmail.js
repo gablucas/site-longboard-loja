@@ -1,9 +1,8 @@
-import account from "../global/users.js";
+import { getStorageAccounts } from "../global/accounts.js";
 import errorDescription from "../global/errorDescription.js";
 
 export default function validateEmail(input) {
   let error = false;
-  
   const email = input.email.value.toLowerCase();
 
   if(!!email) {
@@ -16,7 +15,7 @@ export default function validateEmail(input) {
     }else if(email.includes("@.")) {
       errorDescription(input.email, "Email inválido")
       error = true;
-    }else if(account.some(user => user.email === email)){
+    }else if(!!getStorageAccounts() && getStorageAccounts().some(user => user.email === email)){
       errorDescription(input.email, "Email já registrado")
       error = true;
     }
