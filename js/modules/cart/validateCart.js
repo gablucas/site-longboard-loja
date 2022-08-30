@@ -6,7 +6,7 @@ const cartButtons = document.querySelectorAll('[data-cart="button"]');
 const [addressButton, paymentButton] = cartButtons;
 
 // Inputs
-const cartAddresses = document.querySelectorAll('[data-cart="adresses"] div input');
+const cartAddresses = document.querySelectorAll('[data-cart="addresses"] div input');
 const cartShippings = document.querySelectorAll('[data-cart="shippings"] input');
 const cartPayments = document.querySelectorAll('[data-cart="payments"] input');
 

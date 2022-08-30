@@ -76,9 +76,9 @@
 
             <div data-cart="shipping-container" class="cart-shipping-container ativo">
 
-              <div data-cart="adresses" class="cart-adress-container">
+              <div data-cart="addresses" class="cart-address-container">
 
-                <div data-cart="adress-item" class="cart-adress-item font-2-xxs cor-12">
+                <div data-cart="address-item" class="cart-address-item font-2-xxs cor-12">
                       <input type="radio" name="endereco" value="casa">
                       <label for="casa" class="font-2-xs-m-u cor-10">Casa</label>
                       <span>Rua Trajeto do Front End, 01</span>
@@ -86,7 +86,7 @@
                       <span>Edificio Array, Sala 96</span>
                 </div>
 
-                <div data-cart="adress-item" class="cart-adress-item font-2-xxs cor-12">
+                <div data-cart="address-item" class="cart-address-item font-2-xxs cor-12">
                     <input type="radio" name="endereco" value="trabalho">
                     <label for="trabalho" class="font-2-xs-m-u cor-11">Trabalho</label>
                     <span>Rua Trajeto do Front End, 01</span>
@@ -94,7 +94,7 @@
                     <span>Edificio Array, Sala 96</span>
                 </div>
                 
-                <button class="font-2-xs">Cadastrar novo endereço</button>             
+                <button class="cart-button-newaddress font-2-xs">Cadastrar novo endereço</button>             
               </div>
             
             <!-- Frete -->
@@ -116,7 +116,8 @@
           <div class="cart-payment">
             <h2 class="font-2-s-b-u">Pagamento</h2>
 
-            <duv data-cart="payment-container" class="cart-payment-container">
+            <div data-cart="payment-container" class="cart-payment-container">
+              
               <div data-cart="payments" class="cart-payment-options">
                 <input type="radio" name="pagamento" value="boleto" id="boleto">
                 <label for="boleto">Boleto</label>
@@ -125,8 +126,9 @@
                 <input type="radio" name="pagamento" value="cartao" id="cartao">
                 <label for="cartao">Cartão</label>
               </div>
+
               <span data-cart="error" class="error"></span>
-              <button data-cart="button" class="botao-carrinho font-2-xs-m-u cor-0">Finalizar compra</button>
+              <button data-cart="button" class="cart-button font-2-xs-m-u cor-0">Finalizar compra</button>
             </div>
           </div>
         </div>

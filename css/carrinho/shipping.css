@@ -21,13 +21,13 @@
   font-weight: 500;
 }
 
-.cart-adress-container {
+.cart-address-container {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.cart-adress-item {
+.cart-address-item {
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 8px;
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.cart-adress-item::before {
+.cart-address-item::before {
   content: "";
   width: 16px;
   height: 16px;
@@ -46,30 +46,29 @@
   align-self: center;
 }
 
-.cart-adress-item label {
+.cart-address-item label {
   margin-bottom: 4px;
 }
 
-/* Adiciona estilo quando o endereço é selecionado */
-.cart-adress-item.selecionado {
-  background: var(--cor-d1);
-}
-
-.cart-adress-item.selecionado::before {
-  box-shadow: inset 0 0 0 2px var(--cor-d1), 
-              inset 0 0 0 9px var(--cor-10);
-}
-
-.cart-adress button {
+.cart-button-newaddress {
   border: 1px solid var(--cor-6);
   padding: 4px;
   cursor: pointer;
 }
 
-.cart-adress button:hover {
+.cart-shipping button:hover {
   background: var(--cor-d1);
 }
 
+/* Adiciona estilo quando o endereço é selecionado */
+.cart-address-item.selecionado {
+  background: var(--cor-d1);
+}
+
+.cart-address-item.selecionado::before {
+  box-shadow: inset 0 0 0 2px var(--cor-d1), 
+              inset 0 0 0 9px var(--cor-10);
+}
 
 .cart-shipping-rates {
   margin-top: 10px;
