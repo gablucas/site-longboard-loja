@@ -2,7 +2,7 @@ import { accounts } from "../global/accounts.js";
 import showDataUser from "./showDataUser.js";
 
 export default function registerUser(forms) {
-  const user = {endereco: {}};
+  const user = {endereco: {}, pedidos: {},};
   
   // Adiciona os dados do usuario em um objeto
   forms.forEach((form) => {
