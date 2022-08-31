@@ -7,6 +7,7 @@ import editAddress from "./modules/cart/editAddress.js";
 import purchaseSummary from "./modules/cart/purchaseSummary.js";
 import showQuantityItensCart from "./modules/global/showQuantityItensCart.js";
 import validateCart from "./modules/cart/validateCart.js";
+import { emptyCart } from "./modules/cart/emptyCart.js";
 
 loggedUser();
 exitAccount();
@@ -17,5 +18,6 @@ editAddress();
 purchaseSummary();
 showQuantityItensCart();
 validateCart();
+emptyCart();
 
 

@@ -2,7 +2,7 @@ import { accounts } from "../global/accounts.js";
 import showDataUser from "./showDataUser.js";
 
 export default function registerUser(forms) {
-  const user = {endereco: {}, pedidos: {},};
+  const user = {endereco: {}, pedidos: [],};
   
   // Adiciona os dados do usuario em um objeto
   forms.forEach((form) => {
@@ -20,10 +20,9 @@ export default function registerUser(forms) {
   // Adiciona o objeto criado no array de contas
   // e depois os insere no localStorage
   if(localStorage.accounts) {
-    accounts.setUsers((accounts) => {
-      accounts.push(user)
-      localStorage.accounts = JSON.stringify(accounts);
-    })
+    const newAccount = accounts.getUsers();
+    newAccount.push(user);
+    localStorage.accounts = JSON.stringify(newAccount);
   } else {
     localStorage.accounts = JSON.stringify([user])
   }

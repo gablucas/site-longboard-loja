@@ -5,9 +5,10 @@ const total = document.querySelector('[data-cart="total"]');
 
 export default function purchaseSummary() {
   fetchProducts((fetchProducts) => {
+
     const cartProducts = JSON.parse(localStorage.cart)
 
-    if(cartProducts.length > 0) {
+    if(cartProducts.length) {
       const price = cartProducts.map((itemCart) => {
         return fetchProducts[itemCart.type].find(product => product.id === itemCart.id).price * itemCart.quantity})
         .reduce((acc, actual) => {return acc + actual})

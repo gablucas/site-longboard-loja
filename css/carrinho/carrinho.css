@@ -39,3 +39,24 @@
   background: var(--cor-0);
 }
 
+.cart-empty {
+  display: grid;
+  justify-items: center;
+}
+
+[data-cart="filled"] {
+  display: none;
+}
+
+[data-cart="filled"].active {
+  display: grid;
+}
+
+
+[data-cart="empty"] {
+  display: none;
+}
+
+[data-cart="empty"].active {
+  display: initial;
+}

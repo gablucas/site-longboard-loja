@@ -1,6 +1,7 @@
 import cartStorage from "./cartStorage.js";
 import purchaseSummary from "./purchaseSummary.js";
 import showQuantityItensCart from "../global/showQuantityItensCart.js";
+import { emptyCart } from "./emptyCart.js";
 
 
 export default function removeItem() {
@@ -22,5 +23,6 @@ export default function removeItem() {
     currentTarget.parentElement.remove();
     purchaseSummary();
     showQuantityItensCart();
+    emptyCart();
   }
 }
