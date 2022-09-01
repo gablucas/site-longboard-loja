@@ -8,7 +8,6 @@ export default async function showCartItens() {
   const promise = await fetch('https://gablucas.github.io/site-longboard-loja/products.json');
   const productsJson = await promise.json();
 
-  console.log(localStorage.cart)
   if(!!cartStorage().length) {
     cartStorage((cart) => {
       cart.forEach((product) => {

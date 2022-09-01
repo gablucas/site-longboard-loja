@@ -23,7 +23,21 @@ export default function addItemCart() {
       
       // Insere o objeto do produto numa array e depois na localStorage
       cartStorage((cart) => {
-        cart.push(product)
+
+        // Verifica se o produto comprado ja existe no carrinho
+        const indexRP = cart.findIndex((item) => {
+          if(item.id === product.id && item.flex === product.flex){
+            return item;
+          }
+        })
+        
+        // Se o produto ja existir, ele soma a quantidade
+        // Se não, coloca o objeto dentro do array
+        if(indexRP >= 0) {
+          cart[indexRP].quantity = (+cart[indexRP].quantity) + (+product.quantity);
+        } else {
+          cart.push(product)
+        }
         localStorage.cart = JSON.stringify(cart);
       })
       
