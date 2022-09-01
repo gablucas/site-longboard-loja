@@ -21,8 +21,9 @@ export default function removeItem() {
     });
 
     currentTarget.parentElement.remove();
-    purchaseSummary();
     showQuantityItensCart();
     emptyCart();
+    purchaseSummary();
+
   }
 }

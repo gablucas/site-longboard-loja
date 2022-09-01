@@ -1,5 +1,6 @@
 import cartStorage from "./cartStorage.js";
 import removeItem from "./removeItem.js";
+import { emptyCart } from "./emptyCart.js";
 
 const cart = document.querySelector('[data-cart="products"]');
 
@@ -7,7 +8,7 @@ export default async function showCartItens() {
   const promise = await fetch('https://gablucas.github.io/site-longboard-loja/products.json');
   const productsJson = await promise.json();
 
-  if(cartStorage().length) {
+  if(cartStorage()) {
     const cartProducts = JSON.parse(localStorage.cart)
     cartProducts.forEach((product) => {
       const getProduct = productsJson[product.type].find((getItem) => getItem.id === product.id);

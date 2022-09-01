@@ -9,7 +9,6 @@ if(input.quantity.value <= 0) {
 }else if(input.quantity.value > 4) {
   errorDescription(input.quantity, "Máximo 4 produtos");
   error = true
-  console.log('teste')
 }
 
 return error;

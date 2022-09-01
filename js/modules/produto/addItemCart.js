@@ -17,14 +17,17 @@ export default function addItemCart() {
     if(!validateProduct(form) && !campoVazio(form)) {
       const dataProduct = document.querySelector('[data-product="id"]').getAttribute('id').split('-');
   
+      // Caso já exista produtos no carrinho
       if(localStorage.cart) {
         cartArray = JSON.parse(localStorage.cart);
       }
-      
+      // Pega o produto para adiciona-lo no carrinho
       const product = {type: dataProduct[0], id: dataProduct[1], flex: form.flex.value, quantity: form.quantity.value};
 
+      // Coloca o produto no array do carrinho
       cartArray.push(product)
       
+      // Coloca o array do carrinho no localStorage
       localStorage.cart = JSON.stringify(cartArray);
   
       // Se o cliente clicar no botao de comprar
