@@ -1,11 +1,11 @@
 import validateProduct from "./validateProduct.js";
 import campoVazio from "../global/campoVazio.js";
 import showQuantityItensCart from "../global/showQuantityItensCart.js";
+import cartStorage from "../cart/cartStorage.js";
 
 const form = document.querySelector('[data-cart="form"]');
 const buyItem = document.querySelector('[data-cart="buy"]');
 const addCart = document.querySelector('[data-cart="addCart"]');
-let cartArray = [];
 
 export default function addItemCart() {
   [buyItem, addCart].forEach((btn) => {
@@ -17,19 +17,16 @@ export default function addItemCart() {
     if(!validateProduct(form) && !campoVazio(form)) {
       const dataProduct = document.querySelector('[data-product="id"]').getAttribute('id').split('-');
   
-      // Caso já exista produtos no carrinho
-      if(localStorage.cart) {
-        cartArray = JSON.parse(localStorage.cart);
-      }
-      // Pega o produto para adiciona-lo no carrinho
-      const product = {type: dataProduct[0], id: dataProduct[1], flex: form.flex.value, quantity: form.quantity.value};
-
-      // Coloca o produto no array do carrinho
-      cartArray.push(product)
       
-      // Coloca o array do carrinho no localStorage
-      localStorage.cart = JSON.stringify(cartArray);
-  
+      // Armazena o produco escolhido em um objeto
+      const product = {type: dataProduct[0], id: dataProduct[1], flex: form.flex.value, quantity: form.quantity.value};
+      
+      // Insere o objeto do produto numa array e depois na localStorage
+      cartStorage((cart) => {
+        cart.push(product)
+        localStorage.cart = JSON.stringify(cart);
+      })
+      
       // Se o cliente clicar no botao de comprar
       // O codigo abaixo direciona para a pagina do carrinho
       if(currentTarget.getAttribute("data-cart") === "buy") {

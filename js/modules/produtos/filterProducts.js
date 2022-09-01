@@ -1,6 +1,7 @@
 const botoes = document.querySelectorAll('.filtro button');
 
 export default function filterProducts() {
+  
 /** FILTRAR OS PRODUTOS POR SUAS CARACTERISTICAS */
 botoes.forEach((botao) => {
   botao.addEventListener('click', filtroProdutos)

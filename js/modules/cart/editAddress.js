@@ -1,12 +1,12 @@
-import { cartShipping } from "./activePayment.js";
-const editShippingButton = document.querySelector('[data-cart="edit-shipping"]');
+const cartShipping = document.querySelector('[data-cart^="shipping-container"]');
+const editShippingButton = document.querySelector('[data-cart^="edit-shipping"]');
 
 export default function editShipping() {
 
   editShippingButton.addEventListener('click', reativarEndereco)
 
   function reativarEndereco() {
-    cartShipping.classList.add('ativo');
-    editShippingButton.classList.remove('ativo');
+    cartShipping.setAttribute('data-cart', 'shipping-container-active');
+    editShippingButton.setAttribute('data-cart', 'edit-shipping-active');
   }
 }

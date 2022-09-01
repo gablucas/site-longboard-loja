@@ -1,6 +1,6 @@
 /* PAGAMENTO */
-
 .cart-payment-container {
+  display: grid;
   margin-top: 12px;
 }
 
@@ -22,10 +22,10 @@
 }
 
 /* ATIVADOR */
-[data-cart="payment-container"] {
+[data-cart="payment"] {
   display: none;
 }
 
-[data-cart="payment-container"].ativo {
-  display: grid;
+[data-cart="payment-active"] {
+  display: initial;
 }

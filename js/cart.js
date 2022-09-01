@@ -10,8 +10,8 @@ import validateCart from "./modules/cart/validateCart.js";
 import { emptyCart } from "./modules/cart/emptyCart.js";
 
 loggedUser();
-exitAccount();
 showCartItens();
+exitAccount();
 selectAddress();
 selectShipping();
 editAddress();

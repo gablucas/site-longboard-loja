@@ -8,17 +8,9 @@
   align-items: center;
 }
 
-.cart-edit-shipping {
-  display: none;
-}
-
-.cart-edit-shipping.ativo {
-  display: initial;
-  cursor: pointer;
-}
-
 .cart-edit-shipping:hover {
   font-weight: 500;
+  cursor: pointer;
 }
 
 .cart-address-container {
@@ -54,10 +46,6 @@
   border: 1px solid var(--cor-6);
   padding: 4px;
   cursor: pointer;
-}
-
-.cart-shipping button:hover {
-  background: var(--cor-d1);
 }
 
 /* Adiciona estilo quando o endereço é selecionado */
@@ -100,10 +88,27 @@
 }
 
 /* ATIVADOR */
+[data-cart="shipping"] {
+  display: none;
+}
+
+[data-cart="shipping-active"] {
+  display: initial;
+}
+
+
 [data-cart="shipping-container"] {
   display: none;
 }
 
-[data-cart="shipping-container"].ativo {
+[data-cart="shipping-container-active"] {
   display: grid;
+}
+
+[data-cart="edit-shipping"] {
+  display: none;
+}
+
+[data-cart="edit-shipping-active"] {
+  display: initial;
 }

@@ -29,34 +29,67 @@
   background: var(--cor-d5);
 }
 
+.cart-button:hover {
+  background-color: var(--cor-d6);
+}
+
 
 /* RESUMO, ENDERECO e PAGAMENTO */
 .cart-summary,
 .cart-shipping,
-.cart-payment {
+.cart-payment,
+.cart-login {
   padding: 20px;
   border: 1px solid var(--cor-3);
   background: var(--cor-0);
 }
 
+
+/* CARRINHO VAZIO */
 .cart-empty {
-  display: grid;
-  justify-items: center;
+  height: 70vh;
+
+  grid-template-rows: auto auto;
+  place-content: start center;
+  gap: 12px;
+  padding-top: 40px;
 }
+
+.cart-empty a {
+  text-align: center;
+}
+
+/* LOGIN CARRINHO */
+.cart-login {
+  display: grid;
+  justify-content: center;
+}
+
+.cart-login a {
+  text-align: center;
+}
+
 
 [data-cart="filled"] {
   display: none;
 }
 
-[data-cart="filled"].active {
+[data-cart="filled-active"] {
   display: grid;
 }
 
+[data-cart="login"] {
+  display: none;
+}
+
+[data-cart="login-active"] {
+  display: grid;
+}
 
 [data-cart="empty"] {
   display: none;
 }
 
-[data-cart="empty"].active {
-  display: initial;
+[data-cart="empty-active"] {
+  display: grid;
 }

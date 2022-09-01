@@ -1,12 +1,14 @@
 export default function cartStorage(callback) {
-  
-  if(!!localStorage.cart) {
-    const cartProducts = JSON.parse(localStorage.cart)
 
-    if(callback) {
-      callback(cartProducts)
-    }
-    
-    return cartProducts;
+  let cartProducts = [];
+
+  if(!!localStorage.cart) {
+    cartProducts = JSON.parse(localStorage.cart)
+  } 
+
+  if(callback) {
+    callback(cartProducts)
   }
+
+  return cartProducts;
 }

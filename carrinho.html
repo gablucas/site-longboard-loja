@@ -52,29 +52,28 @@
       <div data-cart="filled" class="cart container">
         <h1 class="font-1-m-u cor-d7">Seu Carrinho</h1>
 
-        <!-- Container dos produtos -->
+        <!-- PRODUTOS -->
         <div data-cart="products">
         </div>
 
-        <!-- Container do resumo, endereço e pagamento -->
         <div class="cart-info">
 
-          <!-- Resumo da compra -->
+          <!-- RESUMO -->
           <div class="cart-summary">
             <h2 class="font-2-s-b-u">Resumo da compra</h2>
 
             <div class="cart-summary-values">
               <span class="font-2-s cor-10">Subtotal <span data-cart="subtotal">R$ 0,00</span></span>
-              <span class="font-2-s cor-10">Frete <span data-cart="shipping">R$ 30,00</span></span>
+              <span class="font-2-s cor-10">Frete <span data-cart="value-shipping">R$ 30,00</span></span>
               <span class="font-2-s-b-u cor-10">Total <span data-cart="total">R$ 0,00</span></span>
             </div>
           </div>
 
-          <!-- Endereço -->
-          <div class="cart-shipping">
+          <!-- ENDEREÇOS -->
+          <div data-cart="shipping" class="cart-shipping">
             <h2 class="font-2-s-b-u">Endereço <span data-cart="edit-shipping" class="cart-edit-shipping font-2-xxs">editar</span></h2>
 
-            <div data-cart="shipping-container" class="cart-shipping-container ativo">
+            <div data-cart="shipping-container-active" class="cart-shipping-container">
 
               <div data-cart="addresses" class="cart-address-container">
 
@@ -112,8 +111,8 @@
             </div>
           </div>
           
-          <!-- Pagamento -->
-          <div class="cart-payment">
+          <!-- PAGAMENTOS -->
+          <div data-cart="payment" class="cart-payment">
             <h2 class="font-2-s-b-u">Pagamento</h2>
 
             <div data-cart="payment-container" class="cart-payment-container">
@@ -131,12 +130,18 @@
               <button data-cart="button" class="cart-button font-2-xs-m-u cor-0">Finalizar compra</button>
             </div>
           </div>
+
+          <!-- LOGIN -->
+          <div data-cart="login-active" class="cart-login">
+            <span class="font-2-s">Faça o login para continuar</span>
+            <a href="./login.html" class="cart-button font-2-xs-m-u cor-0">Acessar conta</a>
+          </div>
         </div>
     </div>
 
-    <div data-cart="empty" class="cart-empty container active">
+    <div data-cart="empty-active" class="cart-empty container">
         <h1 class="font-1-xl cor-10">Seu carrinho esta vazio</h1>
-        <button>Ir as compras</button>
+        <a href="./produtos/produtos.html" class="cart-button font-2-xs-m-u cor-0">Ir as compras</a>
     </div>
   </main>
 
