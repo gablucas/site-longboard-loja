@@ -41,8 +41,24 @@
   color: var(--cor-d4);
 }
 
+.account-edit.save {
+  right: 100px;
+}
+
+.account-edit.cancel {
+  color: red;
+}
+
+.account-edit.cancel:hover {
+  color: rgb(255, 75, 75);
+}
+
 .account-info ul {
   padding: 20px;
+}
+
+.account-info li {
+  display: grid;
 }
 
 .account-info li + li {
@@ -60,6 +76,11 @@
   background-color: var(--cor-d2);
 }
 
+.account-info input {
+  padding: 4px;
+  display: inline-block;
+}
+
 .last-order img {
   padding-top: 5px;
   margin: 0 auto;
@@ -67,4 +88,29 @@
 
 .last-order ul {
   padding-top: 5px;
+}
+
+[data-myinfo="edit"] {
+  display: none;
+}
+
+[data-myinfo="edit-active"] {
+  display: initial;
+}
+
+[data-myinfo="edit-save"] {
+  display: none;
+}
+
+[data-myinfo="edit-save-active"] {
+  display: initial;
+}
+
+[data-myinfo="edit-cancel"] {
+  display: none;
+}
+
+[data-myinfo="edit-cancel-active"] {
+  display: initial;
+
 }

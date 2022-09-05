@@ -16,7 +16,7 @@ export const accounts = {
 
       if(updateType === "add") {
         if(splitProperty.length === 1) {
-          updateUser[property] = newValue;
+          updateUser[splitProperty[0]] = newValue;
         } else if(splitProperty.length === 2) {
           updateUser[splitProperty[0]][splitProperty[1]] = newValue;
         }

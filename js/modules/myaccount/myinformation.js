@@ -1,9 +1,9 @@
 import { accounts } from "../global/accounts.js";
 import fetchProducts from "../global/fetchProducts.js";
 
-const personalData = document.querySelectorAll('[data-myaccount^="personal"]');
-const addressData = document.querySelectorAll('[data-myaccount^="address"]');
-const orderData = document.querySelectorAll('[data-myaccount^="last-order"]');
+const personalData = document.querySelectorAll('[data-myinfo^="personal"]');
+const addressData = document.querySelectorAll('[data-myinfo^="address"]');
+const orderData = document.querySelectorAll('[data-myinfo^="last-order"]');
 
 export function showInformation() {
 
@@ -11,7 +11,7 @@ export function showInformation() {
   [...personalData].forEach((data) => {
     
     // Utilizado regex para separar as palavras separadas com _ e pegar a segunda palavra
-    const property = data.getAttribute('data-myaccount').replace(/\w+-(\w+)/, '$1')
+    const property = data.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1')
     data.innerText = accounts.loggedUser()[property];
   });
 
@@ -19,7 +19,7 @@ export function showInformation() {
   [...addressData].forEach((data) => {
 
     // Utilizado regex para separar as palavras separadas com _ e pegar a terceira palavra
-    const property = data.getAttribute('data-myaccount').replace(/\w+-(\w+)/, '$1')
+    const property = data.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1')
     data.innerText = accounts.loggedUser().endereco[property];
   });
 
@@ -35,3 +35,4 @@ export function showInformation() {
     date.innerText = lastOrder.orderdate;
   })
 }
+
