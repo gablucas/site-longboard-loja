@@ -1,3 +1,9 @@
 export function characters(input) {
-  return input.match(/\D+/g)[0] === input;
+
+  let error = false;
+    if(input.match(/\D+/g) === null || input.match(/\D+/g)[0] !== input) {
+      error =  true;
+    }
+
+  return error;
 }

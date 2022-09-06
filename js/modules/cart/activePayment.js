@@ -4,6 +4,6 @@ const cartPayment = document.querySelector('[data-cart^="payment-container"]');
 
 export default function activePayment() {
   cartShipping.setAttribute('data-cart','shipping-container');
-  editShipping.setAttribute('data-cart', 'edit-shipping-active')
-  cartPayment.setAttribute('data-cart', 'payment-container-active')
+  editShipping.setAttribute('data-cart', 'edit-shipping-active');
+  cartPayment.setAttribute('data-cart', 'payment-container-active');
 }

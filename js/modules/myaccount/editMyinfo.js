@@ -1,4 +1,5 @@
 import { accounts } from "../global/accounts.js";
+import * as validator from "../global/validator.js";
 
 const editButtons = document.querySelectorAll('[data-myinfo^="edit"]')
 const [edit, save, cancel] = editButtons;
@@ -34,7 +35,6 @@ const changeTag = (elements, newTag) => {
   });
 }
 
-
 export function editInformation() {
 
   /** EDITAR INFORMAÇÕES */
@@ -64,16 +64,23 @@ export function editInformation() {
       // Pega os inputs preenchidos e atualiza os dados do usuario no localStorage
       const inputs = currentTarget.parentElement.querySelectorAll('input');
       inputs.forEach((input) => {
+        
         if(!!input.value) {
-          accounts.updateUser(input.name, 'add', input.value)
+
+          if(input.name === "nome" || input.name === "sobrenome" && validator.characters(input.value)) {
+
+          } else {
+            accounts.updateUser(input.name, 'add', input.value)
+            // Transforma os inputs em span novamente e com a informação atualizada
+            changeTag(lis, 'span')
+            changeButtons();
+            cancel.removeEventListener('click', cancelInfo)
+            save.removeEventListener('click', saveInfo)
+            }
         }
       })
       
-      // Transforma os inputs em span novamente e com a informação atualizada
-      changeTag(lis, 'span')
-      changeButtons();
-      cancel.removeEventListener('click', cancelInfo)
-      save.removeEventListener('click', saveInfo)
+
     }
   }
 }
