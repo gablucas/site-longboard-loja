@@ -1,10 +1,9 @@
 import { accounts } from "../global/accounts.js";
 
-const editData = document.querySelectorAll('[data-myinfo="edit-active"]');
 const editButtons = document.querySelectorAll('[data-myinfo^="edit"]')
 const [edit, save, cancel] = editButtons;
 
-const editState = (state) => {
+const changeButtons = (state) => {
   if(state === 'active') {
     edit.setAttribute('data-myinfo', 'edit')
     save.setAttribute('data-myinfo', 'edit-save-active')
@@ -16,64 +15,65 @@ const editState = (state) => {
   }
 }
 
+const changeTag = (elements, newTag) => {
+  elements.forEach((element) => {
+    const propertie = element.firstElementChild.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1');
+
+      if(newTag === "input") {
+      element.firstElementChild.innerText = "";
+      element.innerHTML = element.innerHTML.replace(/(?<=<\/?)span/g, newTag);
+      element.firstElementChild.setAttribute('name', propertie);
+      element.firstElementChild.setAttribute('placeholder', accounts.loggedUser()[propertie]);
+    } else if(newTag === "span") {
+      element.innerHTML = element.innerHTML.replace(/(?<=<\/?)input/g, newTag);
+      element.firstElementChild.setAttribute('placeholder', accounts.loggedUser()[propertie]);
+      element.firstElementChild.innerText = accounts.loggedUser()[propertie];
+      element.firstElementChild.removeAttribute('name');
+      element.firstElementChild.removeAttribute('placeholder');
+    }
+  });
+}
+
 
 export function editInformation() {
-  for(const btn of editData) {
-    btn.addEventListener('click', editInfo)
-  }
 
   /** EDITAR INFORMAÇÕES */
+  edit.addEventListener('click', editInfo)
   function editInfo({currentTarget}) {
     const lis = currentTarget.parentElement.querySelectorAll('li');
 
-    for(const li of lis) {
-      li.firstElementChild.innerText = "";
-      li.innerHTML = li.innerHTML.replace(/(?<=<\/?)span/g, 'input');
-      const property = li.firstElementChild.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1')
-      li.firstElementChild.setAttribute('placeholder', accounts.loggedUser()[property])
+    changeTag(lis, 'input');
+    changeButtons('active');
+
+
+    /** CANCELAR EDIÇÃO DE INFORMAÇÕES */
+    cancel.addEventListener('click', cancelInfo)
+    function cancelInfo() {
+
+      changeTag(lis, 'span')
+      changeButtons();
+      cancel.removeEventListener('click', cancelInfo)
+      save.removeEventListener('click', saveInfo)
     }
-    editState('active');
-  }
 
-  /** SALVAR INFORMAÇÕES EDITADAS */
-  save.addEventListener('click', saveInfo)
-  function saveInfo({currentTarget}) {
-    const inputs = currentTarget.parentElement.querySelectorAll('input');
 
-    // Pega os inputs preenchidos e atualiza os dados do usuario no localStorage
-    for(const input of inputs) {
-      console.log(input.name)
-      if(!!input.value) {
-        const property = input.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1')
-
-        if(property === 'cpf') {
-          console.log(input.value)
+    /** SALVAR INFORMAÇÕES EDITADAS */
+    save.addEventListener('click', saveInfo)
+    function saveInfo({currentTarget}) {
+      
+      // Pega os inputs preenchidos e atualiza os dados do usuario no localStorage
+      const inputs = currentTarget.parentElement.querySelectorAll('input');
+      inputs.forEach((input) => {
+        if(!!input.value) {
+          accounts.updateUser(input.name, 'add', input.value)
         }
-        accounts.updateUser(property, 'add', input.value)
-      }
+      })
+      
+      // Transforma os inputs em span novamente e com a informação atualizada
+      changeTag(lis, 'span')
+      changeButtons();
+      cancel.removeEventListener('click', cancelInfo)
+      save.removeEventListener('click', saveInfo)
     }
-
-    // Transforma os inputs em span novamente e com a informação atualizada
-    const lis = currentTarget.parentElement.querySelectorAll('li');
-    for(const li of lis) {
-      li.innerHTML = li.innerHTML.replace(/(?<=<\/?)input/g, 'span');
-      const property = li.firstElementChild.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1')
-      li.firstElementChild.innerText = accounts.loggedUser()[property]
-    }
-    editState();
-  }
-
-  /** CANCELAR EDIÇÃO DE INFORMAÇÕES */
-  cancel.addEventListener('click', cancelInfo)
-  function cancelInfo({currentTarget}) {
-    const lis = currentTarget.parentElement.querySelectorAll('li');
-
-    for(const li of lis) {
-      li.firstElementChild.innerText = "";
-      li.innerHTML = li.innerHTML.replace(/(?<=<\/?)input/g, 'span');
-      const property = li.firstElementChild.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1')
-      li.firstElementChild.innerText = accounts.loggedUser()[property]
-    }
-    editState();
   }
 }
