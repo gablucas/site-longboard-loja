@@ -19,7 +19,6 @@ import formatCEP from "./modules/register/formatCEP.js";
 import registerUser from "./modules/register/registerUser.js";
 import buscarEndereco from "./modules/register/buscarEndereco.js";
 
-
 // Formulario
 const registerForm = document.querySelectorAll('[data-form="register"]');
 const registerButton = document.querySelectorAll("[data-register='button']");
