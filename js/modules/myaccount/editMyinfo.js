@@ -66,18 +66,16 @@ export function editInformation() {
       inputs.forEach((input) => {
         
         if(!!input.value) {
-
-          if(input.name === "nome" || input.name === "sobrenome" && validator.characters(input.value)) {
-
-          } else {
-            accounts.updateUser(input.name, 'add', input.value)
-            // Transforma os inputs em span novamente e com a informação atualizada
-            changeTag(lis, 'span')
-            changeButtons();
-            cancel.removeEventListener('click', cancelInfo)
-            save.removeEventListener('click', saveInfo)
-            }
+          accounts.updateUser(input.name, 'add', input.value)
+          // if(input.name === "nome" || input.name === "sobrenome" && validator.characters(input.value)) {
+          // } 
         }
+        
+        // Transforma os inputs em span novamente e com a informação atualizada
+        changeTag(lis, 'span')
+        changeButtons();
+        cancel.removeEventListener('click', cancelInfo)
+        save.removeEventListener('click', saveInfo)
       })
       
 
