@@ -13,6 +13,7 @@
 
 .account-info .mini-container {
   border: 1px solid var(--cor-12);
+  padding: 20px;
 
   position: relative;
 }
@@ -53,10 +54,6 @@
   color: rgb(255, 75, 75);
 }
 
-.account-info ul {
-  padding: 20px;
-}
-
 .account-info li {
   display: grid;
 }
@@ -90,6 +87,32 @@
   padding-top: 5px;
 }
 
+.form-myinfo label {
+  display: block;
+}
+
+.form-myinfo input + label {
+  padding-top: 6px;
+}
+
+[data-myinfo="show-myinfo"] {
+  display: none;
+}
+
+[data-myinfo="show-myinfo-active"] {
+  display: initial;
+}
+
+[data-myinfo="form-myinfo"] {
+  display: none;
+}
+
+[data-myinfo="form-myinfo-active"] {
+  display: initial;
+}
+
+
+/* Botões edição */
 [data-myinfo="edit"] {
   display: none;
 }

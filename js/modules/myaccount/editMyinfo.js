@@ -1,57 +1,58 @@
 import { accounts } from "../global/accounts.js";
 import * as validator from "../global/validator.js";
 
+
 const editButtons = document.querySelectorAll('[data-myinfo^="edit"]')
 const [edit, save, cancel] = editButtons;
 
 const changeButtons = (state) => {
   if(state === 'active') {
-    edit.setAttribute('data-myinfo', 'edit')
-    save.setAttribute('data-myinfo', 'edit-save-active')
-    cancel.setAttribute('data-myinfo', 'edit-cancel-active')
+    edit.setAttribute('data-myinfo', 'edit');
+    save.setAttribute('data-myinfo', 'edit-save-active');
+    cancel.setAttribute('data-myinfo', 'edit-cancel-active');
   } else {
-    edit.setAttribute('data-myinfo', 'edit-active')
-    save.setAttribute('data-myinfo', 'edit-save')
-    cancel.setAttribute('data-myinfo', 'edit-cancel')
+    edit.setAttribute('data-myinfo', 'edit-active');
+    save.setAttribute('data-myinfo', 'edit-save');
+    cancel.setAttribute('data-myinfo', 'edit-cancel');
   }
 }
 
-const changeTag = (elements, newTag) => {
-  elements.forEach((element) => {
-    const propertie = element.firstElementChild.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1');
-
-      if(newTag === "input") {
-      element.firstElementChild.innerText = "";
-      element.innerHTML = element.innerHTML.replace(/(?<=<\/?)span/g, newTag);
-      element.firstElementChild.setAttribute('name', propertie);
-      element.firstElementChild.setAttribute('placeholder', accounts.loggedUser()[propertie]);
-    } else if(newTag === "span") {
-      element.innerHTML = element.innerHTML.replace(/(?<=<\/?)input/g, newTag);
-      element.firstElementChild.setAttribute('placeholder', accounts.loggedUser()[propertie]);
-      element.firstElementChild.innerText = accounts.loggedUser()[propertie];
-      element.firstElementChild.removeAttribute('name');
-      element.firstElementChild.removeAttribute('placeholder');
-    }
-  });
-}
 
 export function editInformation() {
 
   /** EDITAR INFORMAÇÕES */
   edit.addEventListener('click', editInfo)
   function editInfo({currentTarget}) {
-    const lis = currentTarget.parentElement.querySelectorAll('li');
+    const form = currentTarget.parentElement.querySelector('form');
+    const list = currentTarget.parentElement.querySelector('ul');
+    const listItens = list.querySelectorAll('li span');
 
-    changeTag(lis, 'input');
+    // Desativa a lista e ativa o formulario
+    list.setAttribute('data-myinfo', 'show-myinfo');
+    form.setAttribute('data-myinfo', 'form-myinfo-active');
+
+    // Altera os botões do container
     changeButtons('active');
 
+    // Insere os valores atuais nos placeholder dos inputs
+    [...form].forEach((input) => {
+      input.value = "";
+      input.setAttribute('placeholder', accounts.loggedUser()[input.name])
+    })
+    
 
     /** CANCELAR EDIÇÃO DE INFORMAÇÕES */
     cancel.addEventListener('click', cancelInfo)
     function cancelInfo() {
 
-      changeTag(lis, 'span')
+      // Desativa o formulario e ativa a lista
+      list.setAttribute('data-myinfo', 'show-myinfo-active');
+      form.setAttribute('data-myinfo', 'form-myinfo');
+
+      // Altera os botões do container
       changeButtons();
+
+      // Remove os eventos 
       cancel.removeEventListener('click', cancelInfo)
       save.removeEventListener('click', saveInfo)
     }
@@ -59,26 +60,27 @@ export function editInformation() {
 
     /** SALVAR INFORMAÇÕES EDITADAS */
     save.addEventListener('click', saveInfo)
-    function saveInfo({currentTarget}) {
+    function saveInfo() {
       
-      // Pega os inputs preenchidos e atualiza os dados do usuario no localStorage
-      const inputs = currentTarget.parentElement.querySelectorAll('input');
-      inputs.forEach((input) => {
-        
+      // Busca o elemento referente a informação alterada e insere a nova informação dentro dele
+      // Atualiza as novas informações nos dados do usuario
+      [...form].forEach((input) => {
         if(!!input.value) {
-          accounts.updateUser(input.name, 'add', input.value)
-          // if(input.name === "nome" || input.name === "sobrenome" && validator.characters(input.value)) {
-          // } 
+          [...listItens].find((element) => element.getAttribute('data-myinfo').includes(input.name)).innerText = input.value;
+          accounts.updateUser(input.name, 'add', input.value);
         }
-        
-        // Transforma os inputs em span novamente e com a informação atualizada
-        changeTag(lis, 'span')
+      });
+
+        // Desativa o formulario e ativa a lista
+        list.setAttribute('data-myinfo', 'show-myinfo-active');
+        form.setAttribute('data-myinfo', 'form-myinfo');
+
+        // Altera os botões do container
         changeButtons();
+
+        // Remove os eventos 
         cancel.removeEventListener('click', cancelInfo)
         save.removeEventListener('click', saveInfo)
-      })
-      
-
     }
   }
 }

@@ -73,13 +73,28 @@
           <!-- Informações do cliente -->
           <div class="dados mini-container">
             <h3 class="font-2-xs-u">Dados</h3>
-            <ul class="font-2-s-m">
+            <ul data-myinfo="show-myinfo-active" class="font-2-s-m">
               <li>Nome: <span data-myinfo="personal-nome" class="font-2-s"></span></li>
               <li>Sobrenome: <span data-myinfo="personal-sobrenome" class="font-2-s"></span></li>
               <li>Data de nascimento: <span data-myinfo="personal-nascimento" class="font-2-s"></span></li>
               <li>CPF: <span data-myinfo="personal-cpf" class="font-2-s"></span></li>
               <li>Email: <span data-myinfo="personal-email" class="font-2-s"></span></li>
             </ul>
+
+            <!-- Editar informações do cliente -->
+            <form data-myinfo="form-myinfo" class="form-myinfo font-2-s-m">
+              <label for="nome">Nome</label>
+              <input type="text" name="nome" class="font-2-s">
+              <label for="sobrenome">Sobrenome</label>
+              <input type="text" name="sobrenome" class="font-2-s">
+              <label for="nascimento">Data de nascimento</label>
+              <input type="text" name="nascimento" class="font-2-s">
+              <label for="cpf">CPF</label>
+              <input type="text" name="cpf" class="font-2-s">
+              <label for="email">Email</label>
+              <input type="text" name="email" class="font-2-s">
+            </form>
+
             <span data-myinfo="edit-active" class="account-edit font-2-xxxs-u">Editar</span>
             <span data-myinfo="edit-save" class="account-edit save font-2-xxxs-u">Salvar</span>
             <span data-myinfo="edit-cancel" class="account-edit cancel font-2-xxxs-u">Cancelar</span>
