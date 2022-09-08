@@ -1,4 +1,5 @@
 import { accounts } from "../global/accounts.js";
+import { showError } from "../global/showError.js";
 import * as validator from "../global/validator.js";
 
 
@@ -66,21 +67,26 @@ export function editInformation() {
       // Atualiza as novas informações nos dados do usuario
       [...form].forEach((input) => {
         if(!!input.value) {
-          [...listItens].find((element) => element.getAttribute('data-myinfo').includes(input.name)).innerText = input.value;
-          accounts.updateUser(input.name, 'add', input.value);
+
+          if(input.name == "nome" && validator.onlyCharacters(input.value)) {
+            showError(input, "Apenas letras")
+          } else {
+            [...listItens].find((element) => element.getAttribute('data-myinfo').includes(input.name)).innerText = input.value;
+            accounts.updateUser(input.name, 'add', input.value);
+
+            // Desativa o formulario e ativa a lista
+            list.setAttribute('data-myinfo', 'show-myinfo-active');
+            form.setAttribute('data-myinfo', 'form-myinfo');
+      
+            // Altera os botões do container
+            changeButtons();
+      
+            // Remove os eventos 
+            cancel.removeEventListener('click', cancelInfo)
+            save.removeEventListener('click', saveInfo)
+          }
         }
       });
-
-        // Desativa o formulario e ativa a lista
-        list.setAttribute('data-myinfo', 'show-myinfo-active');
-        form.setAttribute('data-myinfo', 'form-myinfo');
-
-        // Altera os botões do container
-        changeButtons();
-
-        // Remove os eventos 
-        cancel.removeEventListener('click', cancelInfo)
-        save.removeEventListener('click', saveInfo)
     }
   }
 }
