@@ -11,7 +11,6 @@ export const accounts = {
       const index = this.getUsers().findIndex(user => user.email === localStorage.loggedUser);
       const updateAccount = this.getUsers();
       const updateUser = this.loggedUser();
-
       const splitProperty = property.split('-');
 
       if(updateType === "add") {

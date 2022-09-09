@@ -39,9 +39,11 @@ export function editInformation() {
     [...form].forEach((input) => {
       input.value = "";
       input.setAttribute('placeholder', accounts.loggedUser()[input.name])
+
+      // Remove as mensagens de erro se houver
+      showError(input, 'removeError');
     })
     
-
     /** CANCELAR EDIÇÃO DE INFORMAÇÕES */
     cancel.addEventListener('click', cancelInfo)
     function cancelInfo() {
@@ -58,35 +60,35 @@ export function editInformation() {
       save.removeEventListener('click', saveInfo)
     }
 
-
     /** SALVAR INFORMAÇÕES EDITADAS */
     save.addEventListener('click', saveInfo)
     function saveInfo() {
       
-      // Busca o elemento referente a informação alterada e insere a nova informação dentro dele
-      // Atualiza as novas informações nos dados do usuario
-      [...form].forEach((input) => {
-        if(!!input.value) {
-
-          if(input.name == "nome" && validator.onlyCharacters(input.value)) {
-            showError(input, "Apenas letras")
-          } else {
+      // Faz uma validação dos inputs
+      if(!validator.onlyCharacters(form.nome, form.sobrenome)) {
+        
+        // Atualiza os dados do usuario com os valores dos inputs que foram preenchidos
+        [...form].forEach((input) => {
+          if(input.value) {
             [...listItens].find((element) => element.getAttribute('data-myinfo').includes(input.name)).innerText = input.value;
             accounts.updateUser(input.name, 'add', input.value);
+          }
 
             // Desativa o formulario e ativa a lista
             list.setAttribute('data-myinfo', 'show-myinfo-active');
             form.setAttribute('data-myinfo', 'form-myinfo');
-      
+
             // Altera os botões do container
             changeButtons();
       
             // Remove os eventos 
             cancel.removeEventListener('click', cancelInfo)
             save.removeEventListener('click', saveInfo)
-          }
-        }
-      });
+  
+            // Recarregar a pagina
+            location.reload();
+        })
+      }
     }
   }
 }

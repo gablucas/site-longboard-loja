@@ -1,11 +1,21 @@
 import errorDescription from "./errorDescription.js";
+import { showError } from "./showError.js";
 
-export function onlyCharacters(input) {
-
+export function onlyCharacters(...inputs) {
   let error = false;
-    if(input.match(/\D+/g) === null || input.match(/\D+/g)[0] !== input) {
+
+  inputs.forEach((input) => {
+    // showError(input, "removeError")
+
+    if ((/\d+/g).test(input.value)) {
+      showError(input, "Apenas letras")
       error =  true;
+    } else {
+      showError(input, "removeError")
     }
+
+
+  })
 
   return error;
 }

@@ -85,14 +85,17 @@
             <form data-myinfo="form-myinfo" class="form-myinfo font-2-s-m">
               <label for="nome">Nome</label>
               <input type="text" name="nome" class="font-2-s">
+              <span class="error"></span>
               <label for="sobrenome">Sobrenome</label>
               <input type="text" name="sobrenome" class="font-2-s">
+              <span class="error"></span>
               <label for="nascimento">Data de nascimento</label>
               <input type="text" name="nascimento" class="font-2-s">
+              <span class="error"></span>
               <label for="cpf">CPF</label>
               <input type="text" name="cpf" class="font-2-s">
-              <label for="email">Email</label>
-              <input type="text" name="email" class="font-2-s">
+              <span class="error"></span>
+              <div><span>Email: </span><span data-myinfo="personal-email" class="font-2-s"></span></div>
             </form>
 
             <span data-myinfo="edit-active" class="account-edit font-2-xxxs-u">Editar</span>
@@ -100,8 +103,9 @@
             <span data-myinfo="edit-cancel" class="account-edit cancel font-2-xxxs-u">Cancelar</span>
           </div>
 
-          <!-- Botão alterar senha -->
-          <button class="font-2-s-m mini-container">Alterar senha</button>
+          <!-- Botão alterar email e senha -->
+          <button class="font-2-s-m mini-container change">Alterar email</button>
+          <button class="font-2-s-m mini-container change">Alterar senha</button>
         </div>
 
         <!-- Endereço principal -->

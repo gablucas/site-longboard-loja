@@ -18,6 +18,10 @@
   position: relative;
 }
 
+.account-info .mini-container.change {
+  padding: 10px;
+}
+
 .account-info h3 {
   position: absolute;
   padding-left: 4px;
@@ -59,13 +63,13 @@
 }
 
 .account-info li + li {
-  padding-top: 6px;
+  padding-top: 10px;
 }
 
 .account-info button {
   width: 100%;
   padding: 9px 0px 9px 0px;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .account-info button:hover {
@@ -94,6 +98,17 @@
 .form-myinfo input + label {
   padding-top: 6px;
 }
+
+.form-myinfo div {
+  padding-top: 6px;
+}
+
+.form-myinfo div span {
+  display: block;
+}
+
+
+/* Containers */
 
 [data-myinfo="show-myinfo"] {
   display: none;
