@@ -65,7 +65,7 @@ export function editInformation() {
     function saveInfo() {
       
       // Faz uma validação dos inputs
-      if(!validator.onlyCharacters(form.nome, form.sobrenome)) {
+      if(!validator.onlyCharacters(form.nome, form.sobrenome) && !validator.cpf(form.cpf)) {
         
         // Atualiza os dados do usuario com os valores dos inputs que foram preenchidos
         [...form].forEach((input) => {

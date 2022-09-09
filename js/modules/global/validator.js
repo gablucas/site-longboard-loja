@@ -5,7 +5,7 @@ export function onlyCharacters(...inputs) {
   let error = false;
 
   inputs.forEach((input) => {
-    // showError(input, "removeError")
+    showError(input, "removeError")
 
     if ((/\d+/g).test(input.value)) {
       showError(input, "Apenas letras")
@@ -13,19 +13,24 @@ export function onlyCharacters(...inputs) {
     } else {
       showError(input, "removeError")
     }
-
-
   })
 
   return error;
 }
 
-export function onlyNumbers(input) {
-
+export function onlyNumbers(...inputs) {
   let error = false;
-    if(input.match(/\d+/g) === null || input.match(/\D+/g)[0] !== input) {
+
+  inputs.forEach((input) => {
+    showError(input, "removeError")
+
+    if ((/\D+/g).test(input.value)) {
+      showError(input, "Apenas números")
       error =  true;
+    } else {
+      showError(input, "removeError")
     }
+  })
 
   return error;
 }
@@ -45,3 +50,41 @@ export function emptyInputs(input) {
     });
     return error;
   }
+
+// export function date(input) {
+//   let error = false
+//   showError(input, "removeError");
+
+//   if (input.value.length !== 8) {
+//     showError(input, "Digite a data no formato XX XX XXXX")
+//     error =  true;
+
+//   } else if (onlyNumbers(input)){
+//     showError(input, "Somente números")
+//     error =  true;
+
+//   } else {
+//     showError(input, "removeError")
+//   }
+
+//   return error;
+// }
+
+export function cpf(input) {
+  let error = false
+  showError(input, "removeError");
+
+  if (onlyNumbers(input)){
+    showError(input, "Somente números")
+    error =  true;
+
+  } else if (input.value.length !== 11) {
+      showError(input, "Digite os 11 digitos do CPF")
+      error =  true;
+
+  } else {
+    showError(input, "removeError")
+  }
+
+  return error;
+}
