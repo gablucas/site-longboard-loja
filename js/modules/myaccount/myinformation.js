@@ -30,7 +30,7 @@ export function showInformation() {
   if(!!lastOrder) {
     fetchProducts((product) => {
       const getProduct = product[lastOrder.type].find((item) => item.id === lastOrder.id);
-      image.setAttribute('src', getProduct.images[0])
+      image.setAttribute('src', `../${getProduct.images[0]}`);
       name.innerText = getProduct.name;
       price.innerText = `R$ ${getProduct.price},00`;
       date.innerText = lastOrder.orderdate;

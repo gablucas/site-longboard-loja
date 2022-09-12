@@ -45,7 +45,6 @@ function nextStep(step) {
   }
 }
 
-
 // VALIDANDO OS FORMULARIOS
 
 // Primeiro formulario
