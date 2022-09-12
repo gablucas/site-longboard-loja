@@ -21,8 +21,12 @@
 
 .account-options li {
   cursor: pointer;
-  padding: 14px 0px 14px 20px;
   border-top: .5px solid var(--cor-6);
+}
+
+.account-options li a {
+  display: block;
+  padding: 14px 0px 14px 20px;
 }
 
 .account-options li:hover {
@@ -33,4 +37,22 @@
 .account-options li.active {
   color: var(--cor-0);
   background-color: var(--cor-d5);
+}
+
+.account-info {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 40px 20px 20px 20px;
+  gap: 20px;
+}
+
+.account-info h2 {
+  grid-column: 1/-1;
+}
+
+.account-info .mini-container {
+  border: 1px solid var(--cor-12);
+  padding: 20px;
+
+  position: relative;
 }

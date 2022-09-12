@@ -40,7 +40,7 @@ function nextStep(step) {
   } else if (step === 4) {
     stepProgress.classList.replace('step2', 'step3')
     stepCount.parentElement.innerHTML = "";
-    form.parentElement.classList.remove("active");
+    registerForm[2].parentElement.classList.remove("active");
     registerSucessfull.classList.add("active");
   }
 }

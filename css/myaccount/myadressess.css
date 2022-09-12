@@ -1,0 +1,33 @@
+.dados-endereco {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  column-gap: 20px;
+}
+
+.dados-endereco li {
+  display: inline-block;
+}
+
+.dados-endereco li:first-child {
+  grid-column: 1/-1;
+}
+
+.dados-endereco li + li {
+  padding-top: 4px;
+}
+
+.endereco {
+  position: relative;
+}
+
+.endereco.principal::before {
+  content: "Endereço Principal";
+  position: absolute;
+  padding-left: 4px;
+  padding-right: 4px;
+  top: -9px;
+  left: 8px;
+  font: 400 1rem/1.3 'Roboto';
+  text-transform: uppercase;
+  background-color: var(--cor-0);
+}
