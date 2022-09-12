@@ -1,6 +1,7 @@
 import { accounts } from "../global/accounts.js";
 import { showError } from "../global/showError.js";
 import * as validator from "../global/validator.js";
+import * as formatter from "../global/formatter.js";
 
 
 const editButtons = document.querySelectorAll('[data-myinfo^="edit"]')
@@ -70,8 +71,17 @@ export function editInformation() {
         // Atualiza os dados do usuario com os valores dos inputs que foram preenchidos
         [...form].forEach((input) => {
           if(input.value) {
-            [...listItens].find((element) => element.getAttribute('data-myinfo').includes(input.name)).innerText = input.value;
-            accounts.updateUser(input.name, 'add', input.value);
+
+            if (input.name === "cpf") {
+              accounts.updateUser('cpf', 'add', formatter.cpf(input));
+
+            } else if (input.name === "nascimento") {
+              accounts.updateUser('nascimento', 'add', formatter.date(input));
+
+            } else {
+              [...listItens].find((element) => element.getAttribute('data-myinfo').includes(input.name)).innerText = input.value;
+              accounts.updateUser(input.name, 'add', input.value);
+            }
           }
 
             // Desativa o formulario e ativa a lista

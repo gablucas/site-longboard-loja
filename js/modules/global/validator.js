@@ -5,7 +5,6 @@ export function onlyCharacters(...inputs) {
   let error = false;
 
   inputs.forEach((input) => {
-    showError(input, "removeError")
 
     if ((/\d+/g).test(input.value)) {
       showError(input, "Apenas letras")
@@ -22,7 +21,6 @@ export function onlyNumbers(...inputs) {
   let error = false;
 
   inputs.forEach((input) => {
-    showError(input, "removeError")
 
     if ((/\D+/g).test(input.value)) {
       showError(input, "Apenas números")
@@ -72,19 +70,19 @@ export function emptyInputs(input) {
 
 export function cpf(input) {
   let error = false
-  showError(input, "removeError");
 
-  if (onlyNumbers(input)){
-    showError(input, "Somente números")
-    error =  true;
-
-  } else if (input.value.length !== 11) {
-      showError(input, "Digite os 11 digitos do CPF")
+  if(input.value) {
+    if (onlyNumbers(input)){
+      showError(input, "Somente números")
       error =  true;
-
-  } else {
-    showError(input, "removeError")
+  
+    } else if (input.value.length !== 11) {
+        showError(input, "Digite os 11 digitos do CPF")
+        error =  true;
+  
+    } else {
+      showError(input, "removeError")
+    }
   }
-
   return error;
 }
