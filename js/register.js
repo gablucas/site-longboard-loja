@@ -25,6 +25,27 @@ const registerSucessfull = document.querySelector("[data-register='sucessfull']"
 const stepProgress = document.querySelector('[data-register="step-progress"]');
 const stepCount = document.querySelector('[data-register="step-count"]');
 
+
+function nextStep(step) {
+  if (step === 2) {
+    stepProgress.classList.add('step1')
+    stepCount.innerText = 2;
+    registerForm[0].parentElement.classList.remove("active");
+    registerForm[1].parentElement.classList.add("active");
+  } else if (step === 3) {
+    stepProgress.classList.replace('step1', 'step2')
+    stepCount.innerText = 3;
+    registerForm[1].parentElement.classList.remove("active");
+    registerForm[2].parentElement.classList.add("active");
+  } else if (step === 4) {
+    stepProgress.classList.replace('step2', 'step3')
+    stepCount.parentElement.innerHTML = "";
+    form.parentElement.classList.remove("active");
+    registerSucessfull.classList.add("active");
+  }
+}
+
+
 // VALIDANDO OS FORMULARIOS
 
 // Primeiro formulario
@@ -34,10 +55,7 @@ function validarFormulario1() {
 
   // Validação
   if(!validator.email(form.email) && !validator.password(form.senha, form['confirmar-senha']) && !campoVazio(form)) {
-    stepProgress.classList.add('step1')
-    stepCount.innerText = 2;
-    registerForm[0].parentElement.classList.remove("active");
-    registerForm[1].parentElement.classList.add("active");
+    nextStep(2);
   }
 }
 
@@ -52,10 +70,7 @@ function validarFormulario2() {
   
   // Validação
   if(!validator.cpf(form.cpf) && !campoVazio(form)) {
-    stepProgress.classList.replace('step1', 'step2')
-    stepCount.innerText = 3;
-    registerForm[1].parentElement.classList.remove("active");
-    registerForm[2].parentElement.classList.add("active");
+    nextStep(3);
   }
 }
 
@@ -69,10 +84,7 @@ const form = registerForm[2];
   
   // Validação
   if(!campoVazio(form)) {
-    stepProgress.classList.replace('step2', 'step3')
-    stepCount.parentElement.innerHTML = "";
-    form.parentElement.classList.remove("active");
-    registerSucessfull.classList.add("active");
+    nextStep(4);
     registerUser(registerForm)
   }
 }

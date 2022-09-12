@@ -2,6 +2,7 @@ import { accounts } from "../global/accounts.js";
 import { showError } from "../global/showError.js";
 import * as validator from "../global/validator.js";
 import * as formatter from "../global/formatter.js";
+import formatCPF from "../register/formatCPF.js";
 
 
 const editButtons = document.querySelectorAll('[data-myinfo^="edit"]')
@@ -35,6 +36,10 @@ export function editInformation() {
 
     // Altera os botões do container
     changeButtons('active');
+
+    // Insere o formator de CPF
+    // formatCPF(form.cpf);
+    console.log(form.cpf);
 
     // Insere os valores atuais nos placeholder dos inputs
     [...form].forEach((input) => {
