@@ -4,15 +4,14 @@ showQuantityItensCart();
 // Modulos para todos formularios
 import campoVazio from "./modules/global/campoVazio.js"
 
+// Validador
+import * as validator from "./modules/global/validator.js";
+
 // Modulos para o primeiro formulario
-import validateEmail from "./modules/register/validateEmail.js";
-import validatePassword from "./modules/register/validatePassword.js";
 import strengthPassword from "./modules/register/strengthPassword.js";
 
 // Modulos para o segundo formulario
 import formatCPF from "./modules/register/formatCPF.js";
-import validateCPF from "./modules/register/validateCPF.js";
-
 
 // Modulos para o terceiro formulario
 import formatCEP from "./modules/register/formatCEP.js";
@@ -34,7 +33,7 @@ function validarFormulario1() {
   const form = registerForm[0];
 
   // Validação
-  if(!validateEmail(form) && !validatePassword(form) && !campoVazio(form)) {
+  if(!validator.email(form.email) && !validator.password(form.senha, form['confirmar-senha']) && !campoVazio(form)) {
     stepProgress.classList.add('step1')
     stepCount.innerText = 2;
     registerForm[0].parentElement.classList.remove("active");
@@ -52,7 +51,7 @@ function validarFormulario2() {
   const form = registerForm[1];
   
   // Validação
-  if(!validateCPF(form) && !campoVazio(form)) {
+  if(!validator.cpf(form.cpf) && !campoVazio(form)) {
     stepProgress.classList.replace('step1', 'step2')
     stepCount.innerText = 3;
     registerForm[1].parentElement.classList.remove("active");

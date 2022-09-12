@@ -1,4 +1,4 @@
-import errorDescription from "./errorDescription.js";
+import { accounts } from "./accounts.js";
 import { showError } from "./showError.js";
 
 export function onlyCharacters(...inputs) {
@@ -72,17 +72,58 @@ export function cpf(input) {
   let error = false
 
   if(input.value) {
-    if (onlyNumbers(input)){
-      showError(input, "Somente números")
-      error =  true;
-  
-    } else if (input.value.length !== 11) {
-        showError(input, "Digite os 11 digitos do CPF")
+    if (input.value.length !== 14) {
+        showError(input, "CPF Incompleto")
         error =  true;
-  
+    
+    } else if (accounts.getUsers() && accounts.getUsers().some(user => user.cpf === input.value)) {
+      showError(input, "CPF já esta sendo usado");
+      error = true;
+    
     } else {
       showError(input, "removeError")
     }
   }
+  return error;
+}
+
+export function email(input) {
+  let error = false
+
+  const email = input.value.toLowerCase();
+  
+  if(!!email) {
+    if(!email.includes("@")) {
+      showError(input, 'Está faltando o "@" no email')
+      error = true;
+    }else if(!email.includes(".com")) {
+      showError(input, 'Está faltando o ".com" no email')
+      error = true;
+    }else if(email.includes("@.")) {
+      showError(input, "Email inválido")
+      error = true;
+    }else if(!!accounts.getUsers() && accounts.getUsers().some(user => user.email === email)){
+      showError(input, "Email já registrado")
+      error = true;
+    }
+  }
+  return error;
+}
+
+export function password(input1, input2) {
+  let error = false
+
+  // Senhas iguais
+  if(input1.value !== input2.value && input1.value && input2.value) {
+    showError(input2, "As senhas não conferem");
+    error = true;
+  }
+  
+  // Senha fraca
+  if(input1.value.length <= 5 && input1.value) {
+    showError(input1, "A senha é muito fraca");
+    error = true;
+  }
+
   return error;
 }
