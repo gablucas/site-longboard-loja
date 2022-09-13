@@ -1,6 +1,6 @@
 .my-info {
   grid-template-columns: 2fr 2fr 1fr;
-  /* align-items: start; */
+  align-items: start;
 }
 
 .my-info .mini-container.change {
@@ -16,30 +16,20 @@
   background: var(--cor-0);
 }
 
-.account-edit {
-  position: absolute;
-  padding-left: 4px;
-  padding-right: 4px;
-  bottom: -7px;
-  right: 20px;
-  cursor: pointer;
-  color: var(--cor-d6);
-  background: var(--cor-0);
-}
 
-.account-edit:hover {
+.btn-container:hover {
   color: var(--cor-d4);
 }
 
-.account-edit.save {
+.btn-container.save {
   right: 100px;
 }
 
-.account-edit.cancel {
+.btn-container.cancel {
   color: red;
 }
 
-.account-edit.cancel:hover {
+.btn-container.cancel:hover {
   color: rgb(255, 75, 75);
 }
 
@@ -95,45 +85,26 @@
 
 /* Containers */
 
-[data-myinfo="show-myinfo"] {
-  display: none;
-}
-
-[data-myinfo="show-myinfo-active"] {
-  display: initial;
-}
-
+[data-myinfo="show-myinfo"],
 [data-myinfo="form-myinfo"] {
   display: none;
 }
 
+[data-myinfo="show-myinfo-active"],
 [data-myinfo="form-myinfo-active"] {
   display: initial;
 }
 
 
 /* Botões edição */
-[data-myinfo="edit"] {
-  display: none;
-}
-
-[data-myinfo="edit-active"] {
-  display: initial;
-}
-
-[data-myinfo="edit-save"] {
-  display: none;
-}
-
-[data-myinfo="edit-save-active"] {
-  display: initial;
-}
-
+[data-myinfo="edit"],
+[data-myinfo="edit-save"],
 [data-myinfo="edit-cancel"] {
   display: none;
 }
 
+[data-myinfo="edit-active"],
+[data-myinfo="edit-save-active"],
 [data-myinfo="edit-cancel-active"] {
   display: initial;
-
 }

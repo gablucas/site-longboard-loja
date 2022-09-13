@@ -1,23 +1,25 @@
-.dados-endereco {
+.my-addresses {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  column-gap: 20px;
+  grid-template-columns: 300px 300px;
+  gap: 20px;
 }
 
-.dados-endereco li {
-  display: inline-block;
-}
-
-.dados-endereco li:first-child {
-  grid-column: 1/-1;
+.endereco {
+  position: relative;
+  align-self: start;
+  height: 280px;
+  box-sizing: border-box;
 }
 
 .dados-endereco li + li {
   padding-top: 4px;
 }
 
-.endereco {
-  position: relative;
+.endereco.novo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .endereco.principal::before {
@@ -31,3 +33,32 @@
   text-transform: uppercase;
   background-color: var(--cor-0);
 }
+
+.btn-container.editar {
+  right: 90px;
+}
+
+.btn-container.excluir {
+  color: red;
+}
+
+.btn-container.excluir:hover {
+  color: rgb(255, 75, 75);
+}
+
+
+[data-myaddresses="edit"],
+[data-myaddresses="edit-delete"],
+[data-myaddresses="edit-save"],
+[data-myaddresses="edit-cancel"] {
+  display: none;
+}
+
+[data-myaddresses="edit-active"],
+[data-myaddresses="edit-delete-active"],
+[data-myaddresses="edit-save-active"],
+[data-myaddresses="edit-cancel-active"] {
+  display: initial;
+}
+
+

@@ -97,35 +97,34 @@
   width: 260px;
 }
 
+.register-subcontainer {
+  display: flex;
+  gap: 20px;
+}
+
 .register-cep input {
   width: 100px;
 }
 
-.register-rua {
-  display: flex;
-  gap: 20px;
+.register-identificacao input {
+  width: 220px;
 }
 
-.register-rua div:nth-child(2) input{
+.register-numero input {
   width: 60px;
   text-align: center;
-}
-
-.register-cidade {
-  display: flex;
-  gap: 20px;
 }
 
 .register-complemento input {
   width: 340px;
 }
 
-.register-cidade div:first-child input,
-.register-cidade div:nth-child(2) input {
+.register-cidade input,
+.register-bairro input {
   width: 120px;
 }
 
-.register-cidade div:nth-child(3) input {
+.register-estado input {
   width: 60px;
   text-align: center;
 }

@@ -68,7 +68,7 @@
         <span class="error"></span>
 
         <!-- Confirmar senha -->
-        <label for="">Confirmar senha</label>
+        <label for="confirmar-senha">Confirmar senha</label>
         <input class="font-2-xs" type="password" name="confirmar-senha">
         <span class="error"></span>
 
@@ -80,7 +80,7 @@
     <div data-register="step2" class="container-form font-2-s-m cor-11">
       <form data-form="register">
         <!-- Nome -->
-        <label for="">Nome</label>
+        <label for="nome">Nome</label>
         <input class="font-2-xs" type="text" name="nome">
         <span class="error"></span>
         
@@ -107,22 +107,36 @@
     <div data-register="step3" class="container-form font-2-s-m cor-11">
       <form data-form="register">
 
-        <!-- CEP -->
-        <div class="register-cep">
-          <label for="">CEP</label>
-          <input data-register="cep" class="font-2-xs" type="number" name="endereco_cep">
-          <span class="error"></span>
+        <!-- Identificação e CEP -->
+        <div class="register-subcontainer">
+
+          <!-- Identificação -->
+          <div class="register-identificacao">
+            <label for="">Identificação</label>
+            <input data-register="identificacao" class="font-2-xs" type="text" name="endereco_identificacao">
+            <span class="error"></span>
+          </div>
+          
+          <!-- CEP -->
+          <div class="register-cep">
+            <label for="">CEP</label>
+            <input data-register="cep" class="font-2-xs" type="number" name="endereco_cep">
+            <span class="error"></span>
+          </div>
         </div>
         
         <!-- Rua e Numero -->
-        <div class="register-rua">
-          <div>
+        <div class="register-subcontainer">
+
+          <!-- Rua -->
+          <div class="register-rua">
             <label for="">Rua</label>
             <input data-register="rua" class="font-2-xs" type="text" name="endereco_rua">
             <span class="error"></span>
           </div>
 
-          <div>
+          <!-- Número -->
+          <div class="register-numero">
             <label for="">Nº</label>
             <input data-register="numero" class="font-2-xs" type="number" name="endereco_numero">
             <span class="error"></span>
@@ -136,20 +150,24 @@
         </div>
         
         <!-- Cidade, Bairro e Estado -->
-        <div class="register-cidade">
-          <div>
+        <div class="register-subcontainer">
+
+          <!-- Cidade -->
+          <div class="register-cidade">
             <label for="">Cidade</label>
             <input data-register="cidade" class="font-2-xs" type="text" name="endereco_cidade">
             <span class="error"></span>
           </div>
       
-          <div>
+          <!-- Bairro -->
+          <div class="register-bairro">
             <label for="">Bairro</label>
             <input data-register="bairro" class="font-2-xs" type="text" name="endereco_bairro">
             <span class="error"></span>
           </div>
 
-          <div>
+          <!-- Estado -->
+          <div class="register-estado">
             <label for="">Estado</label>
             <input data-register="estado" class="font-2-xs" type="text" name="endereco_estado">
             <span class="error"></span>
