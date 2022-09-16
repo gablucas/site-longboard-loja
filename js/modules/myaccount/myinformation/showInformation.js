@@ -1,5 +1,5 @@
-import { accounts } from "../global/accounts.js";
-import fetchProducts from "../global/fetchProducts.js";
+import { accounts } from "../../global/accounts.js";
+import fetchProducts from "../../global/fetchProducts.js";
 
 const personalData = document.querySelectorAll('[data-myinfo^="personal"]');
 const addressData = document.querySelectorAll('[data-myinfo^="address"]');
@@ -20,7 +20,8 @@ export function showInformation() {
 
     // Utilizado regex para separar as palavras separadas com _ e pegar a terceira palavra
     const property = data.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1')
-    data.innerText = accounts.loggedUser().endereco[property];
+    const mainAddress = accounts.loggedUser().endereco.find((address) => address.main === true);
+    data.innerText = mainAddress[property];
   });
 
   /** ULTIMO PEDIDO */

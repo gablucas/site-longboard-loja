@@ -6,5 +6,5 @@ export default function showDataform(user) {
                         <li><span class="font-2-s-m">CPF:</span> ${user.cpf}</li>
                         <li><span class="font-2-s-m">Email:</span> ${user.email}</li>
                         <li><span class="font-2-s-m">Nascimento:</span> ${user.nascimento}</li>
-                        <li><span class="font-2-s-m">Endereço:</span> ${user.endereco.rua} - ${user.endereco.numero} <br> ${user.endereco.cidade}, ${user.endereco.bairro}, ${user.endereco.estado} - ${user.endereco.cep} - ${user.endereco.complemento}</li>`
+                        <li><span class="font-2-s-m">Endereço:</span> ${user.endereco[0].rua} - ${user.endereco[0].numero} <br> ${user.endereco[0].cidade}, ${user.endereco[0].bairro}, ${user.endereco[0].estado} - ${user.endereco[0].cep} - ${user.endereco[0].complemento}</li>`
 }

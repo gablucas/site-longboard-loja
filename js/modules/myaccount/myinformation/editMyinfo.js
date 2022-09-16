@@ -1,8 +1,8 @@
-import { accounts } from "../global/accounts.js";
-import { showError } from "../global/showError.js";
-import * as validator from "../global/validator.js";
-import * as formatter from "../global/formatter.js";
-import formatCPF from "../register/formatCPF.js";
+import { accounts } from "../../global/accounts.js";
+import { showError } from "../../global/showError.js";
+import * as validator from "../../global/validator.js";
+import * as formatter from "../../global/formatter.js";
+import formatCPF from "../../register/formatCPF.js";
 
 
 const editButtons = document.querySelectorAll('[data-myinfo^="edit"]')
