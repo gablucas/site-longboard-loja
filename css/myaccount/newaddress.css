@@ -1,0 +1,28 @@
+.new-address {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.new-address form {
+  margin-top: 20px;
+}
+
+.new-address label {
+  display: block;
+}
+
+.new-address span + label {
+  margin-top: 12px;
+}
+
+.new-address button {
+  cursor: pointer;
+  padding: 8px;
+  margin-top: 12px;
+  border: 1px solid var(--cor-12);
+  border-radius: 7px;
+  background: var(--cor-d5);
+}

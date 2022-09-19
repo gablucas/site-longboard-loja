@@ -33,16 +33,18 @@ export function onlyNumbers(...inputs) {
   return error;
 }
 
+
 export function emptyInputs(input) {
   let error = false;
-  
+
     Array.from(input).forEach((inp) => {
+
       if(!!inp.nextElementSibling) {
         if(!inp.value) {
-          errorDescription(inp, "Campo vazio");
+          showError(inp, "Campo vazio");
           error = true;
         } else {
-          errorDescription(inp, "");
+          showError(inp, "");
         }
       }
     });
