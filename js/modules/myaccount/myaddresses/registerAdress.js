@@ -2,6 +2,10 @@ import { accounts } from "../../global/accounts.js";
 import { Validator } from "../../global/validator.js";
 import buscarEndereco from "../../register/buscarEndereco.js";
 
+const registerContainer = document.querySelector('[data-newaddress="register-container-active"]');
+const sucessfullContainer = document.querySelector('[data-newaddress="register-sucessfull"]');
+const ulNewAddress = document.querySelector('[data-newaddress="user-data"]');
+
 const form = document.querySelector('[data-newaddress="form"]');
 const formButton = document.querySelector('[data-newaddress="register"]');
 const validate = new Validator(form);
@@ -33,6 +37,19 @@ export function registerAddress() {
       })
 
       accounts.updateUser('endereco', 'push', novoEndereco);
+
+      ulNewAddress.innerHTML = `
+      <li>Identificação: <span class="font-2-xs">${novoEndereco.identificacao}</span></li>
+      <li>CEP: <span class="font-2-xs">${novoEndereco.cep}</span></li>
+      <li>Rua: <span class="font-2-xs">${novoEndereco.rua}</span></li>
+      <li>Número: <span class="font-2-xs">${novoEndereco.numero}</span></li>
+      <li>Cidade: <span class="font-2-xs">${novoEndereco.cidade}</span></li>
+      <li>Bairro: <span class="font-2-xs">${novoEndereco.bairro}</span></li>
+      <li>Estado: <span class="font-2-xs">${novoEndereco.estado}</span></li>
+      <li>Complemento: <span class="font-2-xs">${novoEndereco.complemento}</span></li>`;
+
+      registerContainer.setAttribute('data-newaddress', 'register-container');
+      sucessfullContainer.setAttribute('data-newaddress', 'register-sucessfull-active');
     }
   }
 }

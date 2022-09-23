@@ -26,3 +26,22 @@
   border-radius: 7px;
   background: var(--cor-d5);
 }
+
+.register-address-sucessfull {
+  display: grid;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+
+
+[data-newaddress="register-container-active"],
+[data-newaddress="register-sucessfull-active"] {
+  display: grid;
+}
+
+[data-newaddress="register-container"],
+[data-newaddress="register-sucessfull"] {
+  display: none;
+}
