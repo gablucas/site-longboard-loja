@@ -4,8 +4,7 @@ import showDataUser from "./showDataUser.js";
 
 export default function registerUser(forms) {
   const user = {endereco: [], pedidos: [],};
-  const endereco = {};
-  endereco.main = true;
+  const endereco = {main: true,};
 
   // Adiciona os dados do usuario em um objeto
   forms.forEach((form) => {

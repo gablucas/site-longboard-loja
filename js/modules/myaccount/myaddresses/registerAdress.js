@@ -1,3 +1,4 @@
+import { accounts } from "../../global/accounts.js";
 import { Validator } from "../../global/validator.js";
 import buscarEndereco from "../../register/buscarEndereco.js";
 
@@ -23,9 +24,15 @@ export function registerAddress() {
   validate.onlyCharacters(
     'endereco_identificacao');
 
+    // Adicionar o novo endereço na conta do usuario
     if(validate.isValid()) {
-      
-    }
+      const novoEndereco = {main: false,};
 
+      [...form].forEach((input) => {
+        novoEndereco[input.name.replace(/\w+_(\w+)/, "$1")] = input.value;
+      })
+
+      accounts.updateUser('endereco', 'push', novoEndereco);
+    }
   }
 }
