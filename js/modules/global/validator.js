@@ -1,56 +1,6 @@
 import { accounts } from "./accounts.js";
 import { showError } from "./showError.js";
 
-export function onlyCharacters(...inputs) {
-  let error = false;
-
-  inputs.forEach((input) => {
-
-    if ((/\d+/g).test(input.value)) {
-      showError(input, "Apenas letras")
-      error =  true;
-    } else {
-      showError(input, "removeError")
-    }
-  })
-
-  return error;
-}
-
-export function onlyNumbers(...inputs) {
-  let error = false;
-
-  inputs.forEach((input) => {
-
-    if ((/\D+/g).test(input.value)) {
-      showError(input, "Apenas números")
-      error =  true;
-    } else {
-      showError(input, "removeError")
-    }
-  })
-
-  return error;
-}
-
-
-export function emptyInputs(input) {
-  let error = false;
-
-    Array.from(input).forEach((inp) => {
-
-      if(!!inp.nextElementSibling) {
-        if(!inp.value) {
-          showError(inp, "Campo vazio");
-          error = true;
-        } else {
-          showError(inp, "");
-        }
-      }
-    });
-    return error;
-  }
-
 // export function date(input) {
 //   let error = false
 //   showError(input, "removeError");
@@ -128,4 +78,84 @@ export function password(input1, input2) {
   }
 
   return error;
+}
+
+export class Validator {
+  constructor(form) {
+    this.form = form;
+
+    this.validate = {
+      emptyimputs: true,
+      onlycharacters: true,
+      onlynumbers: true,
+    }
+  }
+
+  // CAMPOS VAZIOS
+  emptyInputs(...inputs) {
+
+    // Validar
+    if(inputs.some((input) => !this.form[input].value)) {
+      this.validate.emptyimputs = false;
+    } else {
+      this.validate.emptyimputs = true;
+    }
+
+    // Exibir ou remover erro
+    inputs.forEach((input) => {
+      if (!this.form[input].value) {
+        showError(this.form[input], 'add', 'Campo vazio');
+      } else {
+        showError(this.form[input], 'remove', 'Campo vazio');
+      }
+    })
+  }
+
+  // APENAS LETRAS
+  onlyCharacters(...inputs) {
+
+    // Validador
+    if (inputs.some((input) => (/\d+/g).test(this.form[input].value))) {
+      this.validate.onlycharacters = false;
+    } else {
+      this.validate.onlycharacters = true;
+    }
+
+
+    // Exibir ou remover erro
+    inputs.forEach((input) => {
+      if ((/\d+/g).test(this.form[input].value)) {
+        showError(this.form[input], 'add', 'Apenas letras');
+      } else {
+        showError(this.form[input], 'remove', "Apenas letras");
+      }
+    })
+  }
+
+  // APENAS NUMEROS
+  onlyNumbers(...inputs) {
+
+    // Validador
+    if (inputs.some((input) => (/\D+/g).test(input.value))) {
+      this.validate.onlynumbers = false;
+    } else {
+      this.validate.onlynumbers = true;
+    }
+
+    // Exibir ou remover erro
+    inputs.forEach((input) => {
+      if ((/\D+/g).test(input.value)) {
+        showError(input, 'add', 'Apenas números');
+      } else {
+        showError(input, 'remove', 'Apenas números');
+      }
+    })
+  }
+
+  // VALIDAR
+  isValid() {
+    const validateValues = Object.values(this.validate)
+    return validateValues.every((item) => item === true);
+  }
+
 }
