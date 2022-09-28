@@ -135,14 +135,5 @@
 }
 
 .shape-compra button {
-  cursor: pointer;
-  font: inherit;
-
   padding: 10px;
-  border-radius: 7px;
-  background:linear-gradient(var(--cor-d4),var(--cor-d5));
-}
-
-.shape-compra button:hover {
-  background:linear-gradient(var(--cor-d5), var(--cor-d6));
 }

@@ -6,6 +6,32 @@
   box-sizing: border-box;
 }
 
+.button-1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background:linear-gradient(var(--cor-d4), var(--cor-d5));
+}
+
+.button-1:hover {
+  background:linear-gradient(var(--cor-d5), var(--cor-d6));
+}
+
+.button-2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid var(--cor-12);
+  background: var(--cor-d5);
+}
+
+.button-2:hover {
+  background-color: var(--cor-d6);
+}
+
+
 @media (max-width: 768px) {
 
   .container {

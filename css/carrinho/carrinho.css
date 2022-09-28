@@ -21,18 +21,10 @@
 }
 
 .cart-button {
-  cursor: pointer;
-  padding: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   margin-top: 12px;
-  border: 1px solid var(--cor-12);
-  border-radius: 7px;
-  background: var(--cor-d5);
 }
-
-.cart-button:hover {
-  background-color: var(--cor-d6);
-}
-
 
 /* RESUMO, ENDERECO e PAGAMENTO */
 .cart-summary,

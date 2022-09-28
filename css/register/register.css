@@ -73,16 +73,7 @@
 }
 
 .register-account button {
-  padding-top: 10px;
-  padding-bottom: 10px;
   margin-top: 20px;
-  border-radius: 5px;
-  background:linear-gradient(var(--cor-d4), var(--cor-d5));
-  cursor: pointer;
-}
-
-.register-account button:hover {
-  background:linear-gradient(var(--cor-d5), var(--cor-d6));
 }
 
 .register-account label {
@@ -133,6 +124,10 @@
   display: grid;
   justify-content: center;
   gap: 12px;
+}
+
+.register-sucessfull a {
+  text-align: center;
 }
 
 .user-data li + li {

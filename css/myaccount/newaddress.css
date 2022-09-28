@@ -1,7 +1,6 @@
 .new-address {
   display: grid;
   justify-content: center;
-  justify-items: center;
   padding-top: 40px;
   padding-bottom: 60px;
 }
@@ -19,19 +18,21 @@
 }
 
 .new-address button {
-  cursor: pointer;
-  padding: 8px;
   margin-top: 12px;
-  border: 1px solid var(--cor-12);
-  border-radius: 7px;
-  background: var(--cor-d5);
 }
 
 .register-address-sucessfull {
   display: grid;
   justify-content: center;
+  justify-items: center;
   padding-top: 40px;
   padding-bottom: 60px;
+}
+
+.register-address-sucessfull a {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 12px;
 }
 
 

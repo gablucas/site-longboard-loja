@@ -43,9 +43,8 @@
 }
 
 .cart-button-newaddress {
-  border: 1px solid var(--cor-6);
-  padding: 4px;
-  cursor: pointer;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 /* Adiciona estilo quando o endereço é selecionado */
