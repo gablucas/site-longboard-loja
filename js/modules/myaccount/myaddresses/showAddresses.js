@@ -1,8 +1,7 @@
 import { accounts } from "../../global/accounts.js";
-import { verifyLocation } from "../../global/verifyLocation.js";
 
   const addressesContainer = document.querySelector('[data-myaddresess="container"]');
-  const addresses = accounts.loggedUser().endereco;
+  const addresses = accounts.loggedUser().enderecos;
 
   export function showAddresses() {
 

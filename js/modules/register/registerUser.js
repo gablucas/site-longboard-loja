@@ -3,7 +3,7 @@ import * as formatter from "../global/formatter.js";
 import showDataUser from "./showDataUser.js";
 
 export default function registerUser(forms) {
-  const user = {endereco: [], pedidos: [],};
+  const user = {enderecos: [], pedidos: [],};
   const endereco = {main: true,};
 
   // Adiciona os dados do usuario em um objeto
@@ -24,7 +24,7 @@ export default function registerUser(forms) {
   })
 
 
-  user.endereco.push(endereco)
+  user.enderecos.push(endereco)
 
   // Adiciona o objeto criado no array de contas
   // e depois os insere no localStorage
