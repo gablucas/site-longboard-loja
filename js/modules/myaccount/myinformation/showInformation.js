@@ -21,7 +21,7 @@ export function showInformation() {
   
       // Utilizado regex para separar as palavras separadas com _ e pegar a terceira palavra
       const property = data.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1')
-      const mainAddress = accounts.loggedUser().endereco.find((address) => address.main === true);
+      const mainAddress = accounts.loggedUser().enderecos.find((address) => address.main === true);
       data.innerText = mainAddress[property];
     });
   
