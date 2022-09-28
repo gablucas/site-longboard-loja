@@ -36,7 +36,7 @@ export function registerAddress() {
         novoEndereco[input.name.replace(/\w+_(\w+)/, "$1")] = input.value;
       })
 
-      accounts.updateUser('endereco', 'push', novoEndereco);
+      accounts.updateUser('enderecos', 'push', novoEndereco);
 
       ulNewAddress.innerHTML = `
       <li>Identificação: <span class="font-2-xs">${novoEndereco.identificacao}</span></li>
