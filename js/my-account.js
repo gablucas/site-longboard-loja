@@ -5,6 +5,7 @@ import { editInformation } from "./modules/myaccount/myinformation/editMyinfo.js
 import { showAddresses } from "./modules/myaccount/myaddresses/showAddresses.js";
 import { verifyLocation } from "./modules/global/verifyLocation.js";
 import { registerAddress } from "./modules/myaccount/myaddresses/registerAdress.js";
+import { mainAddress } from "./modules/myaccount/myaddresses/mainAddress.js";
 
 
 if(!localStorage.loggedUser) {
@@ -24,6 +25,7 @@ if(verifyLocation('my-informations.html')) {
 // Funções da pagina MEUS ENDEREÇOS
 if(verifyLocation('my-addresses.html')) {
   showAddresses();
+  mainAddress();
 }
 
 // Funções da pagina NOVO ENDEREÇO

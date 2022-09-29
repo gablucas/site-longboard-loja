@@ -1,16 +1,16 @@
 import { accounts } from "../../global/accounts.js";
 
-  const addressesContainer = document.querySelector('[data-myaddresess="container"]');
+  const addressesContainer = document.querySelector('[data-myaddresses="container"]');
   const addresses = accounts.loggedUser().enderecos;
 
   export function showAddresses() {
 
       addresses.forEach((address) => {
         const newDiv =  document.createElement('div');
-        newDiv.classList.add('endereco', 'mini-container')
+        newDiv.classList.add('endereco', 'mini-container');
     
         if (address.main === true) {
-          newDiv.classList.add('principal')
+          newDiv.classList.add('principal');
         }
 
         newDiv.innerHTML = `<span data-myaddresses="set-main" class="btn-container new-main font-2-xxxs-u">Definir como endereço principal</span>
