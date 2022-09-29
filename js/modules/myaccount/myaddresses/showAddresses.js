@@ -4,10 +4,10 @@ import { accounts } from "../../global/accounts.js";
   const addresses = accounts.loggedUser().enderecos;
 
   export function showAddresses() {
-
       addresses.forEach((address) => {
         const newDiv =  document.createElement('div');
         newDiv.classList.add('endereco', 'mini-container');
+        newDiv.setAttribute('id', address.id)
     
         if (address.main === true) {
           newDiv.classList.add('principal');

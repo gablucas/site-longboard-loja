@@ -4,7 +4,7 @@ import showDataUser from "./showDataUser.js";
 
 export default function registerUser(forms) {
   const user = {enderecos: [], pedidos: [],};
-  const endereco = {main: true,};
+  const endereco = {main: true, id: 'address1'};
 
   // Adiciona os dados do usuario em um objeto
   forms.forEach((form) => {
@@ -22,7 +22,6 @@ export default function registerUser(forms) {
       }
     })
   })
-
 
   user.enderecos.push(endereco)
 
