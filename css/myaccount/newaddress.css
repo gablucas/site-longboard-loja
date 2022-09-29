@@ -24,7 +24,6 @@
 .register-address-sucessfull {
   display: grid;
   justify-content: center;
-  justify-items: center;
   padding-top: 40px;
   padding-bottom: 60px;
 }
@@ -34,7 +33,6 @@
   padding-right: 20px;
   margin-top: 12px;
 }
-
 
 
 [data-newaddress="register-container-active"],

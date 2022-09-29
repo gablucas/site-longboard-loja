@@ -12,8 +12,9 @@ import { accounts } from "../../global/accounts.js";
         if (address.main === true) {
           newDiv.classList.add('principal')
         }
-    
-        newDiv.innerHTML = `<ul class="dados-endereco font-2-xs-m cor-10">
+
+        newDiv.innerHTML = `<span data-myaddresses="set-main" class="btn-container new-main font-2-xxxs-u">Definir como endereço principal</span>
+        <ul class="dados-endereco font-2-xs-m cor-10">
         <li>Identificação: <span class="font-2-xs">${address.identificacao}</span></li>
         <li>CEP: <span class="font-2-xs">${address.cep}</span></li>
         <li>Rua: <span class="font-2-xs">${address.rua}</span></li>

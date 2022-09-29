@@ -34,16 +34,28 @@
   background-color: var(--cor-0);
 }
 
+.endereco.principal .new-main {
+  display: none;
+}
+
 .btn-container.editar {
+  bottom: -7px;
   right: 90px;
 }
 
 .btn-container.excluir {
+  bottom: -7px;
+  right: 20px;
   color: red;
 }
 
 .btn-container.excluir:hover {
   color: rgb(255, 75, 75);
+}
+
+.btn-container.new-main {
+  top: -7px;
+  left: 8px;
 }
 
 

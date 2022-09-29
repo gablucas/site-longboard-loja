@@ -57,13 +57,3 @@
   position: relative;
 }
 
-.btn-container {
-  position: absolute;
-  padding-left: 4px;
-  padding-right: 4px;
-  bottom: -7px;
-  right: 20px;
-  cursor: pointer;
-  color: var(--cor-d6);
-  background: var(--cor-0);
-}
