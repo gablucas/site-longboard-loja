@@ -7,6 +7,7 @@ import { verifyLocation } from "./modules/global/verifyLocation.js";
 import { registerAddress } from "./modules/myaccount/myaddresses/registerAdress.js";
 import { mainAddress } from "./modules/myaccount/myaddresses/mainAddress.js";
 import { deleteAddress } from "./modules/myaccount/myaddresses/deleteAddress.js";
+import { editAddress, saveAddressChange } from "./modules/myaccount/myaddresses/editAddress.js";
 
 
 if(!localStorage.loggedUser) {
@@ -28,11 +29,17 @@ if(verifyLocation('my-addresses.html')) {
   showAddresses();
   mainAddress();
   deleteAddress();
+  editAddress();
 }
 
 // Funções da pagina NOVO ENDEREÇO
 if(verifyLocation('new-address.html')) {
   registerAddress();
+}
+
+// Funções da pagina EDITAR ENDEREÇO
+if(verifyLocation('edit-address.html')) {
+  saveAddressChange();
 }
 
 
