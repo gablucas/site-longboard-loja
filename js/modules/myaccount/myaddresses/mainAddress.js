@@ -1,6 +1,5 @@
 import { accounts } from "../../global/accounts.js";
 
-
 export function mainAddress() {
   const addresses = document.querySelectorAll('[data-myaddresses="set-main"]');
   const userAddresses = accounts.loggedUser().enderecos;
