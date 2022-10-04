@@ -1,24 +1,7 @@
 import { accounts } from "./accounts.js";
 import { showError } from "./showError.js";
 
-// export function date(input) {
-//   let error = false
-//   showError(input, "removeError");
 
-//   if (input.value.length !== 8) {
-//     showError(input, "Digite a data no formato XX XX XXXX")
-//     error =  true;
-
-//   } else if (onlyNumbers(input)){
-//     showError(input, "Somente números")
-//     error =  true;
-
-//   } else {
-//     showError(input, "removeError")
-//   }
-
-//   return error;
-// }
 
 export function cpf(input) {
   let error = false
@@ -88,6 +71,8 @@ export class Validator {
       emptyimputs: true,
       onlycharacters: true,
       onlynumbers: true,
+      login: true,
+      password: true,
     }
   }
 
@@ -152,10 +137,31 @@ export class Validator {
     })
   }
 
+  // LOGIN
+  login() {
+
+    // Validar email na hora do login
+    if (!accounts.getUsers() || !accounts.getUsers().some(user => user.email === this.form.login.value)) {
+      showError(this.form.email, "add", "Usuário não existe");
+      this.validate.login = false;
+    } else {
+      showError(this.form.email, "remove", "Usuário não existe");
+      this.validate.login = true;
+    }
+
+    // Validar senha na hora do login
+    if (!accounts.getUsers() || !accounts.getUsers().some(user => user.senha === this.form.password.value)) {
+      showError(this.form.password, "add", "Senha incorreta");
+      this.validate.password = false;
+    } else {
+      showError(this.form.password, "remove", "Senha incorreta");
+      this.validate.password = true;
+    }
+  }
+
   // VALIDAR
   isValid() {
     const validateValues = Object.values(this.validate)
     return validateValues.every((item) => item === true);
   }
-
 }

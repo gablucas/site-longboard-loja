@@ -1,22 +1,26 @@
-import validateLogin from "./modules/login/validateLogin.js";
-import campoVazio from "./modules/global/campoVazio.js"
 import showQuantityItensCart from "./modules/global/showQuantityItensCart.js"
+import { Validator } from "./modules/global/validator.js";
 
-const loginForm = document.querySelector("[data-login='form']")
-const loginButton = document.querySelector("[data-login='button']");
+const form = document.querySelector("[data-login='form']")
+const validate = new Validator(form);
+const button = document.querySelector("[data-login='button']");
 
 showQuantityItensCart();
 
 
-loginButton.addEventListener('click', login)
+button.addEventListener('click', login)
 function login() {
+  validate.emptyInputs(
+    'email', 
+    'password');
 
-  if(!validateLogin(loginForm) && !campoVazio(loginForm)) {
-    
-    // Define o usuario logado
-    localStorage.loggedUser = loginForm.email.value;
-
-    // Direciona para a pagina principal
-    window.location.href = "index.html";
+  validate.login(
+    'email',
+    'password',
+  )
+  
+  if (validate.isValid()) {
+    localStorage.loggedUser = form.email.value; // Define o usuario logado
+    window.location.href = "index.html"; // Direciona para a pagina principal
   }
 }
