@@ -7,7 +7,7 @@ export function mainAddress() {
   function setMainAddress({ currentTarget }) {
     const id = currentTarget.parentElement.getAttribute('id');
 
-    // Define o endereço principla no array de enderecos do usuario
+    // Define o endereço principal no array de enderecos do usuario
     userAddresses.forEach((address) => {
       if (address.id === id) {
         address.main = true;
