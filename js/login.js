@@ -17,7 +17,7 @@ function login() {
   validate.login(
     'email',
     'password',
-  )
+  );
   
   if (validate.isValid()) {
     localStorage.loggedUser = form.email.value; // Define o usuario logado

@@ -2,7 +2,7 @@ import showQuantityItensCart from "./modules/global/showQuantityItensCart.js"
 showQuantityItensCart();
 
 // Modulos para todos formularios
-import campoVazio from "./modules/global/campoVazio.js"
+import { Validator } from "./modules/global/validator.js";
 
 // Validador
 import * as validator from "./modules/global/validator.js";
@@ -24,7 +24,6 @@ const registerButton = document.querySelectorAll("[data-register='button']");
 const registerSucessfull = document.querySelector("[data-register='sucessfull']");
 const stepProgress = document.querySelector('[data-register="step-progress"]');
 const stepCount = document.querySelector('[data-register="step-count"]');
-
 
 function nextStep(step) {
   if (step === 2) {
@@ -50,10 +49,20 @@ function nextStep(step) {
 // Primeiro formulario
 registerButton[0].addEventListener('click', validarFormulario1)
 function validarFormulario1() {
-  const form = registerForm[0];
+  const validate = new Validator(registerForm[0]);
 
-  // Validação
-  if(!validator.email(form.email) && !validator.password(form.senha, form['confirmar-senha']) && !campoVazio(form)) {
+  validate.emptyInputs(
+    'email',
+    'senha',
+    'confirmar-senha',
+  );
+
+  validate.existingValue('email', 'email', 'Email já cadastrado');
+  validate.wordContain('email', /\w+@\D+.\w+/, "Email incorreto");
+  validate.minCharacters('senha', 7, "Mínimo de 6 caracteres");
+  validate.equalValues('senha', 'confirmar-senha', "Senhas não são iguais");
+
+  if (validate.isValid()) {
     nextStep(2);
   }
 }

@@ -1,8 +1,6 @@
 import { accounts } from "./accounts.js";
 import { showError } from "./showError.js";
 
-
-
 export function cpf(input) {
   let error = false
 
@@ -73,6 +71,11 @@ export class Validator {
       onlynumbers: true,
       login: true,
       password: true,
+      minmax: true,
+      equalvalues: true,
+      mincharacters: true,
+      existingvalue: true,
+      wordcontain: true,
     }
   }
 
@@ -156,6 +159,73 @@ export class Validator {
     } else {
       showError(this.form.password, "remove", "Senha incorreta");
       this.validate.password = true;
+    }
+  }
+
+  // MINMAX
+  minmax(input, min, max, itemName) {
+    if (this.form[input].value < min) {
+      this.validate.minmax = false;
+      showError(this.form[input], 'add', `Mínimo de ${min} ${itemName}`);
+    } else if (this.form[input].value > max) {
+      this.validate.minmax = false;
+      showError(this.form[input], 'add', `Máximo de ${max} ${itemName}`);
+    } else {
+      this.validate.minmax = true;
+      showError(this.form[input], 'remove', `Mínimo de ${min} ${itemName}`);
+      showError(this.form[input], 'remove', `Máximo de ${max} ${itemName}`);
+    }
+  }
+
+  equalValues(inputName1, inputName2, text) {
+    const input1 = this.form[inputName1];
+    const input2 = this.form[inputName2];
+
+    if (!!input1.value.length && input1.value !== input2.value) {
+      this.validate.value = false;
+      showError(input1, 'add', text)
+    } else {
+      this.validate.equalvalues = true;
+      showError(input1, 'remove', text)
+    }
+  }
+
+  minCharacters(inputName, min) {
+    const input = this.form[inputName];
+
+    if (!!input.value.length && input.value.length < min) {
+      this.validate.mincharacters = false;
+      showError(input, 'add', `Mínimo de ${min} caracteres`);
+    } else {
+      this.validate.mincharacters = true;
+      showError(input, 'remove', `Mínimo de ${min} caracteres`);
+    }
+  }
+
+  existingValue(inputName, value, text) {
+    const input = this.form[inputName];
+    const inputValue = input.value.toLowerCase();
+
+    if (!!accounts.getUsers() && accounts.getUsers().some(user => user[value].toLowerCase() === inputValue)){
+      this.validate.existingvalue = false;
+      showError(input, 'add', text)
+    } else {
+      this.validate.existingvalue = true;
+      showError(input, 'remove', text)
+    }
+  }
+
+  wordContain(inputName, regex, text) {
+    const input = this.form[inputName];
+    const inputValue = input.value;
+
+    if(!!inputValue.length && !regex.test(inputValue)){
+      this.validate.wordcontain = false;
+      showError(input, 'add', text);
+      console.log('teste')
+    } else {
+      this.validate.wordcontain = true;
+      showError(input, 'remove', text);
     }
   }
 
