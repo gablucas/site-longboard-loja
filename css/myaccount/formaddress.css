@@ -1,46 +1,46 @@
-.new-address {
+.form-address {
   display: grid;
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 60px;
 }
 
-.new-address form {
+.form-address form {
   margin-top: 20px;
 }
 
-.new-address label {
+.form-address label {
   display: block;
 }
 
-.new-address span + label {
+.form-address span + label {
   margin-top: 12px;
 }
 
-.new-address button {
+.form-address button {
   margin-top: 12px;
 }
 
-.register-address-sucessfull {
+.action-address-sucessfull {
   display: grid;
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 60px;
 }
 
-.register-address-sucessfull a {
+.action-address-sucessfull a {
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 12px;
 }
 
 
-[data-newaddress="register-container-active"],
-[data-newaddress="register-sucessfull-active"] {
+[data-formaddress="register-container-active"],
+[data-formaddress="register-sucessfull-active"] {
   display: grid;
 }
 
-[data-newaddress="register-container"],
-[data-newaddress="register-sucessfull"] {
+[data-formaddress="register-container"],
+[data-formaddress="register-sucessfull"] {
   display: none;
 }

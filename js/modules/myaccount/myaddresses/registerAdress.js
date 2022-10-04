@@ -3,12 +3,12 @@ import { idGenetaror } from "../../global/idGenerator.js";
 import { Validator } from "../../global/validator.js";
 import buscarEndereco from "../../register/buscarEndereco.js";
 
-const registerContainer = document.querySelector('[data-newaddress="register-container-active"]');
-const sucessfullContainer = document.querySelector('[data-newaddress="register-sucessfull"]');
-const ulNewAddress = document.querySelector('[data-newaddress="user-data"]');
+const registerContainer = document.querySelector('[data-formaddress="register-container-active"]');
+const sucessfullContainer = document.querySelector('[data-formaddress="register-sucessfull"]');
+const ulNewAddress = document.querySelector('[data-formaddress="user-data"]');
 
-const form = document.querySelector('[data-newaddress="form"]');
-const formButton = document.querySelector('[data-newaddress="register"]');
+const form = document.querySelector('[data-formaddress="form"]');
+const formButton = document.querySelector('[data-formaddress="register"]');
 const validate = new Validator(form);
 
 export function registerAddress() {
@@ -49,8 +49,8 @@ export function registerAddress() {
       <li>Estado: <span class="font-2-xs">${novoEndereco.estado}</span></li>
       <li>Complemento: <span class="font-2-xs">${novoEndereco.complemento}</span></li>`;
 
-      registerContainer.setAttribute('data-newaddress', 'register-container');
-      sucessfullContainer.setAttribute('data-newaddress', 'register-sucessfull-active');
+      registerContainer.setAttribute('data-formaddress', 'register-container');
+      sucessfullContainer.setAttribute('data-formaddress', 'register-sucessfull-active');
     }
   }
 }
