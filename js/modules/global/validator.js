@@ -1,66 +1,6 @@
 import { accounts } from "./accounts.js";
 import { showError } from "./showError.js";
 
-export function cpf(input) {
-  let error = false
-
-  if(input.value) {
-    if (input.value.length !== 14) {
-        showError(input, "CPF Incompleto")
-        error =  true;
-    
-    } else if (accounts.getUsers() && accounts.getUsers().some(user => user.cpf === input.value)) {
-      showError(input, "CPF já esta sendo usado");
-      error = true;
-    
-    } else {
-      showError(input, "removeError")
-    }
-  }
-  return error;
-}
-
-export function email(input) {
-  let error = false
-
-  const email = input.value.toLowerCase();
-  
-  if(!!email) {
-    if(!email.includes("@")) {
-      showError(input, 'Está faltando o "@" no email')
-      error = true;
-    }else if(!email.includes(".com")) {
-      showError(input, 'Está faltando o ".com" no email')
-      error = true;
-    }else if(email.includes("@.")) {
-      showError(input, "Email inválido")
-      error = true;
-    }else if(!!accounts.getUsers() && accounts.getUsers().some(user => user.email === email)){
-      showError(input, "Email já registrado")
-      error = true;
-    }
-  }
-  return error;
-}
-
-export function password(input1, input2) {
-  let error = false
-
-  // Senhas iguais
-  if(input1.value !== input2.value && input1.value && input2.value) {
-    showError(input2, "As senhas não conferem");
-    error = true;
-  }
-  
-  // Senha fraca
-  if(input1.value.length <= 5 && input1.value) {
-    showError(input1, "A senha é muito fraca");
-    error = true;
-  }
-
-  return error;
-}
-
 export class Validator {
   constructor(form) {
     this.form = form;
@@ -124,7 +64,7 @@ export class Validator {
   onlyNumbers(...inputs) {
 
     // Validador
-    if (inputs.some((input) => (/\D+/g).test(input.value))) {
+    if (inputs.some((input) => (/\D+/g).test(this.form[input].value))) {
       this.validate.onlynumbers = false;
     } else {
       this.validate.onlynumbers = true;
@@ -132,19 +72,18 @@ export class Validator {
 
     // Exibir ou remover erro
     inputs.forEach((input) => {
-      if ((/\D+/g).test(input.value)) {
-        showError(input, 'add', 'Apenas números');
+      if ((/\D+/g).test(this.form[input].value)) {
+        showError(this.form[input], 'add', 'Apenas números');
       } else {
-        showError(input, 'remove', 'Apenas números');
+        showError(this.form[input], 'remove', 'Apenas números');
       }
     })
   }
 
   // LOGIN
   login() {
-
     // Validar email na hora do login
-    if (!accounts.getUsers() || !accounts.getUsers().some(user => user.email === this.form.login.value)) {
+    if (!accounts.getUsers() || !accounts.getUsers().some(user => user.email === this.form.email.value)) {
       showError(this.form.email, "add", "Usuário não existe");
       this.validate.login = false;
     } else {
@@ -162,8 +101,8 @@ export class Validator {
     }
   }
 
-  // MINMAX
-  minmax(input, min, max, itemName) {
+  // Valida se o argumento corresponde a quantidade minima e maxima
+  minmaxValue(input, min, max, itemName) {
     if (this.form[input].value < min) {
       this.validate.minmax = false;
       showError(this.form[input], 'add', `Mínimo de ${min} ${itemName}`);
@@ -177,6 +116,7 @@ export class Validator {
     }
   }
 
+  // Valida se dois valores são iguais
   equalValues(inputName1, inputName2, text) {
     const input1 = this.form[inputName1];
     const input2 = this.form[inputName2];
@@ -190,6 +130,7 @@ export class Validator {
     }
   }
 
+  // Valida se o argumento passado corresponde a quantidade mínima de caracteres passados
   minCharacters(inputName, min) {
     const input = this.form[inputName];
 
@@ -202,6 +143,7 @@ export class Validator {
     }
   }
 
+  // Valida se o valor ja existe nos outros usuarios
   existingValue(inputName, value, text) {
     const input = this.form[inputName];
     const inputValue = input.value.toLowerCase();
@@ -215,6 +157,7 @@ export class Validator {
     }
   }
 
+  // Valida se contem o texto passado
   wordContain(inputName, regex, text) {
     const input = this.form[inputName];
     const inputValue = input.value;

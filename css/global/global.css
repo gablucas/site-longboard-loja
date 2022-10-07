@@ -79,6 +79,7 @@ input:focus {
 }
 
 .error {
+  padding-top: 4px;
   /* top: 10px; */
   display: block;
   font: 400 .875rem/1.2 'Roboto';

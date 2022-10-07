@@ -74,12 +74,23 @@ strengthPassword(registerForm[0]);
 // Segundo formulario
 registerButton[1].addEventListener('click', validarFormulario2)
 function validarFormulario2() {
-  const form = registerForm[1];
-  
-  // Validação
-  if(!validator.cpf(form.cpf) && !campoVazio(form)) {
+  const validate = new Validator(registerForm[1]);
+
+  validate.emptyInputs(
+    'nome',
+    'sobrenome',
+    'nascimento',
+    'cpf',
+  );
+
+  validate.onlyCharacters(
+    'nome',
+    'sobrenome'
+  );
+
+  if(validate.isValid()) {
     nextStep(3);
-  }
+  };
 }
 
 // Funções segundo formulario
@@ -88,15 +99,25 @@ formatCPF(registerForm[1]);
 // Terceiro formulario
 registerButton[2].addEventListener('click', validarFormulario3)
 function validarFormulario3() {
-const form = registerForm[2];
-  
+  const validate = new Validator(registerForm[2]);
+
+  validate.emptyInputs(
+    'endereco_identificacao',
+    'endereco_cep',
+    'endereco_rua',
+    'endereco_numero',
+    'endereco_cidade',
+    'endereco_bairro',
+    'endereco_estado',
+  );
+
   // Validação
-  if(!campoVazio(form)) {
+  if (validate.isValid()) {
     nextStep(4);
     registerUser(registerForm)
   }
-}
 
 // Funções terceiro formulario
 formatCEP(registerForm[2])
 buscarEndereco(registerForm[2])
+}
