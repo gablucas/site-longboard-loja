@@ -1,11 +1,13 @@
-import validateProduct from "./validateProduct.js";
-import campoVazio from "../global/campoVazio.js";
+
 import showQuantityItensCart from "../global/showQuantityItensCart.js";
 import cartStorage from "../cart/cartStorage.js";
+import { Validator } from "../global/validator.js";
 
 const form = document.querySelector('[data-cart="form"]');
 const buyItem = document.querySelector('[data-cart="buy"]');
 const addCart = document.querySelector('[data-cart="addCart"]');
+
+const validate = new Validator(form);
 
 export default function addItemCart() {
   [buyItem, addCart].forEach((btn) => {
@@ -14,7 +16,9 @@ export default function addItemCart() {
 
   function saveItem({currentTarget}) {
 
-    if(!validateProduct(form) && !campoVazio(form)) {
+    validate.minmaxValue('quantity', 1, 4)
+
+    if (validate.isValid()) {
       const dataProduct = document.querySelector('[data-product="id"]').getAttribute('id').split('-');
   
       

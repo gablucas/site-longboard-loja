@@ -102,17 +102,22 @@ export class Validator {
   }
 
   // Valida se o argumento corresponde a quantidade minima e maxima
-  minmaxValue(input, min, max, itemName) {
-    if (this.form[input].value < min) {
+  minmaxValue(inputName, min, max, itemName) {
+    const input = this.form[inputName];
+
+    if (input.value < min || input.value > max) {
       this.validate.minmax = false;
-      showError(this.form[input], 'add', `Mínimo de ${min} ${itemName}`);
-    } else if (this.form[input].value > max) {
-      this.validate.minmax = false;
-      showError(this.form[input], 'add', `Máximo de ${max} ${itemName}`);
+      
+      if (input.value < min) {
+        showError(input, 'add', `Selecione no mínimo ${min} produto`);
+      } else if (input.value > max) {
+        showError(input, 'add', `Selecione no máximo ${max} produtos`);
+      }
+      
     } else {
       this.validate.minmax = true;
-      showError(this.form[input], 'remove', `Mínimo de ${min} ${itemName}`);
-      showError(this.form[input], 'remove', `Máximo de ${max} ${itemName}`);
+      showError(input, 'remove', `Selecione no mínimo ${min} produto`);
+      showError(input, 'remove', `Selecione no máximo ${max} produtos`);
     }
   }
 

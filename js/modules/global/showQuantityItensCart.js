@@ -4,7 +4,10 @@ const quantityItensCart = document.querySelector('[data-cart="quantity"]');
 
 export default function showQuantityItensCart() {
   cartStorage((products) => {
-    quantityItensCart.innerText = products.length;
+    const quantityPerProduct = products.map((item) => +item.quantity)
+    const totalQuantityProducts = quantityPerProduct.reduce((anterior, atual) => anterior + atual, 0)
+
+    quantityItensCart.innerText = totalQuantityProducts;
   })
   
 }
