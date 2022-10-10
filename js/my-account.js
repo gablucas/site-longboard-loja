@@ -1,3 +1,11 @@
+import loggedUser from "./modules/global/loggedUser.js";
+import exitAccount from "./modules/global/exitAccount.js";
+import showQuantityItensCart from "./modules/global/showQuantityItensCart.js";
+
+loggedUser();
+showQuantityItensCart();
+exitAccount();
+
 import { showInformation } from "./modules/myaccount/myinformation/showInformation.js";
 import { editInformation } from "./modules/myaccount/myinformation/editMyinfo.js";
 import { showAddresses } from "./modules/myaccount/myaddresses/showAddresses.js";
