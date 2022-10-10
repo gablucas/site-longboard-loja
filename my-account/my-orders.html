@@ -36,7 +36,7 @@
 
         <li data-dropdown data-menu="user"><a href=""></a>
           <ul class="menu-dropdown">
-            <li><a href="">Minha conta</a></li>
+            <li><a href="./my-informations.html">Minha conta</a></li>
             <li>Meus pedidos</li>
             <li>Favoritos</li>
             <li data-menu="exit">Sair</li>
@@ -56,9 +56,9 @@
       <div class="account-options">
         <h1 class="font-1-xl cor-d7">Sua conta</h1>
         <ul data-account="options" class="font-2-s-b-u">
-          <li class="active"><a href="">Minhas informações</a></li>
+          <li><a href="./my-informations.html">Minhas informações</a></li>
           <li><a href="./my-addresses.html">Meus endereços</a></li>
-          <li><a href="./my-orders.html">Meus pedidos</a></li>
+          <li class="active"><a href="">Meus pedidos</a></li>
           <li><a href="">Dados de pagamento</a></li>
           <li><a href="">Favoritos</a></li>
           <li><a href="">Sair</a></li>
@@ -66,74 +66,10 @@
       </div>
 
       <!-- Dados das opções -->
-      <div class="account-info my-info cor-10">
-        <h2 class="font-1-m-u">Minhas informações</h2>
+      <div class="account-info cor-10">
+        <h2 class="font-1-m-u">Meus Pedidos</h2>
 
-        <div>
-          <!-- Informações do cliente -->
-          <div class="dados mini-container">
-            <h3 class="font-2-xs-u">Dados</h3>
-            <ul data-myinfo="show-myinfo-active" class="font-2-s-m">
-              <li>Nome: <span data-myinfo="personal-nome" class="font-2-s"></span></li>
-              <li>Sobrenome: <span data-myinfo="personal-sobrenome" class="font-2-s"></span></li>
-              <li>Data de nascimento: <span data-myinfo="personal-nascimento" class="font-2-s"></span></li>
-              <li>CPF: <span data-myinfo="personal-cpf" class="font-2-s"></span></li>
-              <li>Email: <span data-myinfo="personal-email" class="font-2-s"></span></li>
-            </ul>
-
-            <!-- Editar informações do cliente -->
-            <form data-myinfo="form-myinfo" class="form-myinfo font-2-s-m">
-              <label for="nome">Nome</label>
-              <input type="text" name="nome" class="font-2-s">
-              <span class="error"></span>
-              <label for="sobrenome">Sobrenome</label>
-              <input type="text" name="sobrenome" class="font-2-s">
-              <span class="error"></span>
-              <label for="nascimento">Data de nascimento</label>
-              <input type="date" name="nascimento" class="font-2-s">
-              <span class="error"></span>
-              <label for="cpf">CPF</label>
-              <input type="text" name="cpf" class="font-2-s">
-              <span class="error"></span>
-              <div><span>Email: </span><span data-myinfo="personal-email" class="font-2-s"></span></div>
-            </form>
-
-            <span data-myinfo="edit-active" class="btn-container edit font-2-xxxs-u">Editar</span>
-            <span data-myinfo="edit-save" class="btn-container save font-2-xxxs-u">Salvar</span>
-            <span data-myinfo="edit-cancel" class="btn-container cancel font-2-xxxs-u">Cancelar</span>
-          </div>
-
-          <!-- Botão alterar email e senha -->
-          <button class="font-2-s-m mini-container change">Alterar email</button>
-          <button class="font-2-s-m mini-container change">Alterar senha</button>
-        </div>
-
-        <!-- Endereço principal -->
-        <div class="endereco-principal mini-container">
-          <h3 class="font-2-xs-u">Endereço Principal</h3>
-          <ul class="font-2-s-m cor-10">
-            <li>Identificação <span data-myinfo="address-identificacao" class="font-2-s"></span></li>
-            <li>CEP <span data-myinfo="address-cep" class="font-2-s"></span></li>
-            <li>Rua <span data-myinfo="address-rua" class="font-2-s"></span></li>
-            <li>Número <span data-myinfo="address-numero" class="font-2-s"></span></li>
-            <li>Cidade <span data-myinfo="address-cidade" class="font-2-s"></span></li>
-            <li>Bairro <span data-myinfo="address-bairro" class="font-2-s"></span></li>
-            <li>Estado <span data-myinfo="address-estado" class="font-2-s"></span></li>
-            <li>Complemento <span data-myinfo="address-complemento" class="font-2-s"></span></li>
-          </ul>
-          <span class="btn-container address font-2-xxxs-u"><a href="./my-addresses.html">Ver todos endereços</a></span>
-        </div>
-
-        <!-- Ultimo pedido -->
-        <div class="last-order mini-container">
-          <h3 class="font-2-xs-u">Ultimo Pedido</h3>
-          <img data-myinfo="last-order-image" width="120" height="120" alt="">
-          <ul class="font-2-s cor-10">
-            <li data-myinfo="last-order-name"></li>
-            <li data-myinfo="last-order-price"></li>
-            <li data-myinfo="last-order-date"></li>
-          </ul>
-          <span class="btn-container last-order font-2-xxxs-u">Ver todos pedidos</span>
+        <div data-myorders="container" class="my-orders">
         </div>
       </div>
     </div>
