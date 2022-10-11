@@ -4,8 +4,6 @@ showQuantityItensCart();
 // Modulos para todos formularios
 import { Validator } from "./modules/global/validator.js";
 
-// Validador
-import * as validator from "./modules/global/validator.js";
 
 // Modulos para o primeiro formulario
 import strengthPassword from "./modules/register/strengthPassword.js";
@@ -116,8 +114,8 @@ function validarFormulario3() {
     nextStep(4);
     registerUser(registerForm)
   }
+}
 
 // Funções terceiro formulario
 formatCEP(registerForm[2])
 buscarEndereco(registerForm[2])
-}
