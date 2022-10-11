@@ -1,5 +1,5 @@
 import { accounts } from "../global/accounts.js";
-import fetchProducts from "../global/fetchProducts.js";
+import showQuantityItensCart from "../global/showQuantityItensCart.js";
 import cartStorage from "./cartStorage.js";
 import showCartItens from "./showCartItens.js";
 
@@ -36,5 +36,6 @@ export default function finalizePayment() {
 
   localStorage.cart = [];
   showCartItens();
+  showQuantityItensCart();
 }
 

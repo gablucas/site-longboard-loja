@@ -9,15 +9,13 @@
   grid-template-columns: repeat(3, 1fr) 2fr auto;
   padding: 8px 20px;
   border: 1px solid var(--cor-10);
+  cursor: pointer;
 }
 
 .order div {
   text-align: center;
 }
 
-.order img {
-  align-self: center;
-  justify-self: end;
-  cursor: pointer;
+.order:hover {
+  border: 1px solid var(--cor-d4);
 }
-

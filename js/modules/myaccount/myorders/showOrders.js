@@ -27,9 +27,7 @@ export function showOrders() {
     <div>
       <p class="font-2-xxxs-b-u">Estado do pedido</p>
       <span class="font-2-xxs">${order[0].orderState}</span>
-    </div>
-  
-    <img src="../img/icones/iconseta.png" alt="" width="16px" height="16px">`
+    </div>`
 
     container.appendChild(div);
   })

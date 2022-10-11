@@ -26,18 +26,11 @@ export function showInformation() {
     });
   
     /** ULTIMO PEDIDO */
-    const [image, name, price, date] = orderData
-    const lastOrder = [...accounts.loggedUser().pedidos].slice(-1)[0];
-    
-    if(!!lastOrder) {
-      fetchProducts((product) => {
-        const getProduct = product[lastOrder.type].find((item) => item.id === lastOrder.id);
-        image.setAttribute('src', `../${getProduct.images[0]}`);
-        name.innerText = getProduct.name;
-        price.innerText = `R$ ${getProduct.price},00`;
-        date.innerText = lastOrder.orderdate;
-      })
-    }
+    [...orderData].forEach((data) => {
+      const property = data.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1');
+      const lastOrder = accounts.loggedUser().pedidos[0][0];
+      data.innerText = lastOrder[property];
+    })
 }
 
 export { personalData }

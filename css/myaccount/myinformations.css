@@ -1,5 +1,5 @@
 .my-info {
-  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   align-items: start;
 }
 
@@ -15,7 +15,6 @@
   left: 8px;
   background: var(--cor-0);
 }
-
 
 .btn-container:hover {
   color: var(--cor-d4);
@@ -47,7 +46,7 @@
 }
 
 .my-info li + li {
-  padding-top: 10px;
+  padding-top: 6px;
 }
 
 .my-info button {
