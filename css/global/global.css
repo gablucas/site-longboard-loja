@@ -96,3 +96,11 @@ input:focus {
   color: var(--cor-d6);
   background: var(--cor-0);
 }
+
+[data-show] {
+  display: initial;
+}
+
+[data-hide] {
+  display: none !important;
+}

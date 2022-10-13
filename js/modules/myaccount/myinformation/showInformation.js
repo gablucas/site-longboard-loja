@@ -1,10 +1,10 @@
 import { accounts } from "../../global/accounts.js";
-import fetchProducts from "../../global/fetchProducts.js";
-import { verifyLocation } from "../../global/verifyLocation.js";
+import { ElementHandler } from "../../global/elementHandler.js";
 
 const personalData = document.querySelectorAll('[data-myinfo^="personal"]');
 const addressData = document.querySelectorAll('[data-myinfo^="address"]');
 const orderData = document.querySelectorAll('[data-myinfo^="last-order"]');
+const elementHandler = new ElementHandler();
 
 export function showInformation() {
   
@@ -26,11 +26,15 @@ export function showInformation() {
     });
   
     /** ULTIMO PEDIDO */
-    [...orderData].forEach((data) => {
-      const property = data.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1');
-      const lastOrder = accounts.loggedUser().pedidos[0][0];
-      data.innerText = lastOrder[property];
-    })
+    if (accounts.loggedUser().pedidos.length) {
+      [...orderData].forEach((data) => {
+        const property = data.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1');
+        const lastOrder = accounts.loggedUser().pedidos[0][0];
+        data.innerText = lastOrder[property];
+      })
+
+      elementHandler.showAndHide('.last-order-info', '.last-order-empty')
+    }
 }
 
 export { personalData }

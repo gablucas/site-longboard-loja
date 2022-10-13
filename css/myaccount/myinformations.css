@@ -65,15 +65,6 @@
   display: inline-block;
 }
 
-.last-order img {
-  padding-top: 5px;
-  margin: 0 auto;
-}
-
-.last-order ul {
-  padding-top: 5px;
-}
-
 .form-myinfo label {
   display: block;
 }
@@ -90,6 +81,19 @@
   display: block;
 }
 
+.last-order img {
+  padding-top: 5px;
+  margin: 0 auto;
+}
+
+.last-order ul {
+  padding-top: 5px;
+}
+
+.last-order-empty {
+  display: block;
+  text-align: center;
+}
 
 /* Containers */
 
