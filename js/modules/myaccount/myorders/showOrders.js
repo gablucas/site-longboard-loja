@@ -6,6 +6,7 @@ const orders = accounts.loggedUser().pedidos;
 export function showOrders() {
   orders.forEach((order) => {
     const div =  document.createElement('div');
+
     div.classList.add('order');
 
     div.innerHTML = `
@@ -27,7 +28,9 @@ export function showOrders() {
     <div>
       <p class="font-2-xxxs-b-u">Estado do pedido</p>
       <span class="font-2-xxs">${order[0].orderState}</span>
-    </div>`
+    </div>
+    
+    <div class='details'></div>`
 
     container.appendChild(div);
   })
