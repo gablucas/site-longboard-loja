@@ -6,8 +6,8 @@ export function showAddressesCart() {
   const user = accounts.loggedUser().enderecos;
   
   user.forEach((address) => {
-    console.log(address)
     const div = document.createElement('div');
+    div.setAttribute("id", address.id)
     div.setAttribute("data-cart","address-item");
     div.classList.add('cart-address-item', 'font-2-xxs', 'cor-12');
 

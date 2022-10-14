@@ -10,19 +10,26 @@ export default function finalizePayment() {
   const getDate = new Date();
   const orderDate = `${String(getDate.getDate()).padStart(2,0)}/${String(getDate.getMonth()).padStart(2,0)}/${getDate.getFullYear()}`;
 
+  // Pegar informações do formulario
+  const forms = document.querySelectorAll('form');
+  const [address, frete, payment] = forms;
+  const orderAddress = [...address].find((input) => input.checked === true).parentElement.getAttribute('id');
+
   // Interage com os itens do carrinho
   cartStorage((cart) => {
 
-    // Array do pedido
-    const order = [];
-    
     // Dados do pedido
     const orderInfo = {
       orderNumber: "P0000001",
       orderDate,
       orderValue: 0,
       orderState: "Aguardando confirmação pagamento",
+      orderAddress,
     }
+
+
+    // Array do pedido
+    const order = [];
 
     // Fetch dos produtos
     fetchProducts((products) => {

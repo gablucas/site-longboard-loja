@@ -75,19 +75,19 @@
 
             <div data-cart="shipping-container-active" class="cart-shipping-container">
 
-              <div data-cart="addresses" class="cart-address-container">
-              </div>
+              <form data-cart="addresses" class="cart-address-container">
+              </form>
               <a class="cart-button-newaddress cor-10" href="./my-account/my-addresses/new-address.html">Cadastrar novo endereço</a>            
             
             <!-- Frete -->
-              <div data-cart="shippings" class="cart-shipping-rates">
+              <form data-cart="shippings" class="cart-shipping-rates">
                 <h2 class="font-2-s-b-u">Frete</h2>
                 <input type="radio" name="entrega" value="normal">
                 <label class="font-2-xs cor-10" for="normal">Normal <span>R$ 15,00</span></label>
 
                 <input type="radio" name="entrega" value="expresso">
                 <label class="font-2-xs cor-10" for="expresso">Expresso <span>R$ 30,00</span></label>
-              </div>
+              </form>
               
               <span data-cart="error" class="error"></span>
               <button data-cart="button" class="button-2 cart-button font-2-xs-m-u cor-0">Concluido</button>
@@ -100,14 +100,14 @@
 
             <div data-cart="payment-container" class="cart-payment-container">
               
-              <div data-cart="payments" class="cart-payment-options">
+              <form data-cart="payments" class="cart-payment-options">
                 <input type="radio" name="pagamento" value="boleto" id="boleto">
                 <label for="boleto">Boleto</label>
                 <input type="radio" name="pagamento" value="pix" id="pix">
                 <label for="pix">Pix</label>
                 <input type="radio" name="pagamento" value="cartao" id="cartao">
                 <label for="cartao">Cartão</label>
-              </div>
+              </form>
 
               <span data-cart="error" class="error"></span>
               <button data-cart="button" class="button-2 cart-button font-2-xs-m-u cor-0">Finalizar compra</button>
