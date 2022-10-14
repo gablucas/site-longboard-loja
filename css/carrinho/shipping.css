@@ -1,5 +1,6 @@
 .cart-shipping-container{
   margin-top: 12px;
+
 }
 
 .cart-shipping > h2 {
@@ -17,15 +18,22 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  height: 184px;
+  overflow-y: scroll;
 }
 
 .cart-address-item {
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 8px;
+  margin-right: 4px;
   padding: 10px;
   border: 1px solid var(--cor-6);
   cursor: pointer;
+}
+
+.cart-address-item:last-child {
+  margin-bottom: 2px;
 }
 
 .cart-address-item::before {
@@ -43,8 +51,16 @@
 }
 
 .cart-button-newaddress {
-  padding-top: 4px;
-  padding-bottom: 4px;
+  text-align: center;
+  margin-top: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 1px solid var(--cor-6);
+}
+
+.cart-address-item:hover,
+.cart-button-newaddress:hover {
+  border: 1px solid var(--cor-8);
 }
 
 /* Adiciona estilo quando o endereço é selecionado */

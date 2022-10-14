@@ -1,13 +1,12 @@
 //Ativar o endereço selecionado
-const enderecos = document.querySelectorAll('[data-cart="address-item"]');
-
 export default function selectAddress() {
+  const enderecos = document.querySelectorAll('[data-cart="address-item"]');
+  
   enderecos.forEach((item) => {
     item.addEventListener('click', addChecked)
   })
   
   function addChecked({currentTarget}) {
-    
     enderecos.forEach((item) => {
       item.classList.remove('selecionado');
     })
