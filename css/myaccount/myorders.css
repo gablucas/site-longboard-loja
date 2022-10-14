@@ -21,10 +21,24 @@
 }
 
 .order .details {
-  display: none;
+  /* display: none; */
   grid-column: 1/-1;
-}
+} 
 
 .order .details.active {
   display: initial;
+}
+
+.order .product {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: auto repeat(5, 1fr);
+  align-items: center;
+  gap: 40px;
+  border-top: 1px solid var(--cor-2);
+}
+
+.order .product img {
+  width: 100px;
+  height: 100px;
 }
