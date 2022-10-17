@@ -49,7 +49,7 @@
   <!-- Seção 2: Carrinho -->
     <main class="cart-bg">
       
-      <div data-cart="filled" class="cart container">
+      <div data-cart="filled" data-hide class="cart container">
         <h1 class="font-1-m-u cor-d7">Seu Carrinho</h1>
 
         <!-- PRODUTOS -->
@@ -70,10 +70,10 @@
           </div>
 
           <!-- ENDEREÇOS -->
-          <div data-cart="shipping" class="cart-shipping">
+          <div data-cart="shipping" data-hide class="cart-shipping">
             <h2 class="font-2-s-b-u">Endereço <span data-cart="edit-shipping" class="cart-edit-shipping font-2-xxs">editar</span></h2>
 
-            <div data-cart="shipping-container-active" class="cart-shipping-container">
+            <div data-cart="shipping-container" class="cart-shipping-container">
 
               <form data-cart="addresses" class="cart-address-container">
               </form>
@@ -95,10 +95,10 @@
           </div>
           
           <!-- PAGAMENTOS -->
-          <div data-cart="payment" class="cart-payment">
+          <div data-cart="payment" data-hide class="cart-payment">
             <h2 class="font-2-s-b-u">Pagamento</h2>
 
-            <div data-cart="payment-container" class="cart-payment-container">
+            <div data-cart="payment-container" data-hide class="cart-payment-container">
               
               <form data-cart="payments" class="cart-payment-options">
                 <input type="radio" name="pagamento" value="boleto" id="boleto">
@@ -115,14 +115,14 @@
           </div>
 
           <!-- LOGIN -->
-          <div data-cart="login-active" class="cart-login">
+          <div data-cart="login" data-show class="cart-login">
             <span class="font-2-s">Faça o login para continuar</span>
             <a href="./login.html" class="button-1 cart-button font-2-xs-m-u cor-0">Acessar conta</a>
           </div>
         </div>
     </div>
 
-    <div data-cart="empty-active" class="cart-empty container">
+    <div data-cart="empty" data-show class="cart-empty container">
         <h1 class="font-1-xl cor-10">Seu carrinho esta vazio</h1>
         <a href="./produtos/produtos.html" class="button-1 cart-button font-2-xs-m-u cor-0">Ir as compras</a>
     </div>

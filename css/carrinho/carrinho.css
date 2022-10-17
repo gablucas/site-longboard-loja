@@ -39,6 +39,7 @@
 
 /* CARRINHO VAZIO */
 .cart-empty {
+  display: grid;
   height: 70vh;
 
   grid-template-rows: auto auto;
@@ -61,27 +62,3 @@
   text-align: center;
 }
 
-
-[data-cart="filled"] {
-  display: none;
-}
-
-[data-cart="filled-active"] {
-  display: grid;
-}
-
-[data-cart="login"] {
-  display: none;
-}
-
-[data-cart="login-active"] {
-  display: grid;
-}
-
-[data-cart="empty"] {
-  display: none;
-}
-
-[data-cart="empty-active"] {
-  display: grid;
-}

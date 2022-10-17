@@ -21,19 +21,12 @@
   background: var(--cor-d4);
 }
 
-/* ATIVADOR */
+/* ATIVADOR
 [data-cart="payment"] {
   display: none;
 }
 
 [data-cart="payment-active"] {
   display: initial;
-}
+} */
 
-[data-cart="payment-container"] {
-  display: none;
-}
-
-[data-cart="payment-container-active"] {
-  display: grid;
-}

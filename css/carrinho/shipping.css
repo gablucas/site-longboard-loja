@@ -1,6 +1,6 @@
 .cart-shipping-container{
+  display: grid;
   margin-top: 12px;
-
 }
 
 .cart-shipping > h2 {
@@ -113,28 +113,11 @@
               inset 0 0 0 7px var(--cor-10);
 }
 
-/* ATIVADOR */
+/* ATIVADOR
 [data-cart="shipping"] {
   display: none;
 }
 
 [data-cart="shipping-active"] {
   display: initial;
-}
-
-
-[data-cart="shipping-container"] {
-  display: none;
-}
-
-[data-cart="shipping-container-active"] {
-  display: grid;
-}
-
-[data-cart="edit-shipping"] {
-  display: none;
-}
-
-[data-cart="edit-shipping-active"] {
-  display: initial;
-}
+} */

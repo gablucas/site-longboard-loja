@@ -1,13 +1,14 @@
 import cartStorage from "./cartStorage.js";
-const empty = document.querySelector('[data-cart^="empty"]');
-const filled = document.querySelector('[data-cart^="filled"]');
+import { ElementHandler } from "../global/elementHandler.js";
+
+const elementHandler = new ElementHandler();
 
 export function emptyCart() {
-  if(!!cartStorage().length) {
-    empty.setAttribute('data-cart', 'empty');
-    filled.setAttribute('data-cart', 'filled-active');
+  if(cartStorage().length) {
+    elementHandler.hide('[data-cart="empty"]');
+    elementHandler.show('[data-cart="filled"]');
   } else {
-    empty.setAttribute('data-cart', 'empty-active');
-    filled.setAttribute('data-cart', 'filled');
+    elementHandler.hide('[data-cart="filled"]');
+    elementHandler.show('[data-cart="empty"]');
   }
 }
