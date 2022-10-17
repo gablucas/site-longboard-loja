@@ -9,7 +9,6 @@ const elementHandler = new ElementHandler()
 export function showOrders() {
   orders.forEach((order) => {
     const address = accounts.loggedUser().enderecos.find((item) => item.id === order[0].orderAddress);
-    console.log(address)
 
     const div =  document.createElement('div');
     div.classList.add('order');
@@ -50,12 +49,12 @@ export function showOrders() {
 
     fetchProducts((products) => {
       order.forEach((product) => {
+        
         const selectedProduct = products[product.type].find((item) => item.id === product.id);
         const div = document.createElement('div');
-
         div.classList.add('product');
-       
-        div.innerHTML = `<a href=""><img src="../${selectedProduct.images[0]}" alt=""></a>
+        
+        div.innerHTML = `<a href="../produto/${product.type}.html?type=${product.type}&id=${product.id}"><img src="../${selectedProduct.images[0]}" alt=""></a>
         <span>${selectedProduct.name}</span>
         <span>${product.flex}</span>
         <span>R$ ${selectedProduct.price},00</span>
