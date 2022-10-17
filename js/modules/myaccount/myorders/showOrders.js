@@ -8,9 +8,11 @@ const elementHandler = new ElementHandler()
 
 export function showOrders() {
   orders.forEach((order) => {
+    const address = accounts.loggedUser().enderecos.find((item) => item.id === order[0].orderAddress);
+    console.log(address)
+
     const div =  document.createElement('div');
     div.classList.add('order');
-
     div.innerHTML = `
     <div>
       <p class="font-2-xxxs-b-u">Número do pedido</p>
@@ -32,7 +34,9 @@ export function showOrders() {
       <span class="font-2-xxs">${order[0].orderState}</span>
     </div>
     
-    <div class='details' data-hide></div>`
+    <div class='details' data-hide>
+      <div class='info'><span class="font-2-xxxs-b-u">Endereço: </span><span class="font-2-xxs">${address.identificacao} - ${address.cep}, ${address.rua} - ${address.numero}, ${address.cidade}, ${address.bairro} - ${address.estado} - ${address.complemento}</span></div>
+    </div>`
 
     container.appendChild(div);
   })

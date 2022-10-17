@@ -21,7 +21,6 @@ export default function addItemCart() {
     if (validate.isValid()) {
       const dataProduct = document.querySelector('[data-product="id"]').getAttribute('id').split('-');
   
-      
       // Armazena o produco escolhido em um objeto
       const product = {type: dataProduct[0], id: dataProduct[1], flex: form.flex.value, quantity: form.quantity.value};
       

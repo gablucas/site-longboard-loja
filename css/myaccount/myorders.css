@@ -29,8 +29,13 @@
   display: initial;
 }
 
+.order .info {
+  margin-top: 20px;
+  text-align: start;
+  border-top: 1px solid var(--cor-2);
+}
+
 .order .product {
-  margin-top: 10px;
   display: grid;
   grid-template-columns: auto repeat(5, 1fr);
   align-items: center;
