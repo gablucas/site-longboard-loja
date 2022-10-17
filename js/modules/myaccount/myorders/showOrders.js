@@ -34,7 +34,7 @@ export function showOrders() {
     </div>
     
     <div class='details' data-hide>
-      <div class='info'><span class="font-2-xxxs-b-u">Endereço: </span><span class="font-2-xxs">${address.identificacao} - ${address.cep}, ${address.rua} - ${address.numero}, ${address.cidade}, ${address.bairro} - ${address.estado} - ${address.complemento}</span></div>
+      <div class='info'><span class="font-2-xxxs-b-u">Endereço: </span><span class="font-2-xxs">${address.identificacao} - ${address.cep}, ${address.rua} - ${address.numero}, ${address.cidade}, ${address.bairro}, ${address.estado} - ${address.complemento}</span></div>
     </div>`
 
     container.appendChild(div);
@@ -53,10 +53,10 @@ export function showOrders() {
         const selectedProduct = products[product.type].find((item) => item.id === product.id);
         const div = document.createElement('div');
         div.classList.add('product');
-        
+
         div.innerHTML = `<a href="../produto/${product.type}.html?type=${product.type}&id=${product.id}"><img src="../${selectedProduct.images[0]}" alt=""></a>
         <span>${selectedProduct.name}</span>
-        <span>${product.flex}</span>
+        <span>${selectedProduct.flex.find((item) => item.toLowerCase().replace(" ","") === product.flex)}</span>
         <span>R$ ${selectedProduct.price},00</span>
         <span>${product.quantity}</span>
         <span>R$ ${selectedProduct.price * product.quantity},00</span>`;
