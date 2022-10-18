@@ -11,8 +11,8 @@ export default function loggedUser() {
   if(accounts.loggedUser()) {
     
     // Ativar o menu do usuario
-    loginMenu.setAttribute("data-menu", "login")
-    loginUser.setAttribute("data-menu", "user-active")
+    elementHandler.hide('[data-menu="login"]');
+    elementHandler.show('[data-menu="user"]');
     loginUser.firstElementChild.innerText = accounts.loggedUser().nome;
 
 

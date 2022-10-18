@@ -17,9 +17,12 @@
   <!-- Seção 1: Header -->
   <header class="container">
     <a href="./"><img src="img/ohaipreto.svg" alt="Logo OHAI Boards"></a>
+
     <span class="font-s-m cor-8">Crie uma conta para ver todas funcionalidades, clique em "Entrar"</span>
+
     <nav aria-label="Primario">
       <button data-menu="button" class="mobile-button font-2-s-m cor-0" aria-controls="dropdown-menu">Menu</button>
+      
       <ul data-menu="list" class="menu mobile-list font-2-s-m cor-10">
 
         <li data-dropdown><a>Produtos <img src="img/icones/iconexibicao.svg" alt=""></a>
@@ -33,9 +36,9 @@
         </ul>
         </li>
 
-        <li data-menu="login-active"><a href="./login.html">Entrar</a></li>
+        <li data-menu="login" data-show><a href="./login.html">Entrar</a></li>
 
-        <li data-dropdown data-menu="user"><a href=""></a>
+        <li data-dropdown data-menu="user" data-hide data-hide><a href=""></a>
           <ul class="menu-dropdown">
             <li><a href="./my-account/my-informations.html">Minha conta</a></li>
             <li><a href="./my-account/my-orders.html">Meus pedidos</a></li>

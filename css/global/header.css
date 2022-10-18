@@ -55,22 +55,6 @@ header {
   display: none;
 }
 
-[data-menu="login"] {
-  display: none;
-}
-
-[data-menu="user"] {
-  display: none;
-}
-
-[data-menu="login-active"] {
-  display: initial;
-}
-
-[data-menu="user-active"] {
-  display: initial;
-}
-
 @media (max-width: 425px) {
 
   [data-menu="button"] {

@@ -20,13 +20,3 @@
   color: var(--cor-0);
   background: var(--cor-d4);
 }
-
-/* ATIVADOR
-[data-cart="payment"] {
-  display: none;
-}
-
-[data-cart="payment-active"] {
-  display: initial;
-} */
-
