@@ -98,7 +98,7 @@ input:focus {
 }
 
 [data-show] {
-  display: initial;
+  display: initial !important;
 }
 
 [data-hide] {

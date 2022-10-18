@@ -81,10 +81,6 @@ header {
     z-index: 2;
   }
 
-  [data-menu="list"].active {
-    display: flex;
-  }
-
   .mobile-list {
     background: var(--cor-0);
   }
