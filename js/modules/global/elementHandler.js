@@ -11,12 +11,10 @@ export class ElementHandler {
   show(element) {
     const getElement = document.querySelector(element);
     getElement.removeAttribute('data-hide');
-    getElement.setAttribute('data-show', "");
   }
 
   hide(element) {
     const getElement = document.querySelector(element);
-    getElement.removeAttribute('data-show');
     getElement.setAttribute('data-hide', "");
   }
 }

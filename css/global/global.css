@@ -97,10 +97,6 @@ input:focus {
   background: var(--cor-0);
 }
 
-[data-show] {
-  display: initial !important;
-}
-
 [data-hide] {
   display: none !important;
 }

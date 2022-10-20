@@ -16,7 +16,7 @@ export default function menuMobile() {
     elementHandler.show('[data-menu="list"]');
 
     outsideClick(listMobile, () => {
-      elementHandler.remove('[data-menu="list"]', 'data-show')
+      elementHandler.add('[data-menu="list"]', 'data-hide')
     })
   }
 }

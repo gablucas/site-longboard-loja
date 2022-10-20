@@ -33,7 +33,8 @@ export function showInformation() {
         data.innerText = lastOrder[property];
       })
 
-      elementHandler.showAndHide('.last-order-info', '.last-order-empty')
+      elementHandler.hide('.last-order-empty');
+      elementHandler.show('.last-order-info');
     }
 }
 
