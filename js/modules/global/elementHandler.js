@@ -17,4 +17,9 @@ export class ElementHandler {
     const getElement = document.querySelector(element);
     getElement.setAttribute('data-hide', "");
   }
+
+  toogle(element) {
+    const getElement = document.querySelector(element);
+    getElement.classList.toogle('active');
+  }
 }

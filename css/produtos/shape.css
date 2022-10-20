@@ -103,9 +103,29 @@
 
 .shape-compra {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto 1fr;
   align-items: center;
   margin-top: 12px;
+}
+
+.favorite {
+  cursor: pointer;
+}
+
+.favorite::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url('../../img/icones/iconfavorite.svg') center center no-repeat;
+}
+
+.favorite:hover::before {
+  background: url('../../img/icones/iconfavoritehover.svg') center center no-repeat;
+}
+
+.favorite.active::before {
+  background: url('../../img/icones/iconfavoriteselected.svg') center center no-repeat;
 }
 
 .shape-compra form {
@@ -114,7 +134,7 @@
   justify-content: start;
   align-items: center;
   gap: 12px;
-  height: 40px;
+  /* height: 40px; */
 }
 
 .shape-compra div {

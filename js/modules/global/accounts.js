@@ -19,6 +19,8 @@ export const accounts = {
         updateUser[property].push(newValue);
       } else if(updateType === "unshift") {
         updateUser[property].unshift(newValue);
+      } else if(updateType === "splice") {
+        updateUser[property].splice(newValue, 1);
       }
 
       accounts[index] = updateUser;

@@ -3,7 +3,7 @@ import * as formatter from "../global/formatter.js";
 import showDataUser from "./showDataUser.js";
 
 export default function registerUser(forms) {
-  const user = {enderecos: [], pedidos: [],};
+  const user = {enderecos: [], pedidos: [], favorites: []};
   const endereco = {main: true, id: 'address1'};
 
   // Adiciona os dados do usuario em um objeto
