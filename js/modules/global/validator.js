@@ -81,9 +81,12 @@ export class Validator {
   }
 
   // LOGIN
-  login() {
+  login(login, password) {
+    const user = accounts.getUsers().find(user => user.email === this.form[login].value);
+    console.log(user)
+
     // Validar email na hora do login
-    if (!accounts.getUsers() || !accounts.getUsers().some(user => user.email === this.form.email.value)) {
+    if (this.form[login].value && !user) {
       showError(this.form.email, "add", "Usuário não existe");
       this.validate.login = false;
     } else {
@@ -92,13 +95,19 @@ export class Validator {
     }
 
     // Validar senha na hora do login
-    if (!accounts.getUsers() || !accounts.getUsers().some(user => user.senha === this.form.password.value)) {
+    if (this.form[login].value && this.form[password].value && user && user.senha !== this.form[password].value) {
       showError(this.form.password, "add", "Senha incorreta");
       this.validate.password = false;
     } else {
       showError(this.form.password, "remove", "Senha incorreta");
       this.validate.password = true;
     }
+
+    // Validar campos vazios
+    this.emptyInputs(
+      'email',
+      'password'
+    );
   }
 
   // Valida se o argumento corresponde a quantidade minima e maxima

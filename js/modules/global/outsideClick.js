@@ -13,7 +13,6 @@ export default function outsideClick(element, callback) {
         if(!element.contains(e.target)) {
             element.removeAttribute(outside);
             ['click', 'touchstart'].forEach((typeEvent) => {
-                console.log('oi')
                 html.removeEventListener(typeEvent, handleOutsideClick);
             });
             callback();
