@@ -135,6 +135,14 @@
   align-items: center;
   gap: 12px;
   /* height: 40px; */
+  position: relative;
+}
+
+.shape-compra .error {
+  position: absolute;
+  top: 46px;
+  left: 0px;
+  width: max-content;
 }
 
 .shape-compra div {
