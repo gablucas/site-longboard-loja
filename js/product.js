@@ -6,6 +6,7 @@ import addItemCart from "./modules/produto/addItemCart.js";
 import showQuantityItensCart from "./modules/global/showQuantityItensCart.js"
 import { favoriteProduct } from "./modules/produto/favoriteProduct.js";
 import { validateLogin } from "./modules/global/validateLogin.js";
+import { callModal } from "./modules/global/modal.js";
  
 initDropDown();
 loggedUser();
@@ -15,5 +16,6 @@ addItemCart();
 showQuantityItensCart();
 favoriteProduct();
 validateLogin();
+
 
 

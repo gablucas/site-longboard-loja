@@ -9,6 +9,8 @@ import validateCart from "./modules/cart/validateCart.js";
 import { emptyCart } from "./modules/cart/emptyCart.js";
 import { showAddressesCart } from "./modules/cart/showAddressesCart.js";
 import selectAddress from "./modules/cart/selectAddress.js";
+import { validateLogin } from "./modules/global/validateLogin.js";
+import { callbackModal } from "./modules/global/modal.js";
 
 loggedUser();
 showCartItens();
@@ -21,5 +23,7 @@ purchaseSummary();
 showQuantityItensCart();
 validateCart();
 emptyCart();
+callbackModal('[data-modal="button"]', '[data-modal="container"]');
+validateLogin();
 
 

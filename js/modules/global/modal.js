@@ -1,5 +1,6 @@
 import { ElementHandler } from "./elementHandler.js";
 import outsideClick from "./outsideClick.js";
+
 const elementHandler = new ElementHandler();
 
 export function modal(container) {
@@ -9,5 +10,14 @@ export function modal(container) {
   
   outsideClick(modal, () => {
     elementHandler.hide(container);
+  })
+}
+
+export function callbackModal(button, container) {
+  const btn = document.querySelector(button);
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    modal(container);
   })
 }
