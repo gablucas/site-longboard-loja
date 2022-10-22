@@ -26,7 +26,7 @@ export default async function showProduct() {
 
     }else if(attribute.includes('images')){
       product.images.forEach((image) => {
-        element.innerHTML += `<img src="/${image}" alt=""></img>`;
+        element.innerHTML += `<img src="../${image}" alt=""></img>`;
       })
 
       const mainImage = document.querySelector('[data-product="main-image"]');
