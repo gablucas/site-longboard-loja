@@ -82,8 +82,7 @@ export class Validator {
 
   // LOGIN
   login(login, password) {
-    const user = accounts.getUsers().find(user => user.email === this.form[login].value);
-    console.log(user)
+    const user = accounts.getUsers()?.find(user => user.email === this.form[login].value);
 
     // Validar email na hora do login
     if (this.form[login].value && !user) {
