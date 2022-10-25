@@ -15,6 +15,7 @@ import { mainAddress } from "./modules/myaccount/myaddresses/mainAddress.js";
 import { deleteAddress } from "./modules/myaccount/myaddresses/deleteAddress.js";
 import { editAddress, insertAddressForm, saveAddressChange } from "./modules/myaccount/myaddresses/editAddress.js";
 import { showOrders } from "./modules/myaccount/myorders/showOrders.js";
+import { showFavorites } from "./modules/myaccount/favorites/showFavorites.js";
 
 if(!localStorage.loggedUser) {
   window.location.href = "index.html";
@@ -48,4 +49,9 @@ if(verifyLocation('edit-address.html')) {
 // Funções da pagina MEUS PEDIDOS
 if(verifyLocation('my-orders.html')) {
   showOrders();
+}
+
+// Funções da pagina MEUS FAVORITOS
+if(verifyLocation('my-favorites.html')) {
+  showFavorites();
 }

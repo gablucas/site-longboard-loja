@@ -5,6 +5,7 @@ export function favoriteProduct() {
   const favorite = document.querySelector('.favorite');
   const productID = new URLSearchParams(location.search).get('id');
 
+  // Caso o produto ja esteja nos favoritos, ativa o botao do referente ao mesmo
   if (accounts.loggedUser()?.favorites.some(item => item === productID)) {
     favorite.classList.add('active');
   }

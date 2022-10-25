@@ -12,7 +12,7 @@
   <title>Ohai Boards</title>
 </head>
 
-<body id="produtos">
+<body id="account">
 
   <!-- Seção 1: Header -->
   <header class="container">
@@ -21,23 +21,23 @@
     <nav aria-label="Primario">
       <ul class="menu font-2-s-m cor-10">
 
-        <li data-dropdown><a href="">Produtos <img src="../img/icones/iconexibicao.svg" alt=""></a>
-          
+        <li data-dropdown><a href="../produtos/produtos.html">Produtos <img src="../img/icones/iconexibicao.svg" alt=""></a>
+
         <ul class="menu-dropdown" >
-          <li><a href="produtos-shapes.html">Shapes</a></li>
-          <li><a href="produtos-trucks.html">Trucks</a></li>
-          <li><a href="produtos-rodas.html">Rodas</a></li>
-          <li><a href="produtos-rolamentos.html">Rolamentos</a></li>
-          <li><a href="produtos-acessorios.html">Acessórios</a></li>
+          <li><a href="../produtos/produtos-shapes.html">Shapes</a></li>
+          <li><a href="../produtos/produtos-trucks.html">Trucks</a></li>
+          <li><a href="../produtos/produtos-rodas.html">Rodas</a></li>
+          <li><a href="../produtos/produtos-rolamentos.html">Rolamentos</a></li>
+          <li><a href="../produtos/produtos-acessorios.html">Acessórios</a></li>
         </ul>
         </li>
 
-        <li data-menu="login" ><a href="../login.html">Entrar</a></li>
+        <li data-menu="login"><a href="login.html">Entrar</a></li>
 
         <li data-dropdown data-menu="user" data-hide><a href=""></a>
           <ul class="menu-dropdown">
-            <li><a href="../my-account/my-informations.html">Minha conta</a></li>
-            <li><a href="../my-account/my-orders.html">Meus pedidos</a></li>
+            <li><a href="./my-informations.html">Minha conta</a></li>
+            <li><a href="./my-orders.html">Meus pedidos</a></li>
             <li><a href="./my-account/my-favorites.html">Favoritos</a></li>
             <li data-menu="exit">Sair</li>
           </ul>
@@ -48,51 +48,33 @@
     </nav>
   </header>
 
-  
-  <!-- Seção 5: Outros produtos -->
-  <article class="opcoes container">
-
-    <h1 class="font-1-xxl">Produtos</h1>
-
-    <ul class="opcoes-lista">
-    
-      <li>
-        <a href="./produtos-trucks.html">
-          <h3 class="font-1-xxl cor-0">Trucks</h3>
-          <img src="../img/home/opcoes/produtos_trucks.jpg" width="360" height="260" alt="">
-        </a>
-      </li>
-
-      <li>
-        <a href="./produtos-rodas.html">
-          <h3 class="font-1-xxl cor-0">Rodas</h3>
-          <img src="../img/home/opcoes/produtos_rodas.jpg" width="360" height="260" alt="">
-        </a>
-      </li>
+  <!-- Seção 2: Sua conta -->
+  <main class="account-bg">
+    <div class="account container">
       
-      <li>
-        <a href="./produtos-shapes.html">
-          <h3 class="font-1-xxl cor-0">Shapes</h3>
-          <img src="../img/home/opcoes/produtos_shapes.jpg" width="360" height="560" alt="">
-        </a>
-      </li>
+      <!-- Campo das opções -->
+      <div class="account-options">
+        <h1 class="font-1-xl cor-d7">Sua conta</h1>
+        <ul data-account="options" class="font-2-s-b-u">
+          <li><a href="my-informations.html">Minhas informações</a></li>
+          <li><a href="./my-addresses.html">Meus endereços</a></li>
+          <li><a href="my-orders.html">Meus pedidos</a></li>
+          <li><a href="">Dados de pagamento</a></li>
+          <li class="active"><a href="">Favoritos</a></li>
+          <li><a href="">Sair</a></li>
+        </ul>
+      </div>
 
-      <li>
-        <a href="./produtos-acessorios.html">
-          <h3 class="font-1-xxl cor-0">Acessórios</h3>
-          <img src="../img/home/opcoes/produtos_acessorios.jpg" width="360" height="260" alt="">
-        </a>
-      </li>
+      <!-- Dados das opções -->
+      <div class="account-info cor-10">
+        <h2 class="font-1-m-u">Meus Favoritos</h2>
 
-      <li>
-        <a href="./produtos-rolamentos.html">
-          <h3 class="font-1-xxl cor-0">Rolamentos</h3>
-          <img src="../img/home/opcoes/produtos_rolamentos.jpg" width="360" height="260" alt="">
-        </a>
-      </li>
-
-    </ul>
-  </article>
+        <!-- Favoritos -->
+        <div data-favorites="container" class="my-favorites">
+        </div>
+      </div>
+    </div>
+  </main>
 
   <!-- Seção 6: Footer -->
   <footer class="footer-bg">
@@ -128,7 +110,7 @@
           <ul class="font-2-s cor-4">
               <li><a href="./">Sobre nós</a></li>
               <li><a href="./">Tutoriais</a></li>
-              <li><a href="./produtos.html">Produtos</a></li>
+              <li><a href="./produtos/produtos.html">Produtos</a></li>
               <li><a href="./">Blog</a></li>
               <li><a href="./">Minha conta</a></li>
           </ul>
@@ -138,6 +120,8 @@
       <p class="footer-copyright font-2-s cor-4">Todos os direitos reservados. 2022</p>
     </div>
   </footer>
-  <script type="module" src="../js/products.js"></script>
+
+  <script type="module" src="../js/my-account.js"></script>
+
 </body>
 </html>

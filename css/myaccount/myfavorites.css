@@ -1,0 +1,11 @@
+.my-favorites {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+  gap: 20px;
+}
+
+.favorite-product {
+  display: flex;
+  flex-direction: column;
+}
