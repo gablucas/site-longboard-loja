@@ -53,13 +53,18 @@ header {
 
 @media (max-width: 425px) {
 
+  header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   [data-menu="button"] {
     display: initial;
   }
 
-  [data-menu="list"] {
-    display: none;
-  }
+    [data-menu="list"] {
+      display: none;
+    }
 
   .mobile-button {
     padding: 8px;

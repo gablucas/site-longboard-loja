@@ -47,7 +47,6 @@
 
 .home-produtos-shapes li {
   display: none;
-
   padding: 20px;
 }
 
@@ -85,8 +84,14 @@
 }
 
 @media (max-width: 1024px) {
-  .home-shapes-modalidades label {
+
+  .home-shapes-modalidades {
+    border: none;
+  }
+
+  .home-shapes-modalidades button {
     padding: 10px;
+    border: 1px solid var(--cor-8);
   }
 
   .home-produtos-shapes {
@@ -114,10 +119,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-  }
-
-  .home-shapes-modalidades label {
-    border: 1px solid var(--cor-8);
   }
 
   .home-produtos-shapes {

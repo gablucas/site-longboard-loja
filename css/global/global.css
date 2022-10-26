@@ -101,3 +101,9 @@ input:focus {
 [data-hide] {
   display: none !important;
 }
+
+.aviso {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
