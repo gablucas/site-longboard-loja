@@ -165,3 +165,20 @@
 .shape-compra button {
   padding: 10px;
 }
+
+@media (max-width: 768px) {
+
+  .shape {
+    grid-template-columns: 1fr;
+  }
+
+  .shape-imagem {
+    grid-template-rows: 125px 1fr; 
+    grid-row: 2;
+  }
+
+  .shape-imagem img {
+    grid-row: 2;
+  }
+  
+}
