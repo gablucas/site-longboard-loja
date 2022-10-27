@@ -109,7 +109,7 @@
   .font-2-s {
     font-size: 1rem;
   }
-}
+
 
 @media (max-width: 768px) {
 
@@ -144,8 +144,8 @@
 
 @media (max-width: 425px) {
 
-  .produtos-lista .font-1-xxl {
-    font-size: 1.8rem;
+  .opcoes-lista .font-1-xxl {
+    font-size: 2rem;
   }
 }
 
