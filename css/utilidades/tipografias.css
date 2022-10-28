@@ -89,6 +89,10 @@
     font-size: 3rem;
   }
 
+  .font-1-xl {
+    font-size: 2.5rem;
+  }
+
   .font-1-l {
     font-size: 2rem;
   }
@@ -140,7 +144,7 @@
   }
 
   .font-1-xl {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 

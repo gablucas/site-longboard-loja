@@ -74,3 +74,8 @@
 }
 
 
+@media (max-width: 425px) {
+  .my-addresses {
+    grid-template-columns: 1fr;
+  }
+}

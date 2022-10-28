@@ -16,13 +16,16 @@
 
   <!-- Seção 1: Header -->
   <header class="container">
-    <a href="../index.html"><img src="../img/ohaipreto.svg" alt="Logo OHAI Boards"></a>
+    <a href="./"><img src="../img/ohaipreto.svg" alt="Logo OHAI Boards"></a>
+
 
     <nav aria-label="Primario">
-      <ul class="menu font-2-s-m cor-10">
+      <button data-menu="button" class="mobile-button font-2-s-m cor-0" aria-controls="dropdown-menu">Menu</button>
+      
+      <ul data-menu="list" class="menu mobile-list font-2-s-m cor-10">
 
-        <li data-dropdown><a href="../produtos/produtos.html">Produtos</a>
-
+        <li data-dropdown><a>Produtos</a>
+          
         <ul class="menu-dropdown menu-products">
           <li><a href="../produtos/produtos-shapes.html">Shapes</a></li>
           <li><a href="../produtos/produtos-trucks.html">Trucks</a></li>
@@ -32,13 +35,13 @@
         </ul>
         </li>
 
-        <li data-menu="login" ><a href="login.html">Entrar</a></li>
+        <li data-menu="login"><a href="../login.html">Entrar</a></li>
 
-        <li data-dropdown data-menu="user" data-hide><a href=""></a>
+        <li data-dropdown data-menu="user" data-hide data-hide><a href=""></a>
           <ul class="menu-dropdown menu-user">
-            <li><a href="./my-informations.html">Minha conta</a></li>
-            <li><a href="./my-orders.html">Meus pedidos</a></li>
-            <li><a href="./my-account/my-favorites.html">Favoritos</a></li>
+            <li><a href="../my-account/my-informations.html">Minha conta</a></li>
+            <li><a href="../my-account/my-orders.html">Meus pedidos</a></li>
+            <li><a href="../my-account/my-favorites.html">Favoritos</a></li>
             <li data-menu="exit">Sair</li>
           </ul>
         </li>
