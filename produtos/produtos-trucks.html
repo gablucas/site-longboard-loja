@@ -73,10 +73,13 @@
     </div>
 
     <div class="produtos container">
+      <div data-filter="menu" class="products-mobile-options">
+        <button data-filter="button" class="font-2-s">Filtrar</button>
+      </div>
 
-      <div class="produtos-filtro">
+      <div data-filter="list" class="produtos-filtro">
 
-        <div class="filtro">
+        <div data-filter="button-options"  class="filtro">
           <h3 class="font-2-s-b-u">Modalidades</h3>
           <div class="filtro-botoes font-2-s">
             <button id="dancingfreestyle">Dancing / Freestyle</button>
@@ -85,7 +88,7 @@
           </div>
         </div>
 
-        <div class="filtro">
+        <div data-filter="button-options"  class="filtro">
           <h3 class="font-2-s-b-u">Comprimento</h3>
           <div class="filtro-botoes font-2-s">
             <button id="tamanho1">150mm</button>
@@ -97,7 +100,7 @@
       </div>
 
       <div>
-        <ul data-products="trucks" class="produtos">
+        <ul data-products="trucks" class="produtos-itens">
         </ul>
       </div>
     </div>
@@ -139,7 +142,7 @@
               <li><a href="./">Sobre nós</a></li>
               <li><a href="./">Tutoriais</a></li>
               <li><a href="./produtos.html">Produtos</a></li>
-              <li><a href="./">Blog</a></li>
+              
               <li><a href="./">Minha conta</a></li>
           </ul>
         </nav>
