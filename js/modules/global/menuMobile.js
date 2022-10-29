@@ -8,15 +8,15 @@ export default function menuMobile() {
   const listMobile = document.querySelector('[data-menu="list"]');
 
   menuMobile.addEventListener('touchstart', openMenuMobile);
+  
   function openMenuMobile(e) {
-
     e.stopPropagation();
     e.preventDefault();
     elementHandler.show('[data-menu="button"]');
     elementHandler.show('[data-menu="list"]');
 
     outsideClick(listMobile, () => {
-      elementHandler.add('[data-menu="list"]', 'data-hide')
+      elementHandler.hide('[data-menu="list"]');
     })
   }
 }

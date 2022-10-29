@@ -102,6 +102,10 @@ input:focus {
   display: none !important;
 }
 
+[data-show] {
+  display: initial !important;
+}
+
 .aviso {
   display: block;
   margin-top: 10px;

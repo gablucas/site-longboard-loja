@@ -62,9 +62,9 @@ header {
     display: initial;
   }
 
-    [data-menu="list"] {
-      display: none;
-    }
+  [data-menu="list"] {
+    display: none;
+  }
 
   .mobile-button {
     padding: 8px;
@@ -117,5 +117,20 @@ header {
   color: var(--cor-d5);
 }
 
+@media (max-width: 425px) {
 
+  .menu a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .menu > li {
+    border-bottom: 1px solid var(--cor-2);
+  }
+
+  .menu li a {
+    padding-left: 20px;
+  }
+
+}
 

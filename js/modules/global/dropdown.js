@@ -1,5 +1,3 @@
-import outsideClick from "./outsideClick.js";
-
 export default function dropDown() {
     const dropdown = document.querySelectorAll('[data-dropdown]');
     
@@ -8,10 +6,9 @@ export default function dropDown() {
     })
     
     function handleClick(e) {
-        this.classList.add('active');
-        outsideClick(this, ()=> {
-            this.classList.remove('active')
-        })
+      if(e.target.parentElement === this) {
+        this.toggleAttribute('data-show');
+      }
     }
 }
 
