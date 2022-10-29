@@ -1,7 +1,7 @@
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 #register header,
@@ -19,7 +19,8 @@ header {
   position: relative;
 }
 
-.menu a {
+.menu a,
+.menu .list-title{
   display: flex;
   align-items: center;
   gap: 8px;
@@ -28,7 +29,9 @@ header {
   padding-bottom: 30px;
 }
 
-.menu a:hover {
+.menu a:hover,
+.menu .list-title{
+  cursor: pointer;
   color: var(--cor-8);
 }
 
@@ -93,11 +96,12 @@ header {
 @media (max-width: 425px) {
 
   header {
+    height: 70px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
 
-  header img {
+  header .logo {
     width: 100px;
   }
 
@@ -116,7 +120,7 @@ header {
 
   .menu {
     position: absolute;
-    top: 0px;
+    top: 70px;
     left: 0px;
     right: 0px;
     align-items: start;
@@ -125,21 +129,21 @@ header {
     z-index: 2;
   }
 
-  .menu a {
+  .menu a,
+  .menu .list-title{
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 20px;
   }
 
   .menu > li {
     border-bottom: 1px solid var(--cor-2);
   }
 
-  .menu li a {
-    padding-left: 20px;
-  }
-
   .mobile-list {
+    height: 100%;
     background: var(--cor-0);
+    transition: 2s;
   }
 
   .mobile-list li {

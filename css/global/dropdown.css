@@ -39,9 +39,10 @@
     margin-top: 15px;
 } */
 
-.menu-dropdown a {
-    padding: 10px 20px;
-    white-space: nowrap;
+.menu-dropdown a,
+.menu-dropdown .user-exit {
+  padding: 10px 20px;
+  white-space: nowrap;
 }
 
 .menu-dropdown li:hover {
@@ -81,8 +82,11 @@
     border: none;
   }
 
+  .menu-dropdown::after {
+    display: none;
+  }
+
   [data-dropdown][data-show] .menu-dropdown {
     display: block;
-    animation: dropdown .3s forwards;
-}
+  }
 }

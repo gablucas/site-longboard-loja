@@ -1,21 +1,20 @@
 import { ElementHandler } from "./elementHandler.js";
-import outsideClick from "./outsideClick.js";
-
 const elementHandler = new ElementHandler();
 
-export default function menuMobile() {
+export function menuMobile() {
   const menuMobile = document.querySelector('[data-menu="button"]');
-  const listMobile = document.querySelector('[data-menu="list"]');
 
   function openMenuMobile(e) {
     e.stopPropagation();
     e.preventDefault();
+    document.body.classList.toggle('no-scroll');
+    elementHandler.toggle('[data-menu="list"]', 'data-show');
     
-    elementHandler.toggle('[data-menu="list"]');
-    
-    outsideClick(listMobile, () => {
-      elementHandler.toggle('[data-menu="list"]');
-    })
+    if (this.nextElementSibling.hasAttribute('data-show')) {
+      menuMobile.firstChild.setAttribute('src', '/img/icones/iconfecharmenumobile.svg')
+    } else {
+      menuMobile.firstChild.setAttribute('src', '/img/icones/iconmenumobile.svg')
+    }
   }
 
   menuMobile.addEventListener('touchstart', openMenuMobile);

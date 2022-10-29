@@ -31,6 +31,10 @@
   background-color: var(--cor-d6);
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 
 @media (max-width: 768px) {
 

@@ -1,7 +1,6 @@
 // Modulos para todos formularios
 import { Validator } from "./modules/global/validator.js";
 
-
 // Modulos para o primeiro formulario
 import strengthPassword from "./modules/register/strengthPassword.js";
 
