@@ -83,7 +83,7 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
 
   .font-1-xxl {
     font-size: 3rem;
@@ -122,10 +122,6 @@
 
   .font-2-xl {
     font-size: 1.20rem;
-  }
-
-  .font-2-l-m {
-    font-size: 1rem;
   }
 
   .font-2-s {
@@ -181,4 +177,4 @@
   .font-2-xl {
     font-size: 1rem;
   }
-}
+} */

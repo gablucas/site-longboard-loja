@@ -1,6 +1,3 @@
-import showQuantityItensCart from "./modules/global/showQuantityItensCart.js"
-showQuantityItensCart();
-
 // Modulos para todos formularios
 import { Validator } from "./modules/global/validator.js";
 
