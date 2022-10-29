@@ -3,7 +3,6 @@ export default function homeFilter() {
 /** EXIBIR OS SHAPES NA HOME DE ACORDO COM A MODALIDADE SELECIONADA */
 const modalidades = document.querySelectorAll('.home-shapes-modalidades button')
 
-
 modalidades.forEach((modalidade) => {
   modalidade.addEventListener('click', selecionarShapes)
 })

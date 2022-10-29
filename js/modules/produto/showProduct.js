@@ -1,15 +1,14 @@
 import switchImage from "./switchImage.js";
+import fetchProducts from '../global/fetchProducts.js';
+
 
 const dataProduct = document.querySelectorAll('[data-product]');
 const parametros = new URLSearchParams(location.search);
 const typeProduct = parametros.get('type');
 const idProduct = parametros.get('id');
 
-export default async function showProduct() {
-
-  const promise = await fetch('https://gablucas.github.io/site-longboard-loja/products.json')
-  const productsJson = await promise.json();
-  const product = productsJson[typeProduct].find(product => product.id === idProduct);
+fetchProducts((products) => {
+  const product = products[typeProduct].find(product => product.id === idProduct);
 
   dataProduct.forEach((element) => {
     const attribute = element.getAttribute('data-product');
@@ -43,4 +42,4 @@ export default async function showProduct() {
   })
 
   switchImage();
-}
+})
