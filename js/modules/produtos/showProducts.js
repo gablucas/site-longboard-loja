@@ -1,4 +1,4 @@
-export default async function showProducts() {
+export async function showProducts() {
   const list = document.querySelector('[data-products]')
   const productType = list.getAttribute('data-products');
   

@@ -1,25 +1,28 @@
 export class ElementHandler {
-  constructor() {
-
+  add(element, attribute) {
+    if(typeof element === "string") {
+      const getElement = document.querySelector(element);
+      getElement.setAttribute(attribute, '');
+    } else {
+      element.setAttribute(attribute, '');
+    }
   }
 
   remove(element, attribute) {
-    const getElement = document.querySelector(element);
-    getElement.removeAttribute(attribute)
+    if(typeof element === "string") {
+      const getElement = document.querySelector(element);
+      getElement.removeAttribute(attribute);
+    } else {
+      element.removeAttribute(attribute);
+    }
   }
 
-  show(element) {
-    const getElement = document.querySelector(element);
-    getElement.removeAttribute('data-hide');
-  }
-
-  hide(element) {
-    const getElement = document.querySelector(element);
-    getElement.setAttribute('data-hide', "");
-  }
-
-  toogle(element) {
-    const getElement = document.querySelector(element);
-    getElement.toggleAttribute('data-show');
+  toggle(element, attribute) {
+    if(typeof element === "string") {
+      const getElement = document.querySelector(element);
+      getElement.toggleAttribute(attribute);
+    } else {
+      element.toggleAttribute(attribute);
+    }
   }
 }

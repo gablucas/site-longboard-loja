@@ -18,27 +18,30 @@
   <header class="container">
     <a href="../index.html"><img src="../img/ohaipreto.svg" alt="Logo OHAI Boards"></a>
 
-    <nav aria-label="Primario">
-      <ul class="menu font-2-s-m cor-10">
 
-        <li data-dropdown><a href="./produtos.html">Produtos</a>
+    <nav aria-label="Primario">
+      <button data-menu="button" class="mobile-button font-2-s-m cor-0" aria-controls="dropdown-menu">Menu</button>
+      
+      <ul data-menu="list" class="menu mobile-list font-2-s-m cor-10">
+
+        <li data-dropdown><a>Produtos</a>
           
-          <ul class="menu-dropdown menu-products">
-            <li><a href="">Shapes</a></li>
-            <li><a href="./produtos-trucks.html">Trucks</a></li>
-            <li><a href="./produtos-rodas.html">Rodas</a></li>
-            <li><a href="./produtos-rolamentos.html">Rolamentos</a></li>
-            <li><a href="./produtos-acessorios.html">Acessórios</a></li>
-          </ul>
+        <ul class="menu-dropdown menu-products">
+          <li><a href="../produtos/produtos-shapes.html">Shapes</a></li>
+          <li><a href="../produtos/produtos-trucks.html">Trucks</a></li>
+          <li><a href="../produtos/produtos-rodas.html">Rodas</a></li>
+          <li><a href="../produtos/produtos-rolamentos.html">Rolamentos</a></li>
+          <li><a href="../produtos/produtos-acessorios.html">Acessórios</a></li>
+        </ul>
         </li>
 
-        <li data-menu="login" ><a href="../login.html">Entrar</a></li>
+        <li data-menu="login"><a href="../login.html">Entrar</a></li>
 
         <li data-dropdown data-menu="user" data-hide><a href=""></a>
           <ul class="menu-dropdown menu-user">
-            <li><a href="../myAccount.html">Minha conta</a></li>
-            <li><a href="./my-orders.html">Meus pedidos</a></li>
-            <li><a href="./my-account/my-favorites.html">Favoritos</a></li>
+            <li><a href="../my-account/my-informations.html">Minha conta</a></li>
+            <li><a href="../my-account/my-orders.html">Meus pedidos</a></li>
+            <li><a href="../my-account/my-favorites.html">Favoritos</a></li>
             <li data-menu="exit">Sair</li>
           </ul>
         </li>
@@ -47,6 +50,7 @@
       </ul>
     </nav>
   </header>
+
 
   <!-- Seção 2: Menu secundario -->
   <div class="header-secundario container">
@@ -63,19 +67,21 @@
 
   <!-- Seção 3: Main -->
   <main>
-
     <div class="banner">
       <h1 class="font-1-xxl cor-0">Shapes</h1>
       <img src="../img/produtos/shapes/banner-shapes.jpg" alt="" width="1160" height="300">
     </div>
 
     <div class="produtos container">
+      <div data-filter="menu" class="products-mobile-options">
+        <button data-filter="button" class="font-2-s">Filtrar</button>
+      </div>
 
-      <div class="produtos-filtro">
+      <div data-filter="list" class="produtos-filtro">
 
-        <div class="filtro">
+        <div data-filter="button-options" class="filtro">
           <h3 class="font-2-s-b-u">Modalidades</h3>
-          <div class="filtro-botoes font-2-s">
+          <div data-filter="list-options" class="filtro-botoes font-2-s">
             <button id="dancingfreestyle">Dancing / Freestyle</button>
             <button id="carvingpumping">Carving / Pumping</button>
             <button id="freeridedownhill">Freeride / Downhill</button>
@@ -85,18 +91,18 @@
           </div>
         </div>
 
-        <div class="filtro">
+        <div data-filter="button-options" class="filtro">
           <h3 class="font-2-s-b-u">Montagem</h3>
-          <div class="filtro-botoes font-2-s">
+          <div data-filter="list-options" class="filtro-botoes font-2-s">
             <button id="topmount">Top Mount</button>
             <button id="dropthrough">Drop-through</button>
             <button id="doubledrop">Double-drop</button>
           </div>
         </div>
 
-        <div class="filtro">
+        <div data-filter="button-options" class="filtro">
           <h3 class="font-2-s-b-u">Comprimento</h3>
-          <div class="filtro-botoes font-2-s">
+          <div data-filter="list-options" class="filtro-botoes font-2-s">
             <button id="tamanho1">25-32'' / 64-81 cm</button>
             <button id="tamanho2">32-37'' / 81-94 cm</button>
             <button id="tamanho3">37-42'' / 94-107 cm</button>
@@ -106,7 +112,7 @@
       </div>
 
       <div>
-        <ul data-products="shapes" class="produtos">
+        <ul data-products="shapes" class="produtos-itens">
 
         </ul>
       </div>

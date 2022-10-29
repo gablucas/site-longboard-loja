@@ -11,10 +11,10 @@ export default function menuMobile() {
     e.stopPropagation();
     e.preventDefault();
     
-    elementHandler.toogle('[data-menu="list"]');
+    elementHandler.toggle('[data-menu="list"]');
     
     outsideClick(listMobile, () => {
-      elementHandler.toogle('[data-menu="list"]');
+      elementHandler.toggle('[data-menu="list"]');
     })
   }
 

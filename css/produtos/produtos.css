@@ -27,24 +27,28 @@
   padding-bottom: 60px;
 }
 
+.produtos-itens {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.produtos-itens h3 {
+  padding-left: 20px;
+}
+
 .produtos-filtro {
   width: 260px;
 }
 
-.produtos-filtro .filtro + .filtro {
-  margin-top: 40px;
-}
-
-.filtro h3 {
-  text-align: center;
-  padding-right: 25px;
-  margin-bottom: 12px;
+.produtos-filtro .filtro {
+  margin-bottom: 40px;
 }
 
 .filtro-botoes {
   display: flex;
   flex-direction: column;
-  max-height: 130px;
+  height: 130px;
   overflow-y: scroll;
 }
 
@@ -67,12 +71,6 @@
 .filtro-botoes button.selecionado {
   color: var(--cor-0);
   background: var(--cor-d5);
-}
-
-.produtos {
-  display: grid;
-  grid-template-columns: repeat(3, 260px);
-  gap: 40px;
 }
 
 .produtos li {
@@ -105,7 +103,6 @@
 }
 
 .produtos h3 {
-  padding-left: 14px;
   padding-bottom: 14px;
 }
 
@@ -115,5 +112,89 @@
 
 .produtos li.ativo {
   display: initial;
+}
+
+[data-filter='menu'] {
+  display: none;
+}
+
+.products-mobile-options {
+  padding-bottom: 10px;
+}
+
+.products-mobile-options button {
+  padding: 8px;
+  border: 1px solid var(--cor-8);
+}
+
+@media (max-width: 1024px) {
+
+  .produtos-itens {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .produtos {
+    gap: 20px;
+  }
+
+  .produtos-filtro {
+    width: max-content;
+  }
+}
+
+@media (max-width: 425px) {
+
+  [data-filter='menu'] {
+    display: grid;
+  }
+
+  [data-filter='list'] {
+    display: none;
+  }
+
+  [data-filter='list-options'] {
+    display: none;
+  }
+
+  .produtos {
+    grid-template-columns: 1fr;
+    padding-top: 10px;
+  }
+
+  .produtos h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .filtro {
+    border-top: 1px solid var(--cor-8);
+  }
+
+  .filtro.selected h3 {
+    color: var(--cor-d5);
+  }
+
+  .filtro:last-child {
+    border-bottom: 1px solid var(--cor-8);
+  }
+
+  .filtro-botoes button {
+    width: 100%;
+  }
+
+  .produtos-filtro {
+    width: 100%;
+  }
+
+  .produtos-filtro .filtro {
+    margin-bottom: 0px;
+  }
+
+  .produtos-itens {
+    grid-template-columns: 1fr;
+  }
 }
 

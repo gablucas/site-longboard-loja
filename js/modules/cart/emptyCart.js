@@ -5,10 +5,10 @@ const elementHandler = new ElementHandler();
 
 export function emptyCart() {
   if(cartStorage().length) {
-    elementHandler.hide('[data-cart="empty"]');
-    elementHandler.show('[data-cart="filled"]');
+    elementHandler.add('[data-cart="empty"]', 'data-hide');
+    elementHandler.remove('[data-cart="filled"]', 'data-hide');
   } else {
-    elementHandler.hide('[data-cart="filled"]');
-    elementHandler.show('[data-cart="empty"]');
+    elementHandler.remove('[data-cart="empty"]' , 'data-hide');
+    elementHandler.add('[data-cart="filled"]', 'data-hide');
   }
 }

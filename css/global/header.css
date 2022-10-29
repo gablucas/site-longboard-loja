@@ -54,7 +54,7 @@ header {
   border-radius: 50%;
 }
 
-[data-menu="button"] {
+[data-menu='button'] {
   display: none;
 }
 
@@ -133,5 +133,9 @@ header {
 
   .mobile-list li {
     width: 100%;
+  }
+
+  .menu-secundario {
+    gap: 20px;
   }
 }
