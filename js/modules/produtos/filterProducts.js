@@ -49,6 +49,7 @@ export function filterButton() {
   function openFilter() {
     elementHandler.toggle('[data-filter="list"]', 'data-show');
     btnOptions.forEach((btn) => {
+      btn.classList.remove('selected');
       elementHandler.remove(btn.lastElementChild, 'data-show')
     })
   }

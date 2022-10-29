@@ -83,11 +83,22 @@ header {
   color: var(--cor-d5);
 }
 
+@media (max-width: 768px) {
+
+  .menu-secundario {
+    gap: 60px;
+  }
+}
+
 @media (max-width: 425px) {
 
   header {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+
+  header img {
+    width: 100px;
   }
 
   [data-menu="button"] {
