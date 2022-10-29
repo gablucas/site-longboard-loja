@@ -2,7 +2,7 @@
   display: grid;
   justify-content: center;
   padding-top: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 20.5vh;
 }
 
 .login label {
@@ -51,5 +51,12 @@
 
 .lost-account:hover {
   color: var(--cor-d5);
+}
+
+@media (max-width: 425px) {
+
+  .login {
+    padding-bottom: 80px;
+  }
 }
 

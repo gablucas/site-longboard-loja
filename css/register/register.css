@@ -55,7 +55,6 @@
   background: var(--cor-d5);
 }
 
-
 .register-step {
   display: block;
   text-align: center;
@@ -63,8 +62,10 @@
 }
 
 .register-account {
+  display: grid;
+  justify-content: center;
   padding-top: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 
 .register-account label,
