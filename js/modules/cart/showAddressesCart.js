@@ -9,7 +9,7 @@ export function showAddressesCart() {
       const div = document.createElement('div');
       div.setAttribute("id", address.id)
       div.setAttribute("data-cart","address-item");
-      div.classList.add('cart-address-item', 'font-2-xxs', 'cor-12');
+      div.classList.add('cart-address-item', 'font-2-xs', 'cor-12');
   
       div.innerHTML = `
       <input type="radio" name="endereco" value="${address.identificacao}">

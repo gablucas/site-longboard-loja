@@ -27,12 +27,12 @@ export default function loggedUser() {
     elementHandler.add('[data-menu="user"]', 'data-hide');
     elementHandler.remove('[data-menu="login"]', 'data-hide');
     loginUser.firstElementChild.innerText = "";
-  }
-
+    
     // Ativar a compra do produto no carrinho
     if(document.location.pathname.includes("carrinho")) {
       elementHandler.add('[data-cart="shipping"]', 'data-hide');
       elementHandler.add('[data-cart="payment"]', 'data-hide');
       elementHandler.remove('[data-cart="login"]', 'data-hide');
     }
+  }
 }

@@ -8,7 +8,7 @@ export default function editShipping() {
   editShippingButton.addEventListener('click', reativarEndereco)
 
   function reativarEndereco() {
-    elementHandler.hide('[data-cart="edit-shipping"]');
-    elementHandler.show('[data-cart="shipping-container"]');
+    elementHandler.add('[data-cart="edit-shipping"]', 'data-hide');
+    elementHandler.remove('[data-cart="shipping-container"]', 'data-hide');
   }
 }

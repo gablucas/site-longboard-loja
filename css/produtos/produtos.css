@@ -134,18 +134,8 @@
   }
 }
 
+
 @media (max-width: 768px) {
-
-  .produtos {
-    gap: 20px;
-  }
-
-  .produtos-filtro {
-    width: max-content;
-  }
-}
-
-@media (max-width: 425px) {
 
   [data-filter='menu'] {
     display: grid;
@@ -162,6 +152,7 @@
   .produtos {
     grid-template-columns: 1fr;
     padding-top: 10px;
+    gap: 20px;
   }
 
   .produtos h3 {
@@ -191,10 +182,6 @@
 
   .produtos-filtro .filtro {
     margin-bottom: 0px;
-  }
-
-  .produtos-itens {
-    grid-template-columns: 1fr;
   }
 }
 

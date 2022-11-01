@@ -88,21 +88,14 @@ header {
 
 @media (max-width: 768px) {
 
-  .menu-secundario {
-    gap: 60px;
-  }
-}
-
-@media (max-width: 425px) {
-
   header {
-    height: 70px;
+    height: 80px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
 
   header .logo {
-    width: 100px;
+    width: 120px;
   }
 
   [data-menu="button"] {
@@ -120,7 +113,7 @@ header {
 
   .menu {
     position: absolute;
-    top: 70px;
+    top: 80px;
     left: 0px;
     right: 0px;
     align-items: start;
@@ -148,6 +141,25 @@ header {
 
   .mobile-list li {
     width: 100%;
+  }
+
+  .menu-secundario {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 425px) {
+
+  header {
+    height: 70px;
+  }
+
+  header .logo {
+    width: 100px;
+  }
+
+  .menu {
+    top: 70px;
   }
 
   .menu-secundario {

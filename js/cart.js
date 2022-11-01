@@ -12,9 +12,11 @@ import selectAddress from "./modules/cart/selectAddress.js";
 import { validateLogin } from "./modules/global/validateLogin.js";
 import { callbackModal } from "./modules/global/modal.js";
 import { menuMobile } from "./modules/global/menuMobile.js";
+import dropDown from "./modules/global/dropdown.js";
 
 loggedUser();
 menuMobile();
+dropDown();
 showCartItens();
 showAddressesCart();
 selectAddress();

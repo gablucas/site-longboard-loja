@@ -2,9 +2,11 @@ import loggedUser from "./modules/global/loggedUser.js";
 import exitAccount from "./modules/global/exitAccount.js";
 import showQuantityItensCart from "./modules/global/showQuantityItensCart.js";
 import { menuMobile } from "./modules/global/menuMobile.js";
+import dropDown from "./modules/global/dropdown.js";
 
 loggedUser();
-menuMobile()
+menuMobile();
+dropDown();
 showQuantityItensCart();
 exitAccount();
 
