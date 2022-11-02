@@ -1,10 +1,8 @@
 import { accounts } from "../../global/accounts.js";
 import fetchProducts from "../../global/fetchProducts.js";
-import { ElementHandler } from "../../global/elementHandler.js";
 
 const container = document.querySelector('[data-myorders="container"]');
 const orders = accounts.loggedUser().pedidos;
-const elementHandler = new ElementHandler()
 
 export function showOrders() {
   orders.forEach((order) => {
