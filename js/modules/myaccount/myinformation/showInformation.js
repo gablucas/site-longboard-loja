@@ -28,13 +28,13 @@ export function showInformation() {
     /** ULTIMO PEDIDO */
     if (accounts.loggedUser().pedidos.length) {
       [...orderData].forEach((data) => {
-        const property = data.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1');
+        const property = data.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1'); 
         const lastOrder = accounts.loggedUser().pedidos[0][0];
         data.innerText = lastOrder[property];
       })
 
-      elementHandler.hide('.last-order-empty');
-      elementHandler.show('.last-order-info');
+      elementHandler.add('.last-order-empty', 'data-hide');
+      elementHandler.add('.last-order-info', 'data-show');
     }
 }
 
