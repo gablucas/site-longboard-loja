@@ -1,11 +1,11 @@
-import fetchProducts from "../global/fetchProducts.js";
-import cartStorage from "./cartStorage.js";
+import { fetchProducts } from "../global/fetchProducts.js";
+import { cartStorage } from "./cartStorage.js";
 import { emptyCart} from "./emptyCart.js";
 
 const subtotal = document.querySelector('[data-cart="subtotal"]');
 const total = document.querySelector('[data-cart="total"]');
 
-export default function purchaseSummary() {
+export function purchaseSummary() {
   fetchProducts((fetchProducts) => {
 
     if(!!cartStorage().length) {

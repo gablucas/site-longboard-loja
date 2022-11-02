@@ -2,15 +2,15 @@
 import { Validator } from "./modules/global/validator.js";
 
 // Modulos para o primeiro formulario
-import strengthPassword from "./modules/register/strengthPassword.js";
+import { strengthPassword } from "./modules/register/strengthPassword.js";
 
 // Modulos para o segundo formulario
-import formatCPF from "./modules/register/formatCPF.js";
+import { formatCPF } from "./modules/register/formatCPF.js";
 
 // Modulos para o terceiro formulario
-import formatCEP from "./modules/register/formatCEP.js";
-import registerUser from "./modules/register/registerUser.js";
-import buscarEndereco from "./modules/register/buscarEndereco.js";
+import { formatCEP } from "./modules/register/formatCEP.js";
+import { registerUser } from "./modules/register/registerUser.js";
+import { buscarEndereco } from "./modules/register/buscarEndereco.js";
 
 // Formulario
 const registerForm = document.querySelectorAll('[data-form="register"]');

@@ -1,10 +1,12 @@
 import { accounts } from "../../global/accounts.js";
-import fetchProducts from "../../global/fetchProducts.js";
+import { fetchProducts } from "../../global/fetchProducts.js";
 
-const container = document.querySelector('[data-myorders="container"]');
-const orders = accounts.loggedUser().pedidos;
 
 export function showOrders() {
+
+  const container = document.querySelector('[data-myorders="container"]');
+  const orders = accounts.loggedUser().pedidos;
+    
   orders.forEach((order) => {
     const address = accounts.loggedUser().enderecos.find((item) => item.id === order[0].orderAddress);
 

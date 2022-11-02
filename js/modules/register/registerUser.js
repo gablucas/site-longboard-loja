@@ -1,8 +1,8 @@
 import { accounts } from "../global/accounts.js";
+import { showDataUser } from "./showDataUser.js";
 import * as formatter from "../global/formatter.js";
-import showDataUser from "./showDataUser.js";
 
-export default function registerUser(forms) {
+export function registerUser(forms) {
   const user = {enderecos: [], pedidos: [], favorites: []};
   const endereco = {main: true, id: 'address1'};
 

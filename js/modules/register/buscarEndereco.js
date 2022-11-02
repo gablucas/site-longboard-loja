@@ -1,4 +1,4 @@
-export default function buscarEndereco(input) {
+export function buscarEndereco(input) {
       // Buscar dados de endereço
       input.endereco_cep.addEventListener('change', buscarEndereco) 
       async function buscarEndereco(inp) {

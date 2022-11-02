@@ -1,5 +1,5 @@
-import switchImage from "./switchImage.js";
-import fetchProducts from '../global/fetchProducts.js';
+import { switchImage } from "./switchImage.js";
+import { fetchProducts } from '../global/fetchProducts.js';
 
 
 const dataProduct = document.querySelectorAll('[data-product]');

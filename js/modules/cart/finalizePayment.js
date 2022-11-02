@@ -1,10 +1,10 @@
 import { accounts } from "../global/accounts.js";
-import showQuantityItensCart from "../global/showQuantityItensCart.js";
-import cartStorage from "./cartStorage.js";
-import showCartItens from "./showCartItens.js";
-import fetchProducts from "../global/fetchProducts.js";
+import { showQuantityItensCart } from "../global/showQuantityItensCart.js";
+import { cartStorage } from "./cartStorage.js";
+import { showCartItens } from "./showCartItens.js";
+import { fetchProducts } from "../global/fetchProducts.js";
 
-export default function finalizePayment() {
+export function finalizePayment() {
 
   // Grava a data da compra
   const getDate = new Date();

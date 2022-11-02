@@ -1,10 +1,10 @@
-import cartStorage from "./cartStorage.js";
-import purchaseSummary from "./purchaseSummary.js";
-import showQuantityItensCart from "../global/showQuantityItensCart.js";
+import { cartStorage } from "./cartStorage.js";
+import { purchaseSummary } from "./purchaseSummary.js";
+import { showQuantityItensCart } from "../global/showQuantityItensCart.js";
 import { emptyCart } from "./emptyCart.js";
 
 
-export default function removeItem() {
+export function removeItem() {
   const btnRemoveItem = document.querySelectorAll('[data-cart="remove-item"]');
 
   btnRemoveItem.forEach((btn) => {

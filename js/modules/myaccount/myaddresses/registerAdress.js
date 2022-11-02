@@ -1,7 +1,7 @@
 import { accounts } from "../../global/accounts.js";
 import { idGenetaror } from "../../global/idGenerator.js";
 import { Validator } from "../../global/validator.js";
-import buscarEndereco from "../../register/buscarEndereco.js";
+import { buscarEndereco } from "../../register/buscarEndereco.js";
 
 const registerContainer = document.querySelector('[data-formaddress="register-container-active"]');
 const sucessfullContainer = document.querySelector('[data-formaddress="register-sucessfull"]');

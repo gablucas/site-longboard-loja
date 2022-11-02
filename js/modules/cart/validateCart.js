@@ -1,7 +1,7 @@
-import activePayment from "./activePayment.js";
-import finalizePayment from "./finalizePayment.js";
+import { activePayment } from "./activePayment.js";
+import { finalizePayment } from "./finalizePayment.js";
 
-export default function validateCart() {
+export function validateCart() {
 
   // Botões
   const cartButtons = document.querySelectorAll('[data-cart="button"]');

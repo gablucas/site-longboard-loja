@@ -1,4 +1,4 @@
-export default function dropDown() {
+export function dropDown() {
     const dropdown = document.querySelectorAll('[data-dropdown]');
     
     dropdown.forEach((menu) => {

@@ -1,6 +1,6 @@
 
-import showQuantityItensCart from "../global/showQuantityItensCart.js";
-import cartStorage from "../cart/cartStorage.js";
+import { showQuantityItensCart } from "../global/showQuantityItensCart.js";
+import { cartStorage } from "../cart/cartStorage.js";
 import { Validator } from "../global/validator.js";
 
 const form = document.querySelector('[data-cart="form"]');
@@ -9,7 +9,7 @@ const addCart = document.querySelector('[data-cart="addCart"]');
 
 const validate = new Validator(form);
 
-export default function addItemCart() {
+export function addItemCart() {
   [buyItem, addCart].forEach((btn) => {
     btn.addEventListener('click', saveItem)
   })

@@ -1,4 +1,4 @@
-export default function formatCPF(input) {
+export function formatCPF(input) {
   
   // Validar CPF
   input.cpf.addEventListener('keydown', validateCPF);

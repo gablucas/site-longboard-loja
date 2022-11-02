@@ -1,15 +1,15 @@
 import { ElementHandler } from "./elementHandler.js";
-import outsideClick from "./outsideClick.js";
+import { outsideClick } from "./outsideClick.js";
 
 const elementHandler = new ElementHandler();
 
 export function modal(container) {
-  elementHandler.show(container);
+  elementHandler.remove(container, 'data-hide');
 
   const modal = document.querySelector(container).firstElementChild;
   
   outsideClick(modal, () => {
-    elementHandler.hide(container);
+    elementHandler.add(container, 'data-hide');
   })
 }
 

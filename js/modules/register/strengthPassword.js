@@ -1,4 +1,4 @@
-export default function strengthPassword(input) {
+export function strengthPassword(input) {
   const passwordBar = document.querySelector('[data-register="password-strength"]');
 
 

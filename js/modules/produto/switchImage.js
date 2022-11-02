@@ -1,4 +1,4 @@
-export default function switchImage() {
+export function switchImage() {
 
 // Trocar imagens com clique
 const imagens = document.querySelectorAll('[data-product="images"] img');

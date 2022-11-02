@@ -1,5 +1,5 @@
 //Ativar o endereço selecionado
-export default function selectAddress() {
+export function selectAddress() {
   const enderecos = document.querySelectorAll('[data-cart="address-item"]');
 
   enderecos.forEach((item) => {

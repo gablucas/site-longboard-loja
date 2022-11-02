@@ -1,4 +1,5 @@
 import { ElementHandler } from "./elementHandler.js";
+
 const elementHandler = new ElementHandler();
 
 export function menuMobile() {

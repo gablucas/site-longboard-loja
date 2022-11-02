@@ -1,5 +1,5 @@
 import { accounts } from '../../global/accounts.js';
-import fetchProducts from '../../global/fetchProducts.js';
+import { fetchProducts } from '../../global/fetchProducts.js';
 import { removeFavorite } from "./removeFavorite.js";
 
 export function showFavorites() {

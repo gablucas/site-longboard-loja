@@ -1,4 +1,4 @@
-import cartStorage from "./cartStorage.js";
+import { cartStorage } from "./cartStorage.js";
 import { ElementHandler } from "../global/elementHandler.js";
 
 const elementHandler = new ElementHandler();

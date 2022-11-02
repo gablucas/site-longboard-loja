@@ -1,4 +1,4 @@
-import errorDescription from "../global/errorDescription.js";
+import { errorDescription } from "../global/errorDescription.js";
 
 export default function validateProduct(input) {
 let error = false;

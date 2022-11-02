@@ -3,7 +3,7 @@ const elementHandler =  new ElementHandler();
 
 const editShippingButton = document.querySelector('[data-cart="edit-shipping"]');
 
-export default function editShipping() {
+export function editShipping() {
 
   editShippingButton.addEventListener('click', reativarEndereco)
 

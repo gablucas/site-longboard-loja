@@ -1,6 +1,6 @@
 const accountOptions = document.querySelectorAll('[data-account="options"] li')
 
-export default function selectedOption() {
+export function selectedOption() {
 
   for(const btn of accountOptions) {
     btn.addEventListener('click', activeOption)

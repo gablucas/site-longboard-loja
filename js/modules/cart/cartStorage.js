@@ -1,4 +1,4 @@
-export default function cartStorage(callback) {
+export function cartStorage(callback) {
 
   let cartProducts = [];
 

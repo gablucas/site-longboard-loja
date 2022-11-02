@@ -1,4 +1,4 @@
-export default function exitAccount() {
+export function exitAccount() {
 
   if(localStorage.loggedUser) {
     const buttonExit = document.querySelector('[data-menu="exit"]');
