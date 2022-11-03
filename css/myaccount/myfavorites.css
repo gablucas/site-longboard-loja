@@ -1,11 +1,25 @@
 .my-favorites {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-items: start;
+  align-content: start;
   gap: 20px;
 }
 
 .favorite-product {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+
+  .my-favorites {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 425px) {
+
+  .my-favorites {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
