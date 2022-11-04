@@ -23,5 +23,58 @@
 .contato-shape {
   position: absolute;
   bottom: 0px;
-  right: 100px;
+  right: -100px;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 200px;
+}
+
+@media (max-width: 1024px) {
+
+  .contato-shape {
+    right: -140px;
+    z-index: -1;
+  }
+
+  main {
+    overflow-x: hidden;
+  }
+
+  .mapa {
+    z-index: -2;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .contato {
+    gap: 20px;
+  }
+
+  .contato-shape {
+    right: -180px;
+  }
+}
+
+@media (max-width: 425px) {
+
+  .contato {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-shape {
+    top: 91px;
+    right: -11px;
+  }
+
+  .contato-shape img {
+    width: 160px;
+  }
+
+  .mapa iframe {
+    width: 100%;
+    height: 200px;
+  }
 }

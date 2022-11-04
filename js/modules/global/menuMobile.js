@@ -12,9 +12,9 @@ export function menuMobile() {
     elementHandler.toggle('[data-menu="list"]', 'data-show');
     
     if (this.nextElementSibling.hasAttribute('data-show')) {
-      menuMobile.firstChild.setAttribute('src', '/site-longboard-loja/img/icones/iconfecharmenumobile.svg')
+      menuMobile.firstChild.setAttribute('src', './img/icones/iconfecharmenumobile.svg')
     } else {
-      menuMobile.firstChild.setAttribute('src', '/site-longboard-loja/img/icones/iconmenumobile.svg')
+      menuMobile.firstChild.setAttribute('src', './img/icones/iconmenumobile.svg')
     }
   }
 
