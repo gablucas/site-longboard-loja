@@ -41,8 +41,12 @@
 
 .menu-dropdown a,
 .menu-dropdown .user-exit {
-  padding: 10px 20px;
+  padding: 20px;
   white-space: nowrap;
+}
+
+.menu-dropdown a {
+  border-bottom: 1px solid var(--cor-d2);
 }
 
 .menu-dropdown li:hover {

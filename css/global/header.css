@@ -29,8 +29,7 @@ header {
   padding-bottom: 30px;
 }
 
-.menu a:hover,
-.menu .list-title{
+.menu a:hover {
   cursor: pointer;
   color: var(--cor-8);
 }

@@ -1,4 +1,4 @@
-export function showDataform(user) {
+export function showDataUser(user) {
   const element = document.querySelector('[data-register="user-data"]');
 
   element.innerHTML = ` <li><span class="font-2-s-m">Nome:</span> ${user.nome}</li>
