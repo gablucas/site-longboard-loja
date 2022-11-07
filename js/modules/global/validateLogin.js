@@ -5,6 +5,7 @@ export function validateLogin() {
   const form = document.querySelector("[data-login='form']")
   const button = document.querySelector("[data-login='button']");
   const validate = new Validator(form);
+  console.log(button)
 
   button.addEventListener('click', login)
   function login() {
