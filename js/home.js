@@ -6,11 +6,11 @@ import { filterShapesHome } from "./modules/home/filterShapesHome.js";
 import { showProducts } from "./modules/produtos/showProducts.js";
 import { showQuantityItensCart } from "./modules/global/showQuantityItensCart.js";
 
+showProducts();
 loggedUser();
 exitAccount();
 dropDown();
 menuMobile();
-showProducts();
 filterShapesHome();
 showQuantityItensCart();
 
