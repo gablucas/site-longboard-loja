@@ -12,6 +12,8 @@ export function showCartItens() {
     if(!!cartStorage().length) {
       cartStorage((cart) => {
         cart.forEach((product) => {
+          console.log(products)
+          console.log(product.type)
           const getProduct = products[product.type].find((getItem) => getItem.id === product.id);
   
           insertProducts.innerHTML +=
