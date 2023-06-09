@@ -25,7 +25,7 @@ export function showOrders() {
   
     <div>
       <p class="font-2-xxxs-b-u">Total pedido</p>
-      <span class="font-2-xxs">R$ ${order[0].orderValue},00</span>
+      <span class="font-2-xxs">R$ ${order[0].orderTotal},00</span>
     </div>
   
     <div>

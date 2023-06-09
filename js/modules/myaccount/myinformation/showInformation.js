@@ -30,7 +30,12 @@ export function showInformation() {
       [...orderData].forEach((data) => {
         const property = data.getAttribute('data-myinfo').replace(/\w+-(\w+)/, '$1'); 
         const lastOrder = accounts.loggedUser().pedidos[0][0];
-        data.innerText = lastOrder[property];
+
+        if (data.getAttribute('data-myinfo') !== 'last-orderTotal') {
+          data.innerText = lastOrder[property];
+        } else {
+          data.innerText = `R$ ${lastOrder[property]},00`;
+        }
       })
 
       elementHandler.add('.last-order-empty', 'data-hide');

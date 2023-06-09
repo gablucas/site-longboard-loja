@@ -1,5 +1,8 @@
+import { purchaseSummary } from "./purchaseSummary.js";
+
 // Ativar o frete selecionado
-const freteLabel = document.querySelectorAll('.cart-shipping-rates label')
+const freteLabel = document.querySelectorAll('.cart-shipping-rates label');
+export let shippingValue = 0;
 
 export function selectShipping() {
 
@@ -8,6 +11,9 @@ export function selectShipping() {
 })
 
 function selecionarFrete(event) {
+  
+  shippingValue = Number(event.target.previousElementSibling.value);
+  purchaseSummary();
 
   freteLabel.forEach((item) => {
     item.classList.replace('font-2-xs-m','font-2-xs')

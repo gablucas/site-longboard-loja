@@ -3,6 +3,7 @@ import { showQuantityItensCart } from "../global/showQuantityItensCart.js";
 import { cartStorage } from "./cartStorage.js";
 import { showCartItens } from "./showCartItens.js";
 import { fetchProducts } from "../global/fetchProducts.js";
+import { shippingValue } from "./selectShipping.js";
 
 export function finalizePayment() {
 
@@ -23,8 +24,10 @@ export function finalizePayment() {
       orderNumber: "P0000001",
       orderDate,
       orderValue: 0,
+      orderShipping: shippingValue,
       orderState: "Aguardando confirmação pagamento",
       orderAddress,
+      orderTotal: 0,
     }
 
 
@@ -40,6 +43,8 @@ export function finalizePayment() {
       }).reduce((anterior, atual) => {
         return anterior + atual;
       })
+
+      orderInfo.orderTotal = orderInfo.orderValue + orderInfo.orderShipping;
 
       // Coloca os dados do produto dentro do array do pedido
       order.push(orderInfo);
